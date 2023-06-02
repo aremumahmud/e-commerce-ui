@@ -1,0 +1,27 @@
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #004225;
+    font-weight: 500;
+    color: #ffffff;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.header .promo {
+    display: flex;
+    justify-content: space-around;
+    width: 30%
+}
+
+.header select {
+    border: none;
+    background-color: #004225;
+    color: #ffffff;
+    padding-left: 20px;
+}

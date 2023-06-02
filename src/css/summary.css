@@ -1,0 +1,47 @@
+.coupon {
+    display: flex;
+    background-color: #cccccc80;
+    border-radius: 24px;
+    padding-left: 15px;
+    justify-content: space-between;
+}
+
+.coupon .btn {
+    padding: 10px;
+    background-color: #004225;
+    border-radius: 24px;
+    color: white;
+    font-weight: 600;
+    height: 100%;
+    padding-top: 20px;
+    margin-top: 0 !important;
+}
+
+.coupon input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.subTopic {
+    font-weight: bolder;
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.radios .radio {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 0;
+}
+
+.radios .radio input {
+    margin-right: 10px;
+}
+
+.payment_form {
+    display: flex;
+    flex-wrap: wrap;
+}

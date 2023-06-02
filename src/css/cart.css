@@ -1,0 +1,32 @@
+.cart {
+    width: 100%;
+    /* border: 1px solid; */
+}
+
+.checkCta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkCta .btn {
+    padding: 10px;
+    color: white;
+    background-color: #004225;
+    /* height: 50px; */
+    border-radius: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.empty_space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    font-weight: 800;
+}
+
+.empty_space p {
+    font-size: 30px;
+}

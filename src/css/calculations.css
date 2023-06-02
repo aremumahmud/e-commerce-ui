@@ -1,0 +1,14 @@
+.specsTable tr td {
+    text-align: right;
+    width: 90%;
+}
+
+.specsTable tr td:first-child {
+    font-weight: 800;
+    text-align: left;
+    width: 200px;
+}
+
+.specsTable tr td {
+    padding: 10px;
+}

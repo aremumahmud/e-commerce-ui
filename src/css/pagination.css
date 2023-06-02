@@ -1,0 +1,32 @@
+.pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.pagination .pageBtn {
+    display: inline;
+    list-style: none;
+    padding: 10px;
+    background-color: #cccccc80;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.pagination .active {
+    color: #ffffff;
+    background-color: #004225;
+}
+
+.pagination .next {
+    border: 2px solid #004225;
+}

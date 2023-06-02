@@ -1,0 +1,55 @@
+    .filters {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        align-items: center;
+    }
+    
+    .filters .filter ul {
+        padding: 0;
+    }
+    
+    .filters .filter ul li {
+        display: inline;
+        margin: 20px;
+        background-color: #cccccc6e;
+        padding: 10px;
+        font-weight: 700;
+        border-radius: 24px;
+    }
+    
+    .filters .filter ul li select {
+        outline: none;
+        border: none;
+        font-weight: 700;
+        text-align: center;
+        background-color: transparent
+    }
+    
+    .ml-none {
+        margin-left: 0 !important;
+    }
+    
+    .sortby {
+        display: inline;
+        margin: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 24px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    }
+    
+    .sortby select {
+        outline: none;
+        border: none;
+        font-weight: 700;
+        text-align: center;
+        background-color: transparent;
+        margin-right: 0 !important;
+    }
+    
+    option {
+        border-radius: 1px solid;
+        padding: 5px;
+        background-color: #ccc;
+    }

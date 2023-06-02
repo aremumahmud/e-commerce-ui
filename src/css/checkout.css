@@ -1,0 +1,40 @@
+.split {
+    display: flex;
+    justify-content: space-between;
+}
+
+.split .one {
+    width: 59%;
+    height: fit-content;
+}
+
+.split .two {
+    width: 39%;
+    border: 2px solid #ccc;
+    padding: 30px;
+    padding-top: 0;
+    border-radius: 10px;
+    height: fit-content;
+    margin-bottom: 150px;
+}
+
+.split .two .topic {
+    font-weight: 700;
+}
+
+.split .two .btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #004225;
+    color: #ffffff;
+    border-radius: 24px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.checkbox {
+    padding: 20px;
+    padding-left: 0;
+    font-weight: bold;
+}

@@ -1,0 +1,22 @@
+.path {
+    width: 100%;
+}
+
+.path ul {
+    margin: 0;
+    padding-top: 170px;
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 50px;
+    background: white;
+}
+
+.path ul li {
+    display: inline;
+    list-style: none;
+    margin: 10px;
+}
+
+.bold {
+    font-weight: 800;
+}

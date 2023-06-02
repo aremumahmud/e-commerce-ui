@@ -1,0 +1,48 @@
+.about {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.descriptionSection {
+    width: 50%
+}
+
+.descriptionSection .title {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.descriptionSection .description {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta .btn {
+    display: inline;
+    padding: 5px;
+    border: 2px solid #004225;
+    border-radius: 24px;
+    margin-right: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.cta .active {
+    background-color: #004225;
+    color: #ffffff;
+}
+
+.imageSection {
+    width: 50%;
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageSection img {
+    width: 49%;
+    height: 100%;
+}

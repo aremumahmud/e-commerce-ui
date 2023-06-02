@@ -1,0 +1,49 @@
+.delivery {
+    border: 2px solid #ccc;
+    padding: 30px;
+    padding-top: 0;
+    border-radius: 10px;
+}
+
+.delivery .topic {
+    font-weight: 700;
+}
+
+.delivery_form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapInput {
+    width: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.wrapInput input {
+    width: 90%;
+    padding: 9px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    font-size: large;
+    background-color: #cccccc59;
+}
+
+.long {
+    width: 100%;
+}
+
+.long input {
+    width: 95%;
+}
+
+.next {
+    display: none;
+}
+
+.prev {
+    display: none;
+}

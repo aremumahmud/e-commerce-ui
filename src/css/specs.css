@@ -1,0 +1,8 @@
+.specsTable tr td:first-child {
+    font-weight: 800;
+    width: 200px;
+}
+
+.specsTable tr td {
+    padding: 10px;
+}
