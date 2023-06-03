@@ -18,10 +18,10 @@ body {
 }
 
 .login {
-     height: 100%;
-    width: 50%;
+    height: 100%;
+    /* width: 50%;
     margin-left: 10%;
-    margin-right: 10%;
+    margin-right: 10%; */
     padding: 20px;
     padding-top: 100px;
 }
