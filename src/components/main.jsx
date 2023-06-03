@@ -30,9 +30,9 @@ function Main({
 }) {
   let [product , setProduct] = useState({})
   let navigate = useNavigate()
-  let setPage = (x)=>{
+  let setPage = (x ,bool=true)=>{
     if(x && x !==''){
-      localStorage.setItem('page', x)
+      bool && localStorage.setItem('page', x)
      return navigate('/'+x)
      // props.history.push('/foo')
 
@@ -59,6 +59,9 @@ function Main({
   },[])
   
   return (<>
+   <input type="hidden" onClick={()=>{
+    setPage(localStorage.getItem('page') || 'home')
+  }} />
     <Modal display={ViewStatus1} />
     <ViewModal data={ViewData} display={ViewStatus} setViewStatus={setViewStatus} />
    <div className="container">

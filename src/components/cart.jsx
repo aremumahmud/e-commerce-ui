@@ -17,7 +17,13 @@ function Cart({ data, setPage, removeFromCart,addFromCart }) {
         <div className="checkCta">
           <p className="topic">Cart</p>
           <div className="btn" onClick={()=>{
-         Object.keys(data).length !== 0 && setPage('checkout')
+            if(localStorage.getItem('TokenID')){
+              Object.keys(data).length !== 0 && setPage('checkout')
+              return
+            }
+
+            setPage('users/login',false)
+         
           }}>Proceed to Checkout</div>
         </div>
 

@@ -12,18 +12,26 @@ function Authenticate(action, options = {}, callback) {
         mode: 'cors',
         headers: {
 
-            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
         }
     }).then(res => {
         return res.json()
     }).then(res => {
         console.log(res)
+
         if (!res.error || res.auth) {
+            localStorage.setItem('TokenID', res.user.token)
             callback && callback(null, {
                 success: true
             })
             return
         }
+
+        if (res.error === 'User exists!') return callback && callback({
+            success: false,
+            reason: res.error,
+            res
+        })
         callback && callback({
             success: false,
             reason: 'invalid credentials',

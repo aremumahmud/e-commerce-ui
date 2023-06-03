@@ -6,7 +6,8 @@ export default function fetch_orders(cb) {
         credentials: 'include',
         mode: 'cors',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authentication': 'Bearer ' + localStorage.getItem('TokenID')
         }
     }).then(res => {
         return res.text()

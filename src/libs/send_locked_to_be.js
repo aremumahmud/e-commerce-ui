@@ -11,7 +11,8 @@ export default function send_locked_to_be_product(body, price, user_data, cb) {
         credentials: 'include',
         mode: 'cors',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authentication': 'Bearer ' + localStorage.getItem('TokenID')
         },
         body: JSON.stringify({
             inventory: Object.keys(body).map(x => body[x]),

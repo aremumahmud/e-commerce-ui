@@ -148,7 +148,8 @@ function Landing(props) {
           //setLoad(false)
           authenticate(true)
           localStorage.setItem('auth',', sjkzn jckmnsd zjk')
-           //return window.open("/"+(localStorage.getItem('page')||'home'), '_self');
+        //  return getDoc('login2').click()
+           return window.open("/"+(localStorage.getItem('page')||'home'), '_self');
           }else{
             setErrors({
               color:'green',
