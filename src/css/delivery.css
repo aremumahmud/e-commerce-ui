@@ -5,6 +5,10 @@
     border-radius: 10px;
 }
 
+.delivery sup {
+    color: red;
+}
+
 .delivery .topic {
     font-weight: 700;
 }
