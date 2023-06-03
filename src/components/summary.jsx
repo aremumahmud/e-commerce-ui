@@ -1,7 +1,9 @@
+import { useState } from "react";
 import "../css/summary.css";
 import Calculation from "./calculations";
 
 function Summary({price , lockProduct,pace,setPace}) {
+  let [busy , setBusy] = useState(false)
   return (
     <>
       <p className="topic">Order Summary</p>
@@ -68,8 +70,11 @@ function Summary({price , lockProduct,pace,setPace}) {
       <br /><br />
       <p className="topic">Total Debit Amount</p>
       <Calculation price={price} />
-      <div className="btn" onClick={()=>lockProduct()}>
-        Pay N{price}.10
+      <div className="btn" onClick={()=>{setBusy(true);lockProduct()}}>
+        {
+          busy ? <div className="loader"></div>:`Pay N${price}.10`
+        }
+       
       </div><br />
       {
         pace === 1 &&

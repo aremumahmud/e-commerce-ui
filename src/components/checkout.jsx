@@ -17,7 +17,7 @@ function Checkout({ setPage , cart }) {
   let lockProduct = ()=>{
     send_locked_to_be_product(cart , price, user_data , (err,resp)=>{
       if(err){
-         return
+         return alert(err.msg)
       }
       let data  = JSON.parse(resp)
       console.log(resp,err)
