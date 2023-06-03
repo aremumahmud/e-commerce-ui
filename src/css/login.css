@@ -6,7 +6,7 @@
 }
 
 .fixed {
-    position: fixed;
+    /* position: fixed; */
     display: flex;
     height: 100%;
     width: 100%;
@@ -64,7 +64,7 @@ body {
     margin-bottom: 10px;
     width: 100%;
     border-radius: 10px;
-    height: 30px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     padding: 6px;
@@ -106,7 +106,7 @@ body {
     background-color: #004225;
     ;
     color: white;
-    height: 30px;
+    height: 50px;
     padding: 6px;
     border-radius: 10px;
     font-size: 20px;
