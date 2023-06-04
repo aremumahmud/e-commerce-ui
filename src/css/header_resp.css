@@ -181,6 +181,8 @@
     }
     .productImage {
         height: 100px !important;
+        width: 100% !important;
+        padding: 4px !important;
     }
     .cartItem {
         align-items: center;
