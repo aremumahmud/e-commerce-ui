@@ -18,7 +18,7 @@ function Home({setCart , setPage, cart, setProduct,data}) {
       <p className="topic">Weekly Popular Products</p>
       <Products setProduct={setProduct}  cart={cart} setPage={setPage} setCart={setCart} data={[0, 1, 2, 3].map(i=>data[i])} />
       <br />
-      <About />
+      <About setPage={setPage} />
       <br />
       <br />
     </>

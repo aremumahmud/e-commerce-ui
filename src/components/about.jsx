@@ -1,6 +1,6 @@
 import "../css/about.css";
 
-function About() {
+function About({setPage}) {
   return (
     <div className="about">
       <div className="descriptionSection">
@@ -15,8 +15,8 @@ function About() {
           you for choosing us!
         </p>
         <div className="cta">
-          <div className="btn active">Log in</div>
-          <div className="btn">Sign up</div>
+          <div className="btn active" onClick={()=>setPage('users/login')}>Log in</div>
+          <div className="btn"  onClick={()=>setPage('users/signup')}>Sign up</div>
         </div>
       </div>
       <div className="imageSection">
