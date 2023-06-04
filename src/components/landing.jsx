@@ -14,6 +14,16 @@ function Landing(props) {
   let [page, setpage1] = useState("home");
   let [cart_no , setCartno] = useState(0)
 
+  useEffect(()=>{
+    
+    let data = localStorage.getItem('cart')
+      if(data){
+        console.log('dd',JSON.parse(data))
+        setcart(JSON.parse(data))
+        setCartno(localStorage.getItem('no'))
+      }
+  },[])
+
   let getDoc = (x) => document.getElementById(x)
 
   let setCart = (x,n,qty) => {
@@ -50,7 +60,10 @@ function Landing(props) {
   
    //console.log(v_cart)
     setcart(v_cart);
-    setCartno(n?(n+cart_no):++cart_no)
+    let no = n?(n+cart_no):++cart_no
+    setCartno(no)
+    localStorage.setItem('cart',JSON.stringify(v_cart))
+    localStorage.setItem('no' , no)
      //console.log(cart)
   };
 
@@ -72,7 +85,10 @@ function Landing(props) {
     
      //console.log(v_cart)
       setcart(v_cart);
-      setCartno(--cart_no)
+      let no = --cart_no
+      setCartno(no)
+      localStorage.setItem('cart',JSON.stringify(v_cart))
+      localStorage.setItem('no' , no)
        //console.log(cart)
     };
 
@@ -102,7 +118,10 @@ function Landing(props) {
       
        //console.log(v_cart)
         setcart(v_cart);
-        setCartno(++cart_no)
+        let no = ++cart_no
+        setCartno(no)
+        localStorage.setItem('cart',JSON.stringify(v_cart))
+        localStorage.setItem('no' , no)
          //console.log(cart)
       };
 

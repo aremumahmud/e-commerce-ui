@@ -12,13 +12,17 @@ import { useState } from "react";
 
 function Checkout({ setPage , cart }) {
   let [user_data, set_user_data] = useState(null)
+  let [busy , setBusy] = useState(false)
   let price = calculate( Object.keys(cart).map(x=>cart[x]))
 
   let lockProduct = ()=>{
     send_locked_to_be_product(cart , price, user_data , (err,resp)=>{
+      setBusy(false)
       if(err){
+       
          return alert(err.msg)
       }
+      
       let data  = JSON.parse(resp)
       console.log(resp,err)
       if(data.login == false){
@@ -67,7 +71,7 @@ function Checkout({ setPage , cart }) {
         <div className="two" style={{
           display : pace === 0? "block" : 'none'
         }}>
-          <Summary  pace={pace} setPace={setPace}  lockProduct={lockProduct} price={price}/>
+          <Summary busy={busy} setBusy={setBusy}  pace={pace} setPace={setPace}  lockProduct={lockProduct} price={price}/>
         </div>
       </div>
     </>

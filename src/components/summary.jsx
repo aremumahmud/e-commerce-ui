@@ -2,8 +2,8 @@ import { useState } from "react";
 import "../css/summary.css";
 import Calculation from "./calculations";
 
-function Summary({price , lockProduct,pace,setPace}) {
-  let [busy , setBusy] = useState(false)
+function Summary({price , lockProduct,pace,setPace , busy , setBusy}) {
+ 
   return (
     <>
       <p className="topic">Order Summary</p>
