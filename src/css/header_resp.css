@@ -292,4 +292,17 @@
         width: 45% !important;
         margin-left: 3% !important;
     }
+    .text p {
+        width: 100% !important;
+        font-size: medium !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+    .text {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+    .split_me {
+        flex-direction: column !important;
+    }
 }
