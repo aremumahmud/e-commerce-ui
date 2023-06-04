@@ -288,4 +288,8 @@
     .social-logins .social {
         padding: 5px !important;
     }
+    .max {
+        width: 45% !important;
+        margin-left: 3% !important;
+    }
 }

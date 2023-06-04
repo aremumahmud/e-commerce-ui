@@ -4,9 +4,9 @@ import "../css/cartItem.css";
 function CartItem({info, removeFromCart,addFromCart}) {
   return (
     <>    <div className="cartItem">
-      <div className="checkBox little">
+      {/* <div className="checkBox little">
         <input type="checkbox" name="" id="" />
-      </div>
+      </div> */}
       <div className="product1 max">
         <div className="productImage">
         <img src={info.image} alt="" />
