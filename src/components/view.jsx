@@ -38,8 +38,8 @@ function ViewModal({display,setViewStatus,data}) {
           These are the delivery information you provided at the checkout
         </p>
         <br />
-        <div className="apart">
-            <div className="deets">
+        <div>
+          {/* <div className="deets">
             <ul>
                 <li>City:</li>
                 <li>Zip Code:</li>
@@ -60,7 +60,38 @@ function ViewModal({display,setViewStatus,data}) {
                 <li>{data.phone_number}</li>
                 <li>{data.address}</li>
             </ul>
-        </div>
+        </div> */}
+        <table style="width:100%">
+          <tr>
+            <td>City:</td>
+            <td>{data.city}</td>
+            
+          </tr>
+          <tr>
+            <td>Zip Code:</td>
+            <td>{data.zip_code}</td>
+          </tr>
+          <tr>
+            <td>First Name:</td>
+            <td>{data.first_name}</td>
+          </tr>
+          <tr>
+            <td>Last Name:</td>
+            <td>{data.last_name}</td>
+          </tr>
+          <tr>
+            <td>Email Address:</td>
+            <td>{data.email_address}</td>
+          </tr>
+          <tr>
+            <td>Phone Number:</td>
+            <td>{data.phone_number}</td>
+          </tr>
+          <tr>
+            <td>Current Address:</td>
+            <td>{data.address}</td>
+          </tr>
+        </table>
         </div>
             </>
         }
