@@ -76,10 +76,10 @@ function Summary({price , lockProduct,pace,setPace , busy , setBusy}) {
         }
        
       </div><br />
-      {
+      {/* {
         pace === 1 &&
         <div  onClick={()=>setPace(0)}> <p className="prev"> &lt;- Prev</p></div>
-      }
+      } */}
     </>
   );
 }

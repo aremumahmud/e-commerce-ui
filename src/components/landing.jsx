@@ -26,6 +26,11 @@ function Landing(props) {
 
   let getDoc = (x) => document.getElementById(x)
 
+  let cleanCart = ()=>{
+    setcart({})
+    setCartno(0)
+  }
+
   let setCart = (x,n,qty) => {
 
   //first we clone the cart state
@@ -208,7 +213,8 @@ function Landing(props) {
           setFocus = {setFocus} 
           cart_no={cart_no}
           removeFromCart={removeFromCart}
-          addFromCart={addFromCart}/>
+          addFromCart={addFromCart}
+          cleanCart={cleanCart}/>
           </>
           
         }>

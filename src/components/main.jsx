@@ -25,7 +25,8 @@ function Main({
   setPage1,
   cart_no,
   removeFromCart,
-  addFromCart
+  addFromCart,
+  cleanCart
 
 }) {
   let [product , setProduct] = useState({})
@@ -95,7 +96,7 @@ function Main({
         page === 'prod_admin' && <ProductsAdmin />
       }
       {
-        page === 'success' && <PaymentSucesss setPage={setPage} />
+        page === 'success' && <PaymentSucesss cleanCart={cleanCart} setPage={setPage} />
       }
       {
        page==='dash' && <Dashboard setPage={setPage} setViewStatus={setViewStatus} setViewData={setViewData} />

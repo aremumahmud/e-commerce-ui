@@ -42,8 +42,8 @@ function Delivery({valid,pace,setPace}) {
           <input onChange={valid} type="text" name="email_address" id="" placeholder="Type Here ..." />
         </div>
       </form>
-      <div className="btn" onClick={()=>setPace(1)}> <p className="next">Next -&gt;</p></div>
-      
+      {/* <div className="btn" onClick={()=>setPace(1)}> <p className="next">Next -&gt;</p></div>
+       */}
      
     </div>
   );
