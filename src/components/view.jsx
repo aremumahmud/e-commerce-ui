@@ -61,7 +61,8 @@ function ViewModal({display,setViewStatus,data}) {
                 <li>{data.address}</li>
             </ul>
         </div> */}
-        <table style="width:100%">
+        <table>
+          <tbody>
           <tr>
             <td>City:</td>
             <td>{data.city}</td>
@@ -91,6 +92,8 @@ function ViewModal({display,setViewStatus,data}) {
             <td>Current Address:</td>
             <td>{data.address}</td>
           </tr>
+          </tbody>
+          
         </table>
         </div>
             </>
