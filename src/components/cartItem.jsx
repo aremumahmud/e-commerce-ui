@@ -1,7 +1,7 @@
 import { AiOutlineDelete } from "react-icons/ai";
 import "../css/cartItem.css";
 
-function CartItem({info, removeFromCart,addFromCart}) {
+function CartItem({info, removeFromCart,addFromCart,symbol}) {
   return (
     <>    <div className="cartItem">
       {/* <div className="checkBox little">
@@ -32,7 +32,7 @@ function CartItem({info, removeFromCart,addFromCart}) {
           </div>
       </div>
       <div className="price">
-        <p>N{info.price}.99</p>
+        <p>{symbol}{info.price}</p>
       </div>
     </div>
     <br /><br />

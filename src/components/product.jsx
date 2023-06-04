@@ -2,7 +2,7 @@ import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
 import "../css/products.css";
 import { useState } from "react";
 
-function Product({setCart,cart,setPage,info,setProduct}) {
+function Product({setCart,cart,setPage,info,setProduct,symbol}) {
  // console.log("/imgs/"+info+".png")
   let [load , setLoad] = useState(false)
   let onclick =(n)=>{
@@ -35,9 +35,9 @@ function Product({setCart,cart,setPage,info,setProduct}) {
                   }} className="name">
                     <p>{info.name}</p>
                     <p>
-                      <sup>N</sup>
+                      {symbol}
                       {info.price}
-                      <sup>.99</sup>
+                      <sup></sup>
                     </p>
                   </div>
                   <p onClick={()=>setPage('product')} className="description">{info.description}</p>

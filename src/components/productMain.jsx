@@ -8,7 +8,7 @@ import Specs from "./specs";
 import Products from './products'
 import { useState } from "react";
 
-function ProductMain({setCart , setPage,datar, productData}) {
+function ProductMain({setCart , setPage,datar, productData,symbol}) {
  //console.log(data,'rr') 
  console.log(datar)
  let [data , setData] = useState(datar)
@@ -111,7 +111,7 @@ function ProductMain({setCart , setPage,datar, productData}) {
           </div>
 
           <div className="prices">
-            <p className="subTitle">N{data.price}.00 or N{Math.floor(data.price/6)+33}.99/month </p>
+            <p className="subTitle">{symbol}{data.price}.00 or {symbol}{Math.floor(data.price/6)+33}.99/month </p>
             <p className="descrpTitle">
               Buy and listen or pay for it for 6 months
             </p>
@@ -177,7 +177,7 @@ function ProductMain({setCart , setPage,datar, productData}) {
         </div>
         <br /><br />
         <p className="topic">Similar Items You Might Like</p>
-        <Products data={[0,1,2,3].map(x=>productData[Math.floor(Math.random()*productData.length)])} />
+        <Products symbol={symbol} data={[0,1,2,3].map(x=>productData[Math.floor(Math.random()*productData.length)])} />
         <br /><br />
       </div>
     </>

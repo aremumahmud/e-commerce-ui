@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../css/summary.css";
 import Calculation from "./calculations";
 
-function Summary({price , lockProduct,pace,setPace , busy , setBusy}) {
+function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol}) {
  
   return (
     <>
@@ -69,10 +69,10 @@ function Summary({price , lockProduct,pace,setPace , busy , setBusy}) {
       </form> */}
       <br /><br />
       <p className="topic">Total Debit Amount</p>
-      <Calculation price={price} />
+      <Calculation symbol={symbol} price={price} />
       <div className="btn" onClick={()=>{setBusy(true);lockProduct()}}>
         {
-          busy ? <div className="loader"></div>:`Pay N${price}.10`
+          busy ? <div className="loader"></div>:`Pay ${symbol + price}`
         }
        
       </div><br />

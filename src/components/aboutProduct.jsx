@@ -1,7 +1,7 @@
 import Path from "./path";
 import ProductMain from "./productMain";
 
-function AboutProduct({ setCart, setPage , product , productData }) {
+function AboutProduct({ setCart, setPage , product , productData,symbol }) {
   return (
     <div className="aboutProduct">
       <Path
@@ -12,7 +12,7 @@ function AboutProduct({ setCart, setPage , product , productData }) {
           { name: "caps" },
         ]}
       />
-      <ProductMain productData={productData} datar={product} setCart={setCart} setPage={setPage} />
+      <ProductMain symbol={symbol} productData={productData} datar={product} setCart={setCart} setPage={setPage} />
     </div>
   );
 }

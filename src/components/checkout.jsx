@@ -10,7 +10,7 @@ import { useState } from "react";
 
 
 
-function Checkout({ setPage , cart }) {
+function Checkout({ setPage , cart ,symbol}) {
   let [user_data, set_user_data] = useState(null)
   let [busy , setBusy] = useState(false)
   let price = calculate( Object.keys(cart).map(x=>cart[x]))
@@ -60,7 +60,7 @@ function Checkout({ setPage , cart }) {
       />
       <div className="split">
         <div className="one">
-          <Review cart={cart}/>
+          <Review symbol={symbol} cart={cart}/>
           <div className="checkbox">
             <input type="checkbox" name="" id="" />
             Returning Customer
@@ -71,7 +71,7 @@ function Checkout({ setPage , cart }) {
         <div className="two" style={{
           display : pace === 0? "block" : 'none'
         }}>
-          <Summary busy={busy} setBusy={setBusy}  pace={pace} setPace={setPace}  lockProduct={lockProduct} price={price}/>
+          <Summary  symbol={symbol}  busy={busy} setBusy={setBusy}  pace={pace} setPace={setPace}  lockProduct={lockProduct} price={price}/>
         </div>
       </div>
     </>

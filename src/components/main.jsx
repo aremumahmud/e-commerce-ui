@@ -15,6 +15,10 @@ import Dashboard from "./dashboard";
 import ViewModal from "./view";
 import { useNavigate, useParams } from "react-router-dom";
 import Modal from "./modal";
+import getUserIP from "../libs/geolocate";
+import changeCurrency from "../libs/changeCurrency"
+import currencyTab from "../config/currency";
+
 
 
 function Main({
@@ -39,8 +43,11 @@ function Main({
 
     }
   }
+
   let [data, setData] = useState([{},{},{},{}])
   let [load, setLoad] = useState(true)
+  let [load1, setLoad1] = useState(true)
+  let [currency , setCurrency] = useState('N')
   const { paged } = useParams()
  setPage1(paged||'home')
   
@@ -58,7 +65,18 @@ function Main({
           res.length && setData(res)
       })
   },[])
-  
+  useEffect(()=>{
+    load1 && 
+    getUserIP().then(res=>{
+      console.log(res)
+      let data2  = changeCurrency(data, res) 
+      setCurrency(currencyTab[data2[1]].symbol)
+      console.log(data2)
+      setData(data2[0]) 
+       setLoad1(false)
+    })
+    
+  },[data])
   return (<>
    <input type="hidden" onClick={()=>{
     setPage(localStorage.getItem('page') || 'home')
@@ -74,19 +92,19 @@ function Main({
       
      
       {
-        page === 'home' && <Home data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
+        page === 'home' && <Home symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
       }
 
       {
-        page === 'product' && <AboutProduct productData={data} product={product} setPage={setPage} setCart={setCart}  />
+        page === 'product' && <AboutProduct symbol={currency} productData={data} product={product} setPage={setPage} setCart={setCart}  />
       }
 
       {
-        page === 'checkout' && <Checkout cart={cart} setPage={setPage} />
+        page === 'checkout' && <Checkout symbol={currency} cart={cart} setPage={setPage} />
       }
       
       {
-        page === 'cart' && <Cart addFromCart={addFromCart} removeFromCart={removeFromCart} setPage={setPage} data={cart}/>
+        page === 'cart' && <Cart symbol={currency} addFromCart={addFromCart} removeFromCart={removeFromCart} setPage={setPage} data={cart}/>
       }
 
       {

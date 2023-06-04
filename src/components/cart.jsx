@@ -2,7 +2,7 @@ import "../css/cart.css";
 import CartItem from "./cartItem";
 import Path from "./path";
 
-function Cart({ data, setPage, removeFromCart,addFromCart }) {
+function Cart({ data, setPage, removeFromCart,addFromCart,symbol }) {
   return (
     <>
       <Path
@@ -27,7 +27,7 @@ function Cart({ data, setPage, removeFromCart,addFromCart }) {
           }}>Proceed to Checkout</div>
         </div>
 
-        {data && Object.keys(data).map(x=>data[x]).map((d) => <CartItem addFromCart={addFromCart} removeFromCart={removeFromCart} info={d}/>)}
+        {data && Object.keys(data).map(x=>data[x]).map((d) => <CartItem symbol={symbol} addFromCart={addFromCart} removeFromCart={removeFromCart} info={d}/>)}
         {
           Object.keys(data).length === 0 && <div className="empty_space">
             <p>No Items In Cart!</p>

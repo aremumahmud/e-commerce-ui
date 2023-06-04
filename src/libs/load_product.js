@@ -7,6 +7,8 @@ function load_products(cb) {
         return res.json()
     }).then(res => {
         // process_data
+
+        //console.log(res.data)
         cb && cb(null, process_data(res.data))
     }).catch(err => {
         cb && cb(err, null)

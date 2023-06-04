@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../css/review.css'
 
-function Review({cart}){
+function Review({cart , symbol}){
     let [data , setData] = useState(Object.keys(cart).map(x=>cart[x]))
     let [index , setIndex] = useState(0)
     return (
@@ -16,7 +16,7 @@ function Review({cart}){
                 </div>
                 <div className="info">
                     <p>{data[index].name}</p>
-                    <p>Price: N{data[index].price}</p>
+                    <p>Price: {symbol}{data[index].price}</p>
                     <p>Quantity: {data[index].quantity_for_cart}</p>
                 </div>
                 <div className="wrapNext">
