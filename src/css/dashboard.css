@@ -107,3 +107,28 @@ span {
 .icony:hover {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
+
+.loadings {
+    /* border: 1px solid; */
+    height: 50%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d {
+    width: 50px !important;
+    height: 50px !important;
+    border-bottom-color: #004225 !important;
+}
+
+.nony {
+    color: #004225;
+    font-weight: 700;
+    font-size: medium;
+}
+
+.h {
+    text-align: center;
+}

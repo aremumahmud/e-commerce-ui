@@ -2,7 +2,7 @@ import { AiOutlineEye, AiOutlinePayCircle, AiOutlineShoppingCart, AiOutlineUser 
 import '../css/dashboard.css'
 import Tile from './tile'
 
-function Dash({orders ,setViewStatus , setViewData}){
+function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
     return(
         <div class="split_me1">
     <div class="one_1">
@@ -16,6 +16,19 @@ function Dash({orders ,setViewStatus , setViewData}){
     </div>
     <div class="one_2">
         <p class="header11">Orders</p>
+        {
+            loader && <div className='loadings'>
+                <div className="loader d"></div>
+            </div>
+        }{
+            loader === false && orders.length === 0 && !refresh && <div className='loadings'>
+            <div className="nony">No orders yet</div>
+        </div>
+        }{
+            refresh && <div className='loadings'>
+            <div className="nony h">Please refresh this page or check your internet connection</div>
+        </div>
+        }
        {
         orders.map(x=><Tile setViewStatus={setViewStatus} setViewData={setViewData} data={x} />)
        }
