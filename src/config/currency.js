@@ -11,10 +11,10 @@ const currencyTab = {
         symbol: '₦',
         price_in_naira: 1
     },
-    // EUR: {
-    //     symbol: '€',
-    //     price_in_naira: 500
-    // }
+    EUR: {
+        symbol: '€',
+        price_in_naira: 500
+    }
 }
 
 const symbolTab = { '₦': 1, '€': 500, '$': 460, '£': 560 }
