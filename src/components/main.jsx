@@ -47,7 +47,7 @@ function Main({
   let [data, setData] = useState([{},{},{},{}])
   let [load, setLoad] = useState(true)
   let [load1, setLoad1] = useState(true)
-  let [currency , setCurrency] = useState('N')
+  let [currency , setCurrency] = useState('₦')
   const { paged } = useParams()
  setPage1(paged||'home')
   
@@ -69,10 +69,14 @@ function Main({
     load1 && 
     getUserIP().then(res=>{
       console.log(res)
-      let data2  = changeCurrency(data, res) 
-      setCurrency(currencyTab[data2[1]].symbol)
-      console.log(data2)
+      let data2  = changeCurrency(data, currencyTab[res]?res:'USD')  
+     // console.log(data2,'jayz')
+     console.log(isNaN(data2[0][0].price))
+      if(isNaN(data2[0][0].price)){
+        return
+      }
       setData(data2[0]) 
+      setCurrency(currencyTab[data2[1]].symbol)
        setLoad1(false)
     })
     
@@ -100,7 +104,7 @@ function Main({
       }
 
       {
-        page === 'checkout' && <Checkout symbol={currency} cart={cart} setPage={setPage} />
+        page === 'checkout' && <Checkout setCurrency={setCurrency} symbol={currency} cart={cart} setPage={setPage} />
       }
       
       {

@@ -7,16 +7,17 @@ import calculate from "../libs/calculate";
 import send_locked_to_be_product from "../libs/send_locked_to_be";
 import validate from "../libs/validate_deets";
 import { useState } from "react";
+import { nameTab } from "../config/currency";
 
 
 
-function Checkout({ setPage , cart ,symbol}) {
+function Checkout({setCurrency, setPage , cart ,symbol}) {
   let [user_data, set_user_data] = useState(null)
   let [busy , setBusy] = useState(false)
-  let price = calculate( Object.keys(cart).map(x=>cart[x]))
+  let price = calculate( Object.keys(cart).map(x=>cart[x]),symbol)
 
   let lockProduct = ()=>{
-    send_locked_to_be_product(cart , price, user_data , (err,resp)=>{
+    send_locked_to_be_product(cart , price, user_data ,nameTab[symbol] , (err,resp)=>{
       setBusy(false)
       if(err){
        
@@ -71,7 +72,7 @@ function Checkout({ setPage , cart ,symbol}) {
         <div className="two" style={{
           display : pace === 0? "block" : 'none'
         }}>
-          <Summary  symbol={symbol}  busy={busy} setBusy={setBusy}  pace={pace} setPace={setPace}  lockProduct={lockProduct} price={price}/>
+          <Summary setCurrency={setCurrency}  symbol={symbol}  busy={busy} setBusy={setBusy}  pace={pace} setPace={setPace}  lockProduct={lockProduct} price={price}/>
         </div>
       </div>
     </>

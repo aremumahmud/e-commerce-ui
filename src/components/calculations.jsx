@@ -8,7 +8,7 @@ function Calculation ({price , symbol}){
              <tbody>
                 <tr>
                     <td>Sub Total</td>
-                    <td>{symbol}{price}</td>
+                    <td>{symbol}{+price.toFixed(2)}</td>
                 </tr>
                 <tr>
                     <td>Tax(10%)</td>
@@ -25,7 +25,7 @@ function Calculation ({price , symbol}){
                 <br /><hr style={{width:'100%'}} />
                 <tr>
                     <td>Total</td>
-                    <td>{symbol}{price+1}</td>
+                    <td>{symbol}{+price.toFixed(2)}</td>
                 </tr>
                 
              </tbody>

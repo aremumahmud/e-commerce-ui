@@ -143,8 +143,8 @@ function ProductMain({setCart , setPage,datar, productData,symbol}) {
             </div>
           </div>
           <div className="ctas">
-            <div className="btn active" onClick={()=>{setCart([{image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity);setPage('checkout')}}>Buy now</div>
-            <div className="btn" onClick={()=>{setCart([{image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity)}}>Add to Cart</div>
+            <div className="btn active" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity);setPage('checkout')}}>Buy now</div>
+            <div className="btn" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity)}}>Add to Cart</div>
           </div>
           <div className="otherInfo">
             <div className="info">

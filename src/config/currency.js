@@ -17,4 +17,8 @@ const currencyTab = {
     }
 }
 
+const symbolTab = { '₦': 1, '€': 500, '$': 460, '£': 560 }
+const nameTab = { '₦': 'NGN', '€': 'EUR', '$': 'USD', '£': 'GBP' }
+
 export default currencyTab
+export { symbolTab, nameTab }

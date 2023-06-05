@@ -65,7 +65,10 @@ function Landing(props) {
   
    //console.log(v_cart)
     setcart(v_cart);
+    n = Number(n)
+    cart_no = Number(cart_no)
     let no = n?(n+cart_no):++cart_no
+    console.log(no)
     setCartno(no)
     localStorage.setItem('cart',JSON.stringify(v_cart))
     localStorage.setItem('no' , no)
@@ -89,8 +92,11 @@ function Landing(props) {
     }
     
      //console.log(v_cart)
-      setcart(v_cart);
+      setcart(v_cart); 
+      cart_no = Number(cart_no)
       let no = --cart_no
+      //n = Number(n)
+     
       setCartno(no)
       localStorage.setItem('cart',JSON.stringify(v_cart))
       localStorage.setItem('no' , no)
@@ -123,6 +129,7 @@ function Landing(props) {
       
        //console.log(v_cart)
         setcart(v_cart);
+        cart_no = Number(cart_no)
         let no = ++cart_no
         setCartno(no)
         localStorage.setItem('cart',JSON.stringify(v_cart))

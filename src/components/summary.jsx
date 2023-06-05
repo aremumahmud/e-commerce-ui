@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../css/summary.css";
 import Calculation from "./calculations";
+import manageChecked from '../libs/manageChecked'
+import currencyTab, { nameTab } from "../config/currency";
 
-function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol}) {
+function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol , setCurrency}) {
+ let change= (e)=>{
+  manageChecked(['USD','EUR','GBP','NGN'],e.target.id)
+  setCurrency(currencyTab[e.target.id].symbol)
+ }
+ useEffect(()=>{
+  document.getElementById(nameTab[symbol]).checked = true
+  manageChecked(['USD','EUR','GBP','NGN'],nameTab[symbol])
  
+ },[symbol])
   return (
     <>
       <p className="topic">Order Summary</p>
@@ -11,23 +21,23 @@ function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol}) {
         <input type="email" placeholder="Enter Coupon Code" />
         <div className="btn">Apply Coupon</div>
       </div>
-      <p className="topic">Payment Details</p>
+      <p className="topic">Payment Currency</p>
       <div className="radios">
         <div className="radio">
-          <input type="radio" name="" id="" />
-          <p>Cash on delivery</p>
+          <input type="radio" name="" id="USD" onChange={change} />
+          <p>USD <b>($)</b></p>
         </div>
         <div className="radio">
-          <input type="radio" name="" id="" />
-          <p>Shopcart Card</p>
+          <input type="radio" name="" id="EUR" onChange={change} />
+          <p>EUR <b>(€)</b></p>
         </div>
         <div className="radio">
-          <input type="radio" name="" id="" />
-          <p>Paypal</p>
+          <input type="radio" name="" id="GBP" onChange={change} />
+          <p>GBP <b>(£)</b></p>
         </div>
         <div className="radio">
-          <input type="radio" name="" id="" />
-          <p>Credit or Debit Card</p>
+          <input type="radio" name="" id="NGN" onChange={change} />
+          <p>NGN <b>(₦)</b></p>
         </div>
       </div>
       {/* <form action="" className="payment_form">
@@ -72,7 +82,7 @@ function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol}) {
       <Calculation symbol={symbol} price={price} />
       <div className="btn" onClick={()=>{setBusy(true);lockProduct()}}>
         {
-          busy ? <div className="loader"></div>:`Pay ${symbol + price}`
+          busy ? <div className="loader"></div>:`Pay ${symbol + +price.toFixed(2)}`
         }
        
       </div><br />
