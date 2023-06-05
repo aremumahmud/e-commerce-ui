@@ -18,7 +18,7 @@ function Landing(props) {
     
     let data = localStorage.getItem('cart')
       if(data){
-        console.log('dd',JSON.parse(data))
+       // console.log('dd',JSON.parse(data))
         setcart(JSON.parse(data))
         setCartno(localStorage.getItem('no'))
       }
@@ -49,7 +49,7 @@ function Landing(props) {
     }
   }
   
-  console.log(x[0]._id)
+  //console.log(x[0]._id)
 
   //then if the cart object for the present is not available
   if(!v_cart[x[0]._id]){
@@ -68,7 +68,7 @@ function Landing(props) {
     n = Number(n)
     cart_no = Number(cart_no)
     let no = n?(n+cart_no):++cart_no
-    console.log(no)
+    //console.log(no)
     setCartno(no)
     localStorage.setItem('cart',JSON.stringify(v_cart))
     localStorage.setItem('no' , no)
@@ -159,10 +159,10 @@ function Landing(props) {
 
 
   useEffect(()=>{
-    console.log('this run fa', load)
+    //console.log('this run fa', load)
     load &&
     Authenticate(action,actionsParam,((err,res)=>{
-        console.log(action,res)
+      //  console.log(action,res)
         setBusy(false)
         if(err){
           setErrors({

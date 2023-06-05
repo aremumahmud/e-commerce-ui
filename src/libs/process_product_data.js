@@ -1,5 +1,5 @@
 function process_data(data) {
-    console.log(data, 'll')
+    //console.log(data, 'll')
     return data.data.map(x => helper(x)).flat(1)
 
 }

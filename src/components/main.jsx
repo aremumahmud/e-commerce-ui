@@ -58,8 +58,8 @@ function Main({
   useEffect(()=>{
     load &&
       load_products((err,res)=>{
-        console.log(res , 'lk')
-        console.log(err,',lhjgz,mb')
+       // console.log(res , 'lk')
+        //console.log(err,',lhjgz,mb')
           if(err) return  setViewStatus1('flex')
           setLoad(false)
           res.length && setData(res)
@@ -68,10 +68,10 @@ function Main({
   useEffect(()=>{
     load1 && 
     getUserIP().then(res=>{
-      console.log(res)
+     // console.log(res)
       let data2  = changeCurrency(data, currencyTab[res]?res:'USD')  
      // console.log(data2,'jayz')
-     console.log(isNaN(data2[0][0].price))
+    // console.log(isNaN(data2[0][0].price))
       if(isNaN(data2[0][0].price)){
         return
       }

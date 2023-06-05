@@ -65,7 +65,7 @@ function Product({setCart,cart,setPage,info,setProduct,symbol}) {
                     <p>{Math.floor(Math.random()*200)+200}</p>
                   </div>
                   <div className="btn" onClick={()=>onclick({currency:info.currentCurrency,image:info.image,_id:info._id,name:info.name,price:info.price})}>
-                  {console.log(info.currentCurrency)}
+                  {/* {console.log(info.currentCurrency)} */}
                     {
                       load?
                     <div className="loader"></div>

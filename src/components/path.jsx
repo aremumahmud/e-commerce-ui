@@ -1,10 +1,10 @@
 import '../css/path.css'
 
 function Path({data,setPage}){
-console.log(setPage)
+//console.log(setPage)
     let count = 0
     let changePage = (e)=>{
-        console.log(e)
+        //console.log(e)
        setPage(e)
     }
 

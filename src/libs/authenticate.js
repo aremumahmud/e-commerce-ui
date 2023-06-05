@@ -1,5 +1,5 @@
 function Authenticate(action, options = {}, callback) {
-    console.log('hdsbuyxhzjmn')
+    //console.log('hdsbuyxhzjmn')
     fetch(action, {
         method: 'POST',
         credentials: 'include',
@@ -17,7 +17,7 @@ function Authenticate(action, options = {}, callback) {
     }).then(res => {
         return res.json()
     }).then(res => {
-        console.log(res)
+        //console.log(res)
 
         if (!res.error || res.auth) {
             localStorage.setItem('TokenID', res.user.token)
@@ -40,7 +40,7 @@ function Authenticate(action, options = {}, callback) {
 
 
     }).catch(e => {
-        console.log('e', e)
+        // console.log('e', e)
         callback && callback({
             success: false,
             reason: 'an unexpected error happened'

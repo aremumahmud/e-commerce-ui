@@ -32,7 +32,7 @@ function CartItem({info, removeFromCart,addFromCart,symbol}) {
             </div>
           </div>
       </div>
-      <div className="price">{console.log(info.currency,'laugh')}
+      <div className="price">
         <p>{symbol}{+((info.price*currencyTab[info.currency||'NGN'].price_in_naira)/symbolTab[symbol]).toFixed(2)}</p>
       </div>
     </div>

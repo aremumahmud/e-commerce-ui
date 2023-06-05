@@ -1,7 +1,7 @@
 import pic from './uri'
 
 export default function send_locked_to_be_product(body, price, user_data, currency, cb) {
-    console.log(price)
+    // console.log(price)
     if (!(user_data && price)) return cb && cb({
         msg: 'Please fill all fields',
         error: true

@@ -10,7 +10,7 @@ import { useState } from "react";
 
 function ProductMain({setCart , setPage,datar, productData,symbol}) {
  //console.log(data,'rr') 
- console.log(datar)
+ //console.log(datar)
  let [data , setData] = useState(datar)
  let [currMain, setMain] = useState(data.image)
   let inventory = data.quantity

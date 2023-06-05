@@ -1,6 +1,6 @@
 import pic from './uri'
 let upload = (formID, cb, ) => {
-    console.log('jknhzxn ')
+    //console.log('jknhzxn ')
     const formElem = document.getElementById(formID)
 
     fetch(pic.pic_uri, {
@@ -10,10 +10,10 @@ let upload = (formID, cb, ) => {
         return res.json();
     }).then(res => {
 
-        console.log(res)
+        // console.log(res)
         cb && cb(null, res)
     }).catch(err => {
-        console.log(err, 'djihlndku.,jm')
+        // console.log(err, 'djihlndku.,jm')
         cb && cb(err)
     })
 

@@ -23,7 +23,7 @@ function Dashboard({setPage , setViewData , setViewStatus}){
                 setOrder2(arrayToObject(data.data.orders))
             }
            
-            console.log(data)
+            //console.log(data)
            setLoad(false)
         })
     })
