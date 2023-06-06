@@ -30,7 +30,8 @@ function Main({
   cart_no,
   removeFromCart,
   addFromCart,
-  cleanCart
+  cleanCart,
+  removeTotally
 
 }) {
   let [product , setProduct] = useState({})
@@ -109,7 +110,7 @@ let [filter , setFilter] = useState('all')
       }
       
       {
-        page === 'cart' && <Cart symbol={currency} addFromCart={addFromCart} removeFromCart={removeFromCart} setPage={setPage} data={cart}/>
+        page === 'cart' && <Cart removeTotally={removeTotally} symbol={currency} addFromCart={addFromCart} removeFromCart={removeFromCart} setPage={setPage} data={cart}/>
       }
 
       {

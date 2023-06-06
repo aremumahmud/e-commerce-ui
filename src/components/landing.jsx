@@ -137,7 +137,14 @@ function Landing(props) {
          //console.log(cart)
       };
 
-      
+      let remove_totally = (id , qty)=>{
+        delete cart[id]
+        setcart(cart)
+        let no = cart_no - qty
+        setCartno(no)
+        localStorage.setItem('cart',JSON.stringify(cart))
+        localStorage.setItem('no' , no)
+      }
 
   let [isAuthenticated , authenticate] = useState(localStorage.getItem('auth')?true:false)
   let [action , setAction] = useState(config.loginURI)
@@ -221,7 +228,8 @@ function Landing(props) {
           cart_no={cart_no}
           removeFromCart={removeFromCart}
           addFromCart={addFromCart}
-          cleanCart={cleanCart}/>
+          cleanCart={cleanCart}
+          removeTotally={remove_totally}/>
           </>
           
         }>

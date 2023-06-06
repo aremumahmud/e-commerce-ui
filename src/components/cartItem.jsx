@@ -2,7 +2,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import "../css/cartItem.css";
 import currencyTab, { symbolTab } from "../config/currency";
 
-function CartItem({info, removeFromCart,addFromCart,symbol}) {
+function CartItem({info, removeFromCart,addFromCart,symbol, removeTotally}) {
   return (
     <>    <div className="cartItem">
       {/* <div className="checkBox little">
@@ -26,7 +26,10 @@ function CartItem({info, removeFromCart,addFromCart,symbol}) {
               <p>{info.quantity_for_cart}</p>
               <p onClick={()=>addFromCart(info._id, info.quantity)}>+</p>
             </div>
-            <div className="inventory">
+            <div onClick={()=>{
+              let conf =confirm('Do you want to remove this Item from your cart?')
+              conf && removeTotally(info._id ,info.quantity_for_cart )
+            }} className="inventory">
                 <AiOutlineDelete />
                 <p>remove</p>
             </div>
