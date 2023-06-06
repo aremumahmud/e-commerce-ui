@@ -27,7 +27,7 @@ function CartItem({info, removeFromCart,addFromCart,symbol, removeTotally}) {
               <p onClick={()=>addFromCart(info._id, info.quantity)}>+</p>
             </div>
             <div onClick={()=>{
-              let conf =confirm('Do you want to remove this Item from your cart?')
+              let conf = window.confirm('Do you want to remove this Item from your cart?')
               conf && removeTotally(info._id ,info.quantity_for_cart )
             }} className="inventory">
                 <AiOutlineDelete />
