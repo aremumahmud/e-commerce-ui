@@ -40,7 +40,7 @@ function Authenticate(action, options = {}, callback) {
 
 
     }).catch(e => {
-        // console.log('e', e)
+        console.log('e', e)
         callback && callback({
             success: false,
             reason: 'an unexpected error happened'
