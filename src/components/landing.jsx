@@ -169,7 +169,7 @@ function Landing(props) {
     //console.log('this run fa', load)
     load &&
     Authenticate(action,actionsParam,((err,res)=>{
-      //  console.log(action,res)
+      console.log(err)
         setBusy(false)
         if(err){
           setErrors({
