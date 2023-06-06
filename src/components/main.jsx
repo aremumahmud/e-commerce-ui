@@ -55,10 +55,11 @@ function Main({
  let [ViewStatus , setViewStatus] = useState('none')
  let [ViewStatus1 , setViewStatus1] = useState('none')
 let [filter , setFilter] = useState('all')
-  useEffect(()=>{
+  useEffect(()=>{ 
+    console.log('lk')
     load &&
       load_products(filter ,(err,res)=>{
-       // console.log(res , 'lk')
+       
         //console.log(err,',lhjgz,mb')
           if(err) return  setViewStatus1('flex')
           setLoad(false)
@@ -96,7 +97,7 @@ let [filter , setFilter] = useState('all')
       
      
       {
-        page === 'home' && <Home setFilter={setFilter} symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
+        page === 'home' && <Home setLoad={setLoad} setFilter={setFilter} symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
       }
 
       {

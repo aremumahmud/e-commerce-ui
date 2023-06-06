@@ -1,11 +1,12 @@
 import { AiFillStar } from "react-icons/ai";
 import "../css/filter.css";
 
-function Filter({setFilter}) {
+function Filter({setFilter , setLoad}) {
 
   let change = e=>{
     var select = e.target;
     var value = select.options[select.selectedIndex].value;
+    setLoad(true)
     setFilter(value)
   }
   return (
