@@ -22,7 +22,7 @@ let placeholder = (x,y) => {
 }
 //define states of the pics
 let submit_form = ()=>{
-let valid = validate(('1,2,3,4,5,6,7,8').split(','))
+let valid = validate(('1,2,3,4,5,6,7,8,9').split(','))
 
 
     if(valid.length>0){
@@ -96,6 +96,7 @@ function AddProducts (){
                     <input type="text" placeholder='proucts description' name='product_description' id='2'/><br />
                     <input type="number" placeholder='product price' name='product_price' id='3'/><br />
                     <input type="number" placeholder='product discount' name='product_discount' id='4'/>
+                    <input type="number" placeholder='category' name='category' id='9'/>
                     <input type="hidden" name="v1" value={one2} id='5'/>
                     <input type="hidden" name="v2" value={two2} id='6'/>
                     <input type="hidden" name="v3" value={three2} id='7'/>

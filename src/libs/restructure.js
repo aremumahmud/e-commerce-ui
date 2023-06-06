@@ -27,6 +27,7 @@ export default function generateProductStructure(options, variety) {
         description: options.product_description,
         price: options.product_price,
         discount: options.product_discount,
+        category: options.category,
         //varieties object
         varieties: variety.map(x => ({
             image: x.image,
