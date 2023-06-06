@@ -1,14 +1,21 @@
 import { AiFillStar } from "react-icons/ai";
 import "../css/filter.css";
 
-function Filter() {
+function Filter({setFilter}) {
+
+  let change = e=>{
+    var select = e.target;
+    var value = select.options[select.selectedIndex].value;
+    setFilter(value)
+  }
   return (
     <div className="filters">
       <div className="filter">
         <ul>
           <li className="ml-none">
-            <select name="" id="">
-                <option value="">Cap Type</option>
+            <select name="" id="" onChange={change}>
+                <option value="all">All</option>
+                <option value="caps-W-flower">caps with flower</option>
             </select>
           </li>
           <li  className="nonee">

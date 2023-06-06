@@ -2,8 +2,8 @@ import process_data from "./process_product_data"
 import d from "./test"
 import pic from "./uri"
 
-function load_products(cb) {
-    fetch(pic.get_products_uri).then(res => {
+function load_products(category, cb) {
+    fetch(pic.get_products_uri + '/' + (category ? category : 'all')).then(res => {
         return res.json()
     }).then(res => {
         // process_data

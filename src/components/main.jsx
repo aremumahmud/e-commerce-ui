@@ -54,17 +54,17 @@ function Main({
  let [ViewData , setViewData] = useState({})
  let [ViewStatus , setViewStatus] = useState('none')
  let [ViewStatus1 , setViewStatus1] = useState('none')
-
+let [filter , setFilter] = useState(null)
   useEffect(()=>{
     load &&
-      load_products((err,res)=>{
+      load_products(null ,(err,res)=>{
        // console.log(res , 'lk')
         //console.log(err,',lhjgz,mb')
           if(err) return  setViewStatus1('flex')
           setLoad(false)
           res.length && setData(res)
       })
-  },[])
+  },[filter])
   useEffect(()=>{
     load1 && 
     getUserIP().then(res=>{
@@ -96,7 +96,7 @@ function Main({
       
      
       {
-        page === 'home' && <Home symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
+        page === 'home' && <Home setFilter={setFilter} symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
       }
 
       {

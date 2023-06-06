@@ -5,13 +5,13 @@ import Pagination from "./pagination";
 import Products from "./products";
 
 
-function Home({setCart , setPage, cart, setProduct,data , symbol}) {
+function Home({setCart , setPage, cart, setProduct,data , symbol,setFilter}) {
 
 
   return (
     <>
       <Display />
-      <Filter /> 
+      <Filter setFilter={setFilter} /> 
       <p className="topic">Head Caps Recomended For You!</p>
       <Products symbol={symbol} setProduct={setProduct} cart={cart} setPage={setPage} setCart={setCart} data={data} />
       <Pagination />
