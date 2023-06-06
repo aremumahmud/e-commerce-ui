@@ -111,7 +111,7 @@ function ProductMain({setCart , setPage,datar, productData,symbol}) {
           </div>
 
           <div className="prices">
-            <p className="subTitle">{symbol}{data.price}.00 or {symbol}{Math.floor(data.price/6)+33}.99/month </p>
+            <p className="subTitle">{symbol}{data.price}.00 or {symbol}{Math.floor(data.price/6)}.99/month </p>
             <p className="descrpTitle">
               Buy and listen or pay for it for 6 months
             </p>
@@ -134,13 +134,13 @@ function ProductMain({setCart , setPage,datar, productData,symbol}) {
               <p>{qty}</p>
               <p onClick={()=>increase()}>+</p>
             </div>
-            <div className="inventory">
+            {/* <div className="inventory">
               <p>
                 {" "}
                 Only <span className="orange">{data.quantity} items left!</span>
               </p>
-              <p>Dont miss it</p>
-            </div>
+              <p>Dont miss it</p> */}
+            {/* </div> */}
           </div>
           <div className="ctas">
             <div className="btn active" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity);setPage('checkout')}}>Buy now</div>

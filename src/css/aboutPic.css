@@ -1,0 +1,73 @@
+.card {
+    width: 190px;
+    height: 254px;
+    background: rgba(211, 211, 211, 0.199);
+    position: absolute;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+    padding: 0% !important;
+}
+
+#c1 {
+    background: linear-gradient(90deg, rgba(55, 37, 27, 1) 0%, rgba(140, 113, 86, 1) 35%, rgba(200, 145, 125, 1) 100%);
+}
+
+#c2 {
+    background: linear-gradient(90deg, rgba(55, 37, 27, 1) 0%, rgba(140, 113, 86, 1) 35%, rgba(200, 145, 125, 1) 100%);
+}
+
+#c3 {
+    background: linear-gradient(90deg, rgba(55, 37, 27, 1) 0%, rgba(140, 113, 86, 1) 35%, rgba(200, 145, 125, 1) 100%);
+}
+
+#c4 {
+    background: linear-gradient(90deg, rgba(55, 37, 27, 1) 0%, rgba(140, 113, 86, 1) 35%, rgba(200, 145, 125, 1) 100%);
+}
+
+.main #c1 {
+    transform: translateX(-100px) rotate(-40deg);
+}
+
+.main #c2 {
+    transform: translateX(-50px) rotate(-30deg);
+}
+
+.main #c3 {
+    transform: translateX(0) rotate(-20deg);
+}
+
+.main #c4 {
+    transform: translateX(50px) rotate(-10deg);
+}
+
+#c1:hover {
+    transform: translateX(-150px) rotate(0deg) !important;
+}
+
+#c2:hover {
+    transform: translateX(-100px) rotate(0deg) !important;
+}
+
+#c3:hover {
+    transform: translateX(-50px) rotate(0deg) !important;
+}
+
+#c4:hover {
+    transform: translateX(50px) rotate(0deg) !important;
+}
+
+.main {
+    border: 1px solid;
+    display: grid;
+    height: 10vmax;
+    width: 250px;
+    place-items: center;
+    padding: 100px;
+}
+
+.img {
+    width: 100% !important;
+    height: 100%;
+    border-radius: 10px;
+}

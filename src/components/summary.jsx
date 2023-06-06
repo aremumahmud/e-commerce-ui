@@ -4,7 +4,7 @@ import Calculation from "./calculations";
 import manageChecked from '../libs/manageChecked'
 import currencyTab, { nameTab } from "../config/currency";
 
-function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol , setCurrency}) {
+function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol , setCurrency ,setPage}) {
  let change= (e)=>{
   manageChecked(['USD','EUR','GBP','NGN'],e.target.id)
   setCurrency(currencyTab[e.target.id].symbol)
@@ -80,7 +80,16 @@ function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol , set
       <br /><br />
       <p className="topic">Total Debit Amount</p>
       <Calculation symbol={symbol} price={price} />
-      <div className="btn" onClick={()=>{setBusy(true);lockProduct()}}>
+      <div className="btn"  onClick={()=>{
+            if(localStorage.getItem('TokenID')){
+              setBusy(true);lockProduct()
+              //Object.keys(data).length !== 0 && setPage('checkout')
+              return
+            }
+
+            setPage('users/login',false)
+         
+          }}>
         {
           busy ? <div className="loader"></div>:`Pay ${symbol + +price.toFixed(2)}`
         }

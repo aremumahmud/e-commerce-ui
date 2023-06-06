@@ -1,3 +1,4 @@
+import { AiFillFacebook, AiFillInstagram, AiFillLinkedin, AiFillTwitterSquare, AiOutlineFacebook, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineMail, AiOutlineTwitter, AiOutlineWhatsApp } from 'react-icons/ai'
 import '../css/footer.css'
 
 function Footer (){
@@ -10,12 +11,12 @@ function Footer (){
             </div>
             <div className="links">
                 <ul>
-                    <li>Overview</li>
-                    <li>Products</li>
-                    <li>Pricing</li>
-                    <li>Careers</li>
-                    <li>Help</li>
-                    <li>Privacy</li>
+                    <li><a href="https://www.instagram.com/glitzabellelogistics/" target="_blank"><AiOutlineInstagram size={30} /></a></li>
+                    <li><a href="https://twitter.com/glitzlogistics" target="_blank"><AiOutlineTwitter  size={30}/></a></li>
+                    <li><a href="https://www.facebook.com/Glitzabelleworld" target="_blank"><AiOutlineFacebook  size={30}/></a></li>
+                    <li><a href="https://www.linkedin.com/in/bashirah-olawuyi-67778a1aa/" target="_blank"><AiOutlineLinkedin  size={30}/></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=2348032403003" target="_blank"><AiOutlineWhatsApp  size={30}/></a></li>
+                    <li> <a href="mailto:glitzabelleworld@gmail.com"><AiOutlineMail  size={30}/></a></li>
                 </ul>
             </div>
             <div className="other">

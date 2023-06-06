@@ -29,6 +29,7 @@ function Checkout({setCurrency, setPage , cart ,symbol}) {
       if(data.login == false){
         return window.open('/users/signup')
       }
+      if(!data.payment_uri) return alert('sorry something unexpected happened')
       window.open(data.payment_uri)
     // console.log(JSON.parse(resp))
       
@@ -72,7 +73,7 @@ function Checkout({setCurrency, setPage , cart ,symbol}) {
         <div className="two" style={{
           display : pace === 0? "block" : 'none'
         }}>
-          <Summary setCurrency={setCurrency}  symbol={symbol}  busy={busy} setBusy={setBusy}  pace={pace} setPace={setPace}  lockProduct={lockProduct} price={price}/>
+          <Summary setPage={setPage} setCurrency={setCurrency}  symbol={symbol}  busy={busy} setBusy={setBusy}  pace={pace} setPace={setPace}  lockProduct={lockProduct} price={price}/>
         </div>
       </div>
     </>

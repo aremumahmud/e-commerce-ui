@@ -5,7 +5,7 @@ function Display(){
         <div className="display">
            <div className="content">
             <p className='title'>
-                Grab Upto 50% Off On Selected Headphone
+                Grab Upto 50% Off On Selected Wears
             </p>
             <div className="btn">
                 <p>Buy Now</p>

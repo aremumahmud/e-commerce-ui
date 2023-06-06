@@ -1,4 +1,5 @@
 import "../css/about.css";
+import AboutPic from "./about_pic";
 
 function About({setPage}) {
   return (
@@ -6,13 +7,12 @@ function About({setPage}) {
       <div className="descriptionSection">
         <p className="title">About Shopcart</p>
         <p className="description">
-          Welcome to our e-commerce website selling female caps! We offer a wide
-          range of fashionable and comfortable caps for women made from
-          high-quality materials. Our collection includes various styles,
-          colors, and designs to suit your taste and personality. We provide a
-          seamless shopping experience, secure payment options, and fast
-          delivery services. Check back frequently for new arrivals and thank
-          you for choosing us!
+        Explore our premier online boutique, catering exclusively to women's fashion! Discover an exquisite 
+        array of stylish and comfortable clothing items, meticulously curated from top-notch materials. From trendy 
+        tops to chic dresses, we offer a diverse range of designs, colors, and sizes to suit your individual style and 
+        preferences. Experience a seamless shopping journey, secured payments, and expedited delivery services. Stay
+         ahead of the fashion curve with our frequent new arrivals.
+         Thank you for choosing us as your ultimate destination for all your female wear needs!
         </p>
         <div className="cta">
           <div className="btn active" onClick={()=>setPage('users/login')}>Log in</div>
@@ -20,7 +20,8 @@ function About({setPage}) {
         </div>
       </div>
       <div className="imageSection">
-        <img src="/imgs/51+Ev5UmxvL._AC_UL320_-removebg-preview (1).png" alt="" />
+        {/* <img src="/imgs/51+Ev5UmxvL._AC_UL320_-removebg-preview (1).png" alt="" /> */}
+        <AboutPic />
       </div>
     </div>
   );

@@ -57,3 +57,7 @@ footer p {
 .copyWright {
     font-weight: 600;
 }
+
+.links a {
+    color: black;
+}
