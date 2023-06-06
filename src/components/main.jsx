@@ -54,10 +54,10 @@ function Main({
  let [ViewData , setViewData] = useState({})
  let [ViewStatus , setViewStatus] = useState('none')
  let [ViewStatus1 , setViewStatus1] = useState('none')
-let [filter , setFilter] = useState(null)
+let [filter , setFilter] = useState('all')
   useEffect(()=>{
     load &&
-      load_products(null ,(err,res)=>{
+      load_products(filter ,(err,res)=>{
        // console.log(res , 'lk')
         //console.log(err,',lhjgz,mb')
           if(err) return  setViewStatus1('flex')

@@ -3,7 +3,7 @@ import d from "./test"
 import pic from "./uri"
 
 function load_products(category, cb) {
-    fetch(pic.get_products_uri + '/' + (category ? category : 'all')).then(res => {
+    fetch(pic.get_products_uri + '/' + category).then(res => {
         return res.json()
     }).then(res => {
         // process_data
