@@ -20,7 +20,7 @@ function Authenticate(action, options = {}, callback) {
         console.log(res)
 
         if (!res.error || res.auth) {
-            res.user.token && localStorage.setItem('TokenID', res.user.token)
+            res.useren && localStorage.setItem('TokenID', res.user.token)
             callback && callback(null, {
                 success: true
             })
