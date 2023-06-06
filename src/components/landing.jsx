@@ -187,7 +187,11 @@ function Landing(props) {
           authenticate(true)
           localStorage.setItem('auth',', sjkzn jckmnsd zjk')
         //  return getDoc('login2').click()
-           return window.open("/"+(localStorage.getItem('page')||'home'), '_self');
+        let page = localStorage.getItem('page')
+        if(page==='users/signup' || page==='users/signin' || !page){
+          page = 'home'
+        }
+           return window.open("/"+(page), '_self');
           }else{
             setErrors({
               color:'green',
