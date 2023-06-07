@@ -14,12 +14,14 @@
 .logo p {
     /* //  margin-top: 20px; */
     font-weight: 900;
-    font-size: 35px;
+    font-size: 30px;
     text-shadow: -5px 1px 9px rgba(0, 0, 0, 0.6);
 }
 
 .logo span {
     color: #004225;
+    font-weight: 900;
+    font-size: 30px;
     text-shadow: -5px 1px 9px rgba(0, 66, 37, 0.6);
 }
 

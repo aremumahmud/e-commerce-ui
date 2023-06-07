@@ -5,10 +5,9 @@ function Footer (){
     return (
         <footer>
             <hr />
-            <div className="logo">
-            
-                <p>Shopcart</p>
-            </div>
+            <div class="logo">
+            <p>Glitz<span>abelle</span></p>
+        </div>
             <div className="links">
                 <ul>
                     <li><a href="https://www.instagram.com/glitzabellelogistics/" target="_blank"><AiOutlineInstagram size={30} /></a></li>
