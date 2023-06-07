@@ -65,6 +65,7 @@ function Login({error,setAction,URIs, setParams ,busy,setLoad,setBusy}){
             <div className='lit'>
                 <div className="titles">
                     <p className="top">Welcome Back!</p>
+                    <br />
                     <p className="sub">Welcome back to our online store, where female warriors reign supreme! Explore empowering wears for the modern warrior woman and unleash your inner strength in style.</p>
                 </div>
                 <form  className="form">

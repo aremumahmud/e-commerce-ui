@@ -47,8 +47,8 @@ body {
 }
 
 .titles {
-    padding: 10px;
-    line-height: 3.5em;
+    padding: 15px;
+    /* line-height: 3.5em; */
 }
 
 .titles .top {
