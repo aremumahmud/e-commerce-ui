@@ -111,12 +111,12 @@ function Login({error,setAction,URIs, setParams ,busy,setLoad,setBusy}){
                     </div>
                 </form>
             </div>
-            <div className="split_or">
+            {/* <div className="split_or">
                 <div className="line"></div>
                 <p>or</p>
                 <div className="line"></div>
-            </div>
-            <div className="social-logins">
+            </div> */}
+            {/* <div className="social-logins">
                 <div className="social">
                     <AiFillGoogleCircle style={{fontSize:'30px' ,color:'yellowgreen'}} /> 
                     <p>Google</p>
@@ -125,7 +125,7 @@ function Login({error,setAction,URIs, setParams ,busy,setLoad,setBusy}){
                     <AiFillFacebook style={{fontSize:'30px', color:'#0000ff'}} />
                     <p>Facebook</p>
                 </div>
-            </div>
+            </div> */}
             <div className="otherOptions">
                 <p>{signup?'Have an account?':'Dont have an account?'}<a id='login' onClick={()=>{
                    if(signup){
