@@ -65,7 +65,7 @@ function Login({error,setAction,URIs, setParams ,busy,setLoad,setBusy}){
             <div className='lit'>
                 <div className="titles">
                     <p className="top">Welcome Back!</p>
-                    <p className="sub">Start Managing your errors faster and better</p>
+                    <p className="sub">Welcome back to our online store, where female warriors reign supreme! Explore empowering wears for the modern warrior woman and unleash your inner strength in style.</p>
                 </div>
                 <form  className="form">
                     {error && <p className='error_msg' style={{color:error.color}}>{error.msg}</p>}
