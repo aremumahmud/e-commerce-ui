@@ -14,10 +14,11 @@ import { nameTab } from "../config/currency";
 function Checkout({setCurrency, setPage , cart ,symbol}) {
   let [user_data, set_user_data] = useState(null)
   let [busy , setBusy] = useState(false)
+  let [URIState , setURI] = useState('upload_locked_product_uri')
   let price = calculate( Object.keys(cart).map(x=>cart[x]),symbol)
 
   let lockProduct = ()=>{
-    send_locked_to_be_product(cart , price, user_data ,nameTab[symbol] , (err,resp)=>{
+    send_locked_to_be_product(URIState,cart , price, user_data ,nameTab[symbol] , (err,resp)=>{
       setBusy(false)
       if(err){
        
@@ -73,7 +74,7 @@ function Checkout({setCurrency, setPage , cart ,symbol}) {
         <div className="two" style={{
           display : pace === 0? "block" : 'none'
         }}>
-          <Summary setPage={setPage} setCurrency={setCurrency}  symbol={symbol}  busy={busy} setBusy={setBusy}  pace={pace} setPace={setPace}  lockProduct={lockProduct} price={price}/>
+          <Summary setURI={setURI} setPage={setPage} setCurrency={setCurrency}  symbol={symbol}  busy={busy} setBusy={setBusy}  pace={pace} setPace={setPace}  lockProduct={lockProduct} price={price}/>
         </div>
       </div>
     </>

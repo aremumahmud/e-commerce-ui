@@ -4,11 +4,20 @@ import Calculation from "./calculations";
 import manageChecked from '../libs/manageChecked'
 import currencyTab, { nameTab } from "../config/currency";
 
-function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol , setCurrency ,setPage}) {
+function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol , setCurrency ,setPage , setURI}) {
  let change= (e)=>{
   manageChecked(['USD','EUR','GBP','NGN'],e.target.id)
   setCurrency(currencyTab[e.target.id].symbol)
  }
+
+let change2 = (e)=>{
+  let state = e.target.checked
+  if(state){
+    return setURI('upload_locked_product_uri_guest')
+  }
+  setURI('upload_locked_product_uri')
+}
+
  useEffect(()=>{
   document.getElementById(nameTab[symbol]).checked = true
   manageChecked(['USD','EUR','GBP','NGN'],nameTab[symbol])
@@ -80,6 +89,11 @@ function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol , set
       <br /><br />
       <p className="topic">Total Debit Amount</p>
       <Calculation symbol={symbol} price={price} />
+      <br />
+      <div className="as_a_guest">
+        <input type="checkbox" name="" id="" onChange={change2} />
+        BUY AS A GUEST
+      </div>
       <div className="btn"  onClick={()=>{
             if(!localStorage.getItem('TokenID')){
               setBusy(true);lockProduct()

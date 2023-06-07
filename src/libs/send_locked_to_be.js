@@ -1,12 +1,13 @@
 import pic from './uri'
 
-export default function send_locked_to_be_product(body, price, user_data, currency, cb) {
+export default function send_locked_to_be_product(uri, body, price, user_data, currency, cb) {
     // console.log(price)
     if (!(user_data && price)) return cb && cb({
         msg: 'Please fill all fields',
         error: true
     })
-    fetch(pic.upload_locked_product_uri_guest, {
+    let use = pic[uri] || pic['upload_locked_product_uri_guest']
+    fetch(use, {
         method: 'POST',
         credentials: 'include',
         mode: 'cors',
