@@ -6,7 +6,7 @@ export default function send_locked_to_be_product(body, price, user_data, curren
         msg: 'Please fill all fields',
         error: true
     })
-    fetch(pic.upload_locked_product_uri, {
+    fetch(pic.upload_locked_product_uri_guest, {
         method: 'POST',
         credentials: 'include',
         mode: 'cors',

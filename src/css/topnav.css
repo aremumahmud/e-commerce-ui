@@ -11,12 +11,26 @@
     z-index: 1;
 }
 
+.logo {
+    /* //  margin-top: 20px; */
+    font-weight: 900;
+    font-size: 30px;
+    text-shadow: -5px 1px 9px rgba(0, 0, 0, 0.6);
+}
+
+.logo span {
+    color: #004225;
+    text-shadow: -5px 1px 9px rgba(0, 66, 37, 0.6);
+}
+
+
+/* 
 .logo p {
     font-weight: 800;
     font-size: 35px;
     color: #004225;
     ;
-}
+} */
 
 .navigations ul li {
     list-style: none;

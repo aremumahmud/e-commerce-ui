@@ -81,7 +81,7 @@ function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol , set
       <p className="topic">Total Debit Amount</p>
       <Calculation symbol={symbol} price={price} />
       <div className="btn"  onClick={()=>{
-            if(localStorage.getItem('TokenID')){
+            if(!localStorage.getItem('TokenID')){
               setBusy(true);lockProduct()
               //Object.keys(data).length !== 0 && setPage('checkout')
               return

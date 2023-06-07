@@ -27,10 +27,10 @@ function Checkout({setCurrency, setPage , cart ,symbol}) {
       let data  = JSON.parse(resp)
      // console.log(resp,err)
       if(data.login == false){
-        return window.open('/users/signup')
+        return window.open('/users/signup' ,'_self')
       }
       if(!data.payment_uri) return alert('sorry something unexpected happened')
-      window.open(data.payment_uri)
+      window.open(data.payment_uri,'_self')
     // console.log(JSON.parse(resp))
       
     })

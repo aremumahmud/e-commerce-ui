@@ -5,9 +5,9 @@ function TopNav({cart,setPage}){
     return (
         <div className="wrap">
           <div className="topNav">
-            <div className="logo">
-                <p>Shopcart</p>
-            </div>
+          <div class="logo">
+            <p>Glitz<span>abelle</span></p>
+        </div>
             <div className="navigations">
                 <ul>
                     <li>
