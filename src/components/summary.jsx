@@ -95,13 +95,13 @@ let change2 = (e)=>{
         BUY AS A GUEST
       </div>
       <div className="btn"  onClick={()=>{
-            if(!localStorage.getItem('TokenID')){
+            // if(!localStorage.getItem('TokenID')){
               setBusy(true);lockProduct()
               //Object.keys(data).length !== 0 && setPage('checkout')
-              return
-            }
+            //   return
+            // }
 
-            setPage('users/login',false)
+            // setPage('users/login',false)
          
           }}>
         {
