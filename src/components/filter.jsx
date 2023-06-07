@@ -44,7 +44,7 @@ function Filter({setFilter , setLoad}) {
                 <option value="">Offer</option>
             </select>
           </li>
-          <li>
+          <li  className="nonee">
             All Filters
             <AiFillStar />
           </li>
