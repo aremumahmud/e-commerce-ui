@@ -6,7 +6,7 @@ function Footer (){
         <footer>
             <hr />
             <div class="logo">
-            <p>Glitz<span>abelle</span></p>
+            <p>Glitz<span>abelle</span>label</p>
         </div>
             <div className="links">
                 <ul>

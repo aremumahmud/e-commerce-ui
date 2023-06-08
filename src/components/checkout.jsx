@@ -60,7 +60,7 @@ function Checkout({setCurrency, setPage , cart ,symbol}) {
           { name: "Cart", path: "cart" },
           { name: "Checkout", path: "checkout" },
         ]}
-      />
+      /> <br />
       <div className="split">
         <div className="one">
           <Review symbol={symbol} cart={cart}/>

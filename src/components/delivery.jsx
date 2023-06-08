@@ -5,7 +5,7 @@ function Delivery({valid,pace,setPace}) {
     <div className="delivery" style={{
       display : pace === 0? "block" : 'none'
     }}>
-      <p className="topic">Delivery Information</p>
+      <p className="topic nn">Delivery Information</p>
       <form id='form2134' className="delivery_form" action="">
         <div className="wrapInput">
           <p>First name<sup>*</sup></p> 

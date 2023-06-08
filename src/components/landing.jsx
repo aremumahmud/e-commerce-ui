@@ -222,10 +222,10 @@ function Landing(props) {
         <Routes>
           <Route path="/:paged" element={
           <>
-          {
+          {/* {
             page !=='login' && <div className="cont"> <Header /></div>
            
-          }
+          } */}
           <Main 
           page={page} 
           setPage1={setpage1}

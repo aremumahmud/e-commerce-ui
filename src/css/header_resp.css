@@ -41,7 +41,8 @@
     .topNav {
         position: absolute !important;
         width: 100%;
-        /* top: 0 !important; */
+        margin-top: 0 !important;
+        top: 0 !important;
     }
     .navigations {
         display: none;
@@ -69,7 +70,7 @@
         height: 200px !important;
     }
     .productInfo .name p {
-        font-size: large !important;
+        font-size: small !important;
     }
     .description {
         font-size: small !important;
@@ -142,6 +143,7 @@
     .stockImages .mainDisplay {
         width: 90% !important;
         height: 350px !important;
+        margin-top: 25px;
     }
     .varietyDisplay {
         height: 100px !important;
@@ -282,7 +284,7 @@
         margin-right: 0 !important;
     }
     .inputWrap {
-        height: 30px !important;
+        height: 35px !important;
     }
     .submit {
         height: 30px !important;
@@ -320,7 +322,7 @@
         width: 30px;
     }
     .filters {
-        flex-direction: column !important;
+        flex-direction: column-reverse !important;
         /* justify-content: left; */
         align-items: unset !important;
     }
@@ -340,5 +342,23 @@
         padding-bottom: 10px !important;
         border: none;
         outline: none;
+    }
+    .display {
+        display: none !important;
+    }
+    .logo p,
+    span {
+        font-size: 20px !important;
+    }
+    .path ul {
+        padding-top: 90px !important;
+        padding-bottom: 0px !important
+    }
+    .nn {
+        margin-bottom: 10px !important;
+        margin-top: 10px !important;
+    }
+    .qty {
+        font-size: smaller !important;
     }
 }
