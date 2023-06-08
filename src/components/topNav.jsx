@@ -6,7 +6,7 @@ function TopNav({cart,setPage}){
         <div className="wrap">
           <div className="topNav">
           <div class="logo">
-            <p>Glitz<span>abelle</span></p>
+            <p>Glitz<span>abellelabel</span></p>
         </div>
             <div className="navigations">
                 <ul>

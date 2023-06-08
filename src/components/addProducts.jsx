@@ -22,7 +22,7 @@ let placeholder = (x,y) => {
 }
 //define states of the pics
 let submit_form = ()=>{
-let valid = validate(('1,2,3,4,5,6,7,8,9').split(','))
+let valid = validate(('1,2,3,4,9').split(','))
 
 
     if(valid.length>0){
