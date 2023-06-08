@@ -28,7 +28,7 @@ function Delivery({valid,pace,setPace}) {
         </div>
 
         <div className="wrapInput">
-          <p> Zip Code<sup>*</sup></p>
+          <p> Zip Code</p>
           <input onChange={valid} type="text" name="zip_code" id="" placeholder="Type Here ..."  />
         </div>
 

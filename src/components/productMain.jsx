@@ -7,8 +7,9 @@ import {
 import Specs from "./specs";
 import Products from './products'
 import { useState } from "react";
+import currencyTab, { symbolTab } from "../config/currency";
 
-function ProductMain({setCart , setPage,datar, productData,symbol}) {
+function ProductMain({setCart , setPage,datar, productData,symbol, setViewStatus3, setCartData3,setProduct,cart}) {
  //console.log(data,'rr') 
  //console.log(datar)
  let [data , setData] = useState(datar)
@@ -111,7 +112,7 @@ function ProductMain({setCart , setPage,datar, productData,symbol}) {
           </div>
 
           <div className="prices">
-            <p className="subTitle">{symbol}{data.price}.00 or {symbol}{Math.floor(data.price/6)}.99/month </p>
+            <p className="subTitle">{symbol}{+((data.price*currencyTab[data.currency||'NGN'].price_in_naira)/symbolTab[symbol]).toFixed(2)}.00 or {symbol}{Math.floor(+((data.price*currencyTab[data.currency||'NGN'].price_in_naira)/symbolTab[symbol]).toFixed(2)/6)}.99/month </p>
             <p className="descrpTitle">
               Buy and listen or pay for it for 6 months
             </p>
@@ -144,7 +145,11 @@ function ProductMain({setCart , setPage,datar, productData,symbol}) {
           </div>
           <div className="ctas">
             <div className="btn active" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity);setPage('checkout')}}>Buy now</div>
-            <div className="btn" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity)}}>Add to Cart</div>
+            <div className="btn" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity,{
+              image:data.image,
+              price:data.price,
+              name:data.name
+            })}}>Add to Cart</div>
           </div>
           <div className="otherInfo">
             <div className="info">
@@ -177,7 +182,7 @@ function ProductMain({setCart , setPage,datar, productData,symbol}) {
         </div>
         <br /><br />
         <p className="topic">Similar Items You Might Like</p>
-        <Products symbol={symbol} data={[0,1,2,3].map(x=>productData[Math.floor(Math.random()*productData.length)])} />
+        <Products setProduct={setProduct}  cart={cart} setPage={setPage} setCart={setCart}   setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} data={[0,1,2,3].map(x=>productData[Math.floor(Math.random()*productData.length)])} />
         <br /><br />
       </div>
     </>

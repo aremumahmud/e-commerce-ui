@@ -18,6 +18,7 @@ import Modal from "./modal";
 import getUserIP from "../libs/geolocate";
 import changeCurrency from "../libs/changeCurrency"
 import currencyTab from "../config/currency";
+import CartModal from "./CartModalSucess";
 
 
 
@@ -31,7 +32,11 @@ function Main({
   removeFromCart,
   addFromCart,
   cleanCart,
-  removeTotally
+  removeTotally,
+  ViewStatus3 ,
+  setViewStatus3,
+  CartData3,
+  setCartData3
 
 }) {
   let [product , setProduct] = useState({})
@@ -55,6 +60,8 @@ function Main({
  let [ViewData , setViewData] = useState({})
  let [ViewStatus , setViewStatus] = useState('none')
  let [ViewStatus1 , setViewStatus1] = useState('none')
+//  let [ViewStatus3 , setViewStatus3] = useState('flex')
+//  let [CartData3 , setCartData3] = useState({})
 let [filter , setFilter] = useState('all')
   useEffect(()=>{ 
     console.log('lk')
@@ -87,6 +94,7 @@ let [filter , setFilter] = useState('all')
    <input type="hidden" onClick={()=>{
     setPage(localStorage.getItem('page') || 'home')
   }} />
+    <CartModal data={CartData3} display={ViewStatus3}  setViewStatus={setViewStatus3} />
     <Modal display={ViewStatus1} />
     <ViewModal data={ViewData} display={ViewStatus} setViewStatus={setViewStatus} />
    <div className="container">
@@ -98,11 +106,11 @@ let [filter , setFilter] = useState('all')
       
      
       {
-        page === 'home' && <Home setLoad={setLoad} setFilter={setFilter} symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
+        page === 'home' && <Home setViewStatus3={setViewStatus3} setCartData3={setCartData3} setLoad={setLoad} setFilter={setFilter} symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
       }
 
       {
-        page === 'product' && <AboutProduct symbol={currency} productData={data} product={product} setPage={setPage} setCart={setCart}  />
+        page === 'product' && <AboutProduct cart={cart} setProduct={setProduct} setViewStatus3={setViewStatus3} setCartData3={setCartData3}  symbol={currency} productData={data} product={product} setPage={setPage} setCart={setCart}  />
       }
 
       {

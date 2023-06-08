@@ -13,6 +13,8 @@ function Landing(props) {
   let [focus, setFocus] = useState({});
   let [page, setpage1] = useState("home");
   let [cart_no , setCartno] = useState(0)
+  let [ViewStatus3 , setViewStatus3] = useState('none')
+ let [CartData3 , setCartData3] = useState({})
 
   useEffect(()=>{
     
@@ -31,7 +33,7 @@ function Landing(props) {
     setCartno(0)
   }
 
-  let setCart = (x,n,qty) => {
+  let setCart = (x,n,qty,info) => {
 
   //first we clone the cart state
   let v_cart = {...cart}
@@ -72,6 +74,8 @@ function Landing(props) {
     setCartno(no)
     localStorage.setItem('cart',JSON.stringify(v_cart))
     localStorage.setItem('no' , no)
+    setCartData3(info)
+    setViewStatus3('flex')
      //console.log(cart)
   };
 
@@ -233,7 +237,11 @@ function Landing(props) {
           removeFromCart={removeFromCart}
           addFromCart={addFromCart}
           cleanCart={cleanCart}
-          removeTotally={remove_totally}/>
+          removeTotally={remove_totally}
+          ViewStatus3 ={ViewStatus3}
+          setViewStatus3={setViewStatus3}
+          CartData3={CartData3}
+          setCartData3={setCartData3}/>
           </>
           
         }>
@@ -247,6 +255,7 @@ function Landing(props) {
           busy={busy}
           setLoad={setLoad}
           setBusy={setBusy}
+          
           />}></Route>
         </Routes>
       </BrowserRouter>

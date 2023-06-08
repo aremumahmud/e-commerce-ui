@@ -22,3 +22,26 @@ input[type=radio] {
 .coverIt {
     background: white !important
 }
+
+.y23 {
+    /* width: 100% !important; */
+    padding: 4px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #cccccc59;
+    height: 20vh;
+    border-radius: 10px;
+    width: 16vw;
+    /* margin-right: 20px; */
+    padding: 40px;
+}
+
+.y23 img {
+    height: 100%;
+    width: 100%;
+}
+
+.align {
+    align-items: center;
+}

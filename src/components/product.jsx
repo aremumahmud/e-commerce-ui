@@ -1,8 +1,9 @@
 import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
 import "../css/products.css";
 import { useState } from "react";
+import currencyTab, { symbolTab } from "../config/currency";
 
-function Product({setCart,cart,setPage,info,setProduct,symbol}) {
+function Product({setCart,cart,setPage,info,setProduct,symbol ,setViewStatus3, setCartData3}) {
  // console.log("/imgs/"+info+".png")
   let [load , setLoad] = useState(false)
   let onclick =(n)=>{
@@ -10,8 +11,9 @@ function Product({setCart,cart,setPage,info,setProduct,symbol}) {
      let timeout =  setTimeout(()=>{
         setLoad(false)
         
-        setCart([n],1,info.quantity)
-        
+        setCart([n],1,info.quantity,info)
+        //setCartData3(info)
+        //setViewStatus3(true)
         clearTimeout(timeout)
      },200)
 
@@ -35,8 +37,7 @@ function Product({setCart,cart,setPage,info,setProduct,symbol}) {
                   }} className="name">
                     <p>{info.name}</p>
                     <p>
-                      {symbol}
-                      {info.price}
+                    {symbol}{+((info.price*currencyTab[info.currency||'NGN'].price_in_naira)/symbolTab[symbol]).toFixed(2)}
                       <sup></sup>
                     </p>
                   </div>
