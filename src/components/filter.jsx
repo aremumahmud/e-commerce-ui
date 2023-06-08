@@ -1,7 +1,7 @@
 import { AiFillStar, AiOutlineSearch } from "react-icons/ai";
 import "../css/filter.css";
 
-function Filter({setFilter , setLoad}) {
+function Filter({setFilter , setLoad,categories}) {
 
   let change = e=>{
     var select = e.target;
@@ -16,7 +16,13 @@ function Filter({setFilter , setLoad}) {
           <li className="ml-none">
             <select name="" id="" onChange={change}>
                 <option value="all">All</option>
-                <option value="caps-W-flower">caps with flower</option>
+                {/* <option value="caps-W-flower">caps with flower</option> */}
+                {
+                  categories && categories.map(x=>{
+                    return <option value={x}>{x} 
+                    </option>;
+                  })
+                }
             </select>
           </li>
           <li  className="nonee">

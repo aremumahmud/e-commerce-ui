@@ -1,17 +1,25 @@
+import { useEffect, useState } from "react";
 import About from "./about";
 import Display from "./display";
 import Filter from "./filter";
 import Pagination from "./pagination";
 import Products from "./products";
+import fetch_categories from "../libs/get_category";
 
 
 function Home({setCart , setPage, cart, setProduct,data , symbol,setFilter ,setLoad}) {
 
-
+  let [categories, setCategories]= useState([])
+  useEffect(()=>{
+   fetch_categories((err,res)=>{
+    if(err) return
+    setCategories(res.data.data)
+   })
+  },[])
   return (
     <>
       <Display />
-      <Filter setLoad={setLoad} setFilter={setFilter} /> 
+      <Filter categories={categories} setLoad={setLoad} setFilter={setFilter} /> 
       <p className="topic">Head Caps Recomended For You!</p>
       <Products symbol={symbol} setProduct={setProduct} cart={cart} setPage={setPage} setCart={setCart} data={data} />
       <Pagination />
