@@ -1,4 +1,4 @@
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar, AiOutlineSearch } from "react-icons/ai";
 import "../css/filter.css";
 
 function Filter({setFilter , setLoad}) {
@@ -51,9 +51,10 @@ function Filter({setFilter , setLoad}) {
         </ul>
       </div>
       <div className="sortby">
-      <select name="" id="">
-                <option value="">Sort By</option>
-            </select>
+      <input type="text" name="" id="" placeholder="Search for a product"/>
+      <div className="btn">
+        <AiOutlineSearch size={20} />
+      </div>
       </div>
     </div>
   );
