@@ -132,7 +132,7 @@ function ForgotModal({display,close}) {
         {
             !done?<div class="actions1">
         
-          <div class="read" href="">
+          <div class="read re" href="">
             <input id='clearit' className='span' type="text" placeholder={placeholder} onChange={change}/>
           </div>
 
