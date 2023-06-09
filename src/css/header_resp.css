@@ -40,7 +40,7 @@
     }
     .topNav {
         position: absolute !important;
-        width: 100%;
+        width: 100% !important;
         margin-top: 0 !important;
         top: 0 !important;
         padding-top: 10px !important
@@ -361,7 +361,8 @@
     }
     .qty {
         font-size: smaller !important;
-        top: 2px !important;
+        top: 10px !important;
+        left: 94% !important;
     }
     .read .span {
         width: 100% !important;
