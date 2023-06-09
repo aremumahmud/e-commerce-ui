@@ -100,7 +100,10 @@ function AddProducts (){
                     <input type="text" placeholder='proucts description' name='product_description' id='2'/><br />
                     <input type="number" placeholder='product price' name='product_price' id='3'/><br />
                     <input type="number" placeholder='product discount' name='product_discount' id='4'/>
-                    <input type="text" placeholder='category' name='category' id='9'/>
+                    <input type="text" placeholder='category' name='category' id='9' onChange={(e)=>{
+                        let val = e.target.value
+                        e.target.value = val.trim()
+                    }}/>
                     <input type="hidden" name="v1" value={one2} id='5'/>
                     <input type="hidden" name="v2" value={two2} id='6'/>
                     <input type="hidden" name="v3" value={three2} id='7'/>
