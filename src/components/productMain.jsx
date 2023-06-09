@@ -182,7 +182,7 @@ function ProductMain({setCart , setPage,datar, productData,symbol, setViewStatus
         </div>
         <br /><br />
         <p className="topic">Similar Items You Might Like</p>
-        <Products setProduct={setProduct}  cart={cart} setPage={setPage} setCart={setCart}   setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} data={[0,1,2,3].map(x=>productData[Math.floor(Math.random()*productData.length)])} />
+        <Products setProduct={setData}  cart={cart} setPage={setPage} setCart={setCart}   setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} data={[0,1,2,3].map(x=>productData[Math.floor(Math.random()*productData.length)])} />
         <br /><br />
       </div>
     </>

@@ -43,7 +43,7 @@ function Product({setCart,cart,setPage,info,setProduct,symbol ,setViewStatus3, s
                   </div>
                   <p onClick={()=>setPage('product')} className="description">{info.description}</p>
                   <div className="rating" onClick={()=>{
-                    setPage('product')
+                    //setPage('product')
                     setProduct(info)
                   }}>
                     <ul>

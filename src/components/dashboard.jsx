@@ -36,7 +36,7 @@ function Dashboard({setPage , setViewData , setViewStatus}){
           { name: "Home", path: "home" },
           { name: "User Dashboard", path: "dash" },
         ]}
-      />
+      /><br /><br />
          <Dash refresh={refresh} loader={loader} setViewData={setViewData} setViewStatus={setViewStatus} orders={orders}/>
          <br /><br /><br />
         </>
