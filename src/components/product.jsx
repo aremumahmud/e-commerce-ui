@@ -3,7 +3,7 @@ import "../css/products.css";
 import { useState } from "react";
 import currencyTab, { symbolTab } from "../config/currency";
 
-function Product({setCart,cart,setPage,info,setProduct,symbol ,setViewStatus3, setCartData3}) {
+function Product({setMain,setCart,cart,setPage,info,setProduct,symbol ,setViewStatus3, setCartData3}) {
  // console.log("/imgs/"+info+".png")
   let [load , setLoad] = useState(false)
   let onclick =(n)=>{
@@ -24,6 +24,7 @@ function Product({setCart,cart,setPage,info,setProduct,symbol ,setViewStatus3, s
                 <div className="imageDisplay" onClick={()=>{
                     setPage('product')
                     setProduct(info)
+                    setMain && setMain(info.image)
                   }}>
                   <div className="heart">
                     <AiOutlineHeart />
@@ -41,10 +42,16 @@ function Product({setCart,cart,setPage,info,setProduct,symbol ,setViewStatus3, s
                       <sup></sup>
                     </p>
                   </div>
-                  <p onClick={()=>setPage('product')} className="description">{info.description}</p>
-                  <div className="rating" onClick={()=>{
-                    //setPage('product')
+                  <p onClick={()=>{
+                    setPage('product')
                     setProduct(info)
+                    setMain && setMain(info.image)
+                    
+                    }} className="description">{info.description}</p>
+                  <div className="rating" onClick={()=>{
+                    setPage('product')
+                    setProduct(info)
+                    setMain && setMain(info.image)
                   }}>
                     <ul>
                       <li>

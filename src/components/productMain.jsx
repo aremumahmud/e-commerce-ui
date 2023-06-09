@@ -144,7 +144,11 @@ function ProductMain({setCart , setPage,datar, productData,symbol, setViewStatus
             {/* </div> */}
           </div>
           <div className="ctas">
-            <div className="btn active" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity);setPage('checkout')}}>Buy now</div>
+            <div className="btn active" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity,{
+              image:data.image,
+              price:data.price,
+              name:data.name
+            });setPage('checkout')}}>Buy now</div>
             <div className="btn" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity,{
               image:data.image,
               price:data.price,
@@ -182,7 +186,7 @@ function ProductMain({setCart , setPage,datar, productData,symbol, setViewStatus
         </div>
         <br /><br />
         <p className="topic">Similar Items You Might Like</p>
-        <Products setProduct={setData}  cart={cart} setPage={setPage} setCart={setCart}   setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} data={[0,1,2,3].map(x=>productData[Math.floor(Math.random()*productData.length)])} />
+        <Products setMain={setMain} setProduct={setData}  cart={cart} setPage={setPage} setCart={setCart}   setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} data={[0,1,2,3].map(x=>productData[Math.floor(Math.random()*productData.length)])} />
         <br /><br />
       </div>
     </>
