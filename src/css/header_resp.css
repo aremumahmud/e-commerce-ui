@@ -43,6 +43,7 @@
         width: 100%;
         margin-top: 0 !important;
         top: 0 !important;
+        padding-top: 10px !important
     }
     .navigations {
         display: none;
