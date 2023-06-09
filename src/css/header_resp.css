@@ -361,6 +361,7 @@
     }
     .qty {
         font-size: smaller !important;
+        top: 2px !important;
     }
     .read .span {
         width: 100% !important;
