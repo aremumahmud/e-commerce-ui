@@ -5,7 +5,7 @@ import Tile from './tile'
 function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
     return(
         <div class="split_me1">
-    <div class="one_1">
+    {/* <div class="one_1">
         <div class="nav">
             <ul>
                 <li><AiOutlineUser className='icony' /></li>
@@ -13,7 +13,7 @@ function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
                 <li><AiOutlinePayCircle className='icony'  /></li>
             </ul>
         </div>
-    </div>
+    </div> */}
     <div class="one_2">
         <p class="header11">Orders</p>
         {

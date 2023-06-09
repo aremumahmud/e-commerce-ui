@@ -41,6 +41,15 @@ function Login({error,setAction,URIs, setParams ,busy,setLoad,setBusy}){
             password2:password
         })
     }
+    let [seen  , setSeen]= useState('password')
+
+    let see =()=>{
+        if(seen === 'text'){
+            setSeen('password')
+        }else{
+            setSeen('text')
+        }
+    }
     let [ViewStatus4 , setViewStatus4] = useState('none')
     return (
 
@@ -97,8 +106,8 @@ function Login({error,setAction,URIs, setParams ,busy,setLoad,setBusy}){
                         <div className="icon">
                             <AiOutlineKey /> 
                         </div>
-                        <input onChange={(e)=>changePassword(e.target.value)} type="password" className="input" placeholder='Password' />
-                        <div className="icon silent">
+                        <input onChange={(e)=>changePassword(e.target.value)} type={seen} className="input" placeholder='Password' />
+                        <div onClick={see} className="icon silent">
                             <AiOutlineEye />
                         </div>
                     </div>

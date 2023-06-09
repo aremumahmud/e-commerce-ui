@@ -102,7 +102,7 @@ let [filter , setFilter] = useState('all')
     <ViewModal data={ViewData} display={ViewStatus} setViewStatus={setViewStatus} />
    <div className="container">
       
-     <div className="coverIt"></div> 
+     {/* <div className="coverIt nonee"></div>  */}
       {
         page !== 'addP' && <div className="cont"><TopNav cart={cart_no} setPage={setPage}/></div> 
       }

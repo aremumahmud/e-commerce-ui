@@ -2,14 +2,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     padding: 10px;
-    width: 100%;
+    width: 90%;
     position: fixed;
-    top: 40px;
+    /* top: 40px; */
     background-color: white;
     z-index: 1;
     /* border: 1px solid; */
+    padding-top: 40px
 }
 
 .logo p {
@@ -82,8 +83,8 @@
 
 .qty {
     position: absolute;
-    top: 2px;
-    left: 93%;
+    top: 40px;
+    left: 98%;
     padding: 6px;
     background-color: #004225;
     border-radius: 50%;

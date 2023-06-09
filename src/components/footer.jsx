@@ -6,7 +6,8 @@ function Footer (){
         <footer>
             <hr />
             <div class="logo">
-            <p>Glitz<span>abelle</span>label</p>
+            {/* <p>Glitz<span>abellelabel</span></p> */}
+            <img src="\imgs\67957883-348A-45E4-BD1E-E956B290647F~2.jpg" alt="" />
         </div>
             <div className="links">
                 <ul>
@@ -21,7 +22,7 @@ function Footer (){
             <div className="other">
                 <div className="email">
                     <input type="email" placeholder='Email Address' />
-                    <div className="btn">Suscribe</div>
+                    <div className="btn">Subscribe</div>
                 </div>
                 <div className="copyWright">
                     <p>&copy; 2023 Shopcart. All rights reserved</p>
