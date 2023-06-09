@@ -361,4 +361,20 @@
     .qty {
         font-size: smaller !important;
     }
+    .read .span {
+        width: 100% !important;
+        height: 100% !important;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+    .read {
+        background-color: #cccccc8e !important;
+    }
+    .mark-as-read {
+        background-color: #004225 !important;
+        color: #ffffff !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
 }

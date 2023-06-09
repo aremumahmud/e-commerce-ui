@@ -107,14 +107,14 @@ function ProductMain({setCart , setPage,datar, productData,symbol, setViewStatus
                   <AiFillStar />
                 </li>
               </ul>
-              <p>{"(121)"}</p>
+              {/* <p>{"(121)"}</p> */}
             </div>
           </div>
 
           <div className="prices">
             <p className="subTitle">{symbol}{+((data.price*currencyTab[data.currency||'NGN'].price_in_naira)/symbolTab[symbol]).toFixed(2)}.00 or {symbol}{Math.floor(+((data.price*currencyTab[data.currency||'NGN'].price_in_naira)/symbolTab[symbol]).toFixed(2)/6)}.99/month </p>
             <p className="descrpTitle">
-              Buy and listen or pay for it for 6 months
+              Buy and adore or pay for it for 6 months
             </p>
           </div>
 
@@ -180,12 +180,12 @@ function ProductMain({setCart , setPage,datar, productData,symbol, setViewStatus
         </div>
       </div>
       <div className="item_specs">
-        <p className="topic">Apple Airpods Max Wireless HeadPhones Full Specifications</p>
+        {/* <p className="topic">Apple Airpods Max Wireless HeadPhones Full Specifications</p>
         <div className="twin">
             <Specs />
-        </div>
-        <br /><br />
-        <p className="topic">Similar Items You Might Like</p>
+        </div> */}
+        {/* <br /><br /> */}
+        <p style={{marginTop:'0px'}} className="topic">Similar Items You Might Like</p>
         <Products setMain={setMain} setProduct={setData}  cart={cart} setPage={setPage} setCart={setCart}   setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} data={[0,1,2,3].map(x=>productData[Math.floor(Math.random()*productData.length)])} />
         <br /><br />
       </div>

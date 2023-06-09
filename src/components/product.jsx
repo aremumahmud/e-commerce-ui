@@ -70,7 +70,7 @@ function Product({setMain,setCart,cart,setPage,info,setProduct,symbol ,setViewSt
                         <AiFillStar />
                       </li>
                     </ul>
-                    <p>{Math.floor(Math.random()*200)+200}</p>
+                    <p className="nonee">{Math.floor(Math.random()*200)+200}</p>
                   </div>
                   <div className="btn" onClick={()=>onclick({currency:info.currentCurrency,image:info.image,_id:info._id,name:info.name,price:info.price})}>
                   {/* {console.log(info.currentCurrency)} */}

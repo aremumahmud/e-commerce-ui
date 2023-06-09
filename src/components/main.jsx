@@ -19,6 +19,7 @@ import getUserIP from "../libs/geolocate";
 import changeCurrency from "../libs/changeCurrency"
 import currencyTab from "../config/currency";
 import CartModal from "./CartModalSucess";
+import ForgotModal from "./forgotModal";
 
 
 
@@ -60,6 +61,7 @@ function Main({
  let [ViewData , setViewData] = useState({})
  let [ViewStatus , setViewStatus] = useState('none')
  let [ViewStatus1 , setViewStatus1] = useState('none')
+ 
 //  let [ViewStatus3 , setViewStatus3] = useState('flex')
 //  let [CartData3 , setCartData3] = useState({})
 let [filter , setFilter] = useState('all')
@@ -94,6 +96,7 @@ let [filter , setFilter] = useState('all')
    <input type="hidden" onClick={()=>{
     setPage(localStorage.getItem('page') || 'home')
   }} />
+    {/* <ForgotModal display={ViewStatus4} close={setViewStatus4}/> */}
     <CartModal data={CartData3} display={ViewStatus3}  setViewStatus={setViewStatus3} />
     <Modal display={ViewStatus1} />
     <ViewModal data={ViewData} display={ViewStatus} setViewStatus={setViewStatus} />

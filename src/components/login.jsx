@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link,Outlet, useNavigate, useParams } from 'react-router-dom'
 import '../css/login.css'
 import {AiFillGoogleCircle,AiFillFacebook , AiOutlineEye, AiOutlineKey, AiOutlineUser, AiFillIeCircle, AiFillPieChart} from 'react-icons/ai'
+import ForgotModal from './forgotModal'
 
 
 function Login({error,setAction,URIs, setParams ,busy,setLoad,setBusy}){
@@ -40,10 +41,11 @@ function Login({error,setAction,URIs, setParams ,busy,setLoad,setBusy}){
             password2:password
         })
     }
-
+    let [ViewStatus4 , setViewStatus4] = useState('none')
     return (
 
        <div className="fixed">
+        <ForgotModal  display={ViewStatus4} close={setViewStatus4} />
         {/* <Link to='/dashboard' id='linkee' style={{display:'none'}} >sayee</Link> */}
          {/* <div className="pic_display">
             <div className="img">
@@ -100,7 +102,7 @@ function Login({error,setAction,URIs, setParams ,busy,setLoad,setBusy}){
                             <AiOutlineEye />
                         </div>
                     </div>
-                    <div className="forget-password">
+                    <div onClick={()=>setViewStatus4('flex')} className="forget-password">
                         <p>forgot password</p>
                     </div>
                     <div onClick={()=>{!busy && setLoad(true) ;setBusy(true); submitForm()}} className="submit">

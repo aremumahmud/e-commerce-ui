@@ -192,7 +192,7 @@ function Landing(props) {
           localStorage.setItem('auth',', sjkzn jckmnsd zjk')
         //  return getDoc('login2').click()
         let page = localStorage.getItem('page')
-        if(page==='users/signup' || page==='users/signin' || !page){
+        if(page==='users/signup' || page==='users/login' || !page){
           page = 'home'
         }
            return window.open("/"+(page), '_self');
