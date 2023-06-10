@@ -1,14 +1,14 @@
 import { AiOutlineSearch, AiOutlineShoppingCart, AiOutlineUser } from 'react-icons/ai'
 import '../css/topnav.css'
 
-function TopNav({cart,setPage}){
+function TopNav({cart,setPage,search}){
     return (
         <div className="wrap">
           <div className="topNav">
-          <div class="logo">
+          <a href='/home' class="logo">
             {/* <p>Glitz<span>abellelabel</span></p> */}
             <img src="\imgs\67957883-348A-45E4-BD1E-E956B290647F~2.jpg" alt="" />
-        </div>
+        </a>
             <div className="navigations">
                 <ul>
                     <li>
@@ -22,7 +22,7 @@ function TopNav({cart,setPage}){
                 </ul>
             </div>
             <div className="search">
-                <input type="text" placeholder='Search product' />
+                <input onChange={e=>search(e.target.value)} type="text" placeholder='Search product' />
                 <div className="icon">
                     <AiOutlineSearch />
                 </div>

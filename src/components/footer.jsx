@@ -5,10 +5,10 @@ function Footer (){
     return (
         <footer>
             <hr />
-            <div class="logo">
+            <a href='/home' class="logo">
             {/* <p>Glitz<span>abellelabel</span></p> */}
             <img src="\imgs\67957883-348A-45E4-BD1E-E956B290647F~2.jpg" alt="" />
-        </div>
+        </a>
             <div className="links">
                 <ul>
                     <li><a href="https://www.instagram.com/glitzabellelogistics/" target="_blank"><AiOutlineInstagram size={30} /></a></li>

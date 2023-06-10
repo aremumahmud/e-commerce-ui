@@ -7,7 +7,7 @@ import Products from "./products";
 import fetch_categories from "../libs/get_category";
 
 
-function Home({setCart , setPage, cart, setProduct,data , symbol,setFilter ,setLoad, setViewStatus3,setCartData3 }) {
+function Home({setCart , setPage, cart, setProduct,data , symbol,setFilter ,setLoad, setViewStatus3,setCartData3,search }) {
 
   let [categories, setCategories]= useState([])
   useEffect(()=>{
@@ -21,7 +21,7 @@ function Home({setCart , setPage, cart, setProduct,data , symbol,setFilter ,setL
     <br />
       <Display />
       <br /><br /> 
-      <Filter categories={categories} setLoad={setLoad} setFilter={setFilter} /> 
+      <Filter search={search} categories={categories} setLoad={setLoad} setFilter={setFilter} /> 
       <p className="topic">Head Caps Recomended For You!</p>
       <Products  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct} cart={cart} setPage={setPage} setCart={setCart} data={data} />
       <Pagination />

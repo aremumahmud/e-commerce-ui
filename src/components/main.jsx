@@ -20,6 +20,7 @@ import changeCurrency from "../libs/changeCurrency"
 import currencyTab from "../config/currency";
 import CartModal from "./CartModalSucess";
 import ForgotModal from "./forgotModal";
+import search from "../libs/search_products";
 
 
 
@@ -65,6 +66,13 @@ function Main({
 //  let [ViewStatus3 , setViewStatus3] = useState('flex')
 //  let [CartData3 , setCartData3] = useState({})
 let [filter , setFilter] = useState('all')
+
+let search_prod = (search_string)=>{
+   search((search_string|| ' '),(err , resp)=>{
+    if(err) return
+    resp.length && setData(resp)
+   })
+}
   useEffect(()=>{ 
     console.log('lk')
     load &&
@@ -104,12 +112,12 @@ let [filter , setFilter] = useState('all')
       
      {/* <div className="coverIt nonee"></div>  */}
       {
-        page !== 'addP' && <div className="cont"><TopNav cart={cart_no} setPage={setPage}/></div> 
+        page !== 'addP' && <div className="cont"><TopNav  search={search_prod}  cart={cart_no} setPage={setPage}/></div> 
       }
       
      
       {
-        page === 'home' && <Home setViewStatus3={setViewStatus3} setCartData3={setCartData3} setLoad={setLoad} setFilter={setFilter} symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
+        page === 'home' && <Home search={search_prod} setViewStatus3={setViewStatus3} setCartData3={setCartData3} setLoad={setLoad} setFilter={setFilter} symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
       }
 
       {

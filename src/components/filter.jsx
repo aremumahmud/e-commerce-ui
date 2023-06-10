@@ -1,7 +1,7 @@
 import { AiFillStar, AiOutlineSearch } from "react-icons/ai";
 import "../css/filter.css";
 
-function Filter({setFilter , setLoad,categories}) {
+function Filter({setFilter , setLoad,categories, search}) {
 
   let change = e=>{
     var select = e.target;
@@ -57,7 +57,7 @@ function Filter({setFilter , setLoad,categories}) {
         </ul>
       </div>
       <div className="sortby">
-      <input type="text" name="" id="" placeholder="Search for a product"/>
+      <input onChange={e=>search(e.target.value)} type="text" name="" id="" placeholder="Search for a product"/>
       <div className="btn">
         <AiOutlineSearch size={20} />
       </div>
