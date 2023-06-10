@@ -1,12 +1,15 @@
 import { AiOutlineDatabase, AiOutlineDelete, AiOutlinePlus } from 'react-icons/ai'
 import '../css/addproducts.css'
 import  handle_file_change from '../libs/load_image'
-import { useState } from 'react'
+import { useState, useSyncExternalStore } from 'react'
 import validate from '../libs/validate'
 import generateProductStructure from '../libs/restructure'
 import send_product from '../libs/send_product'
 
 
+//function
+function AddProducts (){
+    let [load , setLoad] = useState(false)
 
 let style1 = {
     fontSize: '200px',
@@ -58,18 +61,21 @@ let valid = validate(('1,2,3,4,9').split(','))
 
    let body = generateProductStructure(json,varieties)
    send_product('form3',body,(err,res)=>{
-      if(err){
-        alert('error uploading products')
+    res = JSON.parse(res)
+      if(err || res.error){
+        setLoad(false)
+        alert(res.message || 'error uploading products')
       }else{
+        setLoad(false)
         alert('uploaded products successfully')
+        window.open('/addP' , '_self')
       }
    })
 }
 
 
-//function
-function AddProducts (){
 //pics
+
     let [one,setOne] = useState(false)
     let [two,setTwo] = useState(false)
     let [three,setThree] = useState(false)
@@ -218,8 +224,15 @@ function AddProducts (){
              * @pot button
              */}
             <div className="out">
-                <div className="btn" onClick={()=>submit_form()}>
-                 Add product to inventory
+                <div className="btn" style={{
+                    display:'flex',
+                    justifyContent:'center'
+                }} onClick={()=>{setLoad(true);submit_form()}}>
+                    {
+                         load ?<div className="loader"></div>:' Add product to inventory'
+                    }
+                   
+                
                 </div>
             </div>
             <br /><br />

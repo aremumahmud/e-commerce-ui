@@ -383,4 +383,7 @@
     .y23 {
         width: 40vw !important;
     }
+    .variations .variation {
+        margin-bottom: 15px !important;
+    }
 }

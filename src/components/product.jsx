@@ -4,7 +4,7 @@ import { useState } from "react";
 import currencyTab, { symbolTab } from "../config/currency";
 
 function Product({setMain,setCart,cart,setPage,info,setProduct,symbol ,setViewStatus3, setCartData3}) {
- // console.log("/imgs/"+info+".png")
+ //console.log(info)
   let [load , setLoad] = useState(false)
   let onclick =(n)=>{
      setLoad(true)
