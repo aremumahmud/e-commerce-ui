@@ -12,6 +12,11 @@ import currencyTab, { symbolTab } from "../config/currency";
 function ProductMain({setCart , setPage,datar, productData,symbol, setViewStatus3, setCartData3,setProduct,cart}) {
  //console.log(data,'rr') 
  //console.log(datar)
+ (!datar || Object.keys(datar).length === 0 )&& window.open('/home' ,'_self')
+//  if(false){
+//   return (!datar || Object.keys(datar).length === 0 )&& setPage('home') 
+//  }
+ 
  let [data , setData] = useState(datar)
  let [currMain, setMain] = useState(data.image)
   let inventory = data.quantity
@@ -51,33 +56,34 @@ function ProductMain({setCart , setPage,datar, productData,symbol, setViewStatus
             <div className="variety" onClick={()=>{setMain(data.varieties[1].image);setData({
                 ...data,
                 varieties:data.varieties,
-                _id:data.varieties[1].id,
-                image:data.varieties[1].image})
+                _id:data.varieties[1]?data.varieties[1].id:data.varieties[0].id,
+                image:data.varieties[1]?data.varieties[1].image:data.varieties[0].image})
                 }}>
               {" "}
               <img
-                src={data.varieties[1].image}
+                src={data.varieties[1]?data.varieties[1].image:data.varieties[0].image}
                 alt=""
               />
             </div>
             <div className="variety" onClick={()=>{setMain(data.varieties[2].image);setData({
                 ...data,
                 varieties:data.varieties,
-                _id:data.varieties[2].id,
-                image:data.varieties[2].image})}}>
+                _id:data.varieties[2]?data.varieties[2].id:data.varieties[0].id,
+                image:data.varieties[2]?data.varieties[2].image:data.varieties[0].image})
+                }}>
               {" "}
               <img
-                src={data.varieties[2].image}
+                src={data.varieties[2]?data.varieties[2].image:data.varieties[0].image}
                 alt=""
               />
             </div>
             <div className="variety" onClick={()=>{setMain(data.varieties[3].image);setData({
                 ...data,varieties:data.varieties,
-                _id:data.varieties[3].id,
-                image:data.varieties[3].image})}}>
+                _id:data.varieties[3]?data.varieties[3].id:data.varieties[0].id,
+                image:data.varieties[3]?data.varieties[3].image:data.varieties[0].image})}}>
               {" "}
               <img
-                src={data.varieties[3].image}
+                src={data.varieties[3]?data.varieties[3].image:data.varieties[0].image}
                 alt=""
               />
             </div>

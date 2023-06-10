@@ -380,4 +380,7 @@
         display: flex !important;
         justify-content: center !important;
     }
+    .y23 {
+        width: 40vw !important;
+    }
 }
