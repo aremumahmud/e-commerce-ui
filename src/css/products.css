@@ -3,7 +3,7 @@
     grid-template-columns: auto;
     gap: 7px;
     padding: 5px;
-    scroll-snap-type:x mandatory 
+    scroll-snap-type:y mandatory 
     /* border: 1px solid; */
 }
 
