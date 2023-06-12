@@ -9,7 +9,8 @@ function load_products(category, cb) {
         // process_data
 
         //console.log(res.data)
-        cb && cb(null, process_data(res.data))
+        // cb && cb(null, process_data(res.data))
+        cb && cb(null, res.data.data)
     }).catch(err => {
         cb && cb(err, null)
 

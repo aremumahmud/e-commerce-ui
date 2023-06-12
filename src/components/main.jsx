@@ -21,6 +21,7 @@ import currencyTab from "../config/currency";
 import CartModal from "./CartModalSucess";
 import ForgotModal from "./forgotModal";
 import search from "../libs/search_products";
+import AddProd from "./add_prod";
 
 
 
@@ -89,7 +90,7 @@ let search_prod = (search_string)=>{
     load1 && 
     getUserIP().then(res=>{
      // console.log(res)
-      let data2  = changeCurrency(data, currencyTab[res]?res:'USD')  
+      let data2  = changeCurrency(data, currencyTab[res]?res:'NGN')  
      // console.log(data2,'jayz')
     // console.log(isNaN(data2[0][0].price))
       if(isNaN(data2[0][0].price)){
@@ -107,7 +108,7 @@ let search_prod = (search_string)=>{
   }} />
     {/* <ForgotModal display={ViewStatus4} close={setViewStatus4}/> */}
     <CartModal data={CartData3} display={ViewStatus3}  setViewStatus={setViewStatus3} />
-    <Modal display={ViewStatus1} />
+    {/* <Modal display={ViewStatus1} /> */}
     <ViewModal data={ViewData} display={ViewStatus} setViewStatus={setViewStatus} />
    <div className="container">
       
@@ -134,7 +135,7 @@ let search_prod = (search_string)=>{
       }
 
       {
-        page === 'addP' && <AddProducts />
+        page === 'addP' && <AddProd />
       }
       { 
         page === 'prod_admin' && <ProductsAdmin />

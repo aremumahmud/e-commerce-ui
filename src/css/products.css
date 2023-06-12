@@ -1,11 +1,14 @@
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+    padding: 5px;
+    /* border: 1px solid; */
 }
 
 .product {
-    width: 23%;
+    width: 100% !important;
+    /* border: 1px solid; */
 }
 
 .product .imageDisplay {

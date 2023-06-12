@@ -5,7 +5,7 @@ function About({setPage}) {
   return (
     <div className="about">
       <div className="descriptionSection">
-        <p className="title">About Shopcart</p>
+        <p className="title">About Glitzabelle Label</p>
         <p className="description">
         Explore our premier online boutique, catering exclusively to women's fashion! Discover an exquisite 
         array of stylish and comfortable clothing items, meticulously curated from top-notch materials. From trendy 

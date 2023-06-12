@@ -5,7 +5,7 @@ export default function search(searchStr, cb) {
     fetch(pic.search_uri + '?search_string=' + searchStr).then(res => {
         return res.json()
     }).then(res => {
-        cb && cb(null, process_data({ data: res }))
+        cb && cb(null, res)
     }).catch(err => {
         cb && cb(err)
     })

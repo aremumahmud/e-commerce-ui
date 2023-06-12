@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,900&family=Open+Sans:wght@300;400;500;600;700;800&family=Russo+One&family=Tilt+Warp&display=swap');
+* {
+    /* font-size: calc(5px + 2vmin); */
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    /* font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif; */
+}
+
+form p {
+    font-size: 15px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.simple_input {
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+label textarea {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+form {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-basis: 30%; */
+    padding-left: 0 !important;
+    justify-content: space-between;
+}
+
+.image {
+    background-color: #cccccc8e;
+    height: 100px;
+    /* border: 1px solid; */
+    width: 49%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-weight: */
+}
+
+.partition {
+    width: 70%;
+}
+
+.button {
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #004225;
+    color: white;
+}
+
+.size_choose {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sizes {
+    background-color: #cccccc8e;
+    width: 80px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.size_group {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.sizes p:first-child {
+    font-weight: 900;
+}
+
+.divisions {
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+}
+
+.ass_size {
+    margin-bottom: 20px;
+    margin-right: 5px;
+    background-color: #cccccc8e;
+    padding: 10px;
+    border-radius: 10px;
+    width: 70px;
+    text-align: center;
+}
+
+.submit_this {
+    background-color: #004225;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.topicInAdd,
+.logo {
+    margin-left: 15px;
+}
+
+.topicInAdd {
+    margin-top: 10px;
+    margin-bottom: 20px !important;
+    font-size: 20px;
+    font-weight: 500;
+}

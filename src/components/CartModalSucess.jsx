@@ -4,7 +4,7 @@ import TileAlert from './tileAlert';
 function CartModal({display,data , setViewStatus}) {
   return (
     <div style={{display}} className="modalWrap">
-      <div class="card">
+      <div class="card  animate__animated animate__bounce">
         <div class="header1">
           <span class="icon1">
             <svg
@@ -26,15 +26,15 @@ function CartModal({display,data , setViewStatus}) {
         <br />
         <TileAlert data={data}/>
 
-        <div class="actions1">
+        {/* <div class="actions1">
           <a class="read" onClick={()=>setViewStatus('none')}>
             close
           </a>
 
           {/* <a class="mark-as-read" href="/home">
            Go back
-          </a> */}
-        </div>
+          </a> 
+        </div> */}
       </div>
     </div>
   );

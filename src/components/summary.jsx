@@ -13,9 +13,10 @@ function Summary({price , lockProduct,pace,setPace , busy , setBusy,symbol , set
 let change2 = (e)=>{
   let state = e.target.checked
   if(state){
-    return setURI('upload_locked_product_uri_guest')
+    return  setURI('upload_locked_product_uri')
   }
-  setURI('upload_locked_product_uri')
+  setURI('upload_locked_product_uri_guest')
+ 
 }
 
  useEffect(()=>{
@@ -92,7 +93,7 @@ let change2 = (e)=>{
       <br />
       <div className="as_a_guest">
         <input type="checkbox" name="" id="" onChange={change2} />
-        BUY AS A GUEST
+        Create an account?
       </div>
       <div className="btn"  onClick={()=>{
             // if(!localStorage.getItem('TokenID')){

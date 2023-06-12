@@ -2,6 +2,8 @@ import upload from "./uploadImage"
 
 let getDoc = (x) => document.getElementById(x)
 
+// function handle_file_change(event, target, effect, effect1, effect3) {
+
 
 function handle_file_change(event, target, effect, effect1, effect3) {
     // console.log('hello')

@@ -5,6 +5,7 @@ import currencyTab, { symbolTab } from "../config/currency";
 
 function Product({setMain,setCart,cart,setPage,info,setProduct,symbol ,setViewStatus3, setCartData3}) {
  //console.log(info)
+ 
   let [load , setLoad] = useState(false)
   let onclick =(n)=>{
      setLoad(true)
@@ -24,12 +25,12 @@ function Product({setMain,setCart,cart,setPage,info,setProduct,symbol ,setViewSt
                 <div className="imageDisplay" onClick={()=>{
                     setPage('product')
                     setProduct(info)
-                    setMain && setMain(info.image)
+                    setMain && setMain(info.image|| info.mainImage)
                   }}>
                   <div className="heart">
                     <AiOutlineHeart />
                   </div>{}
-                  <img src={info.image} alt="" />
+                  <img src={info.image|| info.mainImage} alt="" />
                 </div>
                 <div className="productInfo">
                   <div onClick={()=>{
@@ -45,13 +46,13 @@ function Product({setMain,setCart,cart,setPage,info,setProduct,symbol ,setViewSt
                   <p onClick={()=>{
                     setPage('product')
                     setProduct(info)
-                    setMain && setMain(info.image)
+                    setMain && setMain(info.image || info.mainImage)
                     
                     }} className="description">{info.description}</p>
                   <div className="rating" onClick={()=>{
                     setPage('product')
                     setProduct(info)
-                    setMain && setMain(info.image)
+                    setMain && setMain(info.image|| info.mainImage)
                   }}>
                     <ul>
                       <li>

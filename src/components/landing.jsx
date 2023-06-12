@@ -76,6 +76,11 @@ function Landing(props) {
     localStorage.setItem('no' , no)
     setCartData3(info)
     setViewStatus3('flex')
+    //set the cart to dissapear in 3secs
+   let timeout =  setTimeout(()=>{
+      setViewStatus3('none')
+      clearTimeout(timeout)
+    },2000)
      //console.log(cart)
   };
 

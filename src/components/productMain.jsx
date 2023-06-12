@@ -16,9 +16,9 @@ function ProductMain({setCart , setPage,datar, productData,symbol, setViewStatus
 //  if(false){
 //   return (!datar || Object.keys(datar).length === 0 )&& setPage('home') 
 //  }
- 
+window.scrollTo(0,0)
  let [data , setData] = useState(datar)
- let [currMain, setMain] = useState(data.image)
+ let [currMain, setMain] = useState(data.image|| data.mainImage)
   let inventory = data.quantity
   let [qty , setQuantity] = useState(1)
   let increase = ()=>{
@@ -118,9 +118,9 @@ function ProductMain({setCart , setPage,datar, productData,symbol, setViewStatus
           </div>
 
           <div className="prices">
-            <p className="subTitle">{symbol}{+((data.price*currencyTab[data.currency||'NGN'].price_in_naira)/symbolTab[symbol]).toFixed(2)}.00 or {symbol}{Math.floor(+((data.price*currencyTab[data.currency||'NGN'].price_in_naira)/symbolTab[symbol]).toFixed(2)/6)}.99/month </p>
+            <p className="subTitle">{symbol}{+((data.price*currencyTab[data.currency||'NGN'].price_in_naira)/symbolTab[symbol]).toFixed(2)}.00 </p>
             <p className="descrpTitle">
-              Buy and adore or pay for it for 6 months
+              Buy and adore with unlimited guarantee
             </p>
           </div>
 

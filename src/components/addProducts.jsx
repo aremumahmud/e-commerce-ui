@@ -65,7 +65,7 @@ let valid = validate(('1,2,3,4,9').split(','))
       if(err || res.error){
         setLoad(false)
         alert(res.message || 'error uploading products')
-      }else{
+      }else{ 
         setLoad(false)
         alert('uploaded products successfully')
         window.open('/addP' , '_self')
