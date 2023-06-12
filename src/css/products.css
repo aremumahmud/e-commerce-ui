@@ -3,6 +3,7 @@
     grid-template-columns: auto;
     gap: 7px;
     padding: 5px;
+    scroll-snap-type:x mandatory 
     /* border: 1px solid; */
 }
 
@@ -10,7 +11,8 @@
     width: 100% !important;
     /* border: 1px solid; */
     aspect-ratio:1/1 !important; 
-    height :fit-content
+    height :fit-content;
+    scroll-snap-align:start
 }
 
 .product .imageDisplay {
