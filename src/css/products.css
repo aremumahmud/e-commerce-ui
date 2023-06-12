@@ -9,7 +9,8 @@
 .product {
     width: 100% !important;
     /* border: 1px solid; */
-    aspect-ratio:1/1
+    aspect-ratio:1/1 !important; 
+    height :fit-content
 }
 
 .product .imageDisplay {
