@@ -65,7 +65,7 @@
         width: 48% !important;
     }
     .products {
-        justify-content: space-around !important;
+        /* justify-content: space-around !important; */
         padding: 20px !important;
     }
     .product .imageDisplay {
