@@ -1,5 +1,5 @@
 const pic = {
-    pic_uri: 'https://uploadimagefiles.aremzy.repl.co',
+    pic_uri: 'http://localhost:4000',
     upload_product_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/add_products',
     get_products_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/get_products',
     upload_locked_product_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/lock_inventory',

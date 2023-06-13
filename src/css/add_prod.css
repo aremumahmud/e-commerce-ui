@@ -42,15 +42,17 @@ form {
 }
 
 .image {
-    background-color: #cccccc8e;
-    height: 100px;
+    background: #cccccc8e;
+    height: 150px;
     /* border: 1px solid; */
     width: 49%;
     border-radius: 10px;
     margin-bottom: 5px;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
     /* font-weight: */
 }
 
@@ -128,4 +130,21 @@ form {
     margin-bottom: 20px !important;
     font-size: 20px;
     font-weight: 500;
+}
+
+.cover_me {
+    background-color: #0303038a;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* border: 1px solid; */
+    flex-direction: column;
+}
+
+.big {
+    width: 30px !important;
+    height: 30px !important;
 }

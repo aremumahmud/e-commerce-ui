@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import '../css/add_prod.css'
+import handle_file_change from '../libs/load_image'
+import { AiFillDelete } from 'react-icons/ai'
 
 function AddProd(){
 
@@ -9,6 +11,25 @@ function AddProd(){
    let [title , setTitle] = useState('')
    let [price , setPrice] = useState(0)
    let [inventory , setInventory] = useState(0)
+
+   //images
+   let [image1 , setImage1] = useState('')
+   let [image2 , setImage2] = useState('')
+   let [image3 , setImage3] = useState('')
+   let [image4 , setImage4] = useState('')
+
+//loads 
+let [done , setDone ]  = useState(false)
+let [done2 , setDone2 ]  = useState(false)
+let [done3, setDone3 ]  = useState(false)
+let [done4, setDone4 ]  = useState(false)
+let [pending , setPending ]  = useState(false)
+let [pending2 , setPending2 ]  = useState(false)
+let [pending3 , setPending3 ]  = useState(false)
+let [pending4 , setPending4 ]  = useState(false)
+
+
+
 
    let getDoc = (x) => document.getElementById(x)
 // a function to click an element if one element is being clicked
@@ -27,7 +48,7 @@ function AddProd(){
         // console.log('hello')
          
              ([1,2,3,4]).forEach(each=>{
-             console.log(each)
+            // console.log(each)
              placeholder(`image${each}` , `file${each}`)
          })
          
@@ -48,7 +69,7 @@ function AddProd(){
         
         <form onLoad={()=>
             {
-                console.log('hello')
+               // console.log('hello')
                 [1,2,3,4].forEach(each=>{
                     placeholder(`image${each}` , `file${each}`)
                 })
@@ -69,21 +90,66 @@ function AddProd(){
             <label htmlFor="">
                <p> Media</p>
                 <div className="images">
-                    <div className="image" onClick={place} id='image1'>
-                        upload images
-                        <input type="file" className='nonee' id='file1'/>
+                    <div className="image"  id='image1'>
+                        <div className="cover_me" onClick={()=>placeholder(`image${1}` , `file${1}`)}>
+                        {
+                                pending && <div className="loader big"></div>
+                               }
+                            {
+                                done ? <AiFillDelete  size={20} /> : 'upload images'
+                            }
+                            
+                        </div>
+                        <form id='form1' action="">
+                            <input name="picture" onChange={(e)=>handle_file_change(e , 'image1','form1',setDone,setPending,setImage1)} type="file" className='nonee' id='file1'/>
+                    
+                        </form>
+                        </div>
+                    <div className="image" onClick={()=>placeholder(`image${2}` , `file${2}`)} id='image2'>
+                    <div className="cover_me">
+                    {
+                                pending2 && <div className="loader big"></div>
+                               }
+                            {
+                                done2 ? <AiFillDelete  size={20} /> : 'upload images'
+                            }
+                            
+                        </div>
+                        <form id='form2' action="">
+                            <input name="picture" onChange={(e)=>handle_file_change(e , 'image2','form2',setDone2,setPending2,setImage2)} type="file" className='nonee'  id='file2'/>
+                    
+                        </form>
                     </div>
-                    <div className="image" onClick={place} id='image2'>
-                    upload images
-                    <input type="file" className='nonee'  id='file2'/>
+                    <div className="image" onClick={()=>placeholder(`image${3}` , `file${3}`)} id='image3'>
+                        <form id='form3' action="">
+                          <input name="picture"  onChange={(e)=>handle_file_change(e , 'image3','form3',setDone3,setPending3,setImage3)} type="file" className='nonee'  id='file3'/>
+                     
+                        </form>
+                     <div className="cover_me">
+                     {
+                                pending3 && <div className="loader big"></div>
+                               }
+                            {
+                                done3 ? <AiFillDelete  size={20} /> : 'upload images'
+                            }
+                            
+                        </div>
                     </div>
-                    <div className="image" onClick={place} id='image3'>
-                    <input type="file" className='nonee'  id='file3'/>
-                    upload images
-                    </div>
-                    <div className="image" onClick={place} id='image4'>
-                    <input type="file" className='nonee'  id='file4'/>
-                    upload images
+                    <div className="image" onClick={()=>placeholder(`image${4}` , `file${4}`)} id='image4'>
+                        <form id='form4' action="">
+                             <input name="picture"  onChange={(e)=>handle_file_change(e , 'image4' ,'form4',setDone4,setPending4,setImage4)} type="file" className='nonee'  id='file4'/>
+                    
+                        </form>
+                   <div className="cover_me">
+                            {
+                                pending4 && <div className="loader big"></div>
+                               }
+                            {
+                                  done4 ? <AiFillDelete  size={20} /> : 'upload images'
+                           
+                            }
+                            
+                        </div>
                     </div>
                 </div>
             </label>
