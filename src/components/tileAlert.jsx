@@ -11,7 +11,7 @@ function TileAlert({data}){
             {/* <p class="topic_me"><AiOutlineEye fontWeight={900} /></p>
             <p class="sub_me">view order info</p> */}
              <div className="y23">
-        <img src={data.image} alt="" />
+        <img src={data.image|| data.mainImage} alt="" />
         </div>
         </div>
       </div>
