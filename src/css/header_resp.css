@@ -66,9 +66,10 @@
     }
     .products {
         justify-content: space-around !important;
+        padding: 20px !important;
     }
     .product .imageDisplay {
-        height: 350px !important;
+        height: 300px !important;
     }
     .productInfo .name p {
         font-size: small !important;
