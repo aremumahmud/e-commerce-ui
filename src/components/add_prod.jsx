@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../css/add_prod.css'
 
 function AddProd(){
@@ -17,8 +17,22 @@ function AddProd(){
             getDoc(y).click()
         }
     }
-
-    
+// useEffect(()=>{
+//     console.log('hello')
+//     [1,2,3,4].forEach(each=>{
+//         //placeholder(`image${each}` , `file${each}`)
+//     })
+// },[])
+    let place =()=> {
+        // console.log('hello')
+         
+             ([1,2,3,4]).forEach(each=>{
+             console.log(each)
+             placeholder(`image${each}` , `file${each}`)
+         })
+         
+         
+     }
     
 
     return (
@@ -34,6 +48,7 @@ function AddProd(){
         
         <form onLoad={()=>
             {
+                console.log('hello')
                 [1,2,3,4].forEach(each=>{
                     placeholder(`image${each}` , `file${each}`)
                 })
@@ -54,19 +69,19 @@ function AddProd(){
             <label htmlFor="">
                <p> Media</p>
                 <div className="images">
-                    <div className="image" id='image1'>
+                    <div className="image" onClick={place} id='image1'>
                         upload images
                         <input type="file" className='nonee' id='file1'/>
                     </div>
-                    <div className="image" id='image2'>
+                    <div className="image" onClick={place} id='image2'>
                     upload images
                     <input type="file" className='nonee'  id='file2'/>
                     </div>
-                    <div className="image" id='image3'>
+                    <div className="image" onClick={place} id='image3'>
                     <input type="file" className='nonee'  id='file3'/>
                     upload images
                     </div>
-                    <div className="image" id='image4'>
+                    <div className="image" onClick={place} id='image4'>
                     <input type="file" className='nonee'  id='file4'/>
                     upload images
                     </div>
@@ -143,6 +158,7 @@ function AddProd(){
         </form>
         
        <br />
+       
         </>
     )
 }
