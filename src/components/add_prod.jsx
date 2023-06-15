@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import '../css/add_prod.css'
 import handle_file_change from '../libs/load_image'
 import { AiFillDelete } from 'react-icons/ai'
+import send_product from '../libs/send_product'
 
 function AddProd(){
 
@@ -11,6 +12,7 @@ function AddProd(){
    let [title , setTitle] = useState('')
    let [price , setPrice] = useState(0)
    let [inventory , setInventory] = useState(0)
+   let [category , setCategory] = useState('')
 
    //images
    let [image1 , setImage1] = useState('')
@@ -55,7 +57,50 @@ let [pending4 , setPending4 ]  = useState(false)
          
      }
     
+     let getData = ()=>{
+        return {
+              product_name:title,
+              image: image1,
+              description,
+              price,
+              category,
+              
+              varieties:[{
+                image: image1,
+                parentProduct: title,
+                quantity:inventory
+              },{
+                image: image2,
+                parentProduct: title,
+                quantity:inventory
+              },{
+                image: image3,
+                parentProduct: title,
+                quantity:inventory
+              },{
+                image: image4,
+                parentProduct: title,
+                quantity:inventory
+              }]
+        }
+      
 
+     }
+
+
+     let sendProd = ()=>{
+        send_product('', getData(), (err,res)=>{
+            res = JSON.parse(res)
+      if(err || res.error){
+        //setLoad(false)
+        alert(res.message || 'error uploading products')
+      }else{ 
+        //setLoad(false)
+        alert('uploaded products successfully')
+        window.open('/addP' , '_self')
+      }
+        })
+     }
     return (
         <>
          <a href='/home' class="logo">
@@ -85,6 +130,10 @@ let [pending4 , setPending4 ]  = useState(false)
             <label htmlFor="">
                <p> Description</p>
                 <textarea onChange={(e)=>setDescription(e.target.value)} name="" id="" cols="40" rows="10" placeholder='Enter product description' ></textarea>
+            </label><br />
+            <label htmlFor="">
+               <p>Category</p>  
+                <input onChange={(e)=>setCategory(e.target.value)} type="text" className="simple_input" placeholder='Name or title of product' />
             </label>
             <br />
             <label htmlFor="">
@@ -220,7 +269,7 @@ let [pending4 , setPending4 ]  = useState(false)
                     )
             }
             
-            <button className='submit_this'>Add product</button>
+            <button className='submit_this' onClick={sendProd}>Add product</button>
         </form>
         
        <br />

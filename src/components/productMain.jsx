@@ -60,10 +60,10 @@ window.scrollTo(0,0)
                 image:data.varieties[1]?data.varieties[1].image:data.varieties[0].image})
                 }}>
               {" "}
-              <img
+              <img  
                 src={data.varieties[1]?data.varieties[1].image:data.varieties[0].image}
-                alt=""
-              />
+                alt="" 
+              /> 
             </div>
             <div className="variety" onClick={()=>{setMain(data.varieties[2].image);setData({
                 ...data,
@@ -192,7 +192,7 @@ window.scrollTo(0,0)
         </div> */}
         {/* <br /><br /> */}
         <p style={{marginTop:'0px'}} className="topic">Similar Items You Might Like</p>
-        <Products setMain={setMain} setProduct={setData}  cart={cart} setPage={setPage} setCart={setCart}   setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} data={[0,1,2,3].map(x=>productData[Math.floor(Math.random()*productData.length)])} />
+        <Products setMain={setMain} setProduct={setData}  cart={cart} setPage={setPage} setCart={setCart}   setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} data={productData.length<=4?productData:[0,1,2,3].map(x=>productData[Math.floor(Math.random()*productData.length)])} />
         <br /><br />
       </div>
     </>
