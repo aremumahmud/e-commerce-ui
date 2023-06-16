@@ -6,10 +6,13 @@ function process_data(data) {
 
 
 function helper(data) {
+    let mode = 0
     let varieties = data.varieties.map(dt => {
+        mode++
         return {
             ...data,
             ...dt,
+            mode: mode == 1 ? 'ruler' : 'servant',
             varieties: data.varieties.map(x => ({ image: x.image, id: x._id, name: x.name, quantity: x.quantity })),
 
         }

@@ -7,7 +7,12 @@ function Products({setMain,data,setCart , setPage,cart, setProduct, symbol, setV
     <div className="products">
       {
        
-        data.length && data.filter(x=>x).map(x=>
+        data.length && data.filter(x=>{
+          if(!x || x.mode === 'servant'){
+            return false
+          }
+          return true
+        }).map(x=>
           <Product setMain={setMain}  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct} info={x} setPage={setPage} cart={cart} setCart={setCart} />
           )
       }

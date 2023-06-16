@@ -6,6 +6,7 @@ function TileAlert({data}){
         <div class="p1">
             <p class="topic_me">{data.name}</p>
             <p class="sub_me">price: {data.price}</p>
+            <p class="sub_me">size: {(data.sizes &&data.sizes[0].size) || data.size}</p>
         </div>
         <div class="p2">
             {/* <p class="topic_me"><AiOutlineEye fontWeight={900} /></p>

@@ -46,17 +46,32 @@ let [pending4 , setPending4 ]  = useState(false)
 //         //placeholder(`image${each}` , `file${each}`)
 //     })
 // },[])
-    let place =()=> {
-        // console.log('hello')
+    // let place =()=> {
+    //     // console.log('hello')
          
-             ([1,2,3,4]).forEach(each=>{
-            // console.log(each)
-             placeholder(`image${each}` , `file${each}`)
-         })
+    //          ([1,2,3,4]).forEach(each=>{
+    //         // console.log(each)
+    //          placeholder(`image${each}` , `file${each}`)
+    //      })
          
          
-     }
+    //  }
     
+    let divide_inventory = (e,index)=>{
+      let results = 0
+      variants.forEach(variant=>{
+        results += parseInt(variant.qty)
+      })
+      if((results+ parseInt(e.target.value)) > inventory){
+        return 
+        //e.target.value = 0
+      }
+      let duplicate = [...variants]
+      duplicate[index].qty = e.target.value
+      setVariants(duplicate)
+    }
+
+
      let getData = ()=>{
         return {
               product_name:title,
@@ -64,7 +79,7 @@ let [pending4 , setPending4 ]  = useState(false)
               description,
               price,
               category,
-              
+              sizes:variants,
               varieties:[{
                 image: image1,
                 parentProduct: title,
@@ -219,10 +234,11 @@ let [pending4 , setPending4 ]  = useState(false)
             <input className="simple_input partition" onChange={(e)=>{
                 setVari(e.target.value)
             }}  type="text" name="" id="" placeholder='M / L / XL' /> <button onClick={()=>{
-               if(!vari || variants.length === 4) return
+               if(!vari || variants.length === 8) return
                setVariants([...variants,{
                 index:variants.length,
-                size:vari
+                size:vari,
+                qty:0
                }])
             }} className='button'>add</button>
              
@@ -262,7 +278,7 @@ let [pending4 , setPending4 ]  = useState(false)
                     <p>{x.size.toUpperCase()}</p>
                 </div>
                 <div className="ass_qty">
-                    <input className='simple_input partition' type="text" name="" id="" />
+                    <input onChange={(e)=>divide_inventory(e ,x.index)} className='simple_input partition' type="text" name="" id="" />
                 </div>
             </div> 
                     

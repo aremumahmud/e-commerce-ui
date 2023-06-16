@@ -6,8 +6,9 @@ import {
 } from "react-icons/ai";
 import Specs from "./specs";
 import Products from './products'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import currencyTab, { symbolTab } from "../config/currency";
+import Sizes from "./sizes";
 
 function ProductMain({setCart , setPage,datar, productData,symbol, setViewStatus3, setCartData3,setProduct,cart}) {
  //console.log(data,'rr') 
@@ -16,8 +17,9 @@ function ProductMain({setCart , setPage,datar, productData,symbol, setViewStatus
 //  if(false){
 //   return (!datar || Object.keys(datar).length === 0 )&& setPage('home') 
 //  }
-window.scrollTo(0,0)
+// window.scrollTo(0,0)
  let [data , setData] = useState(datar)
+ let [size , setSize]= useState(data.sizes[0].size)
  let [currMain, setMain] = useState(data.image|| data.mainImage)
   let inventory = data.quantity
   let [qty , setQuantity] = useState(1)
@@ -31,7 +33,9 @@ window.scrollTo(0,0)
     setQuantity(qty-1)
     //setCart({},true)
   }
-
+useEffect(()=>{
+  window.scrollTo(0,0)
+},[])
   return (
     <>
       <div className="mainDescription">
@@ -149,16 +153,19 @@ window.scrollTo(0,0)
               <p>Dont miss it</p> */}
             {/* </div> */}
           </div>
+          <Sizes setSize={setSize} sized={data.sizes} />
           <div className="ctas">
-            <div className="btn active" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity,{
+            <div className="btn active" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price,size}],qty,data.quantity,{
               image:data.image,
               price:data.price,
-              name:data.name
+              name:data.name,
+              size
             });setPage('checkout')}}>Buy now</div>
-            <div className="btn" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price}],qty,data.quantity,{
+            <div className="btn" onClick={()=>{setCart([{currency:data.currentCurrency,image:data.image,_id:data._id,name:data.name,price:data.price,size}],qty,data.quantity,{
               image:data.image,
               price:data.price,
-              name:data.name
+              name:data.name,
+              size
             })}}>Add to Cart</div>
           </div>
           <div className="otherInfo">

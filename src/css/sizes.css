@@ -1,0 +1,30 @@
+.sizes1 {
+    width: fit-content;
+    padding: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.size1 {
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    background-color: #ccc;
+    margin-right: 10px;
+}
+
+.reeky {
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.active8 {
+    background-color: #004225;
+    color: white;
+}

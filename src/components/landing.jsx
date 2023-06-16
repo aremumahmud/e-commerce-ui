@@ -34,6 +34,7 @@ function Landing(props) {
   }
 
   let setCart = (x,n,qty,info) => {
+    console.log(x,n,'helo')
 
   //first we clone the cart state
   let v_cart = {...cart}
