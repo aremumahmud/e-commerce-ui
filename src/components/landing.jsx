@@ -40,9 +40,9 @@ function Landing(props) {
   let v_cart = {...cart}
    //console.log(qty)
   //then we check if the produv=ct is already present in the cart
-  if(v_cart[x[0]._id]){
+  if(v_cart[x[0]._id+x[0].size]){
     //if so we assign the current cart value to a variable
-    let curr_qty =  v_cart[x[0]._id].quantity_for_cart
+    let curr_qty =  v_cart[x[0]._id+x[0].size].quantity_for_cart
     
     // then we check if the current quantity is equal to the quantity or product inventory
     //or the increment of the cart qty is greater than the product inventory
@@ -55,15 +55,22 @@ function Landing(props) {
   //console.log(x[0]._id)
 
   //then if the cart object for the present is not available
-  if(!v_cart[x[0]._id]){
+  if(!v_cart[x[0]._id+x[0].size]){
     //then create a reference in the cart object
-    v_cart[x[0]._id] = x[0]
+    v_cart[x[0]._id+x[0].size] = x[0]
     //and add a quantity object
-    v_cart[x[0]._id].quantity = qty
-    v_cart[x[0]._id].quantity_for_cart = n?n:1
+    v_cart[x[0]._id+x[0].size].quantity = qty
+    v_cart[x[0]._id+x[0].size].quantity_for_cart = n?n:1
   }else{
-    //else we just add to the existing reference
-    v_cart[x[0]._id].quantity_for_cart += n?n:1
+   // if(v_cart[x[0]._id].size === x[0].size){
+      v_cart[x[0]._id+x[0].size].quantity_for_cart += n?n:1
+    //   return
+    // }
+    // //else we just add to the existing reference
+    // v_cart[x[0]._id+x[0].size] = x[0]
+    // //and add a quantity object
+    // v_cart[x[0]._id+x[0].size].quantity = qty
+    // v_cart[x[0]._id+x[0].size].quantity_for_cart = n?n:1
   }
   
    //console.log(v_cart)
@@ -85,20 +92,22 @@ function Landing(props) {
      //console.log(cart)
   };
 
-  let removeFromCart = (id) => {
+  let removeFromCart = (id,size) => {
 
     //first we clone the cart state
     let v_cart = {...cart}
   
     //then if the cart object for the present is not available
-    if(!v_cart[id]){
+    if(!v_cart[id] && !v_cart[id+size] ){
+      alert(v_cart[id+size])
       return
     }else{
+      //alert('yay')
       //we check if the quantity is 1 if so we return
-      if(v_cart[id].quantity_for_cart === 1) return 
+      if( v_cart[id+size].quantity_for_cart === 1) return 
       
       //else we just add to the existing reference
-      v_cart[id].quantity_for_cart -= 1
+      v_cart[id+size].quantity_for_cart -= 1
     }
     
      //console.log(v_cart)
@@ -113,14 +122,14 @@ function Landing(props) {
        //console.log(cart)
     };
 
-    let addFromCart = (id,qty) => {
+    let addFromCart = (id,qty,size) => {
 
       //first we clone the cart state
       let v_cart = {...cart}
     //then we check if the produv=ct is already present in the cart
-      if(v_cart[id]){
+      if(v_cart[id+size]){
         //if so we assign the current cart value to a variable
-        let curr_qty =  v_cart[id].quantity_for_cart
+        let curr_qty =  (v_cart[id+size].quantity_for_cart||v_cart[id].quantity_for_cart)
         
         // then we check if the current quantity is equal to the quantity or product inventory
         //or the increment of the cart qty is greater than the product inventory
@@ -130,11 +139,11 @@ function Landing(props) {
         }
       }
       //then if the cart object for the present is not available
-      if(!v_cart[id]){
+      if(!v_cart[id+size]){
         return
       }else{
         //else we just add to the existing reference
-        v_cart[id].quantity_for_cart += 1
+        v_cart[id+size].quantity_for_cart += 1
       }
       
        //console.log(v_cart)
@@ -147,8 +156,8 @@ function Landing(props) {
          //console.log(cart)
       };
 
-      let remove_totally = (id , qty)=>{
-        delete cart[id]
+      let remove_totally = (id , qty,size)=>{
+        delete cart[id+size]
         setcart(cart)
         let no = cart_no - qty
         setCartno(no)
