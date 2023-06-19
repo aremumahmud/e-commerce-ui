@@ -302,9 +302,10 @@
     }
     .text p {
         width: 100% !important;
-        font-size: medium !important;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
+        font-size: small !important;
+        /* margin-left: 10px !important;
+        margin-right: 10px !important; */
+        text-align: center;
     }
     .text {
         margin-left: 10px !important;

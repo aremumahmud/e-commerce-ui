@@ -8,7 +8,8 @@ function Payment({setPage}){
         </div>
         <div class="text">
             <p> 
-Thank you for your purchase at our store! We are pleased to inform you that your order has been successfully processed.Should you have any questions or require further assistance, please don't hesitate to reach out to our customer support team. We appreciate your business and hope you enjoy your new female wear!</p>
+                Great news! Your order has been recieved and we're thrilled you've chosen us to be part of your wardrobe. If you have any questions or need help, please don't hesitate to reach out. We hope you enjoy your new piece(s)!
+            </p>
             <div onClick={()=>setPage('home')} class="btn_me">
                 Go home -&gt;
             </div>

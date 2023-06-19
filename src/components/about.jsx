@@ -7,12 +7,7 @@ function About({setPage}) {
       <div className="descriptionSection">
         <p className="title">About Glitzabelle Label</p>
         <p className="description">
-        Explore our premier online boutique, catering exclusively to women's fashion! Discover an exquisite 
-        array of stylish and comfortable clothing items, meticulously curated from top-notch materials. From trendy 
-        tops to chic dresses, we offer a diverse range of designs, colors, and sizes to suit your individual style and 
-        preferences. Experience a seamless shopping journey, secured payments, and expedited delivery services. Stay
-         ahead of the fashion curve with our frequent new arrivals.
-         Thank you for choosing us as your ultimate destination for all your female wear needs!
+        Welcome to our online fashion store! At Glitzabelle Label, we're dedicated to creating stylish pieces for women all over the world. Wheather you're looking for something unique, we have something for you. Our goals is to help women look and feel their best, no matter what their personal style may be. Enjoy a seamless shopping experience with secure payment options and expendited delivery services. We can't wait to see our Thank you for choosing Glitzabelle Label 
         </p>
         <div className="cta">
           <div className="btn active" onClick={()=>setPage('users/login')}>Log in</div>

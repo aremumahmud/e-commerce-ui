@@ -9,7 +9,9 @@ const pic = {
     send_otp: 'https://e-commerce-api.aremzy.repl.co/v1/api/send_otp',
     verify_otp: 'https://e-commerce-api.aremzy.repl.co/v1/api/verify_otp',
     change_password: 'https://e-commerce-api.aremzy.repl.co/v1/api/change_password',
-    search_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/search/search_products'
+    search_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/search/search_products',
+    suscribe_uri: 'http://localhost:2000/v1/api/suscribe'
 }
 
 export default pic
+//export default pic

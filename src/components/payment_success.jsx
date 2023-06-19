@@ -13,7 +13,7 @@ function PaymentSucesss({setPage , cleanCart}){
         setPage={setPage}
         data={[
           { name: "Home", path: "home" },
-          { name: "Payment Sucess", path: "success" },
+          { name: "Payment Success", path: "success" },
         ]}
       />
          <Payment setPage={setPage}/>

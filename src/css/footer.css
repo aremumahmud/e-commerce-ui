@@ -52,6 +52,7 @@ footer p {
     background-color: transparent;
     border: none;
     outline: none;
+    width: 100%;
 }
 
 .copyWright {
