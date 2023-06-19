@@ -8,6 +8,16 @@ function AddProd(){
 
    let [variants , setVariants] = useState([])
    let [vari , setVari] = useState('')
+
+   let [variants1 , setVariants1] = useState([])
+   let [vari1 , setVari1] = useState('')
+
+   let [variants2 , setVariants2] = useState([])
+   let [vari2 , setVari2] = useState('')
+
+   let [variants3 , setVariants3] = useState([])
+   let [vari3 , setVari3] = useState('')
+
    let [description , setDescription] = useState('')
    let [title , setTitle] = useState('')
    let [price , setPrice] = useState(0)
@@ -60,18 +70,18 @@ let [pending4 , setPending4 ]  = useState(false)
          
     //  }
     
-    let divide_inventory = (e,index)=>{
-      let results = 0
-      variants.forEach(variant=>{
-        results += parseInt(variant.qty)
-      })
-      if((results+ parseInt(e.target.value)) > inventory){
-        return 
-        //e.target.value = 0
-      }
-      let duplicate = [...variants]
+    let divide_inventory = (e,index,dispatch,vay)=>{
+    //   let results = 0
+    //   variants.forEach(variant=>{
+    //     results += parseInt(variant.qty)
+    //   })
+    //   if((results+ parseInt(e.target.value)) > inventory){
+    //     return 
+    //     //e.target.value = 0
+    //   }
+      let duplicate = [...vay]
       duplicate[index].qty = e.target.value
-      setVariants(duplicate)
+      dispatch && dispatch(duplicate)
     }
 
 
@@ -82,23 +92,26 @@ let [pending4 , setPending4 ]  = useState(false)
               description,
               price,
               category,
-              sizes:variants,
               varieties:[{
                 image: image1,
                 parentProduct: title,
-                quantity:inventory
+                quantity:inventory,
+                sizes:variants,
               },{
                 image: image2,
                 parentProduct: title,
-                quantity:inventory1
+                quantity:inventory1,
+                sizes:variants1,
               },{
                 image: image3,
                 parentProduct: title,
-                quantity:inventory2
+                quantity:inventory2,
+                sizes:variants2,
               },{
                 image: image4,
                 parentProduct: title,
-                quantity:inventory3
+                quantity:inventory3,
+                sizes:variants3,
               }]
         }
       
@@ -107,6 +120,7 @@ let [pending4 , setPending4 ]  = useState(false)
 
 
      let sendProd = ()=>{
+    // return console.log(getData())
         send_product('', getData(), (err,res)=>{
             res = JSON.parse(res)
       if(err || res.error){
@@ -225,29 +239,7 @@ let [pending4 , setPending4 ]  = useState(false)
                 <button className="button">Image 1</button>
                 <input  onChange={(e)=>setInventory(e.target.value)}  className="simple_input partition" placeholder='enter amount' />
              </div>
-             <div className="size_choose">
-                <button className="button">Image 2</button>
-                <input  onChange={(e)=>setInventory1(e.target.value)}  className="simple_input partition"  placeholder='enter amount'/>
-             </div>
-             <div className="size_choose">
-                <button className="button">Image 3</button>
-                <input  onChange={(e)=>setInventory2(e.target.value)}  className="simple_input partition"  placeholder='enter amount'/>
-             </div>
-             <div className="size_choose">
-                <button className="button">Image 4</button>
-                <input  onChange={(e)=>setInventory3(e.target.value)}  className="simple_input partition" placeholder='enter amount' />
-             </div>
-            <p> Pricing</p>
-            <label htmlFor="">
-               price 
-               <input  onChange={(e)=>setPrice(e.target.value)} type="text" className="simple_input" placeholder='0.00' />
-            </label>
-            {/* <p>Inventory</p>
-            <label htmlFor="">
-                Quantity
-                <input  onChange={(e)=>setInventory(e.target.value)} type="text" className="simple_input" placeholder='0' />
-            </label> */}
-            <p>Variants (size)</p>
+             <p>Variants (size)</p>
             <div className='size_choose'>
                 
             <input className="simple_input partition" onChange={(e)=>{
@@ -297,12 +289,203 @@ let [pending4 , setPending4 ]  = useState(false)
                     <p>{x.size.toUpperCase()}</p>
                 </div>
                 <div className="ass_qty">
-                    <input onChange={(e)=>divide_inventory(e ,x.index)} className='simple_input partition' type="text" name="" id="" />
+                    <input onChange={(e)=>divide_inventory(e ,x.index,setVariants,variants)} className='simple_input partition' type="text" name="" id="" />
                 </div>
             </div> 
                     
                     )
             }
+             <div className="size_choose">
+                <button className="button">Image 2</button>
+                <input  onChange={(e)=>setInventory1(e.target.value)}  className="simple_input partition"  placeholder='enter amount'/>
+             </div>
+             <p>Variants (size)</p>
+            <div className='size_choose'>
+                
+            <input className="simple_input partition" onChange={(e)=>{
+                setVari1(e.target.value)
+            }}  type="text" name="" id="" placeholder='M / L / XL' /> <button onClick={()=>{
+               if(!vari1 || variants1.length === 8) return
+               setVariants1([...variants1,{
+                index:variants1.length,
+                size:vari1,
+                qty:0
+               }])
+            }} className='button'>add</button>
+             
+            </div>
+            <div className="size_group">
+                {
+                    variants1 && variants1.filter(x=>x).map(x=>{
+                       return <div className="sizes">
+                        <p className='size_choice'>{x.size.toUpperCase()}</p>
+                        <p onClick={()=>{
+                            let j = variants1.filter(n=>{
+                                if(n.index === x.index){
+                                    return false
+                                }
+                                return true
+                            })
+                            setVariants1(j)
+                        }}>x</p>
+                        </div>
+                    })
+                }
+                
+                {/* <div className="sizes">
+                    <p className='size_choice'>X</p>
+                    <p>x</p>
+                </div> */}
+            </div>
+           
+            <br />
+            <p>Inventory division based on size </p>
+           
+            current inventory listed ({inventory||0})
+            <br /> <br />
+            {
+                variants1.map(x=><div className="divisions">
+                <div className="ass_size">
+                    <p>{x.size.toUpperCase()}</p>
+                </div>
+                <div className="ass_qty">
+                    <input onChange={(e)=>divide_inventory(e ,x.index,setVariants1,variants1)} className='simple_input partition' type="text" name="" id="" />
+                </div>
+            </div> 
+                    
+                    )
+            }
+             <div className="size_choose">
+                <button className="button">Image 3</button>
+                <input  onChange={(e)=>setInventory2(e.target.value)}  className="simple_input partition"  placeholder='enter amount'/>
+             </div>
+             <p>Variants (size)</p>
+            <div className='size_choose'>
+                
+            <input className="simple_input partition" onChange={(e)=>{
+                setVari2(e.target.value)
+            }}  type="text" name="" id="" placeholder='M / L / XL' /> <button onClick={()=>{
+               if(!vari2 || variants2.length === 8) return
+               setVariants2([...variants2,{
+                index:variants2.length,
+                size:vari2,
+                qty:0
+               }])
+            }} className='button'>add</button>
+             
+            </div>
+            <div className="size_group">
+                {
+                    variants2 && variants2.filter(x=>x).map(x=>{
+                       return <div className="sizes">
+                        <p className='size_choice'>{x.size.toUpperCase()}</p>
+                        <p onClick={()=>{
+                            let j = variants2.filter(n=>{
+                                if(n.index === x.index){
+                                    return false
+                                }
+                                return true
+                            })
+                            setVariants2(j)
+                        }}>x</p>
+                        </div>
+                    })
+                }
+                
+                {/* <div className="sizes">
+                    <p className='size_choice'>X</p>
+                    <p>x</p>
+                </div> */}
+            </div>
+           
+            <br />
+            <p>Inventory division based on size </p>
+           
+            current inventory listed ({inventory||0})
+            <br /> <br />
+            {
+                variants2.map(x=><div className="divisions">
+                <div className="ass_size">
+                    <p>{x.size.toUpperCase()}</p>
+                </div>
+                <div className="ass_qty">
+                    <input onChange={(e)=>divide_inventory(e ,x.index,setVariants2,variants2)} className='simple_input partition' type="text" name="" id="" />
+                </div>
+            </div> 
+                    
+                    )
+            }
+             <div className="size_choose">
+                <button className="button">Image 4</button>
+                <input  onChange={(e)=>setInventory3(e.target.value)}  className="simple_input partition" placeholder='enter amount' />
+             </div>
+             <p>Variants (size)</p>
+            <div className='size_choose'>
+                
+            <input className="simple_input partition" onChange={(e)=>{
+                setVari3(e.target.value)
+            }}  type="text" name="" id="" placeholder='M / L / XL' /> <button onClick={()=>{
+               if(!vari3 || variants3.length === 8) return
+               setVariants3([...variants3,{
+                index:variants3.length,
+                size:vari3,
+                qty:0
+               }])
+            }} className='button'>add</button>
+             
+            </div>
+            <div className="size_group">
+                {
+                    variants3 && variants3.filter(x=>x).map(x=>{
+                       return <div className="sizes">
+                        <p className='size_choice'>{x.size.toUpperCase()}</p>
+                        <p onClick={()=>{
+                            let j = variants3.filter(n=>{
+                                if(n.index === x.index){
+                                    return false
+                                }
+                                return true
+                            })
+                            setVariants3(j)
+                        }}>x</p>
+                        </div>
+                    })
+                }
+                
+                {/* <div className="sizes">
+                    <p className='size_choice'>X</p>
+                    <p>x</p>
+                </div> */}
+            </div>
+           
+            <br />
+            <p>Inventory division based on size </p>
+           
+            current inventory listed ({inventory||0})
+            <br /> <br />
+            {
+                variants3.map(x=><div className="divisions">
+                <div className="ass_size">
+                    <p>{x.size.toUpperCase()}</p>
+                </div>
+                <div className="ass_qty">
+                    <input onChange={(e)=>divide_inventory(e ,x.index,setVariants3,variants3)} className='simple_input partition' type="text" name="" id="" />
+                </div>
+            </div> 
+                    
+                    )
+            }
+            <p> Pricing</p>
+            <label htmlFor="">
+               price 
+               <input  onChange={(e)=>setPrice(e.target.value)} type="text" className="simple_input" placeholder='0.00' />
+            </label>
+            {/* <p>Inventory</p>
+            <label htmlFor="">
+                Quantity
+                <input  onChange={(e)=>setInventory(e.target.value)} type="text" className="simple_input" placeholder='0' />
+            </label> */}
+           
             
             <button className='submit_this' onClick={sendProd}>Add product</button>
         </form>
