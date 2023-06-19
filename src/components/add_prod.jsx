@@ -69,6 +69,7 @@ let [pending4 , setPending4 ]  = useState(false)
          
          
     //  }
+    let [load , setLoad] = useState(false)
     
     let divide_inventory = (e,index,dispatch,vay)=>{
     //   let results = 0
@@ -80,7 +81,7 @@ let [pending4 , setPending4 ]  = useState(false)
     //     //e.target.value = 0
     //   }
       let duplicate = [...vay]
-      duplicate[index].qty = e.target.value
+      duplicate[index].qty =parseInt(e.target.value) 
       dispatch && dispatch(duplicate)
     }
 
@@ -121,7 +122,9 @@ let [pending4 , setPending4 ]  = useState(false)
 
      let sendProd = ()=>{
     // return console.log(getData())
+    setLoad(true)
         send_product('', getData(), (err,res)=>{
+            setLoad(false)
             res = JSON.parse(res)
       if(err || res.error){
         //setLoad(false)
@@ -235,6 +238,7 @@ let [pending4 , setPending4 ]  = useState(false)
                 </div>
             </label>
             <br />
+            <p>first product variation</p><hr /><br />
             <div className="size_choose">
                 <button className="button">Image 1</button>
                 <input  onChange={(e)=>setInventory(e.target.value)}  className="simple_input partition" placeholder='enter amount' />
@@ -295,6 +299,7 @@ let [pending4 , setPending4 ]  = useState(false)
                     
                     )
             }
+             <p>second product variation</p><hr /><br />
              <div className="size_choose">
                 <button className="button">Image 2</button>
                 <input  onChange={(e)=>setInventory1(e.target.value)}  className="simple_input partition"  placeholder='enter amount'/>
@@ -355,6 +360,8 @@ let [pending4 , setPending4 ]  = useState(false)
                     
                     )
             }
+
+<p>third product variation</p><hr /><br />
              <div className="size_choose">
                 <button className="button">Image 3</button>
                 <input  onChange={(e)=>setInventory2(e.target.value)}  className="simple_input partition"  placeholder='enter amount'/>
@@ -415,6 +422,7 @@ let [pending4 , setPending4 ]  = useState(false)
                     
                     )
             }
+             <p>fourth product variation</p><hr /><br />
              <div className="size_choose">
                 <button className="button">Image 4</button>
                 <input  onChange={(e)=>setInventory3(e.target.value)}  className="simple_input partition" placeholder='enter amount' />
@@ -487,7 +495,17 @@ let [pending4 , setPending4 ]  = useState(false)
             </label> */}
            
             
-            <button className='submit_this' onClick={sendProd}>Add product</button>
+            <button style={{
+                textAlign:'center',
+                display:'flex',
+                alignItems:'center',
+                justifyContent:'center'
+            }} className='submit_this' onClick={sendProd}>
+                {
+                    load ? <div className="loader"></div>:' Add product'
+                }
+              
+            </button>
         </form>
         
        <br />

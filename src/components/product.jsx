@@ -2,17 +2,18 @@ import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
 import "../css/products.css";
 import { useState } from "react";
 import currencyTab, { symbolTab } from "../config/currency";
+import arrayToObject from "../libs/arraytoObj_sizebased";
 
 function Product({setMain,setCart,cart,setPage,info,setProduct,symbol ,setViewStatus3, setCartData3}) {
  //console.log(info)
- 
+  
   let [load , setLoad] = useState(false)
   let onclick =(n)=>{
      setLoad(true)
      let timeout =  setTimeout(()=>{
         setLoad(false)
-        
-        setCart([n],1,info.quantity,info)
+        let sizes = arrayToObject(n.sizes)[n.size].qty
+        setCart([n],1,parseInt(sizes),info)
         //setCartData3(info)
         //setViewStatus3(true)
         clearTimeout(timeout)
@@ -73,7 +74,7 @@ function Product({setMain,setCart,cart,setPage,info,setProduct,symbol ,setViewSt
                     </ul>
                     <p className="nonee">{Math.floor(Math.random()*200)+200}</p>
                   </div>
-                  <div className="btn" onClick={()=>onclick({currency:info.currentCurrency,image:info.image,_id:info._id,name:info.name,price:info.price,size:info.sizes[0].size})}>
+                  <div className="btn" onClick={()=>onclick({currency:info.currentCurrency,image:info.image,_id:info._id,name:info.name,price:info.price,size:info.sizes[0].size,sizes:info.sizes})}>
                   {/* {console.log(info.currentCurrency)} */}
                     {
                       load?

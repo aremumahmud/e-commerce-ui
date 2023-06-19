@@ -1,6 +1,19 @@
+import { useEffect } from 'react'
 import '../css/sizes.css'
+import arrayToObject from '../libs/arraytoObj_sizebased'
 
-function Sizes({sized,setSize}){
+function Sizes({sized,setSize,setOutOfStock}){
+
+    useEffect(()=>{
+        let sis =  parseInt(arrayToObject(sized)[sized[0].size].qty)
+        ///alert(typeof sis)
+        if(sis === 0){
+            setOutOfStock(true)
+        }else{
+            setOutOfStock(false)
+        }
+        
+    },[])
 
     let manageClicked = (e)=>{
         let size = e.target.innerHTML
@@ -14,6 +27,13 @@ function Sizes({sized,setSize}){
             }
             el.classList.remove('active8')
         })
+        let sis =  parseInt(arrayToObject(sized)[size].qty)
+        ///alert(typeof sis)
+        if(sis === 0){
+            setOutOfStock(true)
+        }else{
+            setOutOfStock(false)
+        }
         
     }
     return (

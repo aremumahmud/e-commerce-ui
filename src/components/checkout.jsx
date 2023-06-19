@@ -6,7 +6,7 @@ import Summary from "./summary";
 import calculate from "../libs/calculate";
 import send_locked_to_be_product from "../libs/send_locked_to_be";
 import validate from "../libs/validate_deets";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { nameTab } from "../config/currency";
 
 
@@ -16,7 +16,9 @@ function Checkout({setCurrency, setPage , cart ,symbol}) {
   let [busy , setBusy] = useState(false)
   let [URIState , setURI] = useState('upload_locked_product_uri_guest')
   let price = calculate( Object.keys(cart).map(x=>cart[x]),symbol)
-
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   let lockProduct = ()=>{
     send_locked_to_be_product(URIState,cart , price, user_data ,nameTab[symbol] , (err,resp)=>{
       setBusy(false)

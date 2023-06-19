@@ -8,7 +8,7 @@ function Payment({setPage}){
         </div>
         <div class="text">
             <p> 
-                Great news! Your order has been recieved and we're thrilled you've chosen us to be part of your wardrobe. If you have any questions or need help, please don't hesitate to reach out. We hope you enjoy your new piece(s)!
+                Great news! Your order has been received and we're thrilled you've chosen us to be a part of your wardrobe. If you have any questions or need help, please don't hesitate to reach out. We hope you enjoy your new piece(s)!
             </p>
             <div onClick={()=>setPage('home')} class="btn_me">
                 Go home -&gt;

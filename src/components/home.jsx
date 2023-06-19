@@ -22,7 +22,7 @@ function Home({setCart , setPage, cart, setProduct,data , symbol,setFilter ,setL
       <Display />
       <br /><br /> 
       <Filter search={search} categories={categories} setLoad={setLoad} setFilter={setFilter} /> 
-      <p className="topic">Top Fashion Recomended For You!</p>
+      <p className="topic">Top Fashion For You!</p>
       <Products  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct} cart={cart} setPage={setPage} setCart={setCart} data={data} />
       <Pagination />
       <p className="topic">Weekly Popular Products</p>
