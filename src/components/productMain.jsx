@@ -215,7 +215,7 @@ function ProductMain({
               <p>Dont miss it</p> */}
             {/* </div> */}
           </div>
-          <Sizes setOutOfStock={setOutOfStock} setSize={setSize} sized={data.sizes} />
+          <Sizes setOutOfStock={setOutOfStock} setSize={setSize} data={data} />
           {
             outOfStock ? <div class='out_of_stock'>out of stock</div> :<div className="ctas">
             <div

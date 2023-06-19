@@ -2,8 +2,8 @@ import { useEffect } from 'react'
 import '../css/sizes.css'
 import arrayToObject from '../libs/arraytoObj_sizebased'
 
-function Sizes({sized,setSize,setOutOfStock}){
-
+function Sizes({data,setSize,setOutOfStock}){
+let sized = data.sizes
     useEffect(()=>{
         let sis =  parseInt(arrayToObject(sized)[sized[0].size].qty)
         ///alert(typeof sis)
