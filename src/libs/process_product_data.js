@@ -13,7 +13,7 @@ function helper(data) {
             ...data,
             ...dt,
             mode: mode == 1 ? 'ruler' : 'servant',
-            varieties: data.varieties.map(x => ({ image: x.image, id: x._id, name: x.name, quantity: x.quantity })),
+            varieties: data.varieties.map(x => ({ image: x.image, id: x._id, name: x.parent_product, quantity: x.quantity, sizes: x.sizes })),
 
         }
     })

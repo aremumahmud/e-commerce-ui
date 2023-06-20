@@ -63,6 +63,7 @@ function ProductMain({
                 setData({
                   ...data,
                   varieties: data.varieties,
+                  sizes:data.varieties[0].sizes,
                   _id: data.varieties[0].id,
                   image: data.varieties[0].image,
                 });
@@ -73,9 +74,11 @@ function ProductMain({
             <div
               className="variety"
               onClick={() => {
+                console.log(data,'dhjxnbmsjx')
                 setMain(data.varieties[1].image);
                 setData({
                   ...data,
+                  sizes:data.varieties[1].sizes,
                   varieties: data.varieties,
                   _id: data.varieties[1]
                     ? data.varieties[1].id
@@ -85,7 +88,7 @@ function ProductMain({
                     : data.varieties[0].image,
                 });
               }}>
-              {" "}
+              { console.log(data,'hejhsxh')}
               <img
                 src={
                   data.varieties[1]
@@ -102,6 +105,7 @@ function ProductMain({
                 setData({
                   ...data,
                   varieties: data.varieties,
+                  sizes:data.varieties[2].sizes,
                   _id: data.varieties[2]
                     ? data.varieties[2].id
                     : data.varieties[0].id,
@@ -126,6 +130,7 @@ function ProductMain({
                 setMain(data.varieties[3].image);
                 setData({
                   ...data,
+                  sizes:data.varieties[3].sizes,
                   varieties: data.varieties,
                   _id: data.varieties[3]
                     ? data.varieties[3].id

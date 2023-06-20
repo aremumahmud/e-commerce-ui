@@ -54,3 +54,23 @@
 .as_a_guest input {
     margin-right: 10px;
 }
+
+.showDiscount {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #004225;
+    color: #ffffff;
+    width: fit-content;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.name_ting {
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.close {
+    font-size: larger;
+}
