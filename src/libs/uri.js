@@ -11,9 +11,9 @@ const pic = {
     change_password: 'https://e-commerce-api.aremzy.repl.co/v1/api/change_password',
     search_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/search/search_products',
     suscribe_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/suscribe',
-    create_discount_uri: 'http://localhost:2000/v1/api/discount/create_discount/?value=50',
-    verify_discount_uri: 'http://localhost:2000/v1/api/discount/validate_discount'
-        //
+    create_discount_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/discount/create_discount/?value=50',
+    verify_discount_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/discount/validate_discount'
+    //
 }
 
 export default pic
@@ -32,7 +32,7 @@ export default pic
 //     search_uri: 'http://localhost:2000/v1/api/search/search_products',
 //     suscribe_uri: 'http://localhost:2000/v1/api/suscribe',
 //     create_discount_uri: 'http://localhost:2000/v1/api/discount/create_discount/?value=50',
-//     verify_discount_uri: 'http://localhost:2000/v1/api/discount/validate_discount/?discount_code=KUGYGVCE&value=50'
+//     verify_discount_uri: 'http://localhost:2000/v1/api/discount/validate_discount/'
 // }
 
 // export default pic

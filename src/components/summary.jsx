@@ -21,7 +21,7 @@ function Summary({
   let [discount, setDiscount] = useState("");
   let [load, setLoad] = useState(false)
   let [error, setError] = useState('')
-  let [discounts, setDiscounts] = useState({ ghvhkv: 70 })
+  let [discounts, setDiscounts] = useState({})
   let [discountPrice, setDiscountPrice] = useState(0)
 
 
@@ -63,12 +63,14 @@ function Summary({
     }
     setURI("upload_locked_product_uri_guest");
   };
-
+  useEffect(() => {
+    calculateDiscount(discounts)
+  }, [discounts])
   useEffect(() => {
     // console.log(symbol) 
     // console.log(+((50 * currencyTab['NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2) * 1
     // )
-    calculateDiscount(discounts)
+
     document.getElementById(nameTab[symbol]).checked = true;
     manageChecked(["USD", "EUR", "GBP", "NGN"], nameTab[symbol]);
   }, [symbol]);
