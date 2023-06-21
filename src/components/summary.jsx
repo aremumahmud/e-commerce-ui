@@ -104,6 +104,7 @@ function Summary({
             delete disc[x.discount]
             setDiscounts(disc)
             calculateDiscount(disc)
+            setDiscountCode(Object.keys(disc))
           }}>x</p>
         </div>)
       }
