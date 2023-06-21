@@ -25,7 +25,7 @@ function Checkout({ setCurrency, setPage, cart, symbol }) {
       setBusy(false)
       if (err) {
 
-        return alert(err.msg)
+        return alert(err.msg||'sorry something unexpected happened')
       }
 
       let data = JSON.parse(resp)

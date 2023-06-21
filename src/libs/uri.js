@@ -13,7 +13,7 @@ const pic = {
     suscribe_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/suscribe',
     create_discount_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/discount/create_discount/?value=50',
     verify_discount_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/discount/validate_discount'
-    //
+        //
 }
 
 export default pic
