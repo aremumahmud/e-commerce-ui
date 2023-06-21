@@ -1,6 +1,6 @@
 import pic from './uri'
 
-export default function send_locked_to_be_product(uri, body, price, user_data, currency, cb) {
+export default function send_locked_to_be_product(uri, body, price, user_data, currency, discount, cb) {
     // console.log(price)
     if (!(user_data && price)) return cb && cb({
         msg: 'Please fill all fields',
@@ -19,7 +19,8 @@ export default function send_locked_to_be_product(uri, body, price, user_data, c
             inventory: Object.keys(body).map(x => body[x]),
             price,
             user_data,
-            currency
+            currency,
+            discount
         })
     }).then(res => {
         return res.text()

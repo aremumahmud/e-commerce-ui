@@ -11,48 +11,49 @@ import { nameTab } from "../config/currency";
 
 
 
-function Checkout({setCurrency, setPage , cart ,symbol}) {
+function Checkout({ setCurrency, setPage, cart, symbol }) {
+  let [discount_code, setDiscountCode] = useState([])
   let [user_data, set_user_data] = useState(null)
-  let [busy , setBusy] = useState(false)
-  let [URIState , setURI] = useState('upload_locked_product_uri_guest')
-  let price = calculate( Object.keys(cart).map(x=>cart[x]),symbol)
-  useEffect(()=>{
-    window.scrollTo(0,0)
-  },[])
-  let lockProduct = ()=>{
-    send_locked_to_be_product(URIState,cart , price, user_data ,nameTab[symbol] , (err,resp)=>{
+  let [busy, setBusy] = useState(false)
+  let [URIState, setURI] = useState('upload_locked_product_uri_guest')
+  let price = calculate(Object.keys(cart).map(x => cart[x]), symbol)
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  let lockProduct = () => {
+    send_locked_to_be_product(URIState, cart, price, user_data, nameTab[symbol], discount_code, (err, resp) => {
       setBusy(false)
-      if(err){
-       
-         return alert(err.msg)
+      if (err) {
+
+        return alert(err.msg)
       }
-      
-      let data  = JSON.parse(resp)
-     // console.log(resp,err)
-      if(data.login == false){
-        return window.open('/users/signup' ,'_self')
+
+      let data = JSON.parse(resp)
+      // console.log(resp,err)
+      if (data.login == false) {
+        return window.open('/users/signup', '_self')
       }
-      if(!data.payment_uri) return alert('sorry something unexpected happened')
-      window.open(data.payment_uri,'_self')
-    // console.log(JSON.parse(resp))
-      
+      if (!data.payment_uri) return alert('sorry something unexpected happened')
+      window.open(data.payment_uri, '_self')
+      // console.log(JSON.parse(resp))
+
     })
   }
 
   let getDoc = (x) => document.getElementById(x)
-  let c = ()=>{
+  let c = () => {
     let formData = new FormData(getDoc('form2134'))
     return Object.fromEntries(formData.entries())
   }
 
-  let valid = ()=>{
+  let valid = () => {
     let formData = new FormData(getDoc('form2134'))
     let data = Object.fromEntries(formData.entries())
     let f = Object.keys(data)
-   return validate(f).length === 0 && set_user_data(data)
+    return validate(f).length === 0 && set_user_data(data)
   }
-  
- let [pace , setPace] = useState(0)
+
+  let [pace, setPace] = useState(0)
   return (
     <>
       <Path
@@ -65,18 +66,18 @@ function Checkout({setCurrency, setPage , cart ,symbol}) {
       /> <br />
       <div className="split">
         <div className="one">
-          <Review symbol={symbol} cart={cart}/>
+          <Review symbol={symbol} cart={cart} />
           <div className="checkbox">
             <input type="checkbox" name="" id="" />
             Returning Customer
           </div>
           <Delivery pace={pace} setPace={setPace} valid={valid} />
-          
+
         </div>
         <div className="two" style={{
-          display : pace === 0? "block" : 'none'
+          display: pace === 0 ? "block" : 'none'
         }}>
-          <Summary setURI={setURI} setPage={setPage} setCurrency={setCurrency}  symbol={symbol}  busy={busy} setBusy={setBusy}  pace={pace} setPace={setPace}  lockProduct={lockProduct} price={price}/>
+          <Summary setDiscountCode={setDiscountCode} setURI={setURI} setPage={setPage} setCurrency={setCurrency} symbol={symbol} busy={busy} setBusy={setBusy} pace={pace} setPace={setPace} lockProduct={lockProduct} price={price} />
         </div>
       </div>
     </>
