@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "../css/summary.css";
 import Calculation from "./calculations";
 import manageChecked from "../libs/manageChecked";
-import currencyTab, { nameTab } from "../config/currency";
+import currencyTab, { nameTab, symbolTab } from "../config/currency";
 import verify_discount from "../libs/verify_discount";
 
 function Summary({
@@ -16,26 +16,40 @@ function Summary({
   setCurrency,
   setPage,
   setURI,
+  setDiscountCode
 }) {
   let [discount, setDiscount] = useState("");
-  let [load , setLoad ] = useState(false)
-  let [error , setError] = useState('')
-  let [discounts , setDiscounts] = useState({})
+  let [load, setLoad] = useState(false)
+  let [error, setError] = useState('')
+  let [discounts, setDiscounts] = useState({ ghvhkv: 70 })
+  let [discountPrice, setDiscountPrice] = useState(0)
+
 
   let getDiscount = () => {
-    if(discounts[discount]) return setError('discount has already been added')
+    if (discounts[discount]) return setError('discount has already been added')
     if (!discount) return setError("please enter a discount code!");
     setLoad(true)
-    verify_discount(discount , (err,res)=>{
+    verify_discount(discount, (err, res) => {
       setLoad(false)
-      if(err || res.error) return setError('invalid discount code')
-      let disc = {...discounts}
-      disc[discount] = res.value 
+      if (err || res.error) return setError('invalid discount code')
+      let disc = { ...discounts }
+      disc[discount] = res.value
+      setDiscountCode(Object.keys(disc))
       setDiscounts(disc)
       setError('')
-     setDiscount('')
+      setDiscount('')
     })
   };
+
+  let calculateDiscount = (discounts) => {
+    if (Object.keys(discounts).length === 0) return setDiscountPrice(0)
+    let results = 0
+    Object.keys(discounts).forEach(x => {
+      results += discounts[x]
+    })
+    let priced = (results * price) / 100
+    setDiscountPrice(+priced.toFixed(2))
+  }
 
   let change = (e) => {
     manageChecked(["USD", "EUR", "GBP", "NGN"], e.target.id);
@@ -51,16 +65,20 @@ function Summary({
   };
 
   useEffect(() => {
+    // console.log(symbol) 
+    // console.log(+((50 * currencyTab['NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2) * 1
+    // )
+    calculateDiscount(discounts)
     document.getElementById(nameTab[symbol]).checked = true;
     manageChecked(["USD", "EUR", "GBP", "NGN"], nameTab[symbol]);
   }, [symbol]);
   return (
     <>
       <p className="topic">Order Summary</p>
-      <small style={{color:'red'}}>{error}</small>
+      <small style={{ color: 'red' }}>{error}</small>
       <div className="coupon">
         <input
-          onChange={(e) =>e.target.value.split(" ").join("").length < 9 && setDiscount(e.target.value.split(" ").join("").toUpperCase())}
+          onChange={(e) => e.target.value.split(" ").join("").length < 9 && setDiscount(e.target.value.split(" ").join("").toUpperCase())}
           type="email"
           placeholder="Enter Coupon Code"
           value={discount}
@@ -68,27 +86,28 @@ function Summary({
         />
         <div onClick={getDiscount} className="btn">
           {
-            load ? <div className="loader"></div>: ' Apply Coupon'
+            load ? <div className="loader"></div> : ' Apply Coupon'
           }
-         
-          </div>
+
+        </div>
       </div>
       {
-        Object.keys(discounts).map(x=>{
+        Object.keys(discounts).map(x => {
           return {
-            discount:x,
-            value : discounts[x]
+            discount: x,
+            value: discounts[x]
           }
-        }).map(x=><div className="showDiscount">
-        <p className="name_ting">KUGYGVCE -50%</p>
-        <p className="close" onClick={()=>{
-          let disc = {...discounts}
-          delete disc[x.discount]
-          setDiscounts(disc)
-        }}>x</p>
-      </div>)
+        }).map(x => <div className="showDiscount">
+          <p className="name_ting">{x.discount} -{x.value}%</p>
+          <p className="close" onClick={() => {
+            let disc = { ...discounts }
+            delete disc[x.discount]
+            setDiscounts(disc)
+            calculateDiscount(disc)
+          }}>x</p>
+        </div>)
       }
-      
+
       <p className="topic">Payment Currency</p>
       <div className="radios">
         <div className="radio">
@@ -156,7 +175,7 @@ function Summary({
       <br />
       <br />
       <p className="topic">Total Debit Amount</p>
-      <Calculation symbol={symbol} price={price} />
+      <Calculation symbol={symbol} price={price} discountPrice={discountPrice} />
       <br />
       <div className="as_a_guest">
         <input type="checkbox" name="" id="" onChange={change2} />
@@ -177,7 +196,7 @@ function Summary({
         {busy ? (
           <div className="loader"></div>
         ) : (
-          `Pay ${symbol + +price.toFixed(2)}`
+          `Pay ${symbol + +(price.toFixed(2) - discountPrice)}`
         )}
       </div>
       <br />
