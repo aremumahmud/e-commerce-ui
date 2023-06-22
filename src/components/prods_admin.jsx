@@ -119,6 +119,11 @@ let [load , setLoad]= useState(false)
                 //if(err) return alert('Sorry an unexpected error occured!')
                 let dt = JSON.parse(res)
                 console.log(dt)
+                if(dt.authorized == 'none') {
+                  alert('Please sign up as admin to carry out this operation')
+                  return window.open('/users/login','_self')
+                }
+                
                 if(!dt.sucess) return alert('Sorry an unexpected error occured!')
                 alert('Products updated successfully')
               })
