@@ -13,9 +13,10 @@ function Footer (){
         setLoad(false)
         if(err) return alert('an unexpected error ocurred, please check you internet connection')
         if(!res.success) return alert('seems you are already suscribed to our mailing list')
-        alert('you have successfully suscribed to our mailing list')
+        alert('You have successfully subscribed to our mailing list.')
       })
     }
+    // } @celoOrg, @CeloNigeria @adamsheed93 #CeloAfricdao #CeloUIL
     return (
         <footer>
             <hr />

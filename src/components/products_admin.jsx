@@ -7,11 +7,12 @@ function ProductsAdmin(){
     let [data, setData] = useState([])
     
     useEffect(()=>{
-        load_products((err,res)=>{
+        load_products('all',(err,res)=>{
             if(err) return  alert('error loading products')
             setData(res)
+            console.log(res , 'fuck you')
         })
-    })
+    },[])
 
     return(
         <div className="top-mr">
