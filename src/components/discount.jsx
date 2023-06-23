@@ -23,7 +23,7 @@ function Discounts({setPage}){
             
             if(!dt._doc) return alert('Sorry an unexpected error occured!')
             setValueReturned(dt._doc.discount_code)
-            alert(dt._doc.discount_code)
+           // alert(valuesReturned)
         })
     }
 
@@ -59,7 +59,7 @@ function Discounts({setPage}){
                  
                 </div>
                 {
-                    valuesReturned ?<p>Generated Discount Code : {setValueReturned}</p>:''
+                    valuesReturned ?<p>Generated Discount Code : {valuesReturned}</p>:''
                 }
                 
         </div>
