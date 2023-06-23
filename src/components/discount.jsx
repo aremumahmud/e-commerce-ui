@@ -21,7 +21,7 @@ function Discounts({setPage}){
               return window.open('/users/login','_self')
             }
             
-            if(!dt.sucess) return alert('Sorry an unexpected error occured!')
+            if(!dt.sucess) return alert('Sorry an unexpected error occured!'+JSON.stringify(dt))
             setValueReturned(dt.value)
         })
     }
