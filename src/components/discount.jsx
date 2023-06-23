@@ -23,6 +23,7 @@ function Discounts({setPage}){
             
             if(!dt._doc) return alert('Sorry an unexpected error occured!')
             setValueReturned(dt._doc.discount_code)
+            alert(dt._doc.discount_code)
         })
     }
 
