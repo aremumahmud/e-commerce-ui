@@ -12,7 +12,7 @@ function Discounts({setPage}){
     let getDiscCode = ()=>{
         create_discount(parseInt(value) , (err,res)=>{
             if(err){
-                return alert('an unexpected error occured'+err)
+                return alert('an unexpected error occured'+JSON.stringify(err))
             }
             let dt = JSON.parse(res)
             console.log(dt)
