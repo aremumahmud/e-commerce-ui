@@ -1,6 +1,6 @@
 import '../css/path.css'
 
-function Path({data,setPage}){
+function Path({data,setPage,style}){
 //console.log(setPage)
     let count = 0
     let changePage = (e)=>{
@@ -12,7 +12,7 @@ function Path({data,setPage}){
     return (
         <div className="path">
             
-                <ul>
+                <ul style={style||{}}>
                     {
                         data&&
                         

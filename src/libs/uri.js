@@ -11,7 +11,7 @@ const pic = {
     change_password: 'https://e-commerce-api.aremzy.repl.co/v1/api/change_password',
     search_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/search/search_products',
     suscribe_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/suscribe',
-    create_discount_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/discount/create_discount/?value=50',
+    create_discount_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/discount/create_discount',
     verify_discount_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/discount/validate_discount',
     modify_product_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/modify_product'
         //

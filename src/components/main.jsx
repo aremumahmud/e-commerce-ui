@@ -22,6 +22,7 @@ import CartModal from "./CartModalSucess";
 import ForgotModal from "./forgotModal";
 import search from "../libs/search_products";
 import AddProd from "./add_prod";
+import Discounts from "./discount";
 
 
 
@@ -135,16 +136,19 @@ let search_prod = (search_string)=>{
       }
 
       {
-        page === 'addP' && <AddProd />
+        page === 'addP' && <AddProd setPage={setPage} />
       }
       { 
-        page === 'prod_admin' && <ProductsAdmin />
+        page === 'prod_admin' && <ProductsAdmin setPage={setPage} />
       }
       {
         page === 'success' && <PaymentSucesss cleanCart={cleanCart} setPage={setPage} />
       }
       {
        page==='dash' && <Dashboard setPage={setPage} setViewStatus={setViewStatus} setViewData={setViewData} />
+      }
+      {
+       page==='discount' && <Discounts setPage={setPage} />
       }
        {
         page !== 'login' && <Footer />
