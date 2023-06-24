@@ -1,20 +1,25 @@
-import { AiOutlineEye, AiOutlinePayCircle, AiOutlineShoppingCart, AiOutlineUser } from 'react-icons/ai'
+import { AiOutlineEye, AiOutlineLogout, AiOutlinePayCircle, AiOutlineSetting, AiOutlineShoppingCart, AiOutlineUser, AiOutlineWarning } from 'react-icons/ai'
 import '../css/dashboard.css'
 import Tile from './tile'
+import { useState } from 'react'
 
 function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
+
+    let [page , setPage] = useState(true)
     return(
-        <div class="split_me1">
-    {/* <div class="one_1">
+        <div class="split_me1" style={{
+            display:'flex'
+        }}>
+    <div class="one_1">
         <div class="nav">
             <ul>
-                <li><AiOutlineUser className='icony' /></li>
-                <li><AiOutlineShoppingCart  className='icony'  /></li>
-                <li><AiOutlinePayCircle className='icony'  /></li>
+                <li onClick={()=>setPage(true)} ><AiOutlineUser className='icony' /></li>
+                <li onClick={()=>setPage(false)}><AiOutlineSetting  className='icony'  /></li>
+                {/* <li><AiOutlinePayCircle className='icony'  /></li> */}
             </ul>
         </div>
-    </div> */}
-    <div class="one_2">
+    </div>{
+        page ? <div class="one_2">
         <p class="header11">Orders</p>
         {
             loader && <div className='loadings'>
@@ -32,7 +37,26 @@ function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
        {
         orders.map(x=><Tile setViewStatus={setViewStatus} setViewData={setViewData} data={x} />)
        }
+    </div>: <div class="one_2">
+    <p class="header11">User Actions</p>
+    <p style={{
+        padding:'10px'
+        ,color:' #004225',
+        border:'1px solid  #004225',
+        width:'fit-content',
+        borderRadius:'10px',
+        marginBottom:'10px'
+    }}> <AiOutlineLogout /> Log out</p>
+    <p style={{
+        padding:'10px'
+        ,color:'red',
+        border:'1px solid red',
+        width:'fit-content',
+        borderRadius:'10px'
+    }}><AiOutlineWarning /> Deactivate your Account</p>
     </div>
+    }
+    
     <div class="location">
     {/* <div className="center">
          <!-- <p class="topic_me">Click on an order to reveal its location</p> -->

@@ -244,7 +244,16 @@ let [pending4 , setPending4 ]  = useState(false)
                                 pending4 && <div className="loader big"></div>
                                }
                             {
-                                  done4 ? <AiFillDelete  size={20} /> : 'upload images'
+                                  done4 ? <AiFillDelete style={{
+                                    zIndex:1,
+                                    position:'absolute'
+                                  }} onClick={(e)=>{
+                                    setDone4(false)
+                                    setPending4(false)
+                                    getDoc('image4').style.background = ''
+                                    setImage4('')
+                                    e.preventDefault()
+                                  }}  size={20} /> : 'upload images'
                            
                             }
                             

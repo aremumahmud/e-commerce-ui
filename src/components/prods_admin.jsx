@@ -2,6 +2,7 @@ import { AiFillDatabase, AiFillStar, AiOutlineHeart } from "react-icons/ai";
 import "../css/products.css";
 import { useState } from "react";
 import modify_product from "../libs/modify_product";
+import delete_product from "../libs/delete_product";
 
 
 
@@ -130,6 +131,36 @@ let [load , setLoad]= useState(false)
             }}>
               {
                 load ? <div className="loader"></div>:"save changes"
+              }
+              
+            </div>
+             <div style={{
+              width:'100%',
+              textAlign:'center',
+              display:'flex',
+              justifyContent:'center',
+              background:'white',
+              color:'red',
+              border:'2px solid red'
+            }} className="button" onClick={()=>{
+              setLoad(true)
+              window.confirm('Are you sure you want to delete this product?') && delete_product(prod_data._id , (err,res)=>{
+                console.log(err)
+                setLoad(false)
+                //if(err) return alert('Sorry an unexpected error occured!')
+                let dt = JSON.parse(res)
+                console.log(dt)
+                if(dt.authorized == 'none') {
+                  alert('Please sign up as admin to carry out this operation')
+                  return window.open('/users/login','_self')
+                }
+                
+                if(!dt.sucess) return alert('Sorry an unexpected error occured!')
+                alert('Products updated successfully')
+              })
+            }}>
+              {
+                load ? <div className="loader"></div>:"Delete variety"
               }
               
             </div>
