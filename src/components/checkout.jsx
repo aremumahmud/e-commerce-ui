@@ -21,10 +21,12 @@ function Checkout({ setCurrency, setPage, cart, symbol }) {
     window.scrollTo(0, 0)
   }, [])
   let lockProduct = () => {
+   // localStorage.getItem('TokenID') && setURI('upload_locked_product_uri')
+    console.log(URIState)
     send_locked_to_be_product(URIState, cart, price, user_data, nameTab[symbol], discount_code, (err, resp) => {
       setBusy(false)
       if (err) {
-
+ 
         return alert(err.msg||'sorry something unexpected happened')
       }
 

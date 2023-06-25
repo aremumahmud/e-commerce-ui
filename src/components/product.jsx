@@ -50,7 +50,7 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, se
             setMain && setMain(info.image || info.mainImage)
 
           }} className="description">{info.description}</p>
-          <div className="rating" onClick={() => {
+          {/* <div className="rating" onClick={() => {
             setPage('product')
             setProduct(info)
             setMain && setMain(info.image || info.mainImage)
@@ -73,7 +73,7 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, se
               </li>
             </ul>
             <p className="nonee">{Math.floor(Math.random() * 200) + 200}</p>
-          </div>
+          </div> */}
           <div className="btn" onClick={() => {
             setPage('product')
             setProduct(info)

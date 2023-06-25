@@ -2,6 +2,7 @@ import { AiOutlineEye, AiOutlineLogout, AiOutlinePayCircle, AiOutlineSetting, Ai
 import '../css/dashboard.css'
 import Tile from './tile'
 import { useState } from 'react'
+import delete_user from '../libs/deleteUser'
 
 function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
 
@@ -34,6 +35,7 @@ function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
             <div className="nony h">Please refresh this page or check your internet connection</div>
         </div>
         }
+        {console.log(orders)}
        {
         orders.map(x=><Tile setViewStatus={setViewStatus} setViewData={setViewData} data={x} />)
        }
@@ -46,6 +48,8 @@ function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
         width:'fit-content',
         borderRadius:'10px',
         marginBottom:'10px'
+    }} onClick={()=>{
+        window.confirm('Are you want to Log Out?') && localStorage.removeItem('TokenID')
     }}> <AiOutlineLogout /> Log out</p>
     <p style={{
         padding:'10px'
@@ -53,6 +57,23 @@ function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
         border:'1px solid red',
         width:'fit-content',
         borderRadius:'10px'
+    }} onClick={()=>{
+        window.confirm('Are you want to DEACTIVATE YOUR ACCOUNT?') && delete_user((err,res)=>{
+            console.log(err)
+            //setLoad1(false)
+            //if(err) return alert('Sorry an unexpected error occured!')
+            let dt = JSON.parse(res)
+            console.log(dt)
+            if(dt.authorized == 'none') {
+              alert('Please sign up as admin to carry out this operation')
+              return window.open('/users/login','_self')
+            }
+            
+            if(!dt.success) return alert('Sorry an unexpected error occured!')
+            localStorage.removeItem('TokenID')
+            alert(dt.message)
+            window.open('/home','_self')
+        })
     }}><AiOutlineWarning /> Deactivate your Account</p>
     </div>
     }

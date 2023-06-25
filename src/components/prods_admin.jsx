@@ -8,6 +8,7 @@ import delete_product from "../libs/delete_product";
 
 function Product({data}) {
 let [load , setLoad]= useState(false)
+let [load1 , setLoad1]= useState(false)
   let [prod_data , setData] = useState(data)
   return (
     <>
@@ -55,7 +56,7 @@ let [load , setLoad]= useState(false)
                     }}></textarea>
                     
                   </p>
-                  <div className="rating">
+                  {/* <div className="rating">
                     <ul>
                       <li>
                         <AiFillStar />
@@ -74,7 +75,7 @@ let [load , setLoad]= useState(false)
                       </li>
                     </ul>
                     <p>{"(121)"}</p>
-                  </div>
+                  </div> */}
                   <div className="btn" style={{
                     alignItems:'center',
                     display:'flex',
@@ -143,10 +144,10 @@ let [load , setLoad]= useState(false)
               color:'red',
               border:'2px solid red'
             }} className="button" onClick={()=>{
-              setLoad(true)
+              setLoad1(true)
               window.confirm('Are you sure you want to delete this product?') && delete_product(prod_data._id , (err,res)=>{
                 console.log(err)
-                setLoad(false)
+                setLoad1(false)
                 //if(err) return alert('Sorry an unexpected error occured!')
                 let dt = JSON.parse(res)
                 console.log(dt)
@@ -155,12 +156,13 @@ let [load , setLoad]= useState(false)
                   return window.open('/users/login','_self')
                 }
                 
-                if(!dt.sucess) return alert('Sorry an unexpected error occured!')
-                alert('Products updated successfully')
+                if(!dt.success) return alert('Sorry an unexpected error occured!')
+                alert(dt.message)
+                window.open('/prod_admin','_self')
               })
             }}>
               {
-                load ? <div className="loader"></div>:"Delete variety"
+                load1 ? <div className="loader"></div>:"Delete variety"
               }
               
             </div>

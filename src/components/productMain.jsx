@@ -30,7 +30,7 @@ function ProductMain({
   //  }
   // window.scrollTo(0,0)
   let [data, setData] = useState(datar);
-  let [size, setSize] = useState(data.sizes[0].size);
+  let [size, setSize] = useState(data.sizes[0]?data.sizes[0].size:'');
   let [currMain, setMain] = useState(data.image || data.mainImage);
   let inventory = data.quantity;
   let [qty, setQuantity] = useState(1);
@@ -48,6 +48,9 @@ function ProductMain({
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  useEffect(()=>{
+    console.log(data, 'this friuc')
+  },[data])
   return (
     <>
       <div className="mainDescription">
@@ -67,6 +70,7 @@ function ProductMain({
                   _id: data.varieties[0].id,
                   image: data.varieties[0].image,
                 });
+                console.log(data)
               }}>
               {" "}
               <img src={data.varieties[0].image} alt="" />
@@ -75,10 +79,21 @@ function ProductMain({
               className="variety"
               onClick={() => {
                 console.log(data,'dhjxnbmsjx')
-                setMain(data.varieties[1].image);
+                setMain(data.varieties[1]?data.varieties[1].image:data.varieties[0].image);
+                console.log({
+                  ...data,
+                  sizes:data.varieties[1]?data.varieties[1].sizes:data.varieties[0].sizes,
+                  varieties: data.varieties,
+                  _id: data.varieties[1]
+                    ? data.varieties[1].id
+                    : data.varieties[0].id,
+                  image: data.varieties[1]
+                    ? data.varieties[1].image
+                    : data.varieties[0].image,
+                } , 'spamme')
                 setData({
                   ...data,
-                  sizes:data.varieties[1].sizes,
+                  sizes:data.varieties[1]?data.varieties[1].sizes:data.varieties[0].sizes,
                   varieties: data.varieties,
                   _id: data.varieties[1]
                     ? data.varieties[1].id
@@ -87,6 +102,7 @@ function ProductMain({
                     ? data.varieties[1].image
                     : data.varieties[0].image,
                 });
+                console.log(data)
               }}>
               { console.log(data,'hejhsxh')}
               <img
@@ -101,11 +117,11 @@ function ProductMain({
             <div
               className="variety"
               onClick={() => {
-                setMain(data.varieties[2].image);
+                setMain(data.varieties[2]?data.varieties[2].image:data.varieties[0].image);
                 setData({
                   ...data,
                   varieties: data.varieties,
-                  sizes:data.varieties[2].sizes,
+                  sizes:data.varieties[2]?data.varieties[2].sizes:data.varieties[0].sizes,
                   _id: data.varieties[2]
                     ? data.varieties[2].id
                     : data.varieties[0].id,
@@ -127,10 +143,10 @@ function ProductMain({
             <div
               className="variety"
               onClick={() => {
-                setMain(data.varieties[3].image);
+                setMain(data.varieties[3]?data.varieties[3].image:data.varieties[0].image);
                 setData({
                   ...data,
-                  sizes:data.varieties[3].sizes,
+                  sizes:data.varieties[3]?data.varieties[3].sizes:data.varieties[0].sizes,
                   varieties: data.varieties,
                   _id: data.varieties[3]
                     ? data.varieties[3].id
@@ -156,7 +172,7 @@ function ProductMain({
           <div className="top">
             <p className="title">{data.name}</p>
             <p className="description">{data.description}</p>
-            <div className="rating">
+            {/* <div className="rating">
               <ul>
                 <li>
                   <AiFillStar />
@@ -174,8 +190,8 @@ function ProductMain({
                   <AiFillStar />
                 </li>
               </ul>
-              {/* <p>{"(121)"}</p> */}
-            </div>
+              // 
+            </div> */}
           </div>
 
           <div className="prices">
@@ -287,7 +303,7 @@ function ProductMain({
                   className="orange"
                   style={{ marginRight: "5px" }}
                 />
-                Fast Delivery
+                Delivery and Shipping
               </p>
               <p>Enter your postal Code for Delivery Automatically</p>
             </div>
@@ -297,9 +313,9 @@ function ProductMain({
                   className="orange"
                   style={{ marginRight: "5px" }}
                 />
-                Return Delivery
+                Return Policy
               </p>
-              <p>Free 30days Delivery return Policy</p>
+              <p>Check out our return policy <a href="#">here</a> </p>
             </div>
           </div>
         </div>
