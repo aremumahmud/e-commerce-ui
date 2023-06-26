@@ -5,15 +5,15 @@ function Display(){
         <div className="display">
            <div className="content">
             <p className='title'>
-                Grab Upto 50% Off On Selected Wears
+                Welcome to Glitzabelle Label
             </p>
-            <div className="btn">
+            {/* <div className="btn">
                 <p>Buy Now</p>
-            </div>
+            </div> */}
            </div>
-           <div className="images">
+           {/* <div className="images">
             <img src="/imgs/images__1_-removebg-preview (1).png" alt=''/>
-           </div>
+           </div> */}
         </div>  
     )
 }

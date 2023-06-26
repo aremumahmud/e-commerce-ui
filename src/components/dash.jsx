@@ -49,7 +49,12 @@ function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
         borderRadius:'10px',
         marginBottom:'10px'
     }} onClick={()=>{
-        window.confirm('Are you want to Log Out?') && localStorage.removeItem('TokenID')
+        let conf = window.confirm('Are you want to Log Out?')
+        if(conf){
+            localStorage.removeItem('TokenID')
+            window.open('/home','_self')
+        }
+        
     }}> <AiOutlineLogout /> Log out</p>
     <p style={{
         padding:'10px'

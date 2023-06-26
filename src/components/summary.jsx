@@ -180,10 +180,13 @@ function Summary({
       <p className="topic">Total Debit Amount</p>
       <Calculation symbol={symbol} price={price} discountPrice={discountPrice} />
       <br />
-      <div className="as_a_guest">
+      {
+        !localStorage.getItem('TokenID') &&<div className="as_a_guest">
         <input type="checkbox" name="" id="" onChange={change2} />
         Create an account?
       </div>
+      }
+      
       <div
         className="btn"
         onClick={() => {

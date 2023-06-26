@@ -10,7 +10,7 @@ function TopNav({cart,setPage,search}){
             <img src="\imgs\67957883-348A-45E4-BD1E-E956B290647F~2.jpg" alt="" />
         </a>
             <div className="navigations">
-                <ul>
+                {/* <ul>
                     <li>
                         <select name="" id="">
                             <option value="">Categories</option>
@@ -19,7 +19,7 @@ function TopNav({cart,setPage,search}){
                     <li>Deals</li>
                     <li>What's More</li>
                     <li>Delivery</li>
-                </ul>
+                </ul> */}
             </div>
             <div className="search">
                 <input onChange={e=>search(e.target.value)} type="text" placeholder='Search product' />

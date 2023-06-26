@@ -15,7 +15,7 @@ function Checkout({ setCurrency, setPage, cart, symbol }) {
   let [discount_code, setDiscountCode] = useState([])
   let [user_data, set_user_data] = useState(null)
   let [busy, setBusy] = useState(false)
-  let [URIState, setURI] = useState('upload_locked_product_uri_guest')
+  let [URIState, setURI] = useState(localStorage.getItem('TokenID')?'upload_locked_product_uri':'upload_locked_product_uri_guest')
   let price = calculate(Object.keys(cart).map(x => cart[x]), symbol)
   useEffect(() => {
     window.scrollTo(0, 0)

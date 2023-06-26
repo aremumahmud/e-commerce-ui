@@ -25,7 +25,7 @@ function Filter({setFilter , setLoad,categories, search}) {
                 }
             </select>
           </li>
-          <li  className="nonee">
+          {/* <li  className="nonee">
           <select name="" id="">
                 <option value="">Price</option>
             </select>
@@ -53,7 +53,7 @@ function Filter({setFilter , setLoad,categories, search}) {
           <li  className="nonee">
             All Filters
             <AiFillStar />
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className="sortby">

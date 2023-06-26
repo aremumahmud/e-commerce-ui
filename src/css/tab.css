@@ -1,0 +1,17 @@
+.tab_admin ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab_admin ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 5px;
+    padding-bottom: 1px;
+    /* border-radius: 10px; */
+    /* border: 1px solid; */
+    font-weight: 800;
+    font-size: 15px;
+    color: #004225;
+}

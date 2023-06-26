@@ -23,6 +23,7 @@ import ForgotModal from "./forgotModal";
 import search from "../libs/search_products";
 import AddProd from "./add_prod";
 import Discounts from "./discount";
+import Exchange from "./exchange";
 
 
 
@@ -149,6 +150,9 @@ let search_prod = (search_string)=>{
       }
       {
        page==='discount' && <Discounts setPage={setPage} />
+      }
+       {
+       page==='exchange' && <Exchange setPage={setPage} />
       }
        {
         page !== 'login' && <Footer />

@@ -4,6 +4,7 @@ import handle_file_change from '../libs/load_image'
 import { AiFillDelete } from 'react-icons/ai'
 import send_product from '../libs/send_product'
 import Path from './path'
+import Tab from './tab'
 
 function AddProd({setPage}){
 
@@ -143,20 +144,11 @@ let [pending4 , setPending4 ]  = useState(false)
             {/* <p>Glitz<span>abellelabel</span></p> */}
             <img src="\imgs\67957883-348A-45E4-BD1E-E956B290647F~2.jpg" alt="" />
         </a>
-        <Path
-        setPage={setPage}
-        data={[
-          { name: "Home", path: "addP" },
-          { name: "edit products", path: "prod_admin" },
-          {name:'discount' , path:'discount'}
-        ]
-        
-    }
-    
-    style={{
-        paddingTop:'0 !important' 
-    }}
-      />
+        <br /><br />
+        <Tab style={{
+        no:'1'
+      }} setPage={setPage}/>
+      <hr />
         <p style={{
             marginBottom:0,
             marginLeft:'15px !important'

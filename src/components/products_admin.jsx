@@ -3,6 +3,7 @@ import '../css/prod_admin.css'
 import Products from './prod_admin'
 import load_products from '../libs/load_product'
 import Path from './path'
+import Tab from './tab'
 
 function ProductsAdmin({setPage}){
     let [data, setData] = useState([])
@@ -17,20 +18,11 @@ function ProductsAdmin({setPage}){
 
     return(
         <div>
-            <Path
-        setPage={setPage}
-        data={[
-          { name: "Home", path: "addP" },
-          { name: "edit products", path: "prod_admin" },
-          {name:'discount' , path:'discount'}
-        ]
-        
-    }
-    style={{
-        paddingTop:'0 !important' 
-    }}
-      />
-            <p className='title1'>Products in inventory</p><hr /><br />
+            <br /><br /><br /><br /><br />
+      <Tab style={{
+        no:'2'
+      }} setPage={setPage}/>
+           <hr /><br />
             <Products data={data} />
         </div>
     )

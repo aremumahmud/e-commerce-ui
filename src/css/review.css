@@ -20,12 +20,13 @@
     align-items: center;
     justify-content: center;
     background: #cccccc59;
-    padding: 30px;
+    /* padding: 30px; */
 }
 
 .item_img img {
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 
 .items {

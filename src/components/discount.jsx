@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Path from './path'
 import create_discount from '../libs/create_discount'
+import Tab from './tab'
 
 function Discounts({setPage}){
     let [value, setValue] = useState(0)
@@ -31,20 +32,11 @@ function Discounts({setPage}){
 
     return(
         <div style={{padding:'10px'}}>
-            <Path
-        setPage={setPage}
-        data={[
-          { name: "Home", path: "addP" },
-          { name: "edit products", path: "prod_admin" },
-          {name:'discount' , path:'discount'}
-        ]
-        
-    }
-    style={{
-        paddingTop:'0 !important' 
-    }}
-      />
-            <p className='title1'>Discounts</p><hr /><br />
+          <br /><br /><br /><br /><br />
+      <Tab style={{
+        no:'3'
+      }} setPage={setPage}/>
+           <hr /><br />
             <div className='size_choose'>
                 
                 <input style={{
