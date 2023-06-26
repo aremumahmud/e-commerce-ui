@@ -18,7 +18,7 @@ function Delivery({valid,pace,setPace}) {
         </div>
 
         <div className="wrapInput long">
-          <p>Address<sup>*</sup></p> 
+          <p>Shipping Address<sup>*</sup></p> 
           <input onChange={valid} type="text" name="address" id="" placeholder="Type Here ..."  />
         </div>
 

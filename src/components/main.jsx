@@ -17,13 +17,14 @@ import { useNavigate, useParams } from "react-router-dom";
 import Modal from "./modal";
 import getUserIP from "../libs/geolocate";
 import changeCurrency from "../libs/changeCurrency"
-import currencyTab from "../config/currency";
+import currencyTab, { symbolTab } from "../config/currency";
 import CartModal from "./CartModalSucess";
 import ForgotModal from "./forgotModal";
 import search from "../libs/search_products";
 import AddProd from "./add_prod";
 import Discounts from "./discount";
 import Exchange from "./exchange";
+import fetch_exchange from "../libs/currencies";
 
 
 
@@ -54,6 +55,19 @@ function Main({
 
     }
   }
+  let [symbolTab1 , setSymbolTab] = (symbolTab)
+  let [currencyTab1 , setCurrencyTab] = (currencyTab)
+  let [span , setSpan] = useState(0)
+useEffect(()=>{
+  fetch_exchange((err,res)=>{
+    if(err) return setSpan(++span)
+    if(!res.success) return setSpan(++span)
+    let exchange = res.data
+    setCurrencyTab(exchange.currencyTab)
+    setSymbolTab(exchange.symbolTab)
+  })
+},[span])
+
 
   let [data, setData] = useState([{},{},{},{}])
   let [load, setLoad] = useState(true)
@@ -110,7 +124,7 @@ let search_prod = (search_string)=>{
   }} />
     {/* <ForgotModal display={ViewStatus4} close={setViewStatus4}/> */}
     <CartModal data={CartData3} display={ViewStatus3}  setViewStatus={setViewStatus3} />
-    {/* <Modal display={ViewStatus1} /> */}
+    <Modal display={ViewStatus1} />
     <ViewModal data={ViewData} display={ViewStatus} setViewStatus={setViewStatus} />
    <div className="container">
       
