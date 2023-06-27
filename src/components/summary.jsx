@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "../css/summary.css";
 import Calculation from "./calculations";
 import manageChecked from "../libs/manageChecked";
-import currencyTab, { nameTab, symbolTab } from "../config/currency";
+//import currencyTab, { nameTab, symbolTab } from "../config/currency";
 import verify_discount from "../libs/verify_discount";
 
 function Summary({
