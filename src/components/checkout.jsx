@@ -11,7 +11,7 @@ import { nameTab } from "../config/currency";
 
 
 
-function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab) {
+function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab}) {
   let [discount_code, setDiscountCode] = useState([])
   let [user_data, set_user_data] = useState(null)
   let [busy, setBusy] = useState(false)
