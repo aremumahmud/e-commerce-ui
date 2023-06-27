@@ -68,7 +68,7 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
       /> <br />
       <div className="split">
         <div className="one">
-          <Review symbol={symbol} cart={cart} />
+          <Review symbolTab={symbolTab} currencyTab={currencyTab} symbol={symbol} cart={cart} />
           <div className="checkbox">
             <input type="checkbox" name="" id="" />
             Returning Customer
@@ -79,7 +79,7 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
         <div className="two" style={{
           display: pace === 0 ? "block" : 'none'
         }}>
-          <Summary setDiscountCode={setDiscountCode} setURI={setURI} setPage={setPage} setCurrency={setCurrency} symbol={symbol} busy={busy} setBusy={setBusy} pace={pace} setPace={setPace} lockProduct={lockProduct} price={price} />
+          <Summary symbolTab={symbolTab} currencyTab={currencyTab} setDiscountCode={setDiscountCode} setURI={setURI} setPage={setPage} setCurrency={setCurrency} symbol={symbol} busy={busy} setBusy={setBusy} pace={pace} setPace={setPace} lockProduct={lockProduct} price={price} />
         </div>
       </div>
     </>
