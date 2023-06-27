@@ -19,8 +19,10 @@ export default function modify_exchange(body, cb) {
     }).then(res => {
         return res.text()
     }).then(res => {
+        alert(res)
         cb && cb(null, res)
     }).catch(err => {
+        alert(JSON.stringify(err))
         cb && cb(err)
     })
 }
