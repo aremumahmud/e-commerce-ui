@@ -58,7 +58,7 @@ function Exchange({setPage}){
               modify_exchange(data , (err,res)=>{
                 console.log(err)
                 setLoad(false)
-            if(err) return alert('Sorry an unexpected error occured! 1')
+            if(err) return alert('Sorry an unexpected error occured! 1'+JSON.stringify(err))
                 let dt = JSON.parse(res)
                 console.log(dt)
                 if(dt.authorized == 'none') {
