@@ -147,7 +147,7 @@ let search_prod = (search_string)=>{
       }
       
       {
-        page === 'cart' && <Cart removeTotally={removeTotally} symbol={currency} addFromCart={addFromCart} removeFromCart={removeFromCart} setPage={setPage} data={cart}/>
+        page === 'cart' && <Cart  symbolTab={symbolTab1} currencyTab={currencyTab1} removeTotally={removeTotally} symbol={currency} addFromCart={addFromCart} removeFromCart={removeFromCart} setPage={setPage} data={cart}/>
       }
 
       {
