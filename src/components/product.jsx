@@ -1,7 +1,7 @@
 import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
 import "../css/products.css";
 import { useState } from "react";
-import currencyTab, { symbolTab } from "../config/currency";
+//import currencyTab, { symbolTab } from "../config/currency";
 import arrayToObject from "../libs/arraytoObj_sizebased";
 
 function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, currencyTab,symbolTab,setViewStatus3, setCartData3 }) {
