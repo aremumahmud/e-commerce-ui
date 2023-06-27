@@ -1,6 +1,6 @@
 import { AiOutlineDelete } from "react-icons/ai";
 import "../css/cartItem.css";
-import currencyTab, { symbolTab } from "../config/currency";
+//import currencyTab, { symbolTab } from "../config/currency";
 
 function CartItem({info, removeFromCart,addFromCart,symbol, removeTotally, symbolTab, currencyTab}) {
   return (
