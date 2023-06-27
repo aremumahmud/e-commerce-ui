@@ -106,7 +106,7 @@ let search_prod = (search_string)=>{
     load1 && 
     getUserIP().then(res=>{
      // console.log(res)
-      let data2  = changeCurrency(data, currencyTab1[res]?res:'NGN',currencyTab1, symbolTab1)  
+      let data2  = changeCurrency(data, currencyTab1[res]?res:'NGN',currencyTab1)  
      // console.log(data2,'jayz')
     // console.log(isNaN(data2[0][0].price))
       if(isNaN(data2[0][0].price)){
