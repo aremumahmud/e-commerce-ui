@@ -17,7 +17,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Modal from "./modal";
 import getUserIP from "../libs/geolocate";
 import changeCurrency from "../libs/changeCurrency"
-import currencyTab, { symbolTab } from "../config/currency";
+//import currencyTab, { symbolTab } from "../config/currency";
 import CartModal from "./CartModalSucess";
 import ForgotModal from "./forgotModal";
 import search from "../libs/search_products";
