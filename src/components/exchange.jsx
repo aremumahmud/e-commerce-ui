@@ -58,7 +58,7 @@ function Exchange({setPage}){
               modify_exchange(data , (err,res)=>{
                 console.log(err)
                 setLoad(false)
-                //if(err) return alert('Sorry an unexpected error occured!')
+            if(err) return alert('Sorry an unexpected error occured! 1')
                 let dt = JSON.parse(res)
                 console.log(dt)
                 if(dt.authorized == 'none') {
@@ -66,7 +66,7 @@ function Exchange({setPage}){
                   return window.open('/users/login','_self')
                 }
                 
-                if(!dt.sucess) return alert('Sorry an unexpected error occured!')
+                if(!dt.success) return alert('Sorry an unexpected error occured 2!')
                 alert('exchange updated successfully')
               })
             
