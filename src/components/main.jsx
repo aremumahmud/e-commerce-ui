@@ -143,7 +143,7 @@ let search_prod = (search_string)=>{
       }
 
       {
-        page === 'checkout' && <Checkout setCurrency={setCurrency} symbol={currency} cart={cart} setPage={setPage} />
+        page === 'checkout' && <Checkout symbolTab={symbolTab1} currencyTab={currencyTab1} setCurrency={setCurrency} symbol={currency} cart={cart} setPage={setPage} />
       }
       
       {
