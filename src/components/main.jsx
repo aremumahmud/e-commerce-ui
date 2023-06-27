@@ -139,7 +139,7 @@ let search_prod = (search_string)=>{
       }
 
       {
-        page === 'product' && <AboutProduct cart={cart} setProduct={setProduct} setViewStatus3={setViewStatus3} setCartData3={setCartData3}  symbol={currency} productData={data} product={product} setPage={setPage} setCart={setCart}  />
+        page === 'product' && <AboutProduct  symbolTab={symbolTab1} currencyTab={currencyTab1} cart={cart} setProduct={setProduct} setViewStatus3={setViewStatus3} setCartData3={setCartData3}  symbol={currency} productData={data} product={product} setPage={setPage} setCart={setCart}  />
       }
 
       {

@@ -21,6 +21,8 @@ function ProductMain({
   setCartData3,
   setProduct,
   cart,
+  currencyTab,
+  symbolTab
 }) {
   //console.log(data,'rr')
   //console.log(datar)
@@ -338,6 +340,8 @@ function ProductMain({
           setViewStatus3={setViewStatus3}
           setCartData3={setCartData3}
           symbol={symbol}
+          currencyTab={currencyTab}
+          symbolTab={symbolTab}
           data={
             productData.length <= 4
               ? productData
