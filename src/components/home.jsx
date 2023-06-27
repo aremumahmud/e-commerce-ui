@@ -7,7 +7,7 @@ import Products from "./products";
 import fetch_categories from "../libs/get_category";
 
 
-function Home({setCart , setPage, cart, setProduct,data , symbol,setFilter ,setLoad, setViewStatus3,setCartData3,search }) {
+function Home({setCart , setPage, cart, setProduct,data , symbol,setFilter ,setLoad, setViewStatus3,setCartData3,search,currencyTab,symbolTab }) {
 
   let [categories, setCategories]= useState([])
   useEffect(()=>{
@@ -23,7 +23,7 @@ function Home({setCart , setPage, cart, setProduct,data , symbol,setFilter ,setL
       <br /><br /> 
       <Filter search={search} categories={categories} setLoad={setLoad} setFilter={setFilter} /> 
       {/* <p className="topic">Top Fashion For You!</p> */}
-      <Products  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct} cart={cart} setPage={setPage} setCart={setCart} data={data} />
+      <Products currencyTab={currencyTab} symbolTab={symbolTab}  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct} cart={cart} setPage={setPage} setCart={setCart} data={data} />
       <Pagination />
       {/* <p className="topic">Weekly Popular Products</p>
       <Products  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct}  cart={cart} setPage={setPage} setCart={setCart} data={[0, 1, 2, 3].map(i=>data[i])} />

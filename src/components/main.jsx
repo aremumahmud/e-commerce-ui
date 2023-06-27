@@ -106,14 +106,14 @@ let search_prod = (search_string)=>{
     load1 && 
     getUserIP().then(res=>{
      // console.log(res)
-      let data2  = changeCurrency(data, currencyTab[res]?res:'NGN')  
+      let data2  = changeCurrency(data, currencyTab1[res]?res:'NGN')  
      // console.log(data2,'jayz')
     // console.log(isNaN(data2[0][0].price))
       if(isNaN(data2[0][0].price)){
         return
       }
       setData(data2[0]) 
-      setCurrency(currencyTab[data2[1]].symbol)
+      setCurrency(currencyTab1[data2[1]].symbol)
        setLoad1(false)
     })
     
@@ -135,7 +135,7 @@ let search_prod = (search_string)=>{
       
      
       {
-        page === 'home' && <Home search={search_prod} setViewStatus3={setViewStatus3} setCartData3={setCartData3} setLoad={setLoad} setFilter={setFilter} symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
+        page === 'home' && <Home symbolTab={symbolTab1} currencyTab={currencyTab1} search={search_prod} setViewStatus3={setViewStatus3} setCartData3={setCartData3} setLoad={setLoad} setFilter={setFilter} symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
       }
 
       {

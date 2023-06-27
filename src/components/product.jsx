@@ -4,7 +4,7 @@ import { useState } from "react";
 import currencyTab, { symbolTab } from "../config/currency";
 import arrayToObject from "../libs/arraytoObj_sizebased";
 
-function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, setViewStatus3, setCartData3 }) {
+function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, currencyTab,symbolTab,setViewStatus3, setCartData3 }) {
   //console.log(info)
 
   let [load, setLoad] = useState(false)
