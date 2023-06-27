@@ -60,13 +60,13 @@ function Main({
   let [span , setSpan] = useState(0)
 useEffect(()=>{
   fetch_exchange((err,res)=>{
-    if(err) return setSpan(++span)
+    if(err) return  setSpan(++span)
     if(!res.success) return setSpan(++span)
     let exchange = res.data
     setCurrencyTab(exchange.currencyTab)
     setSymbolTab(exchange.symbolTab)
   })
-},[span])
+},[])
 
 
   let [data, setData] = useState([{},{},{},{}])

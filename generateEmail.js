@@ -1,4 +1,22 @@
 let products = []
+const currencyTab = {
+    USD: {
+        symbol: '$',
+        price_in_naira: 460
+    },
+    GBP: {
+        symbol: '£',
+        price_in_naira: 560
+    },
+    NGN: {
+        symbol: '₦',
+        price_in_naira: 1
+    },
+    EUR: {
+        symbol: '€',
+        price_in_naira: 500
+    }
+}
 
 let template = (data) => `
 <!DOCTYPE html>
@@ -45,6 +63,7 @@ let template = (data) => `
 <p>In the meantime here's a reminder of what you ordered</p>
 <!-- <p>Here is/are your orders list</p> -->
 </div>
+<h3>[Order #${data.orderId}] (${new Date(data.createdAt).toString().split(' ').filter((x,i)=> i<4).join(' ')})</h3>
 <br>
 <table>
 <tbody>
@@ -61,7 +80,12 @@ let end = data => `
 <tr>
     <th colspan='3'>Subtotal</th>
     
-    <th>$20000</th>
+    <th>${data.currency + String(data.total)}</th>
+</tr>
+<tr>
+    <th colspan='3'>Payment Method</th>
+    
+    <th>${data.payment_method.split('_').join(' ')}</th>
 </tr>
 </tbody>
 </table>
@@ -128,48 +152,58 @@ let end = data => `
 
 </html>`
 
-let product = (x) => `
+let product = (x, data) => `
 <tr>
     <td>${x.parent_product}</td>
     <td>${x.size || '55'}</td>
     <td>${x.quantity}</td>
-    <td>${x.price}</td>
+    <td>${data.currency +  String(+(x.price/currencyTab[data.currency].price_in_naira).toFixed(2))}</td>
 </tr>
 
 `
 
 let j = {
-    "_id": "6480796bd00aa03161f014f6",
-    "reference": "p8e5cy3vr5",
+    "_id": {
+        "$oid": "649a2749d6ef6aff3e79978d"
+    },
+    "reference": "4426289",
     "first_name": "Mahmud",
-    "last_name": "Aremu",
-    "phone_number": "07064552617",
+    "last_name": "Aremu234",
+    "phone_number": "+2347064552617",
     "email_address": "aremumahmud2003@gmail.com",
-    "city": "Ilorin",
-    "zip_code": "240003",
-    "address": "Tanke Bubu irepodun",
+    "city": "Ilorin ",
+    "zip_code": "",
+    "address": "University road tanke bubu ilorin Kwara state ",
     "products": [{
-            "image": "https://res.cloudinary.com/dvauarkh6/image/upload/v1685295655/DEV/dlqf470msum2hkukggmt.png",
-            "id": "647393fbb9c1418e41bda13b",
-            "parent_product": "Air caps",
+            "image": "https://res.cloudinary.com/dvauarkh6/image/upload/v1687434380/DEV/yt510bn2e59gju39vjoc.jpg",
+            "id": "6494355cdd83ccf29398f2ff",
+            "parent_product": "Beeba",
             "quantity": 1,
-            "price": 2300
+            "price": 23500,
+            "size": "8"
         },
         {
-            "image": "https://res.cloudinary.com/dvauarkh6/image/upload/v1685295682/DEV/moxmpisgqmdyb72a3j54.png",
-            "id": "647393fbb9c1418e41bda13c",
-            "parent_product": "Air caps",
+            "image": "https://res.cloudinary.com/dvauarkh6/image/upload/v1687434399/DEV/olmfsrtnrenhlmcvzutr.jpg",
+            "id": "6494355cdd83ccf29398f305",
+            "parent_product": "Beeba",
             "quantity": 1,
-            "price": 2300
+            "price": 23500,
+            "size": "8"
         }
     ],
+    "orderId": 1003,
+    "total": 47000,
+    "currency": "NGN",
+    "payment_method": "bank_transfer",
+    "createdAt": "2023-06-27T00:03:21.444Z",
+    "updatedAt": "2023-06-27T00:03:21.444Z",
     "__v": 0
 }
 
 
 function generate(points) {
 
-    let prods = points.products.map(x => product(x)).join('')
+    let prods = points.products.map(x => product(x, points)).join('')
     let template_final = template(points) + prods + end(points)
     return template_final
 
