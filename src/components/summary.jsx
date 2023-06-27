@@ -16,7 +16,9 @@ function Summary({
   setCurrency,
   setPage,
   setURI,
-  setDiscountCode
+  setDiscountCode,
+  symbolTab,
+  currencyTab
 }) {
   let [discount, setDiscount] = useState("");
   let [load, setLoad] = useState(false)
