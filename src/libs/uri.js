@@ -23,7 +23,7 @@ const pic = {
 }
 
 export default pic
-// //export default pic
+// // //export default pic
 // const pic = {
 //     pic_uri: 'https://uploadimagefiles.aremzy.repl.co',
 //     upload_product_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/add_products',
