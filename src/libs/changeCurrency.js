@@ -1,5 +1,5 @@
-
-function changeCurrency(param, currency,currencyTab) {
+function changeCurrency(param, currency, currencyTab) {
+    console.log(currencyTab, 'tabbyt')
     let array = [...param]
     return [array.map(each => {
         if (!currencyTab[currency]) {

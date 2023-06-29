@@ -28,8 +28,14 @@ function TopNav({cart,setPage,search}){
                 </div>
             </div>
             <div className="usersection">
-              <p onClick={()=>setPage('dash')}>
-                <AiOutlineUser style={{fontWeight:'bold'}} />
+              <p onClick={()=>{
+                if( localStorage.getItem('TokenID')){
+                  return setPage('dash')
+                }
+                let a = window.confirm('Sorry you would have to sign in to access the dashboard \n Sign you up?')
+                return a?setPage('users/signup'):''
+                }}>
+                <AiOutlineUser style={{fontWeight:'bold'}} /> 
                 User
               </p>
               <p onClick={()=>setPage('cart')}>

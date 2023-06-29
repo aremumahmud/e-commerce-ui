@@ -1,10 +1,12 @@
 .display {
-    height: 400px;
+    height: 410px;
     /* background-color: rgba(255, 192, 203, 0.164); */
     margin-top: 150px;
     overflow-y: none;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-    background-image: url('../../public/imgs/2.jpg');
+    display: flex;
+    background-color: #79745C;
+    border-radius: 10px;
 }
 
 .content {
@@ -14,17 +16,18 @@
     /* width: 50%;
     padding-left: 80px;
     padding-top: 40px; */
-    background-color: #00000073;
-    width: 100%;
+    position: relative;
+    width: 60%;
     height: 100%;
+    left: 15%;
 }
 
 .content .title {
     font-weight: 800;
-    font-size: 65px;
-    color: #ffffffd8;
+    font-size: 45px;
+    color: #ffffff;
     text-align: center;
-    text-shadow: 4px 7px 2px rgba(0, 0, 0, 0.6);
+    /* text-shadow: 4px 7px 2px rgba(0, 0, 0, 0.6); */
 }
 
 .content .btn {

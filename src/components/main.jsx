@@ -55,19 +55,25 @@ function Main({
 
     }
   }
-  let [symbolTab1 , setSymbolTab] = ([symbolTab])
-  let [currencyTab1 , setCurrencyTab] = ([currencyTab])
-  let [span , setSpan] = useState(0)
-useEffect(()=>{
-  fetch_exchange((err,res)=>{
-    if(err) return  setSpan(++span)
-    if(!res.success) return setSpan(++span)
-    let exchange = res.data
-    console.log(exchange)
-    setCurrencyTab([exchange.currencyTab])
-    setSymbolTab([exchange.symbolTab])
-  })
-},[])
+  const [symbolTab1, setSymbolTab] = useState({ ...symbolTab });
+  const [currencyTab1, setCurrencyTab] = useState({ ...currencyTab });
+  const [span, setSpan] = useState(0);
+  
+  useEffect(() => {
+    fetch_exchange((err, res) => {
+      if (err) return setSpan((prevSpan) => prevSpan + 1);
+      if (!res.success) return setSpan((prevSpan) => prevSpan + 1);
+      let exchange = res.data;
+      console.log(exchange);
+      
+      setCurrencyTab({ ...exchange.currencyTab });
+      setSymbolTab({ ...exchange.symbolTab });
+    });
+  }, []);
+  
+  // Use symbolTab1 and currencyTab1 directly in the component or use another useEffect to observe changes
+  console.log(symbolTab1, currencyTab1, 'll');
+  
 
 
   let [data, setData] = useState([{},{},{},{}])
@@ -107,7 +113,7 @@ let search_prod = (search_string)=>{
     load1 && 
     getUserIP().then(res=>{
      // console.log(res)
-      let data2  = changeCurrency(data, currencyTab1[res]?res:'NGN')  
+      let data2  = changeCurrency(data, currencyTab1[res]?res:'NGN' , currencyTab1)  
      // console.log(data2,'jayz')
     // console.log(isNaN(data2[0][0].price))
       if(isNaN(data2[0][0].price)){
@@ -144,7 +150,7 @@ let search_prod = (search_string)=>{
       }
 
       {
-        page === 'checkout' && <Checkout setCurrency={setCurrency} symbol={currency} cart={cart} setPage={setPage} />
+        page === 'checkout' && <Checkout  symbolTab={symbolTab1} currencyTab={currencyTab1} setCurrency={setCurrency} symbol={currency} cart={cart} setPage={setPage} />
       }
       
       {
