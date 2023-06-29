@@ -64,8 +64,8 @@ useEffect(()=>{
     if(!res.success) return setSpan(++span)
     let exchange = res.data
     console.log(exchange)
-    setCurrencyTab(exchange.currencyTab)
-    setSymbolTab(exchange.symbolTab)
+    setCurrencyTab([exchange.currencyTab])
+    setSymbolTab([exchange.symbolTab])
   })
 },[])
 
