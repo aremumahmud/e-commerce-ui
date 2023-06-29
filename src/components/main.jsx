@@ -17,7 +17,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Modal from "./modal";
 import getUserIP from "../libs/geolocate";
 import changeCurrency from "../libs/changeCurrency"
-//import currencyTab, { symbolTab } from "../config/currency";
+import currencyTab, { symbolTab } from "../config/currency";
 import CartModal from "./CartModalSucess";
 import ForgotModal from "./forgotModal";
 import search from "../libs/search_products";
@@ -55,15 +55,14 @@ function Main({
 
     }
   }
-  let [symbolTab1 , setSymbolTab] = ({})
-  let [currencyTab1 , setCurrencyTab] = ({})
+  let [symbolTab1 , setSymbolTab] = ([symbolTab])
+  let [currencyTab1 , setCurrencyTab] = ([currencyTab])
   let [span , setSpan] = useState(0)
 useEffect(()=>{
   fetch_exchange((err,res)=>{
     if(err) return  setSpan(++span)
     if(!res.success) return setSpan(++span)
     let exchange = res.data
-    console.log(res.data)
     setCurrencyTab(exchange.currencyTab)
     setSymbolTab(exchange.symbolTab)
   })
@@ -107,7 +106,7 @@ let search_prod = (search_string)=>{
     load1 && 
     getUserIP().then(res=>{
      // console.log(res)
-      let data2  = changeCurrency(data, currencyTab1[res]?res:'NGN',currencyTab1)  
+      let data2  = changeCurrency(data, currencyTab1[res]?res:'NGN')  
      // console.log(data2,'jayz')
     // console.log(isNaN(data2[0][0].price))
       if(isNaN(data2[0][0].price)){
@@ -144,7 +143,7 @@ let search_prod = (search_string)=>{
       }
 
       {
-        page === 'checkout' && <Checkout symbolTab={symbolTab1} currencyTab={currencyTab1} setCurrency={setCurrency} symbol={currency} cart={cart} setPage={setPage} />
+        page === 'checkout' && <Checkout setCurrency={setCurrency} symbol={currency} cart={cart} setPage={setPage} />
       }
       
       {
