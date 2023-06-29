@@ -1,6 +1,5 @@
-import currencyTab from "../config/currency"
 
-function changeCurrency(param, currency) {
+function changeCurrency(param, currency,currencyTab) {
     let array = [...param]
     return [array.map(each => {
         if (!currencyTab[currency]) {

@@ -6,7 +6,9 @@ export default function modify_exchange(body, cb) {
         msg: 'Please fill all fields',
         error: true
     })
+   // alert(JSON.stringify(body))
     let use = pic.modify_exchange_uri
+   //alert(use)
     fetch(use, {
         method: 'POST',
         credentials: 'include',
@@ -19,8 +21,10 @@ export default function modify_exchange(body, cb) {
     }).then(res => {
         return res.text()
     }).then(res => {
+        //alert(res)
         cb && cb(null, res)
     }).catch(err => {
+        //alert(JSON.stringify(err))
         cb && cb(err)
     })
 }

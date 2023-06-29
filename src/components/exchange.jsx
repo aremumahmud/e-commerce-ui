@@ -26,7 +26,7 @@ function Exchange({setPage}){
            <br />
            {
             Object.keys(data).filter(x=>{
-                if(x === 'id' || x==='_id'){
+                if(x === 'id' || x==='_id'||x==="updatedAt"){
                     return false
                 }
                 return true
@@ -53,12 +53,14 @@ function Exchange({setPage}){
                 <div style={{
                     width:'100%',
                     textAlign:'center'
+            , display:"flex",
+            justifyContent:"center"
                 }} className="button" onClick={()=>{
                     setLoad(true)
               modify_exchange(data , (err,res)=>{
                 console.log(err)
                 setLoad(false)
-                //if(err) return alert('Sorry an unexpected error occured!')
+            if(err) return alert('Sorry an unexpected error occured!')
                 let dt = JSON.parse(res)
                 console.log(dt)
                 if(dt.authorized == 'none') {
@@ -66,7 +68,7 @@ function Exchange({setPage}){
                   return window.open('/users/login','_self')
                 }
                 
-                if(!dt.sucess) return alert('Sorry an unexpected error occured!')
+                if(!dt.success) return alert('Sorry an unexpected error occured!')
                 alert('exchange updated successfully')
               })
             

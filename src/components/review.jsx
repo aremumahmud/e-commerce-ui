@@ -2,7 +2,7 @@ import { useState } from 'react'
 import currencyTab, { symbolTab } from "../config/currency";
 import '../css/review.css'
 
-function Review({cart , symbol}){
+function Review({cart , symbol,symbolTab, currencyTab}){
     let [data , setData] = useState(Object.keys(cart).map(x=>cart[x]))
     let [index , setIndex] = useState(0)
     return (

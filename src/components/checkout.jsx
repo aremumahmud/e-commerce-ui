@@ -11,12 +11,12 @@ import { nameTab } from "../config/currency";
 
 
 
-function Checkout({ setCurrency, setPage, cart, symbol }) {
+function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab}) {
   let [discount_code, setDiscountCode] = useState([])
   let [user_data, set_user_data] = useState(null)
   let [busy, setBusy] = useState(false)
   let [URIState, setURI] = useState(localStorage.getItem('TokenID')?'upload_locked_product_uri':'upload_locked_product_uri_guest')
-  let price = calculate(Object.keys(cart).map(x => cart[x]), symbol)
+  let price = calculate(Object.keys(cart).map(x => cart[x]), symbol,currencyTab,symbolTab)
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -68,7 +68,7 @@ function Checkout({ setCurrency, setPage, cart, symbol }) {
       /> <br />
       <div className="split">
         <div className="one">
-          <Review symbol={symbol} cart={cart} />
+          <Review symbolTab={symbolTab} currencyTab={currencyTab} symbol={symbol} cart={cart} />
           <div className="checkbox">
             <input type="checkbox" name="" id="" />
             Returning Customer
@@ -79,7 +79,7 @@ function Checkout({ setCurrency, setPage, cart, symbol }) {
         <div className="two" style={{
           display: pace === 0 ? "block" : 'none'
         }}>
-          <Summary setDiscountCode={setDiscountCode} setURI={setURI} setPage={setPage} setCurrency={setCurrency} symbol={symbol} busy={busy} setBusy={setBusy} pace={pace} setPace={setPace} lockProduct={lockProduct} price={price} />
+          <Summary symbolTab={symbolTab} currencyTab={currencyTab} setDiscountCode={setDiscountCode} setURI={setURI} setPage={setPage} setCurrency={setCurrency} symbol={symbol} busy={busy} setBusy={setBusy} pace={pace} setPace={setPace} lockProduct={lockProduct} price={price} />
         </div>
       </div>
     </>

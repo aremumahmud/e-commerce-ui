@@ -17,7 +17,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Modal from "./modal";
 import getUserIP from "../libs/geolocate";
 import changeCurrency from "../libs/changeCurrency"
-import currencyTab, { symbolTab } from "../config/currency";
+//import currencyTab, { symbolTab } from "../config/currency";
 import CartModal from "./CartModalSucess";
 import ForgotModal from "./forgotModal";
 import search from "../libs/search_products";
@@ -107,7 +107,7 @@ let search_prod = (search_string)=>{
     load1 && 
     getUserIP().then(res=>{
      // console.log(res)
-      let data2  = changeCurrency(data, currencyTab1[res]?res:'NGN')  
+      let data2  = changeCurrency(data, currencyTab1[res]?res:'NGN',currencyTab1)  
      // console.log(data2,'jayz')
     // console.log(isNaN(data2[0][0].price))
       if(isNaN(data2[0][0].price)){
@@ -144,7 +144,7 @@ let search_prod = (search_string)=>{
       }
 
       {
-        page === 'checkout' && <Checkout setCurrency={setCurrency} symbol={currency} cart={cart} setPage={setPage} />
+        page === 'checkout' && <Checkout symbolTab={symbolTab1} currencyTab={currencyTab1} setCurrency={setCurrency} symbol={currency} cart={cart} setPage={setPage} />
       }
       
       {
