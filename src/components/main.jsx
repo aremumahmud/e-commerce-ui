@@ -63,6 +63,7 @@ useEffect(()=>{
     if(err) return  setSpan(++span)
     if(!res.success) return setSpan(++span)
     let exchange = res.data
+    console.log(exchange)
     setCurrencyTab(exchange.currencyTab)
     setSymbolTab(exchange.symbolTab)
   })
