@@ -74,12 +74,12 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, cu
             </ul>
             <p className="nonee">{Math.floor(Math.random() * 200) + 200}</p>
           </div> */}
-          <div className="btn" onClick={() => {
+          {/* <div className="btn" onClick={() => {
             setPage('product')
             setProduct(info)
             setMain && setMain(info.image || info.mainImage)
           }}>
-            {/* {console.log(info.currentCurrency)} */}
+            {/* {console.log(info.currentCurrency)} *
             {
               load ?
                 <div className="loader"></div>
@@ -87,7 +87,7 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, cu
             }
 
 
-          </div>
+          </div> */}
         </div>
       </div>
     </>

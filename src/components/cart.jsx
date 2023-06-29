@@ -2,7 +2,7 @@ import "../css/cart.css";
 import CartItem from "./cartItem";
 import Path from "./path";
 
-function Cart({ data, setPage, removeFromCart,addFromCart,symbol,removeTotally }) {
+function Cart({ data, setPage, removeFromCart,addFromCart,symbol,removeTotally, }) {
   return (
     <>
       <Path

@@ -213,7 +213,7 @@ function ProductMain({
             </p>
           </div>
 
-          <div className="chooseColor">
+          {/* <div className="chooseColor">
             <p className="subTitle">Choose Color </p>
             <div className="colorWrap">
               <div className="color r1"></div>
@@ -222,7 +222,7 @@ function ProductMain({
               <div className="color r4"></div>
               <div className="color r5"></div>
             </div>
-          </div>
+          </div> */}
 
           <div className="increment">
             <div className="incrementor">

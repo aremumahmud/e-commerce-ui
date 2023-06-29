@@ -28,7 +28,11 @@ function Home({setCart , setPage, cart, setProduct,data , symbol,setFilter ,setL
       {/* <p className="topic">Weekly Popular Products</p>
       <Products  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct}  cart={cart} setPage={setPage} setCart={setCart} data={[0, 1, 2, 3].map(i=>data[i])} />
       <br /> */}
-      <About setPage={setPage} />
+      {
+        console.log(data)
+      }
+      
+      <About data={data[0].varieties} setPage={setPage} />
       <br />
       <br />
     </>

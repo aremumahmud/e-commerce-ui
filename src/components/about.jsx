@@ -1,9 +1,9 @@
 import "../css/about.css";
 import AboutPic from "./about_pic";
 
-function About({ setPage }) {
+function About({ setPage , data }) {
   return (
-    <div className="about">
+    <div className="about">{console.log(data)}
       <div className="descriptionSection">
         <p className="title">About Glitzabelle Label</p>
         <p className="description">
@@ -16,7 +16,10 @@ function About({ setPage }) {
       </div>
       <div className="imageSection">
         {/* <img src="/imgs/51+Ev5UmxvL._AC_UL320_-removebg-preview (1).png" alt="" /> */}
-        <AboutPic />
+       {
+        data &&<AboutPic data={data} />
+       }
+        
       </div>
     </div>
   );
