@@ -19,7 +19,7 @@ const pic = {
     get_exchanges_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/exchange/get_exchanges',
     modify_exchange_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/exchange/modify_exchange',
 
-    //
+    //hh
 }
 
 export default pic
