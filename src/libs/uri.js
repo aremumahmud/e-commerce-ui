@@ -19,7 +19,7 @@ const pic = {
     get_exchanges_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/exchange/get_exchanges',
     modify_exchange_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/exchange/modify_exchange',
 
-    //hh
+    //hhy
 }
 
 export default pic
@@ -36,7 +36,7 @@ export default pic
 //     verify_otp: 'https://e-commerce-api.aremzy.repl.co/v1/api/verify_otp',
 //     change_password: 'https://e-commerce-api.aremzy.repl.co/v1/api/change_password',
 //     search_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/search/search_products',
-//     suscribe_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/suscribe',
+//     suscribe_uri: ['https://e-commerce-api.aremzy.repl.co/v1/api/suscribe',
 //     create_discount_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/discount/create_discount',
 //     verify_discount_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/discount/validate_discount',
 //     modify_product_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/modify_product',
