@@ -76,9 +76,9 @@ function Login({error,setAction,URIs, setParams ,busy,setLoad,setBusy}){
             <div className='lit'>
                 <div className="titles">
                     <p className="top">Welcome Back!</p>
-                    <br />
+                    {/* <br />
                     <p className="sub">Welcome back to our online store, where female warriors reign supreme! Explore empowering wears for the modern warrior woman and unleash your inner strength in style.</p>
-                </div>
+                 */}</div>
                 <form  className="form">
                     {error && <p className='error_msg' style={{color:error.color}}>{error.msg}</p>}
                     {
@@ -152,7 +152,9 @@ function Login({error,setAction,URIs, setParams ,busy,setLoad,setBusy}){
                 }}>{!signup?'Sign up here':'Log in here'}</a></p>
             </div>
             <div className="footer">
-                <p>&copy; 2023 ALL RIGHTS RESERVED</p>
+            <div className="copyWright">
+                    <p>&copy; 2023  Glitzabelle Label. All rights reserved</p>
+                </div>
             </div>
           </div>
          {/* <Outlet /> */}
