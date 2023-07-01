@@ -25,6 +25,8 @@ import AddProd from "./add_prod";
 import Discounts from "./discount";
 import Exchange from "./exchange";
 import fetch_exchange from "../libs/currencies";
+import Policy from "./policy";
+import ReturnPolicy from "./returnPolicy";
 
 
 
@@ -131,13 +133,13 @@ let search_prod = (search_string)=>{
   }} />
     {/* <ForgotModal display={ViewStatus4} close={setViewStatus4}/> */}
     <CartModal data={CartData3} display={ViewStatus3}  setViewStatus={setViewStatus3} />
-    <Modal display={ViewStatus1} />
+    {/* <Modal display={ViewStatus1} /> */}
     <ViewModal data={ViewData} display={ViewStatus} setViewStatus={setViewStatus} />
    <div className="container">
       
      {/* <div className="coverIt nonee"></div>  */}
       {
-        page !== 'addP' && <div className="cont"><TopNav  search={search_prod}  cart={cart_no} setPage={setPage}/></div> 
+        (page !== 'addP' && page !== 'shipping_policy' && page !== 'return_policy' )&& <div className="cont"><TopNav  search={search_prod}  cart={cart_no} setPage={setPage}/></div> 
       }
       
      
@@ -174,6 +176,12 @@ let search_prod = (search_string)=>{
       }
        {
        page==='exchange' && <Exchange setPage={setPage} />
+      }
+      {
+         page==='shipping_policy' && <Policy />
+      }
+      {
+         page==='return_policy' && <ReturnPolicy />
       }
        {
         page !== 'login' && <Footer />

@@ -393,4 +393,12 @@
     .filters {
         margin-top: 25px !important;
     }
+    .description12 {
+        font-size: medium !important;
+        width: 100% !important;
+    }
+    .conta {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
 }
