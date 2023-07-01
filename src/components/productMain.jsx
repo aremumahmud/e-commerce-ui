@@ -197,8 +197,11 @@ function ProductMain({
           </div>
 
           <div className="prices">
-            <p className="subTitle">
-              {symbol}
+            <p className="subTitle" >
+            Buy and adore with unlimited guarantee
+            </p>
+            <p className="descrpTitle">
+            {symbol}
               {
                 +(
                   (data.price *
@@ -207,9 +210,7 @@ function ProductMain({
                 ).toFixed(2)
               }
               .00{" "}
-            </p>
-            <p className="descrpTitle">
-              Buy and adore with unlimited guarantee
+             
             </p>
           </div>
 
@@ -307,17 +308,23 @@ function ProductMain({
                 />
                 Delivery and Shipping
               </p>
-              <p>Enter your postal Code for Delivery Automatically</p>
+              <p style={{
+                fontSize:'small'
+              }}>Enter your postal Code for Delivery Automatically</p>
             </div>
             <div className="info">
-              <p className="topic">
+              <p  style={{
+                marginBottom:'10px'
+              }} className="topic">
                 <AiOutlineDeliveredProcedure
                   className="orange"
                   style={{ marginRight: "5px" }}
                 />
                 Return Policy
               </p>
-              <p>Check out our return policy <a href="#">here</a> </p>
+              <p  style={{
+                fontSize:'small'
+              }}>Check out our return policy <a href="#">here</a> </p>
             </div>
           </div>
         </div>

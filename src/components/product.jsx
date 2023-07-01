@@ -90,6 +90,7 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, cu
           </div> */}
         </div>
       </div>
+      {/* <br /> */}
     </>
 
   );

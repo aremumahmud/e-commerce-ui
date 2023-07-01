@@ -13,6 +13,7 @@
     /* aspect-ratio: 1/1 !important; */
     height: fit-content;
     /* scroll-snap-align: start */
+    margin-bottom: 20px;
 }
 
 .product .imageDisplay {

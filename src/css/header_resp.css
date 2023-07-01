@@ -390,4 +390,7 @@
     .variations .variation {
         margin-bottom: 15px !important;
     }
+    .filters {
+        margin-top: 25px !important;
+    }
 }

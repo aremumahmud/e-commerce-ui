@@ -5,7 +5,9 @@ import arrayToObject from '../libs/arraytoObj_sizebased'
 function Sizes({data,setSize,setOutOfStock}){
 let sized = data.sizes
     useEffect(()=>{
-        let sis =  parseInt(arrayToObject(sized)[sized[0].size].qty)
+       if(sized.length){
+        console.log(sized)
+         let sis =  parseInt(arrayToObject(sized)[sized[0].size].qty)
         ///alert(typeof sis)
         if(sis === 0){
             setOutOfStock(true)
@@ -13,7 +15,15 @@ let sized = data.sizes
             setOutOfStock(false)
         }
         
-    },[])
+       }else{
+        setOutOfStock(true)
+    }
+       
+    },[data])
+
+    
+
+    
 
     let manageClicked = (e)=>{
         let size = e.target.innerHTML
@@ -43,7 +53,7 @@ let sized = data.sizes
         <div className='sizes1'>
             {
                 sized && sized.map((sizes,i)=>{
-                  return  <div name="fave" onClick={(e)=>manageClicked(e)} className={"size1 "+(sizes.index==0?'active8':'')}>{sizes.size}</div>
+                  return  <div id={'size' + i} name="fave" onClick={(e)=>manageClicked(e)} className={"size1 "+(sizes.index==0?'active8':'')}>{sizes.size}</div>
                 })
             }
            
