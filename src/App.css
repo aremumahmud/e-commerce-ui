@@ -3,7 +3,7 @@
     /* font-size: calc(5px + 2vmin); */
     margin: 0;
     box-sizing: border-box;
-    font-family: Raleway, Arial, Helvetica, sans-serif
+    font-family: Raleway, Arial, Helvetica, 'sans-serif'
     /* font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif; */
 }
 
