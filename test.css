@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    /* font-size: calc(5px + 2vmin); */
+    font-family: Raleway, Arial, Helvetica, 'sans-serif'
+    /* font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif; */
+}
+
+.conta {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.logo {
+    /* border: 2px solid red; */
+    padding: 20px;
+    width: fit-content;
+    margin-bottom: 80px;
+    padding-left: 0;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.topic_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+
+.iconify {
+    width: 70px;
+    height: 70px;
+    background-color: aqua;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.topic_header .title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.policy .header {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.topic_header .title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.policy .header {
+    font-weight: 600;
+    font-size: 18px;
+}
