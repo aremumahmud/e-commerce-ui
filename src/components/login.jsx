@@ -138,7 +138,9 @@ function Login({error,setAction,URIs, setParams ,busy,setLoad,setBusy}){
                     <p>Facebook</p>
                 </div>
             </div> */}
-            <div className="otherOptions">
+            <div style={{
+                  fontSize:"small !important"
+                }}  className="otherOptions">
                 <p>{signup?'Have an account?':'Dont have an account?'}<a id='login' onClick={()=>{
                    if(signup){
                     navigate('/users/login')
