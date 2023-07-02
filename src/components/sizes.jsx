@@ -50,9 +50,9 @@ let sized = data.sizes
         <> <p className='reeky'> sizes</p> 
         <small onClick={()=>setViewStatus('flex')} style={{
             textDecoration:'underline',
-            marginBottom:'10px'
+           
           }}> <b>Checkout our size chart</b></small>
-          <br />
+         
         <div className='sizes1'>
             {
                 sized && sized.map((sizes,i)=>{
