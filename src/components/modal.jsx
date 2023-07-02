@@ -20,9 +20,8 @@ function Modal({display}) {
         </div>
 
         <p class="message">
-          Seems like your session is out. kindly click
-          the 'Go Back' button to re-Authenticate or click
-          retry to re-connect to the server
+          Seems like your internet connection is down. kindly check your internet connection and click
+          the 'Retry' button to reload the page
         </p>
 
         <div class="actions1">
@@ -30,9 +29,7 @@ function Modal({display}) {
             Retry
           </a>
 
-          <a class="mark-as-read" href="/home">
-           Go back
-          </a>
+         
         </div>
       </div>
     </div>

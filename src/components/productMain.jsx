@@ -260,10 +260,8 @@ function ProductMain({
               <p>Dont miss it</p> */}
             {/* </div> */}
           </div>
-          <small onClick={()=>setViewStatus2('flex')} style={{
-            textDecoration:'underline'
-          }}>Checkout our size chart</small>
-          <Sizes setOutOfStock={setOutOfStock} setSize={setSize} data={data} />
+         
+          <Sizes setViewStatus={setViewStatus2} setOutOfStock={setOutOfStock} setSize={setSize} data={data} />
           {outOfStock ? (
             <div class="out_of_stock">out of stock</div>
           ) : (

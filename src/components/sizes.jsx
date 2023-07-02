@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import '../css/sizes.css'
 import arrayToObject from '../libs/arraytoObj_sizebased'
 
-function Sizes({data,setSize,setOutOfStock}){
+function Sizes({data,setSize,setOutOfStock,setViewStatus}){
 let sized = data.sizes
     useEffect(()=>{
        if(sized.length){
@@ -47,9 +47,11 @@ let sized = data.sizes
         
     }
     return (
-        <> <p className='reeky'> sizes</p>{
-            //alert(JSON.stringify(sized))
-        }
+        <> <p className='reeky'> sizes</p> 
+        <small onClick={()=>setViewStatus('flex')} style={{
+            textDecoration:'underline',
+            marginBottom:'10px'
+          }}>Checkout our size chart</small>
         <div className='sizes1'>
             {
                 sized && sized.map((sizes,i)=>{
