@@ -18,6 +18,7 @@ function ProductMain({
   productData,
   symbol,
   setViewStatus3,
+  setViewStatus2,
   setCartData3,
   setProduct,
   cart,
@@ -259,6 +260,9 @@ function ProductMain({
               <p>Dont miss it</p> */}
             {/* </div> */}
           </div>
+          <small onClick={()=>setViewStatus2('flex')} style={{
+            textDecoration:'underline'
+          }}>Checkout our size chart</small>
           <Sizes setOutOfStock={setOutOfStock} setSize={setSize} data={data} />
           {outOfStock ? (
             <div class="out_of_stock">out of stock</div>

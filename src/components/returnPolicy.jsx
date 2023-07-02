@@ -3,14 +3,13 @@ import "../css/policy.css";
 import { useEffect } from "react";
 
 function ReturnPolicy() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div class="conta">
       <br />
-      <br />
-      <br />
+
       <div class="logo downImpel">
         <a href="https://e-commerce-ui-ruddy.vercel.app/home" class="logo">
           <img src="\imgs\67957883-348A-45E4-BD1E-E956B290647F~2.jpg" alt="" />
@@ -120,6 +119,21 @@ function ReturnPolicy() {
           </li>
         </ol>
         <br />
+        <p style={{ fontWeight: 800 }}>RETURN ADDRESS:</p>
+        <br />
+        <p class="description12">
+          16, Oremeji Avenue, off Bamishile Street, Egbeda, Lagos State,
+          Nigeria. Postcode 102213.
+        </p>
+        <br />
+        <p style={{ fontWeight: 500 }}>
+          If you have any questions or concerns about our return policy, please
+          do not hesitate to contact us. We are always happy to help!
+        </p><br />
+        <p style={{ fontWeight: 500 }}>
+          Contact: +2348052200994 or email:  <a href="mailto:info@glitzabellelabel.com">info@glitzabellelabel.com</a> or 
+          <a href="mailto:glitzabellelabel@gmail.com"> glitzabellelabel@gmail.com.</a> 
+        </p>
       </div>
       <br />
       <br />

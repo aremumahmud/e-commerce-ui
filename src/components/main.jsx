@@ -27,6 +27,7 @@ import Exchange from "./exchange";
 import fetch_exchange from "../libs/currencies";
 import Policy from "./policy";
 import ReturnPolicy from "./returnPolicy";
+import SizeChart from "./sizechart";
 
 
 
@@ -88,6 +89,7 @@ function Main({
  let [ViewData , setViewData] = useState({})
  let [ViewStatus , setViewStatus] = useState('none')
  let [ViewStatus1 , setViewStatus1] = useState('none')
+ let [ViewStatus2 , setViewStatus2] = useState('none')
  
 //  let [ViewStatus3 , setViewStatus3] = useState('flex')
 //  let [CartData3 , setCartData3] = useState({})
@@ -133,7 +135,8 @@ let search_prod = (search_string)=>{
   }} />
     {/* <ForgotModal display={ViewStatus4} close={setViewStatus4}/> */}
     <CartModal data={CartData3} display={ViewStatus3}  setViewStatus={setViewStatus3} />
-    {/* <Modal display={ViewStatus1} /> */}
+    <Modal display={ViewStatus1} />
+    <SizeChart display={ViewStatus2} setViewStatus={setViewStatus2} />
     <ViewModal data={ViewData} display={ViewStatus} setViewStatus={setViewStatus} />
    <div className="container">
       
@@ -148,7 +151,7 @@ let search_prod = (search_string)=>{
       }
 
       {
-        page === 'product' && <AboutProduct  symbolTab={symbolTab1} currencyTab={currencyTab1} cart={cart} setProduct={setProduct} setViewStatus3={setViewStatus3} setCartData3={setCartData3}  symbol={currency} productData={data} product={product} setPage={setPage} setCart={setCart}  />
+        page === 'product' && <AboutProduct  symbolTab={symbolTab1} currencyTab={currencyTab1} cart={cart} setProduct={setProduct} setViewStatus3={setViewStatus3} setViewStatus2={setViewStatus2} setCartData3={setCartData3}  symbol={currency} productData={data} product={product} setPage={setPage} setCart={setCart}  />
       }
 
       {
