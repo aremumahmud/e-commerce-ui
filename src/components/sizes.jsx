@@ -51,7 +51,7 @@ let sized = data.sizes
         <small onClick={()=>setViewStatus('flex')} style={{
             textDecoration:'underline',
             marginBottom:'10px'
-          }}>Checkout our size chart</small>
+          }}> <b>Checkout our size chart</b></small>
           <br />
         <div className='sizes1'>
             {
