@@ -267,6 +267,11 @@ function ProductMain({
           ) : (
             <div className="ctas">
               <div
+                style={{
+                  display:"flex",
+                  alignItems:"center",
+                  justifyContents:"center"
+                }}
                 className="btn active"
                 onClick={() => {
                   setCart(
@@ -295,6 +300,12 @@ function ProductMain({
                 Buy now
               </div>
               <div
+style={{
+                  display:"flex",
+                  alignItems:"center",
+                  justifyContents:"center"
+                }}
+
                 className="btn"
                 onClick={() => {
                   setCart(
