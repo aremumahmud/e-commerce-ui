@@ -52,6 +52,7 @@ let sized = data.sizes
             textDecoration:'underline',
             marginBottom:'10px'
           }}>Checkout our size chart</small>
+          <br />
         <div className='sizes1'>
             {
                 sized && sized.map((sizes,i)=>{

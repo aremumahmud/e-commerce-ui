@@ -39,10 +39,14 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, cu
             setProduct(info)
           }} className="name">
             <p>{info.name}</p>
-            <p>
+           
+            {
+              !isNaN(info.price) && <p>
               {symbol}{+((info.price * currencyTab[info.currency || 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)}
               <sup></sup>
             </p>
+            }
+           
           </div>
           <p onClick={() => {
             setPage('product')
