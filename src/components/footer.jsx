@@ -3,7 +3,7 @@ import '../css/footer.css'
 import { useState } from 'react'
 import suscribe from '../libs/suscribe'
 
-function Footer (){
+function Footer ({setPage}){
     let [email , setEmail] = useState('')
     let [load , setLoad] = useState(false)
     let suscribe_email = ()=>{
@@ -23,19 +23,16 @@ function Footer (){
             <a href='/home' class="logo">
             {/* <p>Glitz<span>abellelabel</span></p> */}
             <img src="\imgs\67957883-348A-45E4-BD1E-E956B290647F~2.jpg" alt="" />
-        </a>
-            <div className="links">
-                <ul>
-                    <li><a href="https://www.instagram.com/glitzabellelogistics/" target="_blank"><AiOutlineInstagram size={30} /></a></li>
-                    <li><a href="https://twitter.com/glitzlogistics" target="_blank"><AiOutlineTwitter  size={30}/></a></li>
-                    <li><a href="https://www.facebook.com/Glitzabelleworld" target="_blank"><AiOutlineFacebook  size={30}/></a></li>
-                    {/* <li><a href="https://www.linkedin.com/in/bashirah-olawuyi-67778a1aa/" target="_blank"><AiOutlineLinkedin  size={30}/></a></li> */}
-                    <li><a href="https://api.whatsapp.com/send?phone=2348032403003" target="_blank"><AiOutlineWhatsApp  size={30}/></a></li>
-                    <li> <a href="mailto:glitzabelleworld@gmail.com"><AiOutlineMail  size={30}/></a></li>
-                </ul>
-            </div>
-            <div className="other">
-                <div className="email">
+        </a><br />
+        <div className="some_links">
+            <ul>
+                <li>Policies</li>
+                <li onClick={()=>setPage('shipping_policy')}>Shipping Policy</li>
+                <li onClick={()=>setPage('return_policy')}>Return Policy</li>
+            </ul>
+        </div>
+        <div className="other">
+             <div className="email">
                     <input onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Email Address' />
                     <div className="btn" onClick={suscribe_email}>
                         {
@@ -47,6 +44,20 @@ function Footer (){
                         
                     </div>
                 </div>
+        </div>
+       
+            <div className="links">
+                <ul>
+                    <li><a href="https://www.instagram.com/glitzabellelogistics/" target="_blank"><AiOutlineInstagram size={30} /></a></li>
+                    <li><a href="https://twitter.com/glitzlogistics" target="_blank"><AiOutlineTwitter  size={30}/></a></li>
+                    <li><a href="https://www.facebook.com/Glitzabelleworld" target="_blank"><AiOutlineFacebook  size={30}/></a></li>
+                    {/* <li><a href="https://www.linkedin.com/in/bashirah-olawuyi-67778a1aa/" target="_blank"><AiOutlineLinkedin  size={30}/></a></li> */}
+                    <li><a href="https://api.whatsapp.com/send?phone=2348032403003" target="_blank"><AiOutlineWhatsApp  size={30}/></a></li>
+                    <li> <a href="mailto:glitzabelleworld@gmail.com"><AiOutlineMail  size={30}/></a></li>
+                </ul>
+            </div>
+            <div className="other">
+                
                 <div className="copyWright">
                     <p>&copy; 2023  Glitzabelle Label. All rights reserved</p>
                 </div>

@@ -1,6 +1,7 @@
 import { AiFillAlert } from 'react-icons/ai'
 import '../css/policy.css'
 import { useEffect } from 'react';
+import { FaShippingFast } from 'react-icons/fa';
 
 function Policy(){
     useEffect(() => {
@@ -17,7 +18,7 @@ function Policy(){
         </div>
         <div class="topic_header">
             <div class="iconify">
-               <AiFillAlert color='#004225'n size={35} /> 
+               <FaShippingFast color='#004225'n size={35} /> 
                 
             </div>
             <div class="titlepolicy">

@@ -187,7 +187,7 @@ let search_prod = (search_string)=>{
          page==='return_policy' && <ReturnPolicy />
       }
        {
-        page !== 'login' && <Footer />
+        page !== 'login' && <Footer setPage={setPage} />
       }
       
     </div>

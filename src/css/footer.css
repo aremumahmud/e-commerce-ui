@@ -62,3 +62,27 @@ footer p {
 .links a {
     color: black;
 }
+
+.some_links {
+    width: 100%;
+    list-style-type: none;
+}
+
+.some_links ul {
+    display: block;
+    margin-left: 0px !important;
+}
+
+.some_links ul li {
+    display: block;
+    padding: 10px;
+}
+
+.some_links ul li:first-child {
+    font-weight: 900;
+    font-size: large;
+}
+
+.some_links ul li {
+    font-size: large;
+}

@@ -1,4 +1,4 @@
-import { AiFillAlert } from "react-icons/ai";
+import { FaExchangeAlt } from "react-icons/fa";
 import "../css/policy.css";
 import { useEffect } from "react";
 
@@ -18,7 +18,7 @@ function ReturnPolicy() {
       </div>
       <div class="topic_header">
         <div class="iconify">
-          <AiFillAlert color="#004225" n size={35} />
+          <FaExchangeAlt color="#004225" n size={35} />
         </div>
         <div class="titlepolicy">Glitzabelle Label Return Policies</div>
       </div>
