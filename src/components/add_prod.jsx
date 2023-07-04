@@ -257,7 +257,7 @@ let [pending4 , setPending4 ]  = useState(false)
             <p>first product variation</p><hr /><br />
             <div className="size_choose">
                 <button className="button">Image 1</button>
-                <input  onChange={(e)=>setInventory(e.target.value)}  className="simple_input partition" placeholder='enter amount' />
+                <input  onChange={(e)=>setInventory(e.target.value)}  className="simple_input partition" placeholder='enter quantity' />
              </div>
              <p>Variants (size)</p>
             <div className='size_choose'>
@@ -318,7 +318,7 @@ let [pending4 , setPending4 ]  = useState(false)
              <p>second product variation</p><hr /><br />
              <div className="size_choose">
                 <button className="button">Image 2</button>
-                <input  onChange={(e)=>setInventory1(e.target.value)}  className="simple_input partition"  placeholder='enter amount'/>
+                <input  onChange={(e)=>setInventory1(e.target.value)}  className="simple_input partition"  placeholder='enter quantity'/>
              </div>
              <p>Variants (size)</p>
             <div className='size_choose'>
@@ -380,7 +380,7 @@ let [pending4 , setPending4 ]  = useState(false)
 <p>third product variation</p><hr /><br />
              <div className="size_choose">
                 <button className="button">Image 3</button>
-                <input  onChange={(e)=>setInventory2(e.target.value)}  className="simple_input partition"  placeholder='enter amount'/>
+                <input  onChange={(e)=>setInventory2(e.target.value)}  className="simple_input partition"  placeholder='enter quantity'/>
              </div>
              <p>Variants (size)</p>
             <div className='size_choose'>
@@ -441,7 +441,7 @@ let [pending4 , setPending4 ]  = useState(false)
              <p>fourth product variation</p><hr /><br />
              <div className="size_choose">
                 <button className="button">Image 4</button>
-                <input  onChange={(e)=>setInventory3(e.target.value)}  className="simple_input partition" placeholder='enter amount' />
+                <input  onChange={(e)=>setInventory3(e.target.value)}  className="simple_input partition" placeholder='enter quantity' />
              </div>
              <p>Variants (size)</p>
             <div className='size_choose'>
