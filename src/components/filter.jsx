@@ -1,7 +1,7 @@
 import { AiFillStar, AiOutlineSearch } from "react-icons/ai";
 import "../css/filter.css";
 
-function Filter({setFilter , setLoad,categories, search}) {
+function Filter({setFilter , setLoad,categories, search,setCurrency,symbol}) {
 
   let change = e=>{
     var select = e.target;
@@ -23,6 +23,16 @@ function Filter({setFilter , setLoad,categories, search}) {
                     </option>;
                   })
                 }
+            </select>
+          </li>
+          <li className="ml-non">
+            <select name="" id=""  onChange={(e)=>{
+                setCurrency(e.target.value)
+            }} >
+                <option value="$" selected={symbol === "$"}>USD</option>
+                <option value="£" selected={symbol === "£"}>GBP</option>
+                <option value="₦" selected={symbol === "₦"}>NGN</option>
+                <option value="€" selected={symbol === "€"}>EUR</option>
             </select>
           </li>
           {/* <li  className="nonee">

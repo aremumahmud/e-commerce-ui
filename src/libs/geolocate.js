@@ -6,6 +6,7 @@ async function getUserIP() {
         const data2 = await response2.text();
         return data2
     } catch (error) {
+
         console.error('Error fetching IP:', error);
     }
 }

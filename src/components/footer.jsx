@@ -48,12 +48,12 @@ function Footer ({setPage}){
        
             <div className="links">
                 <ul>
-                    <li><a href="https://www.instagram.com/glitzabellelogistics/" target="_blank"><AiOutlineInstagram size={30} /></a></li>
-                    <li><a href="https://twitter.com/glitzlogistics" target="_blank"><AiOutlineTwitter  size={30}/></a></li>
-                    <li><a href="https://www.facebook.com/Glitzabelleworld" target="_blank"><AiOutlineFacebook  size={30}/></a></li>
+                    <li><a href="https://www.instagram.com/glitzabellelogistics/" target="_blank"><AiOutlineInstagram className='ico' size={30} /></a></li>
+                    <li><a href="https://twitter.com/glitzlogistics" target="_blank"><AiOutlineTwitter  className='ico'  size={30}/></a></li>
+                    <li><a href="https://www.facebook.com/Glitzabelleworld" target="_blank"><AiOutlineFacebook  className='ico'  size={30}/></a></li>
                     {/* <li><a href="https://www.linkedin.com/in/bashirah-olawuyi-67778a1aa/" target="_blank"><AiOutlineLinkedin  size={30}/></a></li> */}
-                    <li><a href="https://api.whatsapp.com/send?phone=2348032403003" target="_blank"><AiOutlineWhatsApp  size={30}/></a></li>
-                    <li> <a href="mailto:glitzabelleworld@gmail.com"><AiOutlineMail  size={30}/></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=2348032403003" target="_blank"><AiOutlineWhatsApp  className='ico'   size={30}/></a></li>
+                    <li> <a href="mailto:glitzabelleworld@gmail.com"><AiOutlineMail  className='ico'   size={30}/></a></li>
                 </ul>
             </div>
             <div className="other">

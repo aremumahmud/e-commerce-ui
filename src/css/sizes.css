@@ -27,5 +27,5 @@
 
 .active8 {
     background-color: #004225;
-    color: white;
+    color: white !important;
 }

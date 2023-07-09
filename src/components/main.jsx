@@ -124,7 +124,8 @@ let search_prod = (search_string)=>{
         return
       }
       setData(data2[0]) 
-      setCurrency(currencyTab1[data2[1]].symbol)
+      //setCurrency(currencyTab1[data2[1]].symbol)
+      setCurrency('$')
        setLoad1(false)
     })
     
@@ -147,7 +148,7 @@ let search_prod = (search_string)=>{
       
      
       {
-        page === 'home' && <Home symbolTab={symbolTab1} currencyTab={currencyTab1} search={search_prod} setViewStatus3={setViewStatus3} setCartData3={setCartData3} setLoad={setLoad} setFilter={setFilter} symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
+        page === 'home' && <Home setCurrency={setCurrency} symbolTab={symbolTab1} currencyTab={currencyTab1} search={search_prod} setViewStatus3={setViewStatus3} setCartData3={setCartData3} setLoad={setLoad} setFilter={setFilter} symbol={currency} data={data} setProduct={setProduct} setPage={setPage} setCart={setCart} cart={cart}/>
       }
 
       {

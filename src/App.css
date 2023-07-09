@@ -70,3 +70,45 @@ input[type=radio] {
 .fitme {
     width: 500px;
 }
+
+html {
+    --text-color-normal: #0a244d;
+    --text-color-light: #8cabd9;
+}
+
+html[data-theme='dark'] {
+    --text-color-normal: hsl(210, 10%, 62%);
+    --text-color-light: hsl(210, 15%, 35%);
+    --text-color-richer: hsl(210, 50%, 72%);
+    --text-color-highlight: hsl(25, 70%, 45%);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black !important;
+        color: #cccccc;
+        --text-color-normal: hsl(210, 10%, 62%);
+        --text-color-light: hsl(210, 15%, 35%);
+        --text-color-richer: hsl(210, 50%, 72%);
+        --text-color-highlight: hsl(25, 70%, 45%);
+    }
+    .path ul {
+        background-color: black !important;
+        color: #cccccc;
+    }
+    .topNav {
+        background-color: black !important;
+    }
+    .topNav img {
+        content: url(../public/imgs/3.png)
+    }
+    footer img {
+        content: url(../public/imgs/3.png)
+    }
+    .ico {
+        color: #cccccc;
+    }
+    .size1 {
+        color: black;
+    }
+}

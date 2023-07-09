@@ -221,7 +221,7 @@ function ProductMain({
           </div>
 
           <div className="prices">
-            <p className="subTitle">Buy and adore with unlimited guarantee</p>
+            {/* <p className="subTitle">Buy and adore with unlimited guarantee</p> */}
             <p className="descrpTitle">
               {symbol}
               {
@@ -231,7 +231,7 @@ function ProductMain({
                   symbolTab[symbol]
                 ).toFixed(2)
               }
-              .00{" "}
+              
             </p>
           </div>
 

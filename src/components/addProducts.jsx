@@ -34,7 +34,7 @@ let valid = validate(('1,2,3,4,9').split(','))
   // console.log()
    //form one data
 
-   let formData = new FormData(getDoc('form2'))
+   let formData = new FormData(getDoc('form'))
    let json = Object.fromEntries(formData.entries())
 
    //form 2 quantity data

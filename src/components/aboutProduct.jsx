@@ -8,8 +8,8 @@ function AboutProduct({ setCart, setPage , product , productData,symbol,setViewS
         setPage={setPage}
         data={[
           { name: "Home", path: "home" },
-          { name: "About Product", path: "product" },
-          { name: "caps" },
+          { name: "About Product", path: "product" }
+        
         ]}
       />
       <ProductMain symbolTab={symbolTab} currencyTab={currencyTab} cart={cart} setProduct={setProduct}  setViewStatus3={setViewStatus3} setViewStatus2={setViewStatus2} setCartData3={setCartData3} symbol={symbol} productData={productData} datar={product} setCart={setCart} setPage={setPage} />
