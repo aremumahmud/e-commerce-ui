@@ -116,15 +116,16 @@ let search_prod = (search_string)=>{
   useEffect(()=>{
     load1 && 
     getUserIP().then(res=>{
-     // console.log(res)
-      let data2  = changeCurrency(data, currencyTab1[res]?res:'NGN' , currencyTab1)  
+      console.log(res,'llihjn')
+    // res = 'USD'
+      let data2  = changeCurrency(data, 'NGN' , currencyTab1)  
      // console.log(data2,'jayz')
     // console.log(isNaN(data2[0][0].price))
       if(isNaN(data2[0][0].price)){
         return
       }
       setData(data2[0]) 
-      setCurrency(currencyTab1[data2[1]].symbol)
+      setCurrency(currencyTab1[res].symbol)
      // setCurrency('$')
        setLoad1(false)
     })

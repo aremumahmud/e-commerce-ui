@@ -33,7 +33,7 @@ function TopNav({cart,setPage,search}){
                 if( localStorage.getItem('TokenID')){
                   return setPage('dash')
                 }
-                let a = window.confirm('Sorry you would have to sign in to access the dashboard \n Sign you up?')
+                let a = window.confirm('Sorry, you need to sign in to access the dashboard \n \t Sign you up?')
                 return a?setPage('users/signup'):''
                 }}>
                 <AiOutlineUser style={{fontWeight:'bold'}} /> 
