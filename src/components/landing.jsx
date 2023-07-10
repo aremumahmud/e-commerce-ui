@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, BrowserRouter, useNavigate } from 'react-router-dom'
 import config from "../config/config";
+import '../css/tablet.css'
 
 //components
 import Header from "./header";

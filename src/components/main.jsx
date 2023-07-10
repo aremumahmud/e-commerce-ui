@@ -124,8 +124,8 @@ let search_prod = (search_string)=>{
         return
       }
       setData(data2[0]) 
-      //setCurrency(currencyTab1[data2[1]].symbol)
-      setCurrency('$')
+      setCurrency(currencyTab1[data2[1]].symbol)
+     // setCurrency('$')
        setLoad1(false)
     })
     
