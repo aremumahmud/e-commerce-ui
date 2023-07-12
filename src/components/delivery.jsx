@@ -1,25 +1,24 @@
 import { useEffect, useState } from "react";
 import "../css/delivery.css";
-//import axios from 'axios'
+import axios from 'axios'
 //import * as countryjs from 'countryjs'
 
 function Delivery({valid,pace,setPace}) {
-  let Country;
+ // let Country;
   //console.log( countryjs.all().map(country => country.name.common))
 let [ options1,setoptions] = useState([])
-useEffect(()=>{
-  Country && setoptions(Country.all().map(country => ({name:country.name.common})))
-},[])
-//   axios.post('https://countriesnow.space/api/v0.1/countries/states', {
-//     "country": "Nigeria",
-// })
-// .then(function(response) {
-//     let cities = response.data.data.states
-//     console.log()
-//     setoptions(cities)
+// useEffect(()=>{
+//   Country && setoptions(Country.all().map(country => ({name:country.name.common})))
+// },[])
+axios.get('https://restcountries.com/v3.1/all')
+.then(function(response) {
+  const countryNames = response.data.map(country => country.name.common);
+  
+    console.log()
+    setoptions({name:countryNames})
 
-//     // console.log(options)
-// })
+    // console.log(options)
+})
   
   return ( 
     <div className="delivery" style={{
