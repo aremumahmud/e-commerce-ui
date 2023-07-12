@@ -20,7 +20,7 @@ useEffect(()=>{
 //     // console.log(options)
 // })
   
-  return (
+  return ( 
     <div className="delivery" style={{
       display : pace === 0? "block" : 'none'
     }}>
