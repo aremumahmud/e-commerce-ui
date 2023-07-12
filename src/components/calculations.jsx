@@ -20,7 +20,7 @@ function Calculation({ price, symbol, discountPrice,deliv }) {
                     </tr>
                     <tr>
                         <td>Shipping Cost</td>
-                        <td>-{symbol}{deliv.toFixed(2)}</td>
+                        <td>+{symbol}{deliv.toFixed(2)}</td>
                     </tr>
                     <br /><hr style={{ width: '100%' }} />
                     <tr>
