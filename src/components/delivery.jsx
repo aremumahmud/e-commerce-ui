@@ -4,11 +4,12 @@ import "../css/delivery.css";
 //import * as countryjs from 'countryjs'
 
 function Delivery({valid,pace,setPace}) {
-  console.log( countryjs.all().map(country => country.name.common))
+  let Country;
+  //console.log( countryjs.all().map(country => country.name.common))
 let [ options1,setoptions] = useState([])
 useEffect(()=>{
-  setoptions(Country.all().map(country => ({name:country.name.common})))
-})
+  Country && setoptions(Country.all().map(country => ({name:country.name.common})))
+},[])
 //   axios.post('https://countriesnow.space/api/v0.1/countries/states', {
 //     "country": "Nigeria",
 // })
