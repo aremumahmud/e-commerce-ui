@@ -14,7 +14,7 @@ axios.get('https://restcountries.com/v3.1/all')
 .then(function(response) {
   const countryNames = response.data.map(country => country.name.common);
   
-    console.log()
+    console.log(countryNames)
     setoptions({name:countryNames})
 
     // console.log(options)
