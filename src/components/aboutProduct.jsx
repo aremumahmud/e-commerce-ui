@@ -8,7 +8,7 @@ function AboutProduct({ setCart, setPage , product , productData,symbol,setViewS
         setPage={setPage}
         data={[
           { name: "Home", path: "home" },
-          { name: "About Product", path: "product" }
+          { name: "About Product", path: "product" },{name:product.category}
         
         ]}
       />

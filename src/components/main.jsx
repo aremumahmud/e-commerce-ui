@@ -28,6 +28,7 @@ import fetch_exchange from "../libs/currencies";
 import Policy from "./policy";
 import ReturnPolicy from "./returnPolicy";
 import SizeChart from "./sizechart";
+import Shipment from "./shipment";
 
 
 
@@ -181,6 +182,9 @@ let search_prod = (search_string)=>{
       }
        {
        page==='exchange' && <Exchange setPage={setPage} />
+      }
+      {
+       page==='shipment' && <Shipment setPage={setPage} />
       }
       {
          page==='shipping_policy' && <Policy />

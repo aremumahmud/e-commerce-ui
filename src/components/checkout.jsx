@@ -53,7 +53,7 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
     let formData = new FormData(getDoc('form2134'))
     let data = Object.fromEntries(formData.entries())
     let f = Object.keys(data)
-    return validate(f).length === 0 && set_user_data(data)
+    return validate(f).length === 0 ? set_user_data(data):set_user_data(null)
   }
 
   let [pace, setPace] = useState(0)

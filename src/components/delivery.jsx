@@ -1,6 +1,20 @@
+import { useState } from "react";
 import "../css/delivery.css";
+import axios from 'axios'
 
 function Delivery({valid,pace,setPace}) {
+let [ options1,setoptions] = useState([])
+  axios.post('https://countriesnow.space/api/v0.1/countries/states', {
+    "country": "Nigeria",
+})
+.then(function(response) {
+    let cities = response.data.data.states
+    console.log(cities)
+    setoptions(cities)
+
+    // console.log(options)
+})
+  
   return (
     <div className="delivery" style={{
       display : pace === 0? "block" : 'none'
@@ -21,7 +35,15 @@ function Delivery({valid,pace,setPace}) {
           <p>Shipping Address<sup>*</sup></p> 
           <input onChange={valid} type="text" name="address" id="" placeholder="Type Here ..."  />
         </div>
-
+        <div className="wrapInput long">
+          <p>Country<sup>*</sup></p> 
+          <select onChange={valid} type="text" name="country" id="" >
+            <option value="">Choose country</option>
+           {
+            options1.map(x=> <option value={x.name}>{x.name}</option>)
+           }
+          </select>
+        </div>
         <div className="wrapInput">
           <p>City/Town<sup>*</sup></p> 
           <input onChange={valid} type="text" name="city" id="" placeholder="Type Here ..." />

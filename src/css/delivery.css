@@ -36,6 +36,17 @@
     background-color: #cccccc59;
 }
 
+.wrapInput select {
+    width: 90%;
+    padding: 9px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    font-size: small;
+    background-color: #cccccc59;
+}
+
 .long {
     width: 100%;
 }
