@@ -1,6 +1,6 @@
 import '../css/calculations.css'
 
-function Calculation({ price, symbol, discountPrice }) {
+function Calculation({ price, symbol, discountPrice,deliv }) {
     return (
         <div className="specsTable">
             <table>
@@ -12,7 +12,7 @@ function Calculation({ price, symbol, discountPrice }) {
                     </tr>
                     <tr>
                         <td>Tax(10%)</td>
-                        <td>{symbol}10.00</td>
+                        <td>{symbol}00.00</td>
                     </tr>
                     <tr>
                         <td>Coupon Discount</td>
@@ -20,12 +20,12 @@ function Calculation({ price, symbol, discountPrice }) {
                     </tr>
                     <tr>
                         <td>Shipping Cost</td>
-                        <td>-{symbol}0.00</td>
+                        <td>-{symbol}{deliv.toFixed(2)}</td>
                     </tr>
                     <br /><hr style={{ width: '100%' }} />
                     <tr>
                         <td>Total</td>{console.log(price - discountPrice)}
-                        <td>{symbol}{+(price - discountPrice).toFixed(2)}</td>
+                        <td>{symbol}{+(price - discountPrice+deliv).toFixed(2)}</td>
                     </tr>
 
                 </tbody>

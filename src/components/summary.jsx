@@ -18,7 +18,8 @@ function Summary({
   setURI,
   setDiscountCode,
   symbolTab,
-  currencyTab
+  currencyTab,
+  deliv
 }) {
   let [discount, setDiscount] = useState("");
   let [load, setLoad] = useState(false)
@@ -180,7 +181,7 @@ function Summary({
       <br />
       <br />
       <p className="topic">Total Debit Amount</p>
-      <Calculation symbol={symbol} price={price} discountPrice={discountPrice} />
+      <Calculation deliv={deliv} symbol={symbol} price={price} discountPrice={discountPrice} />
       <br />
       {
         !localStorage.getItem('TokenID') &&<div className="as_a_guest">
@@ -204,7 +205,7 @@ function Summary({
         {busy ? (
           <div className="loader"></div>
         ) : (
-          `Pay ${symbol + +(price.toFixed(2) - discountPrice)}`
+          `Pay ${symbol + +(price.toFixed(2) - discountPrice + deliv)}`
         )}
       </div>
       <br />

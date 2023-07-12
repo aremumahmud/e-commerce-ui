@@ -18,8 +18,8 @@ const pic = {
     delete_product_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/delete/deleteProduct',
     get_exchanges_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/exchange/get_exchanges',
     modify_exchange_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/exchange/modify_exchange',
-    get_shipments_uri: 'http://localhost:2000/v1/api/shipment/get_shipments',
-    modify_shipments_uri: 'http://localhost:2000/v1/api/shipment/modify_shipments'
+    get_shipments_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/shipment/get_shipments',
+    modify_shipments_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/shipment/modify_shipments'
 
     //hhy
 }

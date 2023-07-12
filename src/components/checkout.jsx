@@ -8,6 +8,8 @@ import send_locked_to_be_product from "../libs/send_locked_to_be";
 import validate from "../libs/validate_deets";
 import { useEffect, useState } from "react";
 import { nameTab } from "../config/currency";
+import fetch_shipment from "../libs/getShipment";
+import getUserCountry from "../libs/country";
 
 
 
@@ -21,10 +23,12 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  let [deliv,setDeliv] = useState(0)
+  let [deliv1,setDeliv1] = useState(0)
   let lockProduct = () => {
    // localStorage.getItem('TokenID') && setURI('upload_locked_product_uri')
     console.log(URIState)
-    send_locked_to_be_product(URIState, cart, price, user_data, nameTab[symbol], discount_code, (err, resp) => {
+    send_locked_to_be_product(URIState, cart, deliv1, user_data, nameTab[symbol], discount_code,user_data.country, (err, resp) => {
       setBusy(false)
       if (err) {
  
@@ -48,15 +52,48 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
     let formData = new FormData(getDoc('form2134'))
     return Object.fromEntries(formData.entries())
   }
+//let [deliv,setDeliv] = useState(0)
 
+  let [ship , setShip] = useState({
+    local:0,
+    international:0
+  })
+  useEffect(()=>{
+    let p = +((deliv1 * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
+    setDeliv(p)
+  },[symbol])
   let valid = () => {
     let formData = new FormData(getDoc('form2134'))
     let data = Object.fromEntries(formData.entries())
+    if(data.country == 'Nigeria'){
+      let p = +((ship.local * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
+      setDeliv(p)
+      setDeliv1(p)
+    }else{
+      let p = +((ship.international * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
+      setDeliv(p)
+      setDeliv1(p)
+     
+    }
     let f = Object.keys(data)
     return validate(f).length === 0 ? set_user_data(data):set_user_data(null)
   }
 
   let [pace, setPace] = useState(0)
+
+ 
+  
+  useEffect(()=>{
+      fetch_shipment((err,res)=>{
+        if(err) return
+        if(!res.success) return
+        let exchange = res.shipments
+        setShip(exchange)
+        //setSymbolTab(exchange.symbolTab)
+      })
+    },[])
+
+   
   return (
     <>
       <Path
@@ -80,7 +117,7 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
         <div className="two" style={{
           display: pace === 0 ? "block" : 'none'
         }}>
-          <Summary symbolTab={symbolTab} currencyTab={currencyTab} setDiscountCode={setDiscountCode} setURI={setURI} setPage={setPage} setCurrency={setCurrency} symbol={symbol} busy={busy} setBusy={setBusy} pace={pace} setPace={setPace} lockProduct={lockProduct} price={price} />
+          <Summary deliv={deliv} symbolTab={symbolTab} currencyTab={currencyTab} setDiscountCode={setDiscountCode} setURI={setURI} setPage={setPage} setCurrency={setCurrency} symbol={symbol} busy={busy} setBusy={setBusy} pace={pace} setPace={setPace} lockProduct={lockProduct} price={price} />
         </div>
       </div>
     </>
