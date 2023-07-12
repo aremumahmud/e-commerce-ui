@@ -76,7 +76,12 @@ let template = (data) => `
 
 `
 
-let end = data => `
+let end = (data, total) => `
+<tr>
+    <th colspan='3'>Subtotal</th>
+    
+    <th>${data.currency + String(data.total-total)}</th>
+</tr>
 <tr>
     <th colspan='3'>Subtotal</th>
     
@@ -178,7 +183,7 @@ let j = {
             "image": "https://res.cloudinary.com/dvauarkh6/image/upload/v1687434380/DEV/yt510bn2e59gju39vjoc.jpg",
             "id": "6494355cdd83ccf29398f2ff",
             "parent_product": "Beeba",
-            "quantity": 1,
+            "quantity": 2,
             "price": 23500,
             "size": "8"
         },
@@ -205,12 +210,14 @@ function generate(points) {
 
     let prods = points.products.map(x => product(x, points)).join('')
     let total = 0
-    points.products.forEach(x => {
+    let clone = [...points.products]
+    clone.forEach(x => {
         console.log(x.price)
         console.log(+(x.price / currencyTab[points.currency].price_in_naira).toFixed(2))
-        total += +(x.price / currencyTab[points.currency].price_in_naira).toFixed(2)
+        total += +((x.price / currencyTab[points.currency].price_in_naira) * x.quantity).toFixed(2)
     })
-    let template_final = template(points) + prods + end(points)
+
+    let template_final = template(points) + prods + end(points, total)
     return template_final
 
 }
