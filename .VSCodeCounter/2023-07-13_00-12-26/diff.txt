@@ -1,0 +1,120 @@
+Date : 2023-07-13 00:12:26
+Directory : c:\Users\HP\Documents\e-commerce\e-commerce-ui
+Total : 85 files,  2303 codes, 329 comments, 225 blanks, all 2857 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| JavaScript JSX |         36 |      1,335 |        221 |        160 |      1,716 |
+| CSS            |         22 |        667 |         63 |         40 |        770 |
+| JavaScript     |         22 |        279 |         42 |         25 |        346 |
+| JSON           |          2 |         38 |          0 |          0 |         38 |
+| HTML           |          3 |        -16 |          3 |          0 |        -13 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                             | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                |         85 |      2,303 |        329 |        225 |      2,857 |
+| . (Files)                                                                        |          6 |        132 |          4 |         14 |        150 |
+| public                                                                           |          1 |          0 |          2 |          0 |          2 |
+| src                                                                              |         78 |      2,171 |        323 |        211 |      2,705 |
+| src (Files)                                                                      |          2 |         32 |          1 |          2 |         35 |
+| src\components                                                                   |         36 |      1,335 |        221 |        160 |      1,716 |
+| src\css                                                                          |         20 |        585 |         60 |         29 |        674 |
+| src\libs                                                                         |         20 |        219 |         41 |         20 |        280 |
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                         | language       | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\generateEmail.js                  | JavaScript     |         60 |          0 |          5 |         65 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\hh.html                           | HTML           |         15 |          1 |          4 |         20 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\package-lock.json                 | JSON           |         37 |          0 |          0 |         37 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\package.json                      | JSON           |          1 |          0 |          0 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\public\index.html                 | HTML           |          0 |          2 |          0 |          2 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\App.css                       | CSS            |         32 |          0 |          2 |         34 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\about.jsx          | JavaScript JSX |         -3 |          0 |          1 |         -2 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\aboutProduct.jsx   | JavaScript JSX |         -1 |          0 |          1 |          0 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\about_pic.jsx      | JavaScript JSX |          0 |          0 |          1 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\add_prod.jsx       | JavaScript JSX |        293 |         44 |         46 |        383 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\cartItem.jsx       | JavaScript JSX |          0 |          1 |          0 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\checkout.jsx       | JavaScript JSX |         35 |          3 |          5 |         43 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\dash.jsx           | JavaScript JSX |         52 |         -6 |          4 |         50 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\delivery.jsx       | JavaScript JSX |         17 |          9 |          1 |         27 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\discount.jsx       | JavaScript JSX |         45 |          3 |         14 |         62 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\display.jsx        | JavaScript JSX |         -3 |          6 |          0 |          3 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\exchange.jsx       | JavaScript JSX |         71 |          2 |         11 |         84 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\filter.jsx         | JavaScript JSX |        -19 |         29 |          0 |         10 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\footer.jsx         | JavaScript JSX |         29 |          2 |          3 |         34 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\home.jsx           | JavaScript JSX |         -3 |          5 |          1 |          3 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\landing.jsx        | JavaScript JSX |          3 |          8 |         -1 |         10 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\login.jsx          | JavaScript JSX |          2 |          2 |          1 |          5 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\main.jsx           | JavaScript JSX |         40 |          1 |          5 |         46 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\modal.jsx          | JavaScript JSX |         -4 |          0 |          1 |         -3 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\payment.jsx        | JavaScript JSX |          1 |          0 |          0 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\policy.jsx         | JavaScript JSX |         44 |          1 |          5 |         50 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\prods_admin.jsx    | JavaScript JSX |         81 |         23 |         13 |        117 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\product.jsx        | JavaScript JSX |        -28 |         39 |         -1 |         10 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\productMain.jsx    | JavaScript JSX |        189 |         31 |          3 |        223 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\products.jsx       | JavaScript JSX |          5 |          0 |          0 |          5 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\products_admin.jsx | JavaScript JSX |          7 |          0 |          0 |          7 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\returnPolicy.jsx   | JavaScript JSX |        140 |          1 |          4 |        145 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\review.jsx         | JavaScript JSX |          0 |          0 |          1 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\shipment.jsx       | JavaScript JSX |         72 |          2 |         11 |         85 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\sizechart.jsx      | JavaScript JSX |         34 |          0 |          5 |         39 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\sizes.jsx          | JavaScript JSX |         53 |          2 |         15 |         70 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\summary.jsx        | JavaScript JSX |         93 |          3 |          3 |         99 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\tab.jsx            | JavaScript JSX |         25 |          0 |          3 |         28 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\table.jsx          | JavaScript JSX |         66 |          0 |          3 |         69 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\tileAlert.jsx      | JavaScript JSX |          1 |          0 |          0 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\topNav.jsx         | JavaScript JSX |         -4 |         10 |          1 |          7 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\view.jsx           | JavaScript JSX |          2 |          0 |          0 |          2 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\add_prod.css              | CSS            |          6 |         13 |          2 |         21 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\dashboard.css             | CSS            |         -7 |          9 |          0 |          2 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\delivery.css              | CSS            |         10 |          0 |          1 |         11 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\display.css               | CSS            |          7 |          4 |          0 |         11 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\exchange.css              | CSS            |          0 |          0 |          1 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\filter.css                | CSS            |          1 |          0 |          0 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\footer.css                | CSS            |         20 |          0 |          5 |         25 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\header_resp.css           | CSS            |         15 |          3 |          0 |         18 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\login.css                 | CSS            |         -6 |          6 |          0 |          0 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\modal.css                 | CSS            |          1 |          0 |          0 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\policy.css                | CSS            |         53 |          2 |         10 |         65 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\productMain.css           | CSS            |         16 |          1 |          1 |         18 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\products.css              | CSS            |          4 |          3 |          0 |          7 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\review.css                | CSS            |          0 |          1 |          0 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\sizes.css                 | CSS            |         28 |          0 |          3 |         31 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\sizetable.css             | CSS            |         16 |          0 |          2 |         18 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\success.css               | CSS            |         -7 |          6 |          0 |         -1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\summary.css               | CSS            |         17 |          0 |          3 |         20 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\tab.css                   | CSS            |         14 |          2 |          1 |         17 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\tablet.css                | CSS            |        397 |         10 |          0 |        407 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\arraytoObj_sizebased.js  | JavaScript     |          9 |          0 |          2 |         11 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\calculate.js             | JavaScript     |         -1 |          2 |          0 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\changeCurrency.js        | JavaScript     |          0 |          0 |         -1 |         -1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\country.js               | JavaScript     |         12 |          0 |          2 |         14 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\create_discount.js       | JavaScript     |         26 |          1 |          1 |         28 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\currencies.js            | JavaScript     |         10 |          0 |          1 |         11 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\deleteUser.js            | JavaScript     |         19 |          1 |          2 |         22 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\delete_product.js        | JavaScript     |         22 |          1 |          1 |         24 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\geolocate.js             | JavaScript     |          0 |          0 |          1 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\getShipment.js           | JavaScript     |         10 |          0 |          1 |         11 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\load_image.js            | JavaScript     |          5 |          0 |          0 |          5 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\modify_exchange.js       | JavaScript     |         24 |          5 |          2 |         31 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\modify_product.js        | JavaScript     |         24 |          1 |          1 |         26 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\modify_shipment.js       | JavaScript     |         24 |          5 |          1 |         30 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\process_product_data.js  | JavaScript     |          3 |          0 |          0 |          3 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\send_locked_to_be.js     | JavaScript     |          2 |          0 |          0 |          2 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\suscribe.js              | JavaScript     |         10 |          0 |          1 |         11 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\uri.js                   | JavaScript     |         10 |         25 |          3 |         38 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\verify_admin.js          | JavaScript     |          0 |          0 |          1 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\verify_discount.js       | JavaScript     |         10 |          0 |          1 |         11 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\socket.js                     | JavaScript     |          0 |          1 |          0 |          1 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\test.css                          | CSS            |         50 |          3 |          9 |         62 |
+| c:\Users\HP\Documents\e-commerce\e-commerce-ui\test.html                         | HTML           |        -31 |          0 |         -4 |        -35 |
+| Total                                                                            |                |      2,303 |        329 |        225 |      2,857 |
++----------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
