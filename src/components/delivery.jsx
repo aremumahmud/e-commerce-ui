@@ -45,6 +45,7 @@ axios.get('https://restcountries.com/v3.1/all')
           <p>Country<sup>*</sup></p> 
           <select onChange={valid} type="text" name="country" id="" >
             <option value="">Choose country</option>
+            <option value="Nigeria">Nigeria</option>
            {
             options1.map(x=> <option value={x.name}>{x.name}</option>)
            }
