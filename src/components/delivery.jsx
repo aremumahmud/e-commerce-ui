@@ -12,10 +12,10 @@ let [ options1,setoptions] = useState([])
 // },[])
 axios.get('https://restcountries.com/v3.1/all')
 .then(function(response) {
-  const countryNames = response.data.map(country => country.name.common);
+  const countryNames = response.data.map(country => ({name:country.name.common}));
   
-    console.log(countryNames)
-    setoptions({name:countryNames})
+    //console.log(countryNames)
+    setoptions(countryNames)
 
     // console.log(options)
 })
