@@ -48,12 +48,12 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, cu
             }
            
           </div>
-          <p onClick={() => {
+          {/* <p onClick={() => {
             setPage('product')
             setProduct(info)
             setMain && setMain(info.image || info.mainImage)
 
-          }} className="description">{info.description}</p>
+          }} className="description">{info.description}</p> */}
           {/* <div className="rating" onClick={() => {
             setPage('product')
             setProduct(info)

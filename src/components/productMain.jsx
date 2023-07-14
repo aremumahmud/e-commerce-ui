@@ -197,7 +197,13 @@ function ProductMain({
         <div className="stockInfo">
           <div className="top">
             <p className="title">{data.name}</p>
-            <p className="description">{data.description}</p>
+            <br />
+            <div className="description">{
+              data.description.split('•').map(x=>x&&<>•{x} <br/></>)
+            }
+                  {/* <p >{data.description}</p> */}
+            </div>
+           
             {/* <div className="rating">
               <ul>
                 <li>

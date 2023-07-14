@@ -1,9 +1,9 @@
-import '../css/modal.css'
-import SizeTable from './table';
+import "../css/modal.css";
+import SizeTable from "./table";
 
-function SizeChart({display,setViewStatus}) {
+function SizeChart({ display, setViewStatus }) {
   return (
-    <div style={{display}} className="modalWrap">
+    <div style={{ display }} className="modalWrap">
       <div class="card">
         <div class="header1">
           <span class="icon1">
@@ -19,21 +19,19 @@ function SizeChart({display,setViewStatus}) {
           </span>
           <p class="alert">Glitzabelle Label Size Chart</p>
         </div>
-<SizeTable />
-        <p class="message fitme" >
+        <SizeTable />
+        <p class="message fitme">
           Use this chart to check out what fits you best!
         </p>
 
         <div class="actions1">
-          <a class="read" onClick={()=>setViewStatus('none')}>
+          <a class="read" onClick={() => setViewStatus("none")}>
             close
           </a>
-
         </div>
       </div>
     </div>
   );
 }
 
-
-export default SizeChart
+export default SizeChart;
