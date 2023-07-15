@@ -212,7 +212,7 @@ function ProductMain({
               
             </p>
           </div>
-
+<br />
             <div className="description">{
               data.description.split('•').map(x=>x&&<>•{x} <br/></>)
             }
