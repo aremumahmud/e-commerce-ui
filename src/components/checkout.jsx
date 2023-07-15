@@ -89,7 +89,7 @@ let [ship , setShip] = useState({
       setDeliv1(p)
     }
     let f = Object.keys(data)
-    return validate(f).length === 0 ? set_user_data(data):set_user_data(null)
+    return validate(f,isNaij).length === 0 ? set_user_data(data):set_user_data(null)
   }
 
 
