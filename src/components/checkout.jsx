@@ -53,33 +53,46 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
     return Object.fromEntries(formData.entries())
   }
 //let [deliv,setDeliv] = useState(0)
-
-  let [ship , setShip] = useState({
+let [isNaij , setIsNaij] = useState(false)
+let [pace, setPace] = useState(0)
+let [ship , setShip] = useState({
     local:0,
     international:0
   })
+
+
   useEffect(()=>{
     let p = +((deliv1 * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
     setDeliv(p)
   },[symbol])
+
+
   let valid = () => {
     let formData = new FormData(getDoc('form2134'))
     let data = Object.fromEntries(formData.entries())
     if(data.country == 'Nigeria'){
-      let p = +((ship.local * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
-      setDeliv(p)
-      setDeliv1(p)
+      setIsNaij(true)
+    
     }else{
+      setIsNaij(false)
       let p = +((ship.international * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
-      setDeliv(p)
+      setDeliv(p) 
       setDeliv1(p)
      
+    }
+
+    if(data.state){
+      setIsNaij(true)
+      //alert('hey')
+      let p = +(((ship[data.state]||0) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
+      setDeliv(p)
+      setDeliv1(p)
     }
     let f = Object.keys(data)
     return validate(f).length === 0 ? set_user_data(data):set_user_data(null)
   }
 
-  let [pace, setPace] = useState(0)
+
 
  
   
@@ -88,6 +101,7 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
         if(err) return
         if(!res.success) return
         let exchange = res.shipments
+        console.log(exchange)
         setShip(exchange)
         //setSymbolTab(exchange.symbolTab)
       })
@@ -111,7 +125,7 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
             <input type="checkbox" name="" id="" />
             Returning Customer
           </div>
-          <Delivery pace={pace} setPace={setPace} valid={valid} />
+          <Delivery isNaij={isNaij} setIsNaij={setIsNaij} pace={pace} setPace={setPace} valid={valid} />
 
         </div>
         <div className="two" style={{
