@@ -198,6 +198,21 @@ function ProductMain({
           <div className="top">
             <p className="title">{data.name}</p>
             <br />
+            <div className="prices">
+            {/* <p className="subTitle">Buy and adore with unlimited guarantee</p> */}
+            <p className="descrpTitle">
+              {symbol}
+              {
+                +(
+                  (data.price *
+                    currencyTab[data.currency || "NGN"].price_in_naira) /
+                  symbolTab[symbol]
+                ).toFixed(2)
+              }
+              
+            </p>
+          </div>
+
             <div className="description">{
               data.description.split('•').map(x=>x&&<>•{x} <br/></>)
             }
@@ -226,21 +241,7 @@ function ProductMain({
             </div> */}
           </div>
 
-          <div className="prices">
-            {/* <p className="subTitle">Buy and adore with unlimited guarantee</p> */}
-            <p className="descrpTitle">
-              {symbol}
-              {
-                +(
-                  (data.price *
-                    currencyTab[data.currency || "NGN"].price_in_naira) /
-                  symbolTab[symbol]
-                ).toFixed(2)
-              }
-              
-            </p>
-          </div>
-
+          
           {/* <div className="chooseColor">
             <p className="subTitle">Choose Color </p>
             <div className="colorWrap">
