@@ -1,14 +1,15 @@
 let getDoc = (x) => document.getElementsByName(x)[0]
 
 
-let validate = (...ids) => {
+let validate = (ids, isaij) => {
     let results = []
-    for (let id = 0; id < ids[0].length; id++) {
+    for (let id = 0; id < ids.length; id++) {
         // console.log(ids)
-        let idn = ids[0][id]
+        let idn = ids[id]
             //   console.log(idn)
-        if (!getDoc(idn).value) {
+        if (getDoc(idn).value.trim() === '') {
             //now check and convert those numbers to the id of the actual boxes
+            console.log(results, 'yo meahk')
             results.push(1)
             getDoc(idn).style.border = '2px solid red'
         } else {

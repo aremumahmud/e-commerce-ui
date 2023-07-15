@@ -31,7 +31,7 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
     send_locked_to_be_product(URIState, cart, deliv1, user_data, nameTab[symbol], discount_code,user_data.country, (err, resp) => {
       setBusy(false)
       if (err) {
- 
+ console.log(err)
         return alert(err.msg||'sorry something unexpected happened')
       }
 
@@ -89,7 +89,7 @@ let [ship , setShip] = useState({
       setDeliv1(p)
     }
     let f = Object.keys(data)
-    return validate(f).length === 0 ? set_user_data(data):set_user_data(null)
+    return validate(f,isNaij).length === 0 ? set_user_data(data):set_user_data(null)
   }
 
 
