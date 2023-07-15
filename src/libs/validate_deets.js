@@ -7,7 +7,7 @@ let validate = (ids,isNaij) => {
         // console.log(ids)
         let idn = ids[id]
             //   console.log(idn)
-        if (!getDoc(idn).value || (isNaij&&idn==='state')) {
+        if (!getDoc(idn).value && (isNaij&&idn==='state')) {
             //now check and convert those numbers to the id of the actual boxes
             results.push(1)
             getDoc(idn).style.border = '2px solid red'
