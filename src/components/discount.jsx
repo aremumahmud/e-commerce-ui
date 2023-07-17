@@ -2,16 +2,23 @@ import { useEffect, useState } from 'react'
 import Path from './path'
 import create_discount from '../libs/create_discount'
 import Tab from './tab'
+import fetch_discount from '../libs/getDiscounts'
+import destroy_discount_discount from '../libs/destroy_discount'
 
 function Discounts({setPage}){
     let [value, setValue] = useState(0)
     let [valuesReturned , setValueReturned] = useState(null)
-    
-    // useEffect(()=>{
-       
-    // },[])
+    let [discounts, setDiscounts]= useState([])
+    let [ondelete, deledte] = useState(false)
+    useEffect(()=>{
+       fetch_discount((err,res)=>{
+        res&&setDiscounts(res.data)
+       })
+    },[ondelete]) 
     let getDiscCode = ()=>{
-        create_discount(parseInt(value) , (err,res)=>{
+        let lifespan = window.prompt('please enter a lifespan for the discount',1)
+        lifespan = isNaN(parseInt(lifespan)) ?0:parseInt(lifespan)
+        create_discount(parseInt(value) ,parseInt(lifespan), (err,res)=>{
             if(err){
                 return alert('an unexpected error occurred ')
             }
@@ -53,6 +60,29 @@ function Discounts({setPage}){
                 {
                     valuesReturned ?<p>Generated Discount Code : {valuesReturned}</p>:''
                 }
+
+                <h3>Discounts</h3>
+                {
+                    discounts && discounts.map(discount=><div>
+                    <hr />
+                    <p>usage: {discount.usage}</p>
+                    <p>used: {discount.used}</p>
+                    <p>value: {discount.value}%</p>
+                    <p>code: {discount.discount_code}</p>
+                    <div className="button" onClick={()=>{
+                        window.confirm('Are you sure you want to destroy this discount code??') && destroy_discount_discount(discount._id,(err,res)=>{
+                           
+                           if(err){
+                        return alert('an error ocurred while deleting the discount')
+                           }
+                            deledte(!ondelete)
+                            console.log(res)
+                            alert('successfully deleted the discount')
+                        })
+                    }}>Destroy</div>
+                </div>)
+                }
+                
                 
         </div>
     )

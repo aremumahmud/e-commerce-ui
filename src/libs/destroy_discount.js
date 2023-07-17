@@ -1,12 +1,9 @@
 import pic from './uri'
 
-export default function create_discount(value, lifespan, cb) {
+export default function destroy_discount_discount(id, cb) {
     // console.log(price)
-    if (!(value)) return cb && cb({
-        msg: 'Please fill all fields',
-        error: true
-    })
-    let use = pic.create_discount_uri
+
+    let use = pic.destroy_discount_uri
     fetch(use, {
         method: 'POST',
         credentials: 'include',
@@ -16,8 +13,7 @@ export default function create_discount(value, lifespan, cb) {
             'Authentication': 'Bearer ' + localStorage.getItem('TokenID')
         },
         body: JSON.stringify({
-            value,
-            lifespan
+            id
         })
     }).then(res => {
         return res.text()

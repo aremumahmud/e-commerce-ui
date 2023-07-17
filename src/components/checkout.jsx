@@ -28,7 +28,7 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
   let lockProduct = () => {
    // localStorage.getItem('TokenID') && setURI('upload_locked_product_uri')
     console.log(URIState)
-    send_locked_to_be_product(URIState, cart, deliv1, user_data, nameTab[symbol], discount_code,user_data.country, (err, resp) => {
+    send_locked_to_be_product(URIState, cart, deliv1, user_data, nameTab[symbol], discount_code,(user_data.country+","+user_data.state), (err, resp) => {
       setBusy(false)
       if (err) {
  console.log(err)
@@ -82,13 +82,15 @@ let [ship , setShip] = useState({
     }
 
     if(data.state){
-      setIsNaij(true)
+     // setIsNaij(true)
       //alert('hey')
-      let p = +(((ship[data.state]||0) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
+      let p = +(((ship[data.state.split(" ").join("_")]||0) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
       setDeliv(p)
       setDeliv1(p)
     }
     let f = Object.keys(data)
+   // alert(validate(f,isNaij).length === 0)
+   //console.log(f ,'hello famzt')
     return validate(f,isNaij).length === 0 ? set_user_data(data):set_user_data(null)
   }
 

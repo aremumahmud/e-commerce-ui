@@ -195,7 +195,13 @@ function Summary({
         onClick={() => {
           // if(!localStorage.getItem('TokenID')){
           setBusy(true);
-          lockProduct();
+          try{
+             lockProduct();
+          }catch(err){
+            alert('please fill all fields')
+            setBusy(false);
+          }
+         
           //Object.keys(data).length !== 0 && setPage('checkout')
           //   return
           // }
