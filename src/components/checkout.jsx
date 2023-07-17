@@ -75,7 +75,7 @@ let [ship , setShip] = useState({
     
     }else{
       setIsNaij(false)
-      let p = +((ship.international * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
+      let p = +(((ship[data.country.split(" ").join("_")]||ship.international) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
       setDeliv(p) 
       setDeliv1(p)
      

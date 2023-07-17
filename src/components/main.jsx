@@ -29,6 +29,7 @@ import Policy from "./policy";
 import ReturnPolicy from "./returnPolicy";
 import SizeChart from "./sizechart";
 import Shipment from "./shipment";
+import Orders from "./orders";
 
 
 
@@ -185,6 +186,9 @@ let search_prod = (search_string)=>{
       }
       {
        page==='shipment' && <Shipment setPage={setPage} />
+      }
+      {
+         page==='orders' && <Orders setPage={setPage} />
       }
       {
          page==='shipping_policy' && <Policy />

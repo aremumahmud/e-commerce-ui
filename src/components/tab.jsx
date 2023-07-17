@@ -19,7 +19,7 @@ function Tab({style , setPage}){
                 <li onClick={()=>setPage('shipment')} style={style.no === '5'?{
                      borderBottom: '2px solid #004225'
                 }:{}}>shipment</li>
-                <li onClick={()=>setPage('shipment')} style={style.no === '5'?{
+                <li onClick={()=>setPage('orders')} style={style.no === '6'?{
                      borderBottom: '2px solid #004225'
                 }:{}}>orders</li>
                 

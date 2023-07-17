@@ -111,8 +111,9 @@ function Delivery({ valid, pace, setPace,isNaij,setIsNaij }) {
           </p>
           <select onChange={valid} type="text" name="state" id="">
             <option value="">Choose state</option>
-           
-            {options2.map((x) => (
+            <option value="insland">Lagos state(insland)</option>
+            <option value="outskirt">Lagos state(outskirts)</option>
+            {options2.filter(x=>x.name !== 'Lagos State').map((x) => (
               <option value={x.name}>{x.name}</option>
             ))}
           </select>

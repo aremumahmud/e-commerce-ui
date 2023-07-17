@@ -110,3 +110,10 @@
     .btn {
         justify-content: center !important;
     }
+    
+    .card-order {
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        padding: 5%;
+    }

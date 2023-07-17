@@ -21,8 +21,10 @@ const pic = {
     get_shipments_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/shipment/get_shipments',
     modify_shipments_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/shipment/modify_shipments',
     get_discount_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/discount/get_all_discounts',
-    destroy_discount_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/discount/destroy_discount'
-        //hhy
+    destroy_discount_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/discount/destroy_discount',
+    fetch_all_orders_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/fetch_all_orders'
+
+    //hhy
 }
 
 export default pic
