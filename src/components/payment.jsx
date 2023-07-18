@@ -3,9 +3,9 @@ function Payment({setPage}){
     return(
         <div class="center_me">
     <div class="split_me">
-        <div class="image">
+        <div class="image" style={{background:'none'}}>
             <img src="/imgs/undraw_successful_purchase_re_mpig.svg" />
-        </div>
+        </div><br /><br />
         <div class="text">
             <p> 
             Great news! We have received your order and are processing it. You will receive a confirmation email shortly.
