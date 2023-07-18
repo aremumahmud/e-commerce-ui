@@ -68,7 +68,7 @@ function Summary({
   };
   useEffect(() => {
     calculateDiscount(discounts)
-  }, [discounts])
+  }, [discounts,symbol])
   useEffect(() => {
     // console.log(symbol) 
     // console.log(+((50 * currencyTab['NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2) * 1

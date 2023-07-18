@@ -75,6 +75,7 @@ let [ship , setShip] = useState({
     
     }else{
       setIsNaij(false)
+     // alert('data'+data.country)
       let p = +(((ship[data.country.split(" ").join("_")]||ship.international) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
       setDeliv(p) 
       setDeliv1(p)
@@ -84,6 +85,8 @@ let [ship , setShip] = useState({
     if(data.state){
      // setIsNaij(true)
       //alert('hey')
+     // alert(data.state)
+     if(data.country !== 'Nigeria') return 
       let p = +(((ship[data.state.split(" ").join("_")]||0) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
       setDeliv(p)
       setDeliv1(p)
