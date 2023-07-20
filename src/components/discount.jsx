@@ -66,11 +66,11 @@ function Discounts({setPage}){
                 {
                     discounts && discounts.map(discount=><div>
                     <hr />
-                    <p>usage: {discount.usage}</p>
-                    <p>used: {discount.used}</p>
+                    <p>limit: {discount.usage}</p>
+                    <p>usage: {discount.used}</p>
                     <p>value: {discount.value}%</p>
                     <p>code: {discount.discount_code}</p>
-                    <p>code: {discount.remark}</p>
+                    <p>remark: {discount.remark}</p>
                     <div className="button" onClick={()=>{
                         window.confirm('Are you sure you want to destroy this discount code??') && destroy_discount_discount(discount._id,(err,res)=>{
                            
