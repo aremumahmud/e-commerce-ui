@@ -1,6 +1,6 @@
 import pic from './uri'
 
-export default function create_discount(value, lifespan, cb) {
+export default function create_discount(value, lifespan, remark, cb) {
     // console.log(price)
     if (!(value)) return cb && cb({
         msg: 'Please fill all fields',
@@ -17,7 +17,8 @@ export default function create_discount(value, lifespan, cb) {
         },
         body: JSON.stringify({
             value,
-            lifespan
+            lifespan,
+            remark
         })
     }).then(res => {
         return res.text()

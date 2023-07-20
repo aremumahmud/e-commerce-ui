@@ -61,8 +61,11 @@ function ProductMain({
           <div className="mainDisplay">
             <img src={currMain} alt="" />
           </div>
-          <div className="varietyDisplay">
-            <div
+          <div className="varietyDisplay" style={data.varieties.length !== 4  ?{
+            justifyContent:data.varieties.length === 4 ? 'space-between':'center',
+            gap:'2%'
+          }:{}}>
+            { data.varieties.length > 1 &&<div
               className="variety"
               onClick={() => {
                 setMain(data.varieties[0].image);
@@ -77,8 +80,9 @@ function ProductMain({
               }}>
               {" "}
               <img src={data.varieties[0].image} alt="" />
-            </div>
-            <div
+            </div>}
+            
+            { data.varieties[1] &&<div
               className="variety"
               onClick={() => {
                 console.log(data, "dhjxnbmsjx");
@@ -127,8 +131,8 @@ function ProductMain({
                 }
                 alt=""
               />
-            </div>
-            <div
+            </div> }
+            { data.varieties[2] &&<div
               className="variety"
               onClick={() => {
                 setMain(
@@ -159,8 +163,8 @@ function ProductMain({
                 }
                 alt=""
               />
-            </div>
-            <div
+            </div>}
+            { data.varieties[3]&& <div
               className="variety"
               onClick={() => {
                 setMain(
@@ -191,7 +195,8 @@ function ProductMain({
                 }
                 alt=""
               />
-            </div>
+            </div>}
+           
           </div>
         </div>
         <div className="stockInfo">
