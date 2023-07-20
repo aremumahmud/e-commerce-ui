@@ -219,7 +219,7 @@ function ProductMain({
           </div>
 <br />
             <div className="description">{
-              data.description.split('•').map(x=>x&&<>•{x} <br/></>)
+              data.description.split('\n').map(x=>x&&<>{x} <br/></>)
             }
                   {/* <p >{data.description}</p> */}
             </div>
