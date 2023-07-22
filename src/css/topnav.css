@@ -74,6 +74,8 @@
     background-color: transparent;
     font-size: small;
     width: 90%;
+    outline: none;
+    padding: 10px;
 }
 
 .search .icon {
