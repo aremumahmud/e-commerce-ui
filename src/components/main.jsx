@@ -101,7 +101,7 @@ let search_prod = (search_string)=>{
    search((search_string|| ' '),(err , resp)=>{
     console.log(resp)
     if(err) return
-    resp.length && setData(resp)
+    resp.length && setData(resp.filter(data=> data.varieties.length))
    })
 }
   useEffect(()=>{ 
