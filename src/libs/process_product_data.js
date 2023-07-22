@@ -6,6 +6,7 @@ function process_data(data) {
 
 
 function helper(data) {
+    console.log('varies!!!', data.varieties)
     let mode = 0
     let varieties = data.varieties.map(dt => {
         mode++
