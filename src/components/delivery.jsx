@@ -113,6 +113,7 @@ function Delivery({ valid, pace, setPace,isNaij,setIsNaij }) {
             <option value="">Choose state</option>
             <option value="insland">Lagos state(island)</option>
             <option value="outskirt">Lagos state(outskirts)</option>
+            <option value="mainland">Lagos state(mainland)</option>
             {options2.filter(x=>x.name !== 'Lagos State').map((x) => (
               <option value={x.name}>{x.name}</option>
             ))}
