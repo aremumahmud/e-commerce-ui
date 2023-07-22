@@ -6,7 +6,7 @@ import delete_product from "../libs/delete_product";
 
 
 
-function Product({data}) {
+function Product({data,parent}) {
 let [load , setLoad]= useState(false)
 let [load1 , setLoad1]= useState(false)
   let [prod_data , setData] = useState(data)
@@ -115,7 +115,7 @@ let [load1 , setLoad1]= useState(false)
               justifyContent:'center'
             }} className="button" onClick={()=>{
               setLoad(true)
-              modify_product(prod_data , (err,res)=>{
+              modify_product(prod_data ,parent, (err,res)=>{
                 console.log(err)
                 setLoad(false)
                 //if(err) return alert('Sorry an unexpected error occured!')

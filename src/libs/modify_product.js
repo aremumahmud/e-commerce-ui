@@ -1,6 +1,6 @@
 import pic from './uri'
 
-export default function modify_product(body, cb) {
+export default function modify_product(body, parent, cb) {
     // console.log(price)
     if (!(body)) return cb && cb({
         msg: 'Please fill all fields',
@@ -15,7 +15,7 @@ export default function modify_product(body, cb) {
             'Content-Type': 'application/json',
             'Authentication': 'Bearer ' + localStorage.getItem('TokenID')
         },
-        body: JSON.stringify(body)
+        body: JSON.stringify(Object.assign(body, { parent }))
     }).then(res => {
         return res.text()
     }).then(res => {

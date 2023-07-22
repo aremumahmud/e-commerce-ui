@@ -10,6 +10,7 @@ function helper(data) {
     let varieties = data.varieties.map(dt => {
         mode++
         return {
+            parent_id: data._id,
             ...data,
             ...dt,
             mode: mode == 1 ? 'ruler' : 'servant',

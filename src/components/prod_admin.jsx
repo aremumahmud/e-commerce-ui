@@ -6,7 +6,7 @@ function Products({data}) {
     <div className="products">
       {
         data && data.map(x=>
-          <Product  data={x} />
+          <Product parent={x.parent_id}  data={x} />
           )
       }
       
