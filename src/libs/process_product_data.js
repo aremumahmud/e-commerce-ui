@@ -6,6 +6,7 @@ function process_data(data) {
 
 
 function helper(data) {
+    // if (data.varieties.length === 0) return []
     console.log('varies!!!', data.varieties)
     let mode = 0
     let varieties = data.varieties.map(dt => {
@@ -19,6 +20,7 @@ function helper(data) {
 
         }
     })
+    console.log(varieties, "!varrirr")
     return varieties
 }
 export default process_data
