@@ -68,6 +68,7 @@ function ProductMain({
             { data.varieties.length > 1 &&<div
               className="variety"
               onClick={() => {
+                window.scrollTo(0, 0);
                 setMain(data.varieties[0].image);
                 setData({
                   ...data,
@@ -85,6 +86,7 @@ function ProductMain({
             { data.varieties[1] &&<div
               className="variety"
               onClick={() => {
+                window.scrollTo(0, 0);
                 console.log(data, "dhjxnbmsjx");
                 setMain(
                   data.varieties[1]
@@ -135,6 +137,7 @@ function ProductMain({
             { data.varieties[2] &&<div
               className="variety"
               onClick={() => {
+                window.scrollTo(0, 0);
                 setMain(
                   data.varieties[2]
                     ? data.varieties[2].image
@@ -167,6 +170,7 @@ function ProductMain({
             { data.varieties[3]&& <div
               className="variety"
               onClick={() => {
+                window.scrollTo(0, 0);
                 setMain(
                   data.varieties[3]
                     ? data.varieties[3].image
