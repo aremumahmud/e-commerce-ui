@@ -79,8 +79,8 @@
 }
 
 .search .icon {
-    padding-top: 15px;
-    padding: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
 
 .qty {
