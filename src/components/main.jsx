@@ -30,6 +30,7 @@ import ReturnPolicy from "./returnPolicy";
 import SizeChart from "./sizechart";
 import Shipment from "./shipment";
 import Orders from "./orders";
+import process_data from "../libs/process_product_data";
 
 
 
@@ -101,7 +102,7 @@ let search_prod = (search_string)=>{
    search((search_string|| ' '),(err , resp)=>{
     console.log(resp)
     if(err) return
-    resp.length && setData(resp.filter(data=> data.varieties.length))
+    resp.length && setData(process_data(resp.filter(data=> data.varieties.length)))
    })
 }
   useEffect(()=>{ 
