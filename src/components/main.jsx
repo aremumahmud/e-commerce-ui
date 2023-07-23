@@ -100,9 +100,15 @@ let [filter , setFilter] = useState('all')
 
 let search_prod = (search_string)=>{
    search((search_string|| ' '),(err , resp)=>{
-    console.log(resp)
+    if(!resp || !resp.length) return 
+    
+   // if(resp.length ===0 || !resp) return
     if(err) return
-    resp.length && setData(process_data(resp.filter(data=> data.varieties.length)))
+    let d= resp.filter(data=> data.varieties.length)
+   // console.log(d)
+    //console.log(process_data({data:d}))
+    //console.log('shouts yuasuf')
+    setData(process_data({data:d})) 
    })
 }
   useEffect(()=>{ 
