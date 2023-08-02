@@ -85,13 +85,15 @@ function ProductMain({
               className="variety"
               onClick={() => {
                 window.scrollTo(0, 0);
+                if(data.uploadType !== 'default'){
+                  return setMain(
+                    data.varieties[1]
+                      ? data.varieties[1].image
+                      : data.varieties[0].image
+                  );
+                }
              
-                setMain(
-                  data.varieties[1]
-                    ? data.varieties[1].image
-                    : data.varieties[0].image
-                );
-               
+              
                 setData({
                   ...data,
                   sizes: data.varieties[1]
