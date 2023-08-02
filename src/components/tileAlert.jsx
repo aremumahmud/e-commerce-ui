@@ -1,4 +1,3 @@
-import { AiOutlineEye } from 'react-icons/ai'
 
 function TileAlert({data}){
     return (

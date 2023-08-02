@@ -1,12 +1,12 @@
 import pic from './uri'
 
-export default function send_product(e, body, cb) {
+export default function send_product(e, body, uploadType, cb) {
     fetch(pic.upload_product_uri, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(body)
+        body: JSON.stringify({...body, uploadType: uploadType ? 'one_pager' : 'default' })
     }).then(res => {
         return res.text()
     }).then(res => {

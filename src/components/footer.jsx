@@ -1,4 +1,4 @@
-import { AiFillFacebook, AiFillInstagram, AiFillLinkedin, AiFillTwitterSquare, AiOutlineFacebook, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineMail, AiOutlineTwitter, AiOutlineWhatsApp } from 'react-icons/ai'
+import { AiOutlineFacebook, AiOutlineInstagram,  AiOutlineMail, AiOutlineTwitter, AiOutlineWhatsApp } from 'react-icons/ai'
 import '../css/footer.css'
 import { useState } from 'react'
 import suscribe from '../libs/suscribe'

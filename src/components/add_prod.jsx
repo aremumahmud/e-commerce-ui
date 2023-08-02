@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import '../css/add_prod.css'
 import handle_file_change from '../libs/load_image'
 import { AiFillDelete } from 'react-icons/ai'
 import send_product from '../libs/send_product'
-import Path from './path'
 import Tab from './tab'
 
 function AddProd({setPage}){
@@ -121,11 +120,16 @@ let [pending4 , setPending4 ]  = useState(false)
 
      }
 
+let [productType , setProductType] = useState(false)
 
+let setType = (value)=>{
+ if(value === 'default') return setProductType(false)
+ setProductType(true)
+}
      let sendProd = ()=>{
     // return console.log(getData())
     setLoad(true)
-        send_product('', getData(), (err,res)=>{
+        send_product('', getData(),productType, (err,res)=>{
             setLoad(false)
             res = JSON.parse(res)
       if(err || res.error){
@@ -179,6 +183,14 @@ let [pending4 , setPending4 ]  = useState(false)
             </label>
             <br />
             <label htmlFor="">
+               <p>Upload Type</p>  
+                <select onChange={(e)=>setType(e.target.value)} type="text" className="simple_input">
+                    <option value="default">Default</option>
+                    <option value="one_pager">One Pager</option>
+                </select>
+            </label>
+            <br />
+            <label htmlFor="">
                <p> Media</p>
                 <div className="images">
                     <div className="image"  id='image1'>
@@ -211,7 +223,7 @@ let [pending4 , setPending4 ]  = useState(false)
                     
                         </form>
                     </div>
-                    <div className="image" onClick={()=>placeholder(`image${3}` , `file${3}`)} id='image3'>
+                    <div style={productType?{display:'none'}:{}} className="image" onClick={()=>placeholder(`image${3}` , `file${3}`)} id='image3'>
                         <form id='form3' action="">
                           <input name="picture"  onChange={(e)=>handle_file_change(e , 'image3','form3',setDone3,setPending3,setImage3)} type="file" className='nonee'  id='file3'/>
                      
@@ -226,7 +238,7 @@ let [pending4 , setPending4 ]  = useState(false)
                             
                         </div>
                     </div>
-                    <div className="image" onClick={()=>placeholder(`image${4}` , `file${4}`)} id='image4'>
+                    <div style={productType?{display:'none'}:{}} className="image" onClick={()=>placeholder(`image${4}` , `file${4}`)} id='image4'>
                         <form id='form4' action="">
                              <input name="picture"  onChange={(e)=>handle_file_change(e , 'image4' ,'form4',setDone4,setPending4,setImage4)} type="file" className='nonee'  id='file4'/>
                     
@@ -254,6 +266,7 @@ let [pending4 , setPending4 ]  = useState(false)
                 </div>
             </label>
             <br />
+            <div>
             <p>first product variation</p><hr /><br />
             <div className="size_choose">
                 <button className="button">Image 1</button>
@@ -315,7 +328,9 @@ let [pending4 , setPending4 ]  = useState(false)
                     
                     )
             }
-             <p>second product variation</p><hr /><br />
+    </div>
+            <div style={productType?{display:'none'}:{}}>
+             <p >second product variation</p><hr /><br />
              <div className="size_choose">
                 <button className="button">Image 2</button>
                 <input  onChange={(e)=>setInventory1(e.target.value)}  className="simple_input partition"  placeholder='enter quantity'/>
@@ -376,7 +391,8 @@ let [pending4 , setPending4 ]  = useState(false)
                     
                     )
             }
-
+</div>
+<div style={productType?{display:'none'}:{}}>
 <p>third product variation</p><hr /><br />
              <div className="size_choose">
                 <button className="button">Image 3</button>
@@ -438,6 +454,9 @@ let [pending4 , setPending4 ]  = useState(false)
                     
                     )
             }
+
+</div>
+<div style={productType?{display:'none'}:{}}>
              <p>fourth product variation</p><hr /><br />
              <div className="size_choose">
                 <button className="button">Image 4</button>
@@ -499,6 +518,7 @@ let [pending4 , setPending4 ]  = useState(false)
                     
                     )
             }
+        </div>
             <p> Pricing</p>
             <label htmlFor="">
                price 

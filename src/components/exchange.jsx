@@ -58,11 +58,11 @@ function Exchange({setPage}){
                 }} className="button" onClick={()=>{
                     setLoad(true)
               modify_exchange(data , (err,res)=>{
-                console.log(err)
+               
                 setLoad(false)
             if(err) return alert('Sorry an unexpected error occured!')
                 let dt = JSON.parse(res)
-                console.log(dt)
+               
                 if(dt.authorized == 'none') {
                   alert('Please sign up as admin to carry out this operation')
                   return window.open('/users/login','_self')

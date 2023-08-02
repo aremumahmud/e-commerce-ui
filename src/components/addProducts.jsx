@@ -1,7 +1,7 @@
 import { AiOutlineDatabase, AiOutlineDelete, AiOutlinePlus } from 'react-icons/ai'
 import '../css/addproducts.css'
 import  handle_file_change from '../libs/load_image'
-import { useState, useSyncExternalStore } from 'react'
+import { useState } from 'react'
 import validate from '../libs/validate'
 import generateProductStructure from '../libs/restructure'
 import send_product from '../libs/send_product'

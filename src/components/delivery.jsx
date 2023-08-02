@@ -3,7 +3,7 @@ import "../css/delivery.css";
 import axios from "axios";
 //import * as countryjs from 'countryjs'
 
-function Delivery({ valid, pace, setPace,isNaij,setIsNaij }) {
+function Delivery({ valid, pace, isNaij}) {
   // let Country;
   //console.log( countryjs.all().map(country => country.name.common))
   let [options1, setoptions] = useState([]);
@@ -27,22 +27,22 @@ function Delivery({ valid, pace, setPace,isNaij,setIsNaij }) {
     });
   }, []);
 
-
+let [effecrDeprnd , setEffectDepend] = useState(1)
   useEffect(()=>{
     axios.post('https://countriesnow.space/api/v0.1/countries/states', {
             "country": "Nigeria",
         })
         .then(function(response) {
             let cities = response.data.data.states
-            console.log(cities)
+
             setoptions2(cities)
 
             // console.log(options)
         })
         .catch(function(error) {
-            console.log(error);
+           setEffectDepend(effecrDeprnd += 1)
         });
-  },[])
+  },[effecrDeprnd])
   
 
   return (

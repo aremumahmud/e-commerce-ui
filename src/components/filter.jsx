@@ -1,4 +1,4 @@
-import { AiFillStar, AiOutlineSearch } from "react-icons/ai";
+import {  AiOutlineSearch } from "react-icons/ai";
 import "../css/filter.css";
 
 function Filter({setFilter , setLoad,categories, search,setCurrency,symbol}) {
@@ -66,10 +66,10 @@ function Filter({setFilter , setLoad,categories, search,setCurrency,symbol}) {
           </li> */}
         </ul>
       </div>
-      <div className="sortby">
+      <div className="sortby" style={{display:'none'}}>
       <input onChange={e=>search(e.target.value)} type="text" name="" id="" placeholder="Search for a product"/>
       <div className="btn">
-        <AiOutlineSearch size={20} />
+        <AiOutlineSearch  size={20} />
       </div>
       </div>
     </div>

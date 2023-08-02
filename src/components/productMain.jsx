@@ -1,13 +1,12 @@
 import "../css/productMain.css";
 import {
-  AiFillStar,
   AiOutlineCar,
   AiOutlineDeliveredProcedure,
 } from "react-icons/ai";
-import Specs from "./specs";
+
 import Products from "./products";
 import { useEffect, useState } from "react";
-import currencyTab, { symbolTab } from "../config/currency";
+
 import Sizes from "./sizes";
 import arrayToObject from "../libs/arraytoObj_sizebased";
 
@@ -20,7 +19,6 @@ function ProductMain({
   setViewStatus3,
   setViewStatus2,
   setCartData3,
-  setProduct,
   cart,
   currencyTab,
   symbolTab,
@@ -51,9 +49,9 @@ function ProductMain({
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  useEffect(() => {
-    console.log(data, "this friuc");
-  }, [data]);
+  // useEffect(() => {
+  //   console.log(data, "this friuc");
+  // }, [data]);
   return (
     <>
       <div className="mainDescription">
@@ -77,7 +75,7 @@ function ProductMain({
                   _id: data.varieties[0].id,
                   image: data.varieties[0].image,
                 });
-                console.log(data);
+                
               }}>
               {" "}
               <img src={data.varieties[0].image} alt="" />
@@ -87,28 +85,13 @@ function ProductMain({
               className="variety"
               onClick={() => {
                 window.scrollTo(0, 0);
-                console.log(data, "dhjxnbmsjx");
+             
                 setMain(
                   data.varieties[1]
                     ? data.varieties[1].image
                     : data.varieties[0].image
                 );
-                console.log(
-                  {
-                    ...data,
-                    sizes: data.varieties[1]
-                      ? data.varieties[1].sizes
-                      : data.varieties[0].sizes,
-                    varieties: data.varieties,
-                    _id: data.varieties[1]
-                      ? data.varieties[1].id
-                      : data.varieties[0].id,
-                    image: data.varieties[1]
-                      ? data.varieties[1].image
-                      : data.varieties[0].image,
-                  },
-                  "spamme"
-                );
+               
                 setData({
                   ...data,
                   sizes: data.varieties[1]
@@ -122,9 +105,9 @@ function ProductMain({
                     ? data.varieties[1].image
                     : data.varieties[0].image,
                 });
-                console.log(data);
+              
               }}>
-              {console.log(data, "hejhsxh")}
+             
               <img
                 src={
                   data.varieties[1]

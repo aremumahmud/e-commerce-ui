@@ -1,4 +1,4 @@
-import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai";
 import "../css/products.css";
 import { useState } from "react";
 //import currencyTab, { symbolTab } from "../config/currency";

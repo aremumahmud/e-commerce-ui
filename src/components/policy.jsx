@@ -1,4 +1,3 @@
-import { AiFillAlert } from 'react-icons/ai'
 import '../css/policy.css'
 import { useEffect } from 'react';
 import { FaShippingFast } from 'react-icons/fa';

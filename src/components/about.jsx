@@ -3,7 +3,7 @@ import AboutPic from "./about_pic";
 
 function About({ setPage , data }) {
   return (
-    <div className="about">{console.log(data)}
+    <div className="about">
       <div className="descriptionSection">
         <p className="title">About Glitzabelle Label</p>
         <p className="description">

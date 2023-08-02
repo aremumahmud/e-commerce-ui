@@ -6,7 +6,7 @@ let validate = (ids, isNaij) => {
     for (let id = 0; id < ids.length; id++) {
         // console.log(ids)
         let idn = ids[id]
-        console.log(idn)
+
         if (!getDoc(idn).value.trim()) {
             //now check and convert those numbers to the id of the actual boxes
             if (!isNaij && idn === 'state') {
@@ -19,7 +19,7 @@ let validate = (ids, isNaij) => {
         }
 
     }
-    console.log(results, 'yo meahk')
+
 
     return results
 }

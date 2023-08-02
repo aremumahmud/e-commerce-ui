@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import '../css/exchange.css'
 import Tab from './tab'
-import fetch_exchange from '../libs/currencies'
-import modify_exchange from '../libs/modify_exchange'
 import fetch_all_orders from '../libs/fetch_all_orders'
 import { AiOutlineSearch } from 'react-icons/ai'
 
@@ -12,7 +10,7 @@ function Orders({setPage}){
     let [load , setLoad] = useState(false)
     useEffect(()=>{
         fetch_all_orders( (err,res)=>{
-            console.log(err)
+            
             setLoad(false)
         if(err) return alert('Sorry an unexpected error occured!')
             let dt = JSON.parse(res)
@@ -37,7 +35,7 @@ function Orders({setPage}){
          
         }
         for(let order in data1){
-          console.log(order)
+         
             if(data1[order].orderId == word){
               setData([data1[order]])
               break

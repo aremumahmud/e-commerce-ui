@@ -9,7 +9,7 @@ import validate from "../libs/validate_deets";
 import { useEffect, useState } from "react";
 import { nameTab } from "../config/currency";
 import fetch_shipment from "../libs/getShipment";
-import getUserCountry from "../libs/country";
+
 
 
 
@@ -18,7 +18,7 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
   let [user_data, set_user_data] = useState(null)
   let [busy, setBusy] = useState(false)
   let [URIState, setURI] = useState(localStorage.getItem('TokenID')?'upload_locked_product_uri':'upload_locked_product_uri_guest')
- console.log(currencyTab, symbolTab,'checky')
+
   let price = calculate(Object.keys(cart).map(x => cart[x]), symbol,currencyTab,symbolTab)
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -27,11 +27,11 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
   let [deliv1,setDeliv1] = useState(0)
   let lockProduct = () => {
    // localStorage.getItem('TokenID') && setURI('upload_locked_product_uri')
-    console.log(URIState)
+  
     send_locked_to_be_product(URIState, cart, deliv1, user_data, nameTab[symbol], discount_code,(user_data.country+","+user_data.state), (err, resp) => {
       setBusy(false)
       if (err) {
- console.log(err)
+
         return alert(err.msg||'sorry something unexpected happened')
       }
 
@@ -48,6 +48,7 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab})
   }
 
   let getDoc = (x) => document.getElementById(x)
+  
   let c = () => {
     let formData = new FormData(getDoc('form2134'))
     return Object.fromEntries(formData.entries())
@@ -106,7 +107,7 @@ let [ship , setShip] = useState({
         if(err) return
         if(!res.success) return
         let exchange = res.shipments
-        console.log(exchange)
+       
         setShip(exchange)
         //setSymbolTab(exchange.symbolTab)
       })

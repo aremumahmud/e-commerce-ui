@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import Path from './path'
 import create_discount from '../libs/create_discount'
 import Tab from './tab'
 import fetch_discount from '../libs/getDiscounts'
@@ -24,7 +23,7 @@ function Discounts({setPage}){
                 return alert('an unexpected error occurred ')
             }
             let dt = JSON.parse(res)
-            console.log(dt)
+           
             if(dt.authorized == 'none') {
               alert('Please sign up as admin to carry out this operation')
               return window.open('/users/login','_self')
@@ -78,7 +77,7 @@ function Discounts({setPage}){
                         return alert('an error ocurred while deleting the discount')
                            }
                             deledte(!ondelete)
-                            console.log(res)
+                           
                             alert('successfully deleted the discount')
                         })
                     }}>Destroy</div>

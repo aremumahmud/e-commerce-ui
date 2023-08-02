@@ -2,7 +2,7 @@ import "../css/products.css";
 import Product from "./product";
 
 function Products({setMain,data,setCart , setPage,cart, setProduct, symbol, setViewStatus3, setCartData3, currencyTab,symbolTab}) {
-  console.log(data)
+  
   return (
     <div className="products">
       {

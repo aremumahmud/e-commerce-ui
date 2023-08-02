@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, BrowserRouter, useNavigate } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import config from "../config/config";
 import "../css/tablet.css";
 
@@ -185,7 +185,7 @@ function Landing(props) {
     //console.log('this run fa', load)
     load &&
       Authenticate(action, actionsParam, (err, res) => {
-        console.log(err);
+      
         setBusy(false);
         if (err) {
           setErrors({

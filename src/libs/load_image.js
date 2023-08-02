@@ -7,9 +7,9 @@ let getDoc = (x) => document.getElementById(x)
 
 function handle_file_change(event, target, form, effect, effect1, effect3) {
     event.stopPropagation()
-    console.log('hello')
+
     let file = event.target.files[0]
-    event.target.onchange = () => { console.log('dd') }
+    event.target.onchange = () => {}
         //handle_file_change.apply(null, arguments)
     let file_reader = new FileReader()
     file_reader.onload = (e) => {

@@ -2,7 +2,7 @@
 //import currencyTab from "../config/currency"
 
 function calculate(arr, symbol, currencyTab, symbolTab) {
-    console.log(currencyTab, symbolTab)
+
     let total = 0
     arr.forEach(d => {
         //console.log(d.price, 'd')

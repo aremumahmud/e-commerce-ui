@@ -33,7 +33,7 @@ function ForgotModal({display,close}) {
         }
         setLoad(true)
         send_otp(email , (err,res)=>{
-           console.log(res,err)
+         
            setLoad(false)
            if(err){
             return setError('an unexpected error occured')
@@ -53,7 +53,7 @@ function ForgotModal({display,close}) {
         }
         setLoad(true)
         verify_otp(email,token , (err,res)=>{
-           console.log(res,err)
+          
            setLoad(false)
            if(err){
             return setError('an unexpected error occured')
@@ -75,7 +75,7 @@ function ForgotModal({display,close}) {
         }
         setLoad(true)
         change_password(id,token,password , (err,res)=>{
-           console.log(res,err)
+          
            setLoad(false)
            if(err){
             return setError('an unexpected error occured')

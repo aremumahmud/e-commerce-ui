@@ -70,7 +70,7 @@ function Main({
       if (err) return setSpan((prevSpan) => prevSpan + 1);
       if (!res.success) return setSpan((prevSpan) => prevSpan + 1);
       let exchange = res.data;
-      console.log(exchange);
+    
       
       setCurrencyTab({ ...exchange.currencyTab });
       setSymbolTab({ ...exchange.symbolTab });
@@ -78,7 +78,7 @@ function Main({
   }, []);
   
   // Use symbolTab1 and currencyTab1 directly in the component or use another useEffect to observe changes
-  console.log(symbolTab1, currencyTab1, 'll');
+ 
   
 
 
@@ -112,7 +112,6 @@ let search_prod = (search_string)=>{
    })
 }
   useEffect(()=>{ 
-    console.log('lk')
     load &&
       load_products(filter ,(err,res)=>{
        
@@ -125,7 +124,7 @@ let search_prod = (search_string)=>{
   useEffect(()=>{
     load1 && 
     getUserIP().then(res=>{
-      console.log(res,'llihjn')
+     
     // res = 'USD'
       let data2  = changeCurrency(data, 'NGN' , currencyTab1)  
      // console.log(data2,'jayz')

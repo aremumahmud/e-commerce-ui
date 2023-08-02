@@ -330,6 +330,7 @@
         flex-direction: column-reverse !important;
         /* justify-content: left; */
         align-items: unset !important;
+        margin-bottom: auto !important;
     }
     .sortby {
         margin-left: 0 !important;

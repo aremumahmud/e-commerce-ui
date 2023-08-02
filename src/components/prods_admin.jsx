@@ -1,4 +1,4 @@
-import { AiFillDatabase, AiFillStar, AiOutlineHeart } from "react-icons/ai";
+import { AiFillDatabase, AiOutlineHeart } from "react-icons/ai";
 import "../css/products.css";
 import { useState } from "react";
 import modify_product from "../libs/modify_product";
@@ -116,11 +116,11 @@ let [load1 , setLoad1]= useState(false)
             }} className="button" onClick={()=>{
               setLoad(true)
               modify_product(prod_data ,parent, (err,res)=>{
-                console.log(err)
+               
                 setLoad(false)
                 //if(err) return alert('Sorry an unexpected error occured!')
                 let dt = JSON.parse(res)
-                console.log(dt)
+        
                 if(dt.authorized == 'none') {
                   alert('Please sign up as admin to carry out this operation')
                   return window.open('/users/login','_self')
@@ -146,11 +146,11 @@ let [load1 , setLoad1]= useState(false)
             }} className="button" onClick={()=>{
               setLoad1(true)
               window.confirm('Are you sure you want to delete this product?') && delete_product(prod_data._id , (err,res)=>{
-                console.log(err)
+              
                 setLoad1(false)
                 //if(err) return alert('Sorry an unexpected error occured!')
                 let dt = JSON.parse(res)
-                console.log(dt)
+               
                 if(dt.authorized == 'none') {
                   alert('Please sign up as admin to carry out this operation')
                   return window.open('/users/login','_self')

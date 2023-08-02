@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import currencyTab, { symbolTab } from "../config/currency";
 import '../css/review.css'
 
 function Review({cart , symbol,symbolTab, currencyTab}){

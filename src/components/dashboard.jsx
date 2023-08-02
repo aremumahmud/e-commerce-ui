@@ -3,7 +3,7 @@ import Dash from "./dash";
 import Path from "./path";
 import fetch_orders from "../libs/fetch_orders";
 import arrayToObject from "../libs/arrayToObject";
-import Modal from "./modal";
+
 
 function Dashboard({setPage , setViewData , setViewStatus}){
     let [orders , setOrder] = useState([])

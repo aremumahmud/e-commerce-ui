@@ -6,7 +6,7 @@ function Sizes({data,setSize,setOutOfStock,setViewStatus}){
 let sized = data.sizes
     useEffect(()=>{
        if(sized.length){
-        console.log(sized)
+       
          let sis =  parseInt(arrayToObject(sized)[sized[0].size].qty)
         ///alert(typeof sis)
         if(sis === 0){
@@ -29,9 +29,9 @@ let sized = data.sizes
         let size = e.target.innerHTML
         setSize && setSize(size)
         e.target.classList.add('active8')
-        console.log(document.getElementsByName('fave'),'hrlo')
+
         document.getElementsByName('fave').forEach(el=>{
-            console.log(el,'e')
+           
             if(el.innerHTML === size){
                 return
             }

@@ -1,4 +1,4 @@
-import { AiOutlineEye, AiOutlineLogout, AiOutlinePayCircle, AiOutlineSetting, AiOutlineShoppingCart, AiOutlineUser, AiOutlineWarning } from 'react-icons/ai'
+import {  AiOutlineLogout, AiOutlineSetting, AiOutlineUser, AiOutlineWarning } from 'react-icons/ai'
 import '../css/dashboard.css'
 import Tile from './tile'
 import { useState } from 'react'
@@ -35,7 +35,6 @@ function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
             <div className="nony h">Please refresh this page or check your internet connection</div>
         </div>
         }
-        {console.log(orders)}
        {
         orders.map(x=><Tile setViewStatus={setViewStatus} setViewData={setViewData} data={x} />)
        }
@@ -64,11 +63,11 @@ function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
         borderRadius:'10px'
     }} onClick={()=>{
         window.confirm('Are you want to DEACTIVATE YOUR ACCOUNT?') && delete_user((err,res)=>{
-            console.log(err)
+           
             //setLoad1(false)
             //if(err) return alert('Sorry an unexpected error occured!')
             let dt = JSON.parse(res)
-            console.log(dt)
+           
             if(dt.authorized == 'none') {
               alert('Please sign up as admin to carry out this operation')
               return window.open('/users/login','_self')

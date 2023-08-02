@@ -24,7 +24,7 @@ function Calculation({ price, symbol, discountPrice,deliv }) {
                     </tr>
                     <br /><hr style={{ width: '100%' }} />
                     <tr>
-                        <td>Total</td>{console.log(price - discountPrice)}
+                        <td>Total</td>
                         <td>{symbol}{+(price - discountPrice+deliv).toFixed(2)}</td>
                     </tr>
 

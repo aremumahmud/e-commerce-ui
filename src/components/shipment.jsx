@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import '../css/exchange.css'
 import Tab from './tab'
-import modify_exchange from '../libs/modify_exchange'
 import fetch_shipment from '../libs/getShipment'
 import modify_shipment from '../libs/modify_shipment'
 
@@ -59,11 +58,11 @@ function Shipment({setPage}){
                 }} className="button" onClick={()=>{
                     setLoad(true)
               modify_shipment(data , (err,res)=>{
-                console.log(err)
+                
                 setLoad(false)
             if(err) return alert('Sorry an unexpected error occured!')
                 let dt = JSON.parse(res)
-                console.log(dt)
+               
                 if(dt.authorized == 'none') {
                   alert('Please sign up as admin to carry out this operation')
                   return window.open('/users/login','_self')
