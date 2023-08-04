@@ -22,7 +22,7 @@ function Orders({setPage}){
             
             if(!dt.success) return alert('Sorry an unexpected error occured!')
             setData(dt.orders)
-            setData1(dt.orders)
+            setData1(dt.orders.reverse())
            // alert('exchange updated successfully')
           })
       },[])

@@ -61,8 +61,14 @@ let [ship , setShip] = useState({
     international:0
   })
 
-
+  //let [base , setBase] = useState('')
+//the base, what this ,means is that we are capturing the first capture of currency in the hompage that
+//induced a bug, so what the base variable is doing is simply just making it constant for more consistent use 
   useEffect(()=>{
+    //alert(nameTab[symbol])
+   // if(!base) setBase(nameTab[symbol])
+   // alert(base)
+   console.log(deliv1,symbol)
     let p = +((deliv1 * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
     setDeliv(p)
   },[symbol])
@@ -79,7 +85,8 @@ let [ship , setShip] = useState({
      // alert('data'+data.country)
       let p = +(((ship[data.country.split(" ").join("_")]||ship.international) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
       setDeliv(p) 
-      setDeliv1(p)
+      // console.log(p,'in any case 1',)
+      setDeliv1(ship[data.country.split(" ").join("_")]||ship.international)
      
     }
 
@@ -88,9 +95,10 @@ let [ship , setShip] = useState({
       //alert('hey')
      // alert(data.state)
      if(data.country !== 'Nigeria') return 
-      let p = +(((ship[data.state.split(" ").join("_")]||0) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
+      let p = +(((ship[data.state.split(" ").join("_")]||ship.local) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
       setDeliv(p)
-      setDeliv1(p)
+      // console.log(p,'in any case 1')
+      setDeliv1(ship[data.state.split(" ").join("_")]||ship.local)
     }
     let f = Object.keys(data)
    // alert(validate(f,isNaij).length === 0)
