@@ -223,7 +223,7 @@ let setType = (value)=>{
                     
                         </form>
                     </div>
-                    <div style={productType?{display:'none'}:{}} className="image" onClick={()=>placeholder(`image${3}` , `file${3}`)} id='image3'>
+                    <div  className="image" onClick={()=>placeholder(`image${3}` , `file${3}`)} id='image3'>
                         <form id='form3' action="">
                           <input name="picture"  onChange={(e)=>handle_file_change(e , 'image3','form3',setDone3,setPending3,setImage3)} type="file" className='nonee'  id='file3'/>
                      
@@ -238,7 +238,7 @@ let setType = (value)=>{
                             
                         </div>
                     </div>
-                    <div style={productType?{display:'none'}:{}} className="image" onClick={()=>placeholder(`image${4}` , `file${4}`)} id='image4'>
+                    <div  className="image" onClick={()=>placeholder(`image${4}` , `file${4}`)} id='image4'>
                         <form id='form4' action="">
                              <input name="picture"  onChange={(e)=>handle_file_change(e , 'image4' ,'form4',setDone4,setPending4,setImage4)} type="file" className='nonee'  id='file4'/>
                     

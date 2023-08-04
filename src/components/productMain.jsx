@@ -85,6 +85,7 @@ function ProductMain({
               className="variety"
               onClick={() => {
                 window.scrollTo(0, 0);
+
                 if(data.uploadType !== 'default'){
                   return setMain(
                     data.varieties[1]
@@ -123,11 +124,14 @@ function ProductMain({
               className="variety"
               onClick={() => {
                 window.scrollTo(0, 0);
-                setMain(
+
+                if(data.uploadType !== 'default'){
+                return setMain(
                   data.varieties[2]
                     ? data.varieties[2].image
                     : data.varieties[0].image
                 );
+              }
                 setData({
                   ...data,
                   varieties: data.varieties,
@@ -156,11 +160,13 @@ function ProductMain({
               className="variety"
               onClick={() => {
                 window.scrollTo(0, 0);
-                setMain(
+
+                if(data.uploadType !== 'default'){
+                return setMain(
                   data.varieties[3]
                     ? data.varieties[3].image
                     : data.varieties[0].image
-                );
+                );}
                 setData({
                   ...data,
                   sizes: data.varieties[3]

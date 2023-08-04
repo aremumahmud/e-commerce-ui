@@ -22,7 +22,7 @@ function ProductsAdmin({setPage}){
         no:'2'
       }} setPage={setPage}/>
            <hr /><br />
-            <Products data={data} />
+            <Products data={data.reverse()} />
         </div>
     )
 }
