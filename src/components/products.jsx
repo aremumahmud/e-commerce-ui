@@ -12,7 +12,7 @@ function Products({setMain,data,setCart , setPage,cart, setProduct, symbol, setV
             return false
           }
           return true
-        }).map(x=>
+        }).reverse().map(x=>
           <Product currencyTab={currencyTab} symbolTab={symbolTab} setMain={setMain}  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct} info={x} setPage={setPage} cart={cart} setCart={setCart} />
           )
       }
