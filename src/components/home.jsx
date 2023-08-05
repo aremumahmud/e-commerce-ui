@@ -22,7 +22,7 @@ function Home({setCart , setPage, cart, setProduct,data , symbol,setFilter ,setL
       {/* <Display /> */}
       <br /><br />      <Filter symbol={symbol} setCurrency={setCurrency} search={search} categories={categories} setLoad={setLoad} setFilter={setFilter} /> 
       {/* <p className="topic">Top Fashion For You!</p> */}
-      <Products currencyTab={currencyTab} symbolTab={symbolTab}  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct} cart={cart} setPage={setPage} setCart={setCart} data={data.reverse()} />
+      <Products currencyTab={currencyTab} symbolTab={symbolTab}  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct} cart={cart} setPage={setPage} setCart={setCart} data={data} />
       <Pagination />
       {/* <p className="topic">Weekly Popular Products</p>
       <Products  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct}  cart={cart} setPage={setPage} setCart={setCart} data={[0, 1, 2, 3].map(i=>data[i])} />
