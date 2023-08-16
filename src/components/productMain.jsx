@@ -94,7 +94,11 @@ function ProductMain({
                   );
                 }
              
-              
+                setMain(
+                  data.varieties[1]
+                    ? data.varieties[1].image
+                    : data.varieties[0].image
+                );
                 setData({
                   ...data,
                   sizes: data.varieties[1]
@@ -132,6 +136,11 @@ function ProductMain({
                     : data.varieties[0].image
                 );
               }
+              setMain(
+                data.varieties[2]
+                  ? data.varieties[2].image
+                  : data.varieties[0].image
+              );
                 setData({
                   ...data,
                   varieties: data.varieties,
@@ -167,6 +176,11 @@ function ProductMain({
                     ? data.varieties[3].image
                     : data.varieties[0].image
                 );}
+                setMain(
+                  data.varieties[3]
+                    ? data.varieties[3].image
+                    : data.varieties[0].image
+                );
                 setData({
                   ...data,
                   sizes: data.varieties[3]

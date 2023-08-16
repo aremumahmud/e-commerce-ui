@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import About from "./about";
-import Display from "./display";
+//import Display from "./display";
 import Filter from "./filter";
 import Pagination from "./pagination";
 import Products from "./products";
