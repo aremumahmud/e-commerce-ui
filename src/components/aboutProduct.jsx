@@ -2,6 +2,7 @@ import Path from "./path";
 import ProductMain from "./productMain";
 
 function AboutProduct({ setCart, setPage , product , productData,symbol,setViewStatus3,setViewStatus2, setCartData3 ,setProduct,cart ,symbolTab , currencyTab}) {
+  window.scroll(0,0)
   return (
     <div className="aboutProduct">
       <Path
