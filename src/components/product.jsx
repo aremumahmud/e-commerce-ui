@@ -24,6 +24,7 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, cu
     <>
       <div className="product" >
         <div className="imageDisplay" onClick={() => {
+          window.scroll(0,0)
           setPage('product')
           setProduct(info)
           setMain && setMain(info.image || info.mainImage)
@@ -35,6 +36,7 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, cu
         </div>
         <div className="productInfo">
           <div onClick={() => {
+            window.scroll(0,0)
             setPage('product')
             setProduct(info)
           }} className="name">
