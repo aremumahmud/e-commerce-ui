@@ -29,7 +29,7 @@ function Home({setCart , setPage, cart, setProduct,data , symbol,setFilter ,setL
       <br /> */}
      
       
-      <About data={data[0].varieties} setPage={setPage} />
+      <About data={data[0]?data[0].varieties:[]} setPage={setPage} />
       <br />
       <br />
     </>

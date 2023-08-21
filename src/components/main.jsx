@@ -118,7 +118,8 @@ let search_prod = (search_string)=>{
         //console.log(err,',lhjgz,mb')
           if(err) return  setViewStatus1('flex')
           setLoad(false)
-          res.length && setData(res)
+       // console.log(res,'uyhkuj')
+          setData(res)
       })
   },[filter])
   useEffect(()=>{

@@ -6,15 +6,15 @@ function Products({setMain,data,setCart , setPage,cart, setProduct, symbol, setV
   return (
     <div className="products">
       {
-       
-        data.length && data.filter(x=>{
+      
+        data.length ? data.filter(x=>{
           if(!x || x.mode === 'servant'){
             return false
           }
           return true
         }).reverse().map(x=>
           <Product currencyTab={currencyTab} symbolTab={symbolTab} setMain={setMain}  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct} info={x} setPage={setPage} cart={cart} setCart={setCart} />
-          )
+          ):<div className="sorry">sorry no products available at this moment</div>
       }
       
     </div>

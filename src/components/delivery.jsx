@@ -22,7 +22,7 @@ function Delivery({ valid, pace, isNaij}) {
 
       //console.log(countryNames)
       setoptions(sortedCountryNames);
-
+console.log(sortedCountryNames)
       // console.log(options)
     });
   }, []);

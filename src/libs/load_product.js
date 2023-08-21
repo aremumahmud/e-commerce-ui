@@ -1,5 +1,5 @@
 import process_data from "./process_product_data"
-import d from "./test"
+//import d from "./test"
 import pic from "./uri"
 
 function load_products(category, cb) {
@@ -8,7 +8,7 @@ function load_products(category, cb) {
     }).then(res => {
         // process_data
 
-        //console.log(res.data)
+        // console.log(res.data)
         cb && cb(null, process_data(res.data))
             // cb && cb(null, res.data.data)
     }).catch(err => {

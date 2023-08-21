@@ -11,6 +11,7 @@ function ProductsAdmin({setPage}){
         load_products('all',(err,res)=>{
             if(err) return  alert('error loading products')
             setData(res)
+        console.log(data)
 
         })
     },[])
