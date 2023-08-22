@@ -9,6 +9,8 @@ import validate from "../libs/validate_deets";
 import { useEffect, useState } from "react";
 import { nameTab } from "../config/currency";
 import fetch_shipment from "../libs/getShipment";
+import countries from "../config/continent";
+import calculateTotal from "../libs/calculateAddShip";
 
 
 
@@ -68,7 +70,7 @@ let [ship , setShip] = useState({
     //alert(nameTab[symbol])
    // if(!base) setBase(nameTab[symbol])
    // alert(base)
-   console.log(deliv1,symbol)
+   //console.log(deliv1,symbol)
     let p = +((deliv1 * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
     setDeliv(p)
   },[symbol])
@@ -83,10 +85,13 @@ let [ship , setShip] = useState({
     }else{
       setIsNaij(false)
      // alert('data'+data.country)
-      let p = +(((ship[data.country.split(" ").join("_")]||ship.international) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
+     let shipOnCountry= calculateTotal(ship[data.country.split(" ").join("_")])
+     let shipOnRegion=calculateTotal(ship[countries[data.country]] )
+     let fallback = calculateTotal(ship.international)
+      let p = +(((shipOnCountry||shipOnRegion|| fallback) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
       setDeliv(p) 
       // console.log(p,'in any case 1',)
-      setDeliv1(ship[data.country.split(" ").join("_")]||ship.international)
+      setDeliv1(shipOnCountry||shipOnRegion|| fallback)
      
     }
 
