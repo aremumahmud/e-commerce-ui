@@ -15,7 +15,7 @@ import calculateTotal from "../libs/calculateAddShip";
 
 
 
-function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab}) {
+function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab,cart_no}) {
   let [discount_code, setDiscountCode] = useState([])
   let [user_data, set_user_data] = useState(null)
   let [busy, setBusy] = useState(false)
@@ -85,9 +85,9 @@ let [ship , setShip] = useState({
     }else{
       setIsNaij(false)
      // alert('data'+data.country)
-     let shipOnCountry= calculateTotal(ship[data.country.split(" ").join("_")])
-     let shipOnRegion=calculateTotal(ship[countries[data.country]] )
-     let fallback = calculateTotal(ship.international)
+     let shipOnCountry= calculateTotal(ship[data.country.split(" ").join("_")],cart_no)
+     let shipOnRegion=calculateTotal(ship[countries[data.country]] ,cart_no)
+     let fallback = calculateTotal(ship.international,cart_no)
       let p = +(((shipOnCountry||shipOnRegion|| fallback) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
       setDeliv(p) 
       // console.log(p,'in any case 1',)
