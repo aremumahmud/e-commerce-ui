@@ -56,6 +56,17 @@ let [load1 , setLoad1]= useState(false)
                     }}></textarea>
                     
                   </p>
+                  <small>weight (kgs)</small>
+                  <p  className="description">
+                    <input className='simple_input partition' style={{
+                      borderRadius:'10px'
+                    }} name="" value={prod_data.weight} onChange={(e)=>{
+                      let dt = {...data}
+                      dt.weight = e.target.value
+                      setData(dt)
+                    }}></input>
+                    
+                  </p>
                   {/* <div className="rating">
                     <ul>
                       <li>
