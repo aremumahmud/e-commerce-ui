@@ -19,6 +19,7 @@ function Review({cart , symbol,symbolTab, currencyTab}){
                     <p>Price: {symbol}{+((data[index].price*currencyTab[data[index].currency||'NGN'].price_in_naira)/symbolTab[symbol]).toFixed(2)}</p>
                     <p>Quantity: {data[index].quantity_for_cart}</p>
                     <p>Size: {data[index].size}</p>
+                    <p>Weight: {data[index].weight|| 1}kg</p>
                 </div>
                 <div className="wrapNext">
                     <p></p>

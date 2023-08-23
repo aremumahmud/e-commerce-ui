@@ -88,9 +88,11 @@ let [ship , setShip] = useState({
     }else{
       setIsNaij(false)
      // alert('data'+data.country)
-     let shipOnCountry= calculateTotal(ship[data.country.split(" ").join("_")],cart_no)
-     let shipOnRegion=calculateTotal(ship[countries[data.country]] ,cart_no)
-     let fallback = calculateTotal(ship.international,cart_no)
+     console.log('shipOnCountry,weight')
+     let shipOnCountry= calculateTotal(ship[data.country.split(" ").join("_")],weight)
+     let shipOnRegion=calculateTotal(ship[countries[data.country]] ,weight)
+     let fallback = calculateTotal(ship.international,weight)
+    
       let p = +(((shipOnCountry||shipOnRegion|| fallback) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
       setDeliv(p) 
       // console.log(p,'in any case 1',)

@@ -225,6 +225,7 @@ function ProductMain({
               }
               
             </p>
+            
           </div>
 <br />
             <div className="description">{
@@ -232,7 +233,7 @@ function ProductMain({
             }
                   {/* <p >{data.description}</p> */}
             </div>
-           
+            
             {/* <div className="rating">
               <ul>
                 <li>
@@ -281,7 +282,13 @@ function ProductMain({
               <p>Dont miss it</p> */}
             {/* </div> */}
           </div>
-         
+          <br />
+          <div>
+          <p className='reeky'> Weight</p> <p className="descrpTitle">
+            {data.weight.toFixed(2)}kg         
+             </p>
+          </div>
+            
           <Sizes setViewStatus={setViewStatus2} setOutOfStock={setOutOfStock} setSize={setSize} data={data} />
           {outOfStock ? (
             <div class="out_of_stock">out of stock</div>
