@@ -304,6 +304,7 @@ function ProductMain({
                         name: data.name,
                         price: data.price,
                         size,
+                        weight: data.weight
                       },
                     ],
                     qty,
@@ -314,6 +315,7 @@ function ProductMain({
                       price: data.price,
                       name: data.name,
                       size,
+                      weight: data.weight
                     }
                   );
                   setPage("checkout");

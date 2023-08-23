@@ -11,6 +11,7 @@ import { nameTab } from "../config/currency";
 import fetch_shipment from "../libs/getShipment";
 import countries from "../config/continent";
 import calculateTotal from "../libs/calculateAddShip";
+import calculateWeight from "../libs/calculateWeight";
 
 
 
@@ -22,6 +23,8 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab,c
   let [URIState, setURI] = useState(localStorage.getItem('TokenID')?'upload_locked_product_uri':'upload_locked_product_uri_guest')
 
   let price = calculate(Object.keys(cart).map(x => cart[x]), symbol,currencyTab,symbolTab)
+  let weight = calculateWeight(Object.keys(cart).map(x => cart[x]))
+  console.log('weight:' ,weight)
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
