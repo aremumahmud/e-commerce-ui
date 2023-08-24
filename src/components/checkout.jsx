@@ -20,6 +20,7 @@ function Checkout({ setCurrency, setPage, cart, symbol ,symbolTab, currencyTab,c
   let [discount_code, setDiscountCode] = useState([])
   let [user_data, set_user_data] = useState(null)
   let [busy, setBusy] = useState(false)
+  let [isLagos, setIsLagos] = useState(false)
   let [URIState, setURI] = useState(localStorage.getItem('TokenID')?'upload_locked_product_uri':'upload_locked_product_uri_guest')
 
   let price = calculate(Object.keys(cart).map(x => cart[x]), symbol,currencyTab,symbolTab)
@@ -87,8 +88,9 @@ let [ship , setShip] = useState({
     
     }else{
       setIsNaij(false)
+      setIsLagos(false)
      // alert('data'+data.country)
-     console.log('shipOnCountry,weight')
+     //console.log('shipOnCountry,weight')
      let shipOnCountry= calculateTotal(ship[data.country.split(" ").join("_")],weight)
      let shipOnRegion=calculateTotal(ship[countries[data.country]] ,weight)
      let fallback = calculateTotal(ship.international,weight)
@@ -101,14 +103,32 @@ let [ship , setShip] = useState({
     }
 
     if(data.state){
+     // console.log(data.state)
      // setIsNaij(true)
       //alert('hey')
      // alert(data.state)
+     if(data.state==='Lagos State') return setIsLagos(true)
+     setIsLagos(false)
      if(data.country !== 'Nigeria') return 
       let p = +(((ship[data.state.split(" ").join("_")]||ship.local) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
       setDeliv(p)
       // console.log(p,'in any case 1')
       setDeliv1(ship[data.state.split(" ").join("_")]||ship.local)
+    }
+
+
+    
+    if(data.city && data.state==='Lagos State'){
+      // console.log(data.state)
+      // setIsNaij(true)
+       //alert('hey')
+      // alert(data.state)
+      
+     // if(data.country !== 'Nigeria') return 
+       let p = +(((ship[data.city]||ship.local) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
+       setDeliv(p)
+       // console.log(p,'in any case 1')
+       setDeliv1(ship[data.city]||ship.local)
     }
     let f = Object.keys(data)
    // alert(validate(f,isNaij).length === 0)
@@ -149,7 +169,7 @@ let [ship , setShip] = useState({
             <input type="checkbox" name="" id="" />
             Returning Customer
           </div>
-          <Delivery isNaij={isNaij} setIsNaij={setIsNaij} pace={pace} setPace={setPace} valid={valid} />
+          <Delivery isLagos={isLagos} isNaij={isNaij} setIsNaij={setIsNaij} pace={pace} setPace={setPace} valid={valid} />
 
         </div>
         <div className="two" style={{

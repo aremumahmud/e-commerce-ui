@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import "../css/delivery.css";
 import axios from "axios";
+import lagos_cities from "../libs/lagos_cities";
 //import * as countryjs from 'countryjs'
 
-function Delivery({ valid, pace, isNaij}) {
+function Delivery({ valid, pace, isNaij,isLagos}) {
   // let Country;
   //console.log( countryjs.all().map(country => country.name.common))
   let [options1, setoptions] = useState([]);
@@ -111,10 +112,7 @@ let [effecrDeprnd , setEffectDepend] = useState(1)
           </p>
           <select onChange={valid} type="text" name="state" id="">
             <option value="">Choose state</option>
-            <option value="insland">Lagos state(island)</option>
-            <option value="outskirt">Lagos state(outskirts)</option>
-            <option value="mainland">Lagos state(mainland)</option>
-            {options2.filter(x=>x.name !== 'Lagos State').map((x) => (
+            {options2.map((x) => (
               <option value={x.name}>{x.name}</option>
             ))}
           </select>
@@ -125,13 +123,27 @@ let [effecrDeprnd , setEffectDepend] = useState(1)
           <p>
             City/Town<sup>*</sup>
           </p>
-          <input
-            onChange={valid}
-            type="text"
-            name="city"
-            id=""
-            placeholder="Type Here ..."
-          />
+          {
+            isLagos &&
+            <select name="" id="">
+              {
+                lagos_cities.map(city=>{
+                  return <option value={city.value}>{city.name}</option>
+                })
+              }
+            </select>
+          }
+          {
+            !isLagos &&
+             <input
+             onChange={valid}
+             type="text"
+             name="city"
+             id=""
+             placeholder="Type Here ..."
+           />
+          }
+         
         </div>
 
         <div className="wrapInput">

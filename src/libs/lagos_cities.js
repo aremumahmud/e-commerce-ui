@@ -1,0 +1,76 @@
+let lagos_cities = [{
+    name: 'Agege',
+    value: 'agege'
+}, {
+    name: 'Ajeromi-Ifelodun',
+    value: 'ajeromi_ifelodun'
+}, {
+    name: 'Alimosho',
+    value: 'alimosho'
+}, {
+    name: 'Amuwo-Odofin',
+    value: 'amuwo_odofin'
+}, {
+    name: 'Apapa',
+    value: 'apapa'
+}, {
+    name: 'Badagry',
+    value: 'badagry'
+}, {
+    name: 'Epe',
+    value: 'epe'
+}, {
+    name: 'Eti-Osa',
+    value: 'eti_osa'
+}, {
+    name: 'Ibeju',
+    value: 'ibeju'
+}, {
+    name: 'Lekki',
+    value: 'lekki'
+}, {
+    name: 'Ifako-Ijaye',
+    value: 'ifako_ijaye'
+}, {
+    name: 'Ikeja',
+    value: 'ikeja'
+}, {
+    name: 'Ikorodu',
+    value: 'ikorodu'
+}, {
+    name: 'Kosoe',
+    value: 'kosofe'
+}, {
+    name: 'Lagos Island',
+    value: 'lagos_island'
+}, {
+    name: 'Lagos Mainland',
+    value: 'lagos_mainland'
+}, {
+    name: 'Ikota',
+    value: 'ikota'
+}, {
+    name: 'Ikoyi',
+    value: 'ikoyi'
+}, {
+    name: 'Ajah',
+    value: 'ajah'
+}, {
+    name: 'Mushin',
+    value: 'mushin'
+}, {
+    name: 'Ojo',
+    value: 'ojo'
+}, {
+    name: 'Oshodi-Isholo',
+    value: 'oshodi_isholo'
+}, {
+    name: 'Shomolu',
+    value: 'shomolu'
+}, {
+    name: 'Surulere',
+    value: 'surulere'
+}, ]
+
+
+export default lagos_cities
