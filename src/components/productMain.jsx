@@ -229,7 +229,15 @@ function ProductMain({
           </div>
 <br />
             <div className="description">{
-              data.description.split('\n').map(x=>x&&<>{x} <br/></>)
+              data.description.split('\n').map(x=>{
+                let isList = x.search('•') > -1
+               // console.log(isList)
+                return x&&<>{
+                  isList?<> 
+                          {x}<br/>
+                        </>: <p className="instructions">{x}</p> 
+                }</>
+              })
             }
                   {/* <p >{data.description}</p> */}
             </div>
@@ -377,13 +385,13 @@ style={{
                 style={{
                   fontSize: "small",
                 }}>
-                Check out our shipping policy{" "}
+                Check out our {" "}
                 <a  style={{
                   color:'blue',
                   textDecoration:'underline',
                   fontSize:'small !important'
                 }} onClick={()=>setPage("shipping_policy")}>
-                  here
+                  shipping policy
                 </a>{" "}
               </p>
             </div>
@@ -403,13 +411,13 @@ style={{
                 style={{
                   fontSize: "small ",
                 }}>
-                Check out our return policy{" "}
+                Check out our {" "}
                 <a style={{
                   color:'blue',
                   textDecoration:'underline',
                   fontSize:'small !important'
                 }} onClick={()=>setPage("return_policy")}>
-                  here
+                  return policy
                 </a>{" "}
               </p>
             </div>
@@ -422,7 +430,7 @@ style={{
             <Specs />
         </div> */}
         {/* <br /><br /> */}
-        <p style={{ marginTop: "0px" }} className="topic">
+        <p className="topic">
           Similar Items You Might Like
         </p>
         <Products

@@ -107,18 +107,23 @@ let [ship , setShip] = useState({
      // setIsNaij(true)
       //alert('hey')
      // alert(data.state)
-     if(data.state==='Lagos State') return setIsLagos(true)
-     setIsLagos(false)
+     if(data.state==='Lagos State'){
+      setIsLagos(true)
+    }else{
+      setIsLagos(false)
      if(data.country !== 'Nigeria') return 
       let p = +(((ship[data.state.split(" ").join("_")]||ship.local) * currencyTab[null|| 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)
       setDeliv(p)
       // console.log(p,'in any case 1')
       setDeliv1(ship[data.state.split(" ").join("_")]||ship.local)
     }
+     
+    }
 
-
+//onsole.log(data.city)
     
     if(data.city && data.state==='Lagos State'){
+      //alert('hello')
       // console.log(data.state)
       // setIsNaij(true)
        //alert('hey')

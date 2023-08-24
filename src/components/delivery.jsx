@@ -126,6 +126,7 @@ let [effecrDeprnd , setEffectDepend] = useState(1)
           {
             isLagos &&
             <select name="city" id=""  onChange={valid}>
+              <option value="">Choose city/town</option>
               {
                 lagos_cities.map(city=>{
                   return <option value={city.value}>{city.name}</option>
