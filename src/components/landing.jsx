@@ -34,7 +34,7 @@ function Landing(props) {
   };
 
   let setCart = (x, n, qty, info) => {
-    if (qty === 0) return 
+    if (qty === 0) return;
     //first we clone the cart state
     let v_cart = { ...cart };
     //console.log(qty)
@@ -47,7 +47,7 @@ function Landing(props) {
       //or the increment of the cart qty is greater than the product inventory
 
       if (qty < curr_qty + (n ? n : 1)) {
-        return 
+        return;
       }
     }
 
@@ -133,7 +133,7 @@ function Landing(props) {
       //or the increment of the cart qty is greater than the product inventory
 
       if (qty < curr_qty + 1) {
-        return 
+        return;
       }
     }
     //then if the cart object for the present is not available
@@ -185,7 +185,6 @@ function Landing(props) {
     //console.log('this run fa', load)
     load &&
       Authenticate(action, actionsParam, (err, res) => {
-      
         setBusy(false);
         if (err) {
           setErrors({

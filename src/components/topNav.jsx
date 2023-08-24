@@ -1,16 +1,22 @@
-import { AiOutlineSearch, AiOutlineShoppingCart, AiOutlineUser } from 'react-icons/ai'
-import '../css/topnav.css'
+import {
+  AiOutlineSearch,
+  AiOutlineShoppingCart,
+  AiOutlineUser,
+} from "react-icons/ai";
+import "../css/topnav.css";
+import { useState } from "react";
 
-function TopNav({cart,setPage,search}){
-    return (
-        <div className="wrap">
-          <div className="topNav">
-          <a href='/home' class="logo">
-            {/* <p>Glitz<span>abellelabel</span></p> */}
-            <img src="\imgs\67957883-348A-45E4-BD1E-E956B290647F~2.jpg" alt="" />
+function TopNav({ cart, setPage, search, searchLoader, setSearchLoader }) {
+  let [inputSearch, setSearchInput]= useState('')
+  return (
+    <div className="wrap">
+      <div className="topNav">
+        <a href="/home" class="logo">
+          {/* <p>Glitz<span>abellelabel</span></p> */}
+          <img src="\imgs\67957883-348A-45E4-BD1E-E956B290647F~2.jpg" alt="" />
         </a>
-            <div className="navigations">
-                {/* <ul>
+        <div className="navigations">
+          {/* <ul>
                     <li>
                         <select name="" id="">
                             <option value="">Categories</option>
@@ -20,35 +26,47 @@ function TopNav({cart,setPage,search}){
                     <li>What's More</li>
                     <li>Delivery</li>
                 </ul> */}
-            </div>
-            <div className="search">
-                <input onChange={e=>search(e.target.value)} type="text" placeholder='Search product' />
-                <div className="icon">
-                    <AiOutlineSearch />
-                </div>
-            </div>
-            <div className="usersection">
-           
-              <p onClick={()=>{
-                if( localStorage.getItem('TokenID')){
-                  return setPage('dash')
-                }
-                let a = window.confirm('Sorry, you need to sign in to access the dashboard. \nSign you up?')
-                return a?setPage('users/signup'):''
-                }}>
-                <AiOutlineUser style={{fontWeight:'bold'}} /> 
-                User
-              </p>
-              <p onClick={()=>setPage('cart')}>
-                <span className='qty'>{cart}</span>
-                <AiOutlineShoppingCart  style={{fontWeight:'bold'}} />
-                Cart
-              </p>
-            </div>
         </div>
+        <div className="search">
+          <input
+            onChange={(e) => setSearchInput(e.target.value)}
+            type="text"
+            placeholder="Search product"
+          />
+          <div className="icon">
+            {searchLoader ? (
+              <div className="loader"></div>
+            ) : (
+              <AiOutlineSearch onClick={()=>{
+                search(inputSearch)
+                setSearchLoader(true)
+              }} />
+            )}
+          </div>
         </div>
-        
-    )
+        <div className="usersection">
+          <p
+            onClick={() => {
+              if (localStorage.getItem("TokenID")) {
+                return setPage("dash");
+              }
+              let a = window.confirm(
+                "Sorry, you need to sign in to access the dashboard. \nSign you up?"
+              );
+              return a ? setPage("users/signup") : "";
+            }}>
+            <AiOutlineUser style={{ fontWeight: "bold" }} />
+            User
+          </p>
+          <p onClick={() => setPage("cart")}>
+            <span className="qty">{cart}</span>
+            <AiOutlineShoppingCart style={{ fontWeight: "bold" }} />
+            Cart
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default TopNav
+export default TopNav;
