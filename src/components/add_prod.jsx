@@ -45,6 +45,7 @@ let [pending3 , setPending3 ]  = useState(false)
 let [pending4 , setPending4 ]  = useState(false)
 
 let [weight , setweight] = useState(1)
+let [virtual_discount, setDiscount] = useState(30)
 
 
    let getDoc = (x) => document.getElementById(x)
@@ -95,6 +96,7 @@ let [weight , setweight] = useState(1)
               price,
               category,
               weight,
+              virtual_discount,
               varieties:[{
                 image: image1,
                 parentProduct: title,
@@ -523,13 +525,19 @@ let setType = (value)=>{
             <p> Pricing</p>
             <label htmlFor="">
                price 
-               <input  onChange={(e)=>setPrice(e.target.value)} type="text" className="simple_input" placeholder='0.00' />
+               <input  onChange={(e)=>setPrice(e.target.value)} type="number" className="simple_input" placeholder='0.00' />
             </label>
 
             <p>Weight</p>
             <label htmlFor="">
                weight 
-               <input  onChange={(e)=>setweight(e.target.value)} type="text" className="simple_input" placeholder='0kg' />
+               <input  onChange={(e)=>setweight(e.target.value)} type="number" className="simple_input" placeholder='0kg' />
+            </label>
+
+            <p>Virtual Discount</p>
+            <label htmlFor="">
+               discount
+               <input  onChange={(e)=>setDiscount(e.target.value)} type="number" className="simple_input" placeholder='0kg' />
             </label>
             {/* <p>Inventory</p>
             <label htmlFor="">

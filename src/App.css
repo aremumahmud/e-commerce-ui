@@ -1,125 +1,134 @@
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    * {
-        /* font-size: calc(5px + 2vmin); */
-        margin: 0;
-        box-sizing: border-box;
-        font-family: Raleway, Arial, Helvetica, 'sans-serif'
-        /* font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif; */
-    }
-    
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    /* font-size: calc(5px + 2vmin); */
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Raleway, Arial, Helvetica, 'sans-serif'
+    /* font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif; */
+}
+
+body {
+    background-color: white;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+input[type=radio] {
+    transform: scale(1.5);
+}
+
+.coverIt {
+    background: white !important
+}
+
+.y23 {
+    /* width: 100% !important; */
+    padding: 4px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #cccccc59;
+    height: 20vh;
+    border-radius: 10px;
+    width: 15vw;
+    /* margin-right: 20px; */
+    padding: 40px;
+}
+
+.y23 img {
+    height: 100%;
+    width: 100%;
+}
+
+.align {
+    align-items: center;
+}
+
+.logo img {
+    width: 200px
+}
+
+.red {
+    color: red;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.leng p {
+    font-size: 20px !important;
+    font-weight: 900;
+    text-align: center;
+    color: #004225;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.fitme {
+    width: 500px;
+}
+
+@media (prefers-color-scheme: dark) {
     body {
-        background-color: white;
+        background-color: black !important;
+        color: #cccccc;
+        --text-color-normal: hsl(210, 10%, 62%);
+        --text-color-light: hsl(210, 15%, 35%);
+        --text-color-richer: hsl(210, 50%, 72%);
+        --text-color-highlight: hsl(25, 70%, 45%);
     }
-    
-    input[type=checkbox] {
-        transform: scale(1.5);
+    .path ul {
+        background-color: black !important;
+        color: #cccccc;
     }
-    
-    input[type=radio] {
-        transform: scale(1.5);
+    .topNav {
+        background-color: black !important;
     }
-    
-    .coverIt {
-        background: white !important
+    .topNav img {
+        content: url(../public/imgs/3.png)
     }
-    
-    .y23 {
-        /* width: 100% !important; */
-        padding: 4px !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #cccccc59;
-        height: 20vh;
-        border-radius: 10px;
-        width: 15vw;
-        /* margin-right: 20px; */
-        padding: 40px;
+    footer img {
+        content: url(../public/imgs/3.png)
     }
-    
-    .y23 img {
-        height: 100%;
-        width: 100%;
+    .ico {
+        color: #cccccc;
     }
-    
-    .align {
-        align-items: center;
+    .size1 {
+        color: black;
     }
-    
-    .logo img {
-        width: 200px
+    .card {
+        background-color: black !important;
     }
-    
-    .red {
-        color: red;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-        margin-top: 10px;
+    .sortby input {
+        color: #cccccc !important;
     }
-    
-    .leng p {
-        font-size: 20px !important;
-        font-weight: 900;
-        text-align: center;
-        color: #004225;
-        padding-top: 25px;
-        padding-bottom: 25px;
-    }
-    
-    .fitme {
-        width: 500px;
-    }
-    
-    @media (prefers-color-scheme: dark) {
-        body {
-            background-color: black !important;
-            color: #cccccc;
-            --text-color-normal: hsl(210, 10%, 62%);
-            --text-color-light: hsl(210, 15%, 35%);
-            --text-color-richer: hsl(210, 50%, 72%);
-            --text-color-highlight: hsl(25, 70%, 45%);
-        }
-        .path ul {
-            background-color: black !important;
-            color: #cccccc;
-        }
-        .topNav {
-            background-color: black !important;
-        }
-        .topNav img {
-            content: url(../public/imgs/3.png)
-        }
-        footer img {
-            content: url(../public/imgs/3.png)
-        }
-        .ico {
-            color: #cccccc;
-        }
-        .size1 {
-            color: black;
-        }
-        .card {
-            background-color: black !important;
-        }
-        .sortby input {
-            color: #cccccc !important;
-        }
-    }
-    
-    .btn {
-        justify-content: center !important;
-    }
-    
-    .card-order {
-        border-bottom: 1px solid #ccc;
-        display: flex;
-        justify-content: space-between;
-        padding: 5%;
-    }
-    
-    .instructions {
-        padding: 10px;
-        padding-left: 0;
-        font-weight: bold;
-    }
+}
+
+.btn {
+    justify-content: center !important;
+}
+
+.card-order {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.instructions {
+    padding: 10px;
+    padding-left: 0;
+    font-weight: bold;
+}
+
+.discount-way {
+    display: flex;
+    gap: 10px;
+}
+
+.medium {
+    font-size: medium !important
+}

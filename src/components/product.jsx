@@ -3,6 +3,7 @@ import "../css/products.css";
 import { useState } from "react";
 //import currencyTab, { symbolTab } from "../config/currency";
 import arrayToObject from "../libs/arraytoObj_sizebased";
+import calculate_virtual_discount from "../libs/virtual_discount";
 
 function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, currencyTab,symbolTab,setViewStatus3, setCartData3 }) {
   //console.log(info)
@@ -41,13 +42,19 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, cu
             setProduct(info)
           }} className="name">
             <p>{info.name}</p>
-           
-            {
-              !isNaN(info.price) && <p>
-              {symbol}{+((info.price * currencyTab[info.currency || 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)}
-              <sup></sup>
+           <div className="discount-way">
+             {
+              !isNaN(info.price) && <p className='medium' style={{textDecoration:'line-through'}}>
+              {symbol}{calculate_virtual_discount(info.virtual_discount || 30,+((info.price * currencyTab[info.currency || 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2))}
             </p>
             }
+            {
+              !isNaN(info.price) && <p style={{color:'#d01345'}}>
+              {symbol}{+((info.price * currencyTab[info.currency || 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)}
+            </p>
+            }
+           </div>
+           
            
           </div>
           {/* <p onClick={() => {
