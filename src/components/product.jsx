@@ -31,7 +31,7 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, cu
           setMain && setMain(info.image || info.mainImage)
         }}>
           <div className="heart" style={{padding:'10px'}}>
-          <p style={{color:'#d01345', fontSize:'small',padding:'5px'}}>-{info.virtual_discount||30}%</p>
+          <p style={{color:'#d01345', fontSize:'small',padding:'5px'}}>-{info.virtual_discount||0}%</p>
             {/* <AiOutlineHeart /> */}
           </div>{ }
           <img src={info.image || info.mainImage} alt="" />
@@ -46,7 +46,7 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, cu
            <div className="discount-way">
              {
               !isNaN(info.price) && <p className='medium' style={{textDecoration:'line-through'}}>
-              {symbol}{calculate_virtual_discount(info.virtual_discount || 30,+((info.price * currencyTab[info.currency || 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2))}
+              {symbol}{calculate_virtual_discount(info.virtual_discount || 0,+((info.price * currencyTab[info.currency || 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2))}
             </p>
             }
             {
