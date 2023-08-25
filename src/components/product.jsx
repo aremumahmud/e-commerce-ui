@@ -31,7 +31,7 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, cu
           setMain && setMain(info.image || info.mainImage)
         }}>
           <div className="heart" style={{padding:'10px'}}>
-          <p style={{color:'#d01345', fontSize:'small',padding:'5px'}}>-30%</p>
+          <p style={{color:'#d01345', fontSize:'small',padding:'5px'}}>-{info.virtual_discount||30}%</p>
             {/* <AiOutlineHeart /> */}
           </div>{ }
           <img src={info.image || info.mainImage} alt="" />
