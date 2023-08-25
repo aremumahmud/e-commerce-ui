@@ -16,6 +16,9 @@
     .others {
         display: none;
     }
+    .stockInfo .top {
+        margin-top: 150px;
+    }
     .container {
         width: 100%;
         border: 1px solid white;
@@ -176,7 +179,7 @@
         margin-top: 7px !important;
     }
     .item_specs {
-        margin-top: 0px !important;
+        margin-top: 150px !important;
     }
     .item_specs .twin {
         margin-left: 7.3%;

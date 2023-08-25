@@ -212,9 +212,21 @@ function ProductMain({
           <div className="top">
             <p className="title">{data.name}</p>
             <br />
-            <div className="prices">
+            <div className="prices" style={{display:'flex',gap:'5px'}}>
             {/* <p className="subTitle">Buy and adore with unlimited guarantee</p> */}
-            <p className="descrpTitle">
+            <p className="descrpTitle medium" style={{textDecoration:'line-through'}}>
+              {symbol}
+              {
+                +(
+                  (data.price *
+                    currencyTab[data.currency || "NGN"].price_in_naira) /
+                  symbolTab[symbol]
+                ).toFixed(2)
+              }
+             
+            </p> 
+            {/* <sup>-30%</sup> */}
+            <p className="descrpTitle" style={{color:'#d01345'}}>
               {symbol}
               {
                 +(

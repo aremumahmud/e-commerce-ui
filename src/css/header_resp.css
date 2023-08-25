@@ -176,7 +176,7 @@
         margin-top: 7px !important;
     }
     .item_specs {
-        margin-top: 0px !important;
+        margin-top: 150px !important;
     }
     .item_specs .twin {
         margin-left: 7.3%;
@@ -404,5 +404,8 @@
     }
     .fitme {
         width: 100%;
+    }
+    .stockInfo .top {
+        margin-top: 150px;
     }
 }

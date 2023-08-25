@@ -67,6 +67,17 @@ let [load1 , setLoad1]= useState(false)
                     }}></input>
                     
                   </p>
+                  <small>Virtual Discount (%)</small>
+                  <p  className="description">
+                    <input type="number" className='simple_input partition' style={{
+                      borderRadius:'10px'
+                    }} name="" value={prod_data.virtual_discount} onChange={(e)=>{
+                      let dt = {...data}
+                      dt.virtual_discount = e.target.value
+                      setData(dt)
+                    }}></input>
+                    
+                  </p>
                   {/* <div className="rating">
                     <ul>
                       <li>
