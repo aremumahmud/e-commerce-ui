@@ -4,59 +4,87 @@ import { useState } from "react";
 //import currencyTab, { symbolTab } from "../config/currency";
 import arrayToObject from "../libs/arraytoObj_sizebased";
 import calculate_virtual_discount from "../libs/virtual_discount";
+import { nameTab } from "../config/currency";
 
-function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, currencyTab,symbolTab,setViewStatus3, setCartData3 }) {
+function Product({
+  setMain,
+  setCart,
+  cart,
+  setPage,
+  info,
+  setProduct,
+  symbol,
+  currencyTab,
+  symbolTab,
+  setViewStatus3,
+  setCartData3,
+}) {
   //console.log(info)
 
-  let [load, setLoad] = useState(false)
+  let [load, setLoad] = useState(false);
   let onclick = (n) => {
-    setLoad(true)
+    setLoad(true);
     let timeout = setTimeout(() => {
-      setLoad(false)
-      let sizes = arrayToObject(n.sizes)[n.size].qty
-      setCart([n], 1, parseInt(sizes), info)
+      setLoad(false);
+      let sizes = arrayToObject(n.sizes)[n.size].qty;
+      setCart([n], 1, parseInt(sizes), info);
       //setCartData3(info)
       //setViewStatus3(true)
-      clearTimeout(timeout)
-    }, 200)
-
-  }
+      clearTimeout(timeout);
+    }, 200);
+  };
   return (
     <>
-      <div className="product" >
-        <div className="imageDisplay" onClick={() => {
-        //  window.scroll(0,0)
-          setPage('product')
-          setProduct(info)
-          setMain && setMain(info.image || info.mainImage)
-        }}>
-          <div className="heart" style={{padding:'10px'}}>
-          <p style={{color:'#d01345', fontSize:'small',padding:'5px'}}>-{info.virtual_discount||0}%</p>
+      <div className="product">
+        <div
+          className="imageDisplay"
+          onClick={() => {
+            //  window.scroll(0,0)
+            setPage("product");
+            setProduct(info);
+            setMain && setMain(info.image || info.mainImage);
+          }}>
+          <div className="heart" style={{ padding: "10px" }}>
+            <p style={{ color: "#d01345", fontSize: "small", padding: "5px" }}>
+              -{info.virtual_discount || 0}%
+            </p>
             {/* <AiOutlineHeart /> */}
-          </div>{ }
+          </div>
+          {}
           <img src={info.image || info.mainImage} alt="" />
         </div>
         <div className="productInfo">
-          <div onClick={() => {
-            //window.scroll(0,0)
-            setPage('product')
-            setProduct(info)
-          }} className="name">
+          <div
+            onClick={() => {
+              //window.scroll(0,0)
+              setPage("product");
+              setProduct(info);
+            }}
+            className="name">
             <p>{info.name}</p>
-           <div className="discount-way">
-             {
-              !isNaN(info.price) && <p className='medium' style={{textDecoration:'line-through'}}>
-              {symbol}{calculate_virtual_discount(info.virtual_discount || 0,+((info.price * currencyTab[info.currency || 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2))}
-            </p>
-            }
-            {
-              !isNaN(info.price) && <p style={{color:'#d01345'}}>
-              {symbol}{+((info.price * currencyTab[info.currency || 'NGN'].price_in_naira) / symbolTab[symbol]).toFixed(2)}
-            </p>
-            }
-           </div>
-           
-           
+            <div className="discount-way">
+              {!isNaN(info.price) && (
+                <p
+                  className="medium"
+                  style={{ textDecoration: "line-through" }}>
+                  {symbol}
+                  {calculate_virtual_discount(
+                    info.virtual_discount || 0,
+                    info[nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]]
+                  ).toFixed(2)}
+                </p>
+              )}
+              {!isNaN(info.price) && (
+                <p style={{ color: "#d01345" }}>
+                  {symbol}
+                  {
+                    +info[
+                      nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
+                    ].toFixed(2)
+                  }
+                </p>
+              )}
+            </div>
           </div>
           {/* <p onClick={() => {
             setPage('product')
@@ -106,7 +134,6 @@ function Product({ setMain, setCart, cart, setPage, info, setProduct, symbol, cu
       </div>
       {/* <br /> */}
     </>
-
   );
 }
 

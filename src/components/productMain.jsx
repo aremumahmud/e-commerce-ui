@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 
 import Sizes from "./sizes";
 import arrayToObject from "../libs/arraytoObj_sizebased";
+import calculate_virtual_discount from "../libs/virtual_discount";
+import { nameTab } from "../config/currency";
 
 function ProductMain({
   setCart,
@@ -216,12 +218,13 @@ function ProductMain({
             {/* <p className="subTitle">Buy and adore with unlimited guarantee</p> */}
             <p className="descrpTitle medium" style={{textDecoration:'line-through'}}>
               {symbol}
+              {console.log(data[
+                  nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
+                ])}
               {
-                +(
-                  (data.price *
-                    currencyTab[data.currency || "NGN"].price_in_naira) /
-                  symbolTab[symbol]
-                ).toFixed(2)
+                calculate_virtual_discount(data.virtual_discount,data[
+                  nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
+                ]).toFixed(2)
               }
              
             </p> 
@@ -229,11 +232,9 @@ function ProductMain({
             <p className="descrpTitle" style={{color:'#d01345'}}>
               {symbol}
               {
-                +(
-                  (data.price *
-                    currencyTab[data.currency || "NGN"].price_in_naira) /
-                  symbolTab[symbol]
-                ).toFixed(2)
+                +data[
+                  nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
+                ].toFixed(2)
               }
               
             </p>
@@ -331,7 +332,10 @@ function ProductMain({
                         name: data.name,
                         price: data.price,
                         size,
-                        weight: data.weight
+                        weight: data.weight,
+                        USD: data.USD,
+                        GBP: data.GBP,
+                        EUR: data.EUR
                       },
                     ],
                     qty,
@@ -342,7 +346,10 @@ function ProductMain({
                       price: data.price,
                       name: data.name,
                       size,
-                      weight: data.weight
+                      weight: data.weight,
+                      USD: data.USD,
+                      GBP: data.GBP,
+                      EUR: data.EUR
                     }
                   );
                   setPage("checkout");
@@ -367,6 +374,10 @@ style={{
                         name: data.name,
                         price: data.price,
                         size,
+                        weight: data.weight,
+                        USD: data.USD,
+                        GBP: data.GBP,
+                        EUR: data.EUR
                       },
                     ],
                     qty,
@@ -376,6 +387,10 @@ style={{
                       price: data.price,
                       name: data.name,
                       size,
+                      weight: data.weight,
+                      USD: data.USD,
+                      GBP: data.GBP,
+                      EUR: data.EUR
                     }
                   );
                 }}>

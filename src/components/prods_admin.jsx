@@ -26,31 +26,19 @@ let [load1 , setLoad1]= useState(false)
                   <input style={{
                       marginBottom:0
                     }}  className='simple_input partition' value={prod_data.parentProduct} type="text" onChange={(e)=>{
-                      let dt = {...data}
+                      let dt = {...prod_data}
                       dt.parentProduct = e.target.value
                       setData(dt)
                     }} />
                     {/* <p>{prod_data.parentProduct}</p> */}
-                    <p>
-                      <sup>N</sup>
-                      
-                     
-                      <input style={{
-                      marginBottom:0
-                    }}  className='simple_input partition' value= {prod_data.price} type="number" onChange={(e)=>{
-                      let dt = {...data}
-                      dt.price = parseInt(e.target.value)
-                      setData(dt)
-                    }} />
-                      
-                    </p>
+                   
                   </div>
                   <small>description</small>
                   <p  className="description">
                     <textarea style={{
                       borderRadius:'10px'
                     }} name="" id="" cols="40" rows="5" value={prod_data.description} onChange={(e)=>{
-                      let dt = {...data}
+                      let dt = {...prod_data}
                       dt.description = e.target.value
                       setData(dt)
                     }}></textarea>
@@ -61,7 +49,7 @@ let [load1 , setLoad1]= useState(false)
                     <input className='simple_input partition' style={{
                       borderRadius:'10px'
                     }} name="" value={prod_data.weight} onChange={(e)=>{
-                      let dt = {...data}
+                      let dt = {...prod_data}
                       dt.weight = e.target.value
                       setData(dt)
                     }}></input>
@@ -72,12 +60,65 @@ let [load1 , setLoad1]= useState(false)
                     <input type="number" className='simple_input partition' style={{
                       borderRadius:'10px'
                     }} name="" value={prod_data.virtual_discount} onChange={(e)=>{
-                      let dt = {...data}
+                      let dt = {...prod_data}
                       dt.virtual_discount = e.target.value
                       setData(dt)
                     }}></input>
                     
                   </p>
+                  <h2>Pricing</h2>
+                  <p>
+                      <sup>NGN</sup>
+                      
+                     
+                      <input style={{
+                      marginBottom:0
+                    }}  className='simple_input partition' value= {prod_data.price} type="number" onChange={(e)=>{
+                      let dt = {...prod_data}
+                      dt.price = parseInt(e.target.value)
+                      setData(dt)
+                    }} />
+                      
+                    </p>
+                    <p>
+                      <sup>USD</sup>
+                      
+                     
+                      <input style={{
+                      marginBottom:0
+                    }}  className='simple_input partition' value= {prod_data.USD} type="number" onChange={(e)=>{
+                      let dt = {...prod_data}
+                      dt.USD = parseInt(e.target.value)
+                      setData(dt)
+                    }} />
+                      
+                    </p>
+                    <p>
+                      <sup>GBP</sup>
+                      
+                     
+                      <input style={{
+                      marginBottom:0
+                    }}  className='simple_input partition' value= {prod_data.GBP} type="number" onChange={(e)=>{
+                      let dt = {...prod_data}
+                      dt.GBP = parseInt(e.target.value)
+                      setData(dt)
+                    }} />
+                      
+                    </p>
+                    <p>
+                      <sup>EUR</sup>
+                      
+                     
+                      <input style={{
+                      marginBottom:0
+                    }}  className='simple_input partition' value= {prod_data.EUR} type="number" onChange={(e)=>{
+                      let dt = {...prod_data}
+                      dt.EUR = parseInt(e.target.value)
+                      setData(dt)
+                    }} />
+                      
+                    </p>
                   {/* <div className="rating">
                     <ul>
                       <li>
@@ -108,7 +149,7 @@ let [load1 , setLoad1]= useState(false)
                      <input style={{
                       marginBottom:0
                     }}  className='simple_input partition' value={prod_data.quantity} type="number" onChange={(e)=>{
-                      let dt = {...data}
+                      let dt = {...prod_data}
                       dt.quantity = parseInt(e.target.value)
                       setData(dt)
                     }} />
@@ -122,7 +163,7 @@ let [load1 , setLoad1]= useState(false)
                 </div>
                 <div className="ass_qty">
                     <input  className='simple_input partition' type="number" name="" id="" value={x.qty}  onChange={(e)=>{
-                      let dt = {...data}
+                      let dt = {...prod_data}
                       dt.sizes[x.index].qty = parseInt(e.target.value)
                       setData(dt)
                     }}  />
