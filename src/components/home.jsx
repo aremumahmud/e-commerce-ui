@@ -8,6 +8,7 @@ import fetch_categories from "../libs/get_category";
 import extract_ids from "../libs/extract_ids";
 import get_current_version from "../libs/getCurrentVersion";
 import update_cart from "../libs/updateCart";
+import paginate_products from "../libs/paginate_products";
 
 
 function Home({
@@ -57,7 +58,8 @@ function Home({
   })
   },[])
 
-
+let pages = paginate_products(data,6)
+//console.log(pages,'hnbnjmn nknh ')
   return (
     <>
       <br />
@@ -85,7 +87,7 @@ function Home({
         setCart={setCart}
         data={data}
       />
-      <Pagination />
+      <Pagination pages={pages} />
       {/* <p className="topic">Weekly Popular Products</p>
       <Products  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct}  cart={cart} setPage={setPage} setCart={setCart} data={[0, 1, 2, 3].map(i=>data[i])} />
       <br /> */}
