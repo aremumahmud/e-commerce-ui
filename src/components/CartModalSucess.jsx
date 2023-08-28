@@ -4,9 +4,9 @@ import TileAlert from './tileAlert';
 function CartModal({display,data , setViewStatus}) {
   return (
     <div style={{display}} className="modalWrap">
-      <div class="card  animate__animated animate__bounce">
-        <div class="header1">
-          <span class="icon1">
+      <div className="card  animate__animated animate__bounce">
+        <div className="header1">
+          <span className="icon1">
             <svg
               fill="currentColor"
               viewBox="0 0 20 20"
@@ -17,21 +17,21 @@ function CartModal({display,data , setViewStatus}) {
                 fill-rule="evenodd"></path>
             </svg>
           </span>
-          <p class="alert">New message!</p>
+          <p className="alert">New message!</p>
         </div>
 
-        <p class="message">
+        <p className="message">
           The following item has been successfully added to your cart
         </p>
         <br />
         <TileAlert data={data}/>
 
-        {/* <div class="actions1">
-          <a class="read" onClick={()=>setViewStatus('none')}>
+        {/* <div className="actions1">
+          <a className="read" onClick={()=>setViewStatus('none')}>
             close
           </a>
 
-          {/* <a class="mark-as-read" href="/home">
+          {/* <a className="mark-as-read" href="/home">
            Go back
           </a> 
         </div> */}

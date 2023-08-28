@@ -42,11 +42,11 @@ function Home({
     let cart = JSON.parse(localStorage.getItem('cart'))
     if(Object.keys(cart).length === 0 ) return
     let ids = extract_ids(cart)
-    console.log(ids,":ids",cart)
+   // console.log(ids,":ids",cart)
     get_current_version(ids,(err,res)=>{
       if(err){
         //do sth
-        console.log(err)
+       // console.log(err)
         return setTrigger(!trigger)
       }
   
@@ -59,6 +59,24 @@ function Home({
   },[])
 
 let pages = paginate_products(data,6)
+//console.log(pages,":pages")
+let [product_data , setProductData] = useState(pages[0]||[])
+let [active_index, setActiveIndex] = useState(0) 
+let set_data_for_pagination = (index)=>{
+  window.scroll(0,0)
+    if(index > (pages.length-1)){
+      setActiveIndex(0)
+      return setProductData(pages[0])
+    }
+    setActiveIndex(index)
+    setProductData(pages[index])
+  } 
+  useEffect(()=>{
+  
+    let pages = paginate_products(data,6)
+    setProductData(pages[0])
+  },[data])
+  
 //console.log(pages,'hnbnjmn nknh ')
   return (
     <>
@@ -85,9 +103,9 @@ let pages = paginate_products(data,6)
         cart={cart}
         setPage={setPage}
         setCart={setCart}
-        data={data}
+        data={product_data}
       />
-      <Pagination pages={pages} />
+      <Pagination pages={pages} setPage={set_data_for_pagination} activeIndex={active_index} />
       {/* <p className="topic">Weekly Popular Products</p>
       <Products  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct}  cart={cart} setPage={setPage} setCart={setCart} data={[0, 1, 2, 3].map(i=>data[i])} />
       <br /> */}

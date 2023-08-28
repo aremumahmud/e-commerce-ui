@@ -73,11 +73,11 @@ function Main({
     let cart = JSON.parse(localStorage.getItem('cart'))
     if(Object.keys(cart).length === 0 ) return
     let ids = extract_ids(cart)
-    console.log(ids,":ids",cart)
+   // console.log(ids,":ids",cart)
     get_current_version(ids,(err,res)=>{
       if(err){
         //do sth
-        console.log(err)
+       // console.log(err)
         return setTrigger(!trigger)
       }
   
