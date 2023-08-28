@@ -4,6 +4,7 @@ import get_current_version from "../libs/getCurrentVersion";
 import update_cart from "../libs/updateCart";
 import CartItem from "./cartItem";
 import Path from "./path";
+import { useEffect, useState } from "react";
 
 function Cart({ data, setPage, removeFromCart,addFromCart,symbol,removeTotally, symbolTab, currencyTab,setcart}) {
   
