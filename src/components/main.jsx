@@ -94,6 +94,7 @@ function Main({
     });
   }catch(e){
     alert(localStorage.getItem("cart"))
+    localStorage.setItem("cart", JSON.stringify({}));
   }
   }, []);
 
