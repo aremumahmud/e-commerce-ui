@@ -26,7 +26,8 @@ function Home({
   currencyTab,
   symbolTab,
   setCurrency,
-  setcart
+  setcart,
+  setCartno
 }) {
   let [categories, setCategories] = useState([]);
   useEffect(() => {
@@ -37,12 +38,18 @@ function Home({
     
   }, []);
  
+  
+  
   let [trigger , setTrigger] = useState(false)
   useEffect(()=>{
     let cart = JSON.parse(localStorage.getItem('cart'))
-    if(Object.keys(cart).length === 0 ) return
+    if (Object.keys(cart).length === 0) {
+      setCartno(0);
+      localStorage.setItem("no", 0);
+      return;
+    }
     let ids = extract_ids(cart)
-   // console.log(ids,":ids",cart)
+    //console.log(ids,":ids",cart)
     get_current_version(ids,(err,res)=>{
       if(err){
         //do sth
@@ -52,11 +59,14 @@ function Home({
   
       let data = JSON.parse(res).data
       let updatedCart = update_cart(data,cart)
-      setcart(updatedCart)
+      let no = localStorage.getItem("no");
+      setcart(updatedCart);
+      setCartno(no);
       localStorage.setItem('cart', JSON.stringify(updatedCart))
   // console.log(err,res, 'this is ,the thing i want to see')
   })
   },[])
+
 
 let pages = paginate_products(data,6)
 //console.log(pages,":pages")

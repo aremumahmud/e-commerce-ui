@@ -17,9 +17,16 @@ function update_cart(data, cart) {
         let variety_quantity = varieties_sizes[item_size].qty // get the sizen of the variety then the quantity
 
         let quantity = item.quantity_for_cart // get the current quantity for the cart
-        if (variety_quantity === 0) return // if the item is expended delete it from the  cart by not updateing it
+        if (variety_quantity === 0) {
+            let no = localStorage.getItem('no')
+            localStorage.setItem('no', (no - quantity))
+                // alert("Sorry the item '" + item.name + "' size: " + item.size + " is sold out and has been removed from your cart ") // if the item is expended delete it from the  cart by not updateing it
+            return
+        }
         if (quantity > variety_quantity) {
-
+            let diff = quantity - variety_quantity
+            let no = localStorage.getItem('no')
+            localStorage.setItem('no', (no - diff))
             let new_qty = variety_quantity
             item.quantity_for_cart = new_qty // else set the quantity of the item as the variety quantity
                 //  return

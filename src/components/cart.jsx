@@ -6,29 +6,44 @@ import CartItem from "./cartItem";
 import Path from "./path";
 import { useEffect, useState } from "react";
 
-function Cart({ data, setPage, removeFromCart,addFromCart,symbol,removeTotally, symbolTab, currencyTab,setcart}) {
-  
-  let [trigger , setTrigger] = useState(false)
-  useEffect(()=>{
-    let cart = JSON.parse(localStorage.getItem('cart'))
-    if(Object.keys(cart).length === 0 ) return
-    let ids = extract_ids(cart)
+function Cart({
+  data,
+  setPage,
+  removeFromCart,
+  addFromCart,
+  symbol,
+  removeTotally,
+  symbolTab,
+  currencyTab,
+  setcart,
+  setCartno,
+}) {
+  let [trigger, setTrigger] = useState(false);
+  useEffect(() => {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (Object.keys(cart).length === 0) {
+      setCartno(0);
+      localStorage.setItem("no", 0);
+      return;
+    }
+    let ids = extract_ids(cart);
     //console.log(ids,":ids",cart)
-    get_current_version(ids,(err,res)=>{
-      if(err){
+    get_current_version(ids, (err, res) => {
+      if (err) {
         //do sth
-      //  console.log(err)
-        return setTrigger(!trigger)
+        // console.log(err)
+        return setTrigger(!trigger);
       }
-  
-      let data = JSON.parse(res).data
-      let updatedCart = update_cart(data,cart)
-      setcart(updatedCart)
-      localStorage.setItem('cart', JSON.stringify(updatedCart))
-  // console.log(err,res, 'this is ,the thing i want to see')
-  })
-  },[])
 
+      let data = JSON.parse(res).data;
+      let updatedCart = update_cart(data, cart);
+      let no = localStorage.getItem("no");
+      setcart(updatedCart);
+      setCartno(no);
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      // console.log(err,res, 'this is ,the thing i want to see')
+    });
+  }, []);
 
   return (
     <>
@@ -43,19 +58,34 @@ function Cart({ data, setPage, removeFromCart,addFromCart,symbol,removeTotally, 
       <div className="cart">
         <div className="checkCta">
           <p className="topic">Cart</p>
-          <div className="btn" onClick={()=>{
-           
-              Object.keys(data).length !== 0 && setPage('checkout')
-         
-          }}>Proceed to Checkout</div>
+          <div
+            className="btn"
+            onClick={() => {
+              Object.keys(data).length !== 0 && setPage("checkout");
+            }}>
+            Proceed to Checkout
+          </div>
         </div>
 
-        {data && Object.keys(data).map(x=>data[x]).map((d) => <CartItem currencyTab={currencyTab} symbolTab={symbolTab} removeTotally={removeTotally} symbol={symbol} addFromCart={addFromCart} removeFromCart={removeFromCart} info={d}/>)}
-        {
-          Object.keys(data).length === 0 && <div className="empty_space">
+        {data &&
+          Object.keys(data)
+            .map((x) => data[x])
+            .map((d) => (
+              <CartItem
+                currencyTab={currencyTab}
+                symbolTab={symbolTab}
+                removeTotally={removeTotally}
+                symbol={symbol}
+                addFromCart={addFromCart}
+                removeFromCart={removeFromCart}
+                info={d}
+              />
+            ))}
+        {Object.keys(data).length === 0 && (
+          <div className="empty_space">
             <p>No Items In Cart!</p>
           </div>
-        }
+        )}
       </div>
     </>
   );

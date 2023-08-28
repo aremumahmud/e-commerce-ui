@@ -49,7 +49,8 @@ function Main({
   setViewStatus3,
   CartData3,
   setCartData3,
-  setcart
+  setcart,
+  setCartno,
 }) {
   let [product, setProduct] = useState({});
   let navigate = useNavigate();
@@ -61,34 +62,36 @@ function Main({
     }
   };
 
-
   const [symbolTab1, setSymbolTab] = useState({ ...symbolTab });
   const [currencyTab1, setCurrencyTab] = useState({ ...currencyTab });
   const [span, setSpan] = useState(0);
 
-
-  
-  let [trigger , setTrigger] = useState(false)
-  useEffect(()=>{
-    let cart = JSON.parse(localStorage.getItem('cart'))
-    if(Object.keys(cart).length === 0 ) return
-    let ids = extract_ids(cart)
-   // console.log(ids,":ids",cart)
-    get_current_version(ids,(err,res)=>{
-      if(err){
+  let [trigger, setTrigger] = useState(false);
+  useEffect(() => {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (Object.keys(cart).length === 0) {
+      setCartno(0);
+      localStorage.setItem("no", 0);
+      return;
+    }
+    let ids = extract_ids(cart);
+    // console.log(ids,":ids",cart)
+    get_current_version(ids, (err, res) => {
+      if (err) {
         //do sth
-       // console.log(err)
-        return setTrigger(!trigger)
+        // console.log(err)
+        return setTrigger(!trigger);
       }
-  
-      let data = JSON.parse(res).data
-      let updatedCart = update_cart(data,cart)
-      setcart(updatedCart)
-      localStorage.setItem('cart', JSON.stringify(updatedCart))
-  // console.log(err,res, 'this is ,the thing i want to see')
-  })
-  },[])
 
+      let data = JSON.parse(res).data;
+      let updatedCart = update_cart(data, cart);
+      let no = localStorage.getItem("no");
+      setcart(updatedCart);
+      setCartno(no);
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      // console.log(err,res, 'this is ,the thing i want to see')
+    });
+  }, []);
 
   useEffect(() => {
     fetch_exchange((err, res) => {
@@ -187,7 +190,13 @@ function Main({
           page !== "shipping_policy" &&
           page !== "return_policy" && (
             <div className="cont">
-              <TopNav searchLoader={searchLoader} setSearchLoader={setSearchLoader} search={search_prod} cart={cart_no} setPage={setPage} />
+              <TopNav
+                searchLoader={searchLoader}
+                setSearchLoader={setSearchLoader}
+                search={search_prod}
+                cart={cart_no}
+                setPage={setPage}
+              />
             </div>
           )}
 
@@ -208,6 +217,7 @@ function Main({
             setCart={setCart}
             cart={cart}
             setcart={setcart}
+            setCartno={setCartno}
           />
         )}
 
@@ -238,6 +248,7 @@ function Main({
             cart={cart}
             setPage={setPage}
             setcart={setcart}
+            setCartno={setCartno}
           />
         )}
 
@@ -252,6 +263,7 @@ function Main({
             setPage={setPage}
             data={cart}
             setcart={setcart}
+            setCartno={setCartno}
           />
         )}
 

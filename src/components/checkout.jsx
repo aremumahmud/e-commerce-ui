@@ -24,14 +24,21 @@ function Checkout({
   symbolTab,
   currencyTab,
   cart_no,
-  setcart
+  setcart,
+  setCartno
 }) {
 
+
+  (!cart || Object.keys(cart).length === 0) && window.open("/home", "_self");
 
   let [trigger , setTrigger] = useState(false)
   useEffect(()=>{
     let cart = JSON.parse(localStorage.getItem('cart'))
-    if(Object.keys(cart).length === 0 ) return
+    if (Object.keys(cart).length === 0) {
+      setCartno(0);
+      localStorage.setItem("no", 0);
+      return;
+    }
     let ids = extract_ids(cart)
     //console.log(ids,":ids",cart)
     get_current_version(ids,(err,res)=>{
@@ -43,7 +50,9 @@ function Checkout({
   
       let data = JSON.parse(res).data
       let updatedCart = update_cart(data,cart)
-      setcart(updatedCart)
+      let no = localStorage.getItem("no");
+      setcart(updatedCart);
+      setCartno(no);
       localStorage.setItem('cart', JSON.stringify(updatedCart))
   // console.log(err,res, 'this is ,the thing i want to see')
   })

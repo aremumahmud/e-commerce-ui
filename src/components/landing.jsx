@@ -251,6 +251,7 @@ function Landing(props) {
                 CartData3={CartData3}
                 setCartData3={setCartData3}
                 setcart={setcart}
+                setCartno={setCartno}
               />
             </>
           }></Route>
