@@ -5,6 +5,10 @@ import Filter from "./filter";
 import Pagination from "./pagination";
 import Products from "./products";
 import fetch_categories from "../libs/get_category";
+import extract_ids from "../libs/extract_ids";
+import get_current_version from "../libs/getCurrentVersion";
+import update_cart from "../libs/updateCart";
+
 
 function Home({
   setCart,
@@ -21,6 +25,7 @@ function Home({
   currencyTab,
   symbolTab,
   setCurrency,
+  setcart
 }) {
   let [categories, setCategories] = useState([]);
   useEffect(() => {
@@ -28,7 +33,31 @@ function Home({
       if (err) return;
       setCategories(res.data.data);
     });
+    
   }, []);
+ 
+  let [trigger , setTrigger] = useState(false)
+  useEffect(()=>{
+    let cart = JSON.parse(localStorage.getItem('cart'))
+    if(Object.keys(cart).length === 0 ) return
+    let ids = extract_ids(cart)
+    console.log(ids,":ids",cart)
+    get_current_version(ids,(err,res)=>{
+      if(err){
+        //do sth
+        console.log(err)
+        return setTrigger(!trigger)
+      }
+  
+      let data = JSON.parse(res).data
+      let updatedCart = update_cart(data,cart)
+      setcart(updatedCart)
+      localStorage.setItem('cart', JSON.stringify(updatedCart))
+  // console.log(err,res, 'this is ,the thing i want to see')
+  })
+  },[])
+
+
   return (
     <>
       <br />

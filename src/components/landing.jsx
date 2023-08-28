@@ -9,6 +9,7 @@ import Main from "./main";
 import Login from "./login";
 import Authenticate from "../libs/authenticate";
 
+
 function Landing(props) {
   let [cart, setcart] = useState({});
   let [focus, setFocus] = useState({});
@@ -249,6 +250,7 @@ function Landing(props) {
                 setViewStatus3={setViewStatus3}
                 CartData3={CartData3}
                 setCartData3={setCartData3}
+                setcart={setcart}
               />
             </>
           }></Route>

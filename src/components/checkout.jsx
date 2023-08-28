@@ -12,6 +12,9 @@ import fetch_shipment from "../libs/getShipment";
 import countries from "../config/continent";
 import calculateTotal from "../libs/calculateAddShip";
 import calculateWeight from "../libs/calculateWeight";
+import extract_ids from "../libs/extract_ids";
+import get_current_version from "../libs/getCurrentVersion";
+import update_cart from "../libs/updateCart";
 
 function Checkout({
   setCurrency,
@@ -21,7 +24,33 @@ function Checkout({
   symbolTab,
   currencyTab,
   cart_no,
+  setcart
 }) {
+
+
+  let [trigger , setTrigger] = useState(false)
+  useEffect(()=>{
+    let cart = JSON.parse(localStorage.getItem('cart'))
+    if(Object.keys(cart).length === 0 ) return
+    let ids = extract_ids(cart)
+    console.log(ids,":ids",cart)
+    get_current_version(ids,(err,res)=>{
+      if(err){
+        //do sth
+        console.log(err)
+        return setTrigger(!trigger)
+      }
+  
+      let data = JSON.parse(res).data
+      let updatedCart = update_cart(data,cart)
+      setcart(updatedCart)
+      localStorage.setItem('cart', JSON.stringify(updatedCart))
+  // console.log(err,res, 'this is ,the thing i want to see')
+  })
+  },[])
+
+
+
   let [discount_code, setDiscountCode] = useState([]);
   let [user_data, set_user_data] = useState(null);
   let [busy, setBusy] = useState(false);

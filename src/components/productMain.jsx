@@ -27,7 +27,18 @@ function ProductMain({
 }) {
   //console.log(data,'rr')
   //console.log(datar)
+  if((!datar || Object.keys(datar).length === 0) ){
+    let data_from_localstorage = JSON.parse(localStorage.getItem('product_data')) 
+     if( (data_from_localstorage || Object.keys(data_from_localstorage).length !== 0)){
+      datar = data_from_localstorage
+     }else{
+      datar = {}
+     }
+    
+  }
+ 
   (!datar || Object.keys(datar).length === 0) && window.open("/home", "_self");
+  (datar || Object.keys(datar).length !== 0) && localStorage.setItem('product_data',  JSON.stringify(datar))
   //  if(false){
   //   return (!datar || Object.keys(datar).length === 0 )&& setPage('home')
   //  }
@@ -335,7 +346,8 @@ function ProductMain({
                         weight: data.weight,
                         USD: data.USD,
                         GBP: data.GBP,
-                        EUR: data.EUR
+                        EUR: data.EUR,
+                        parent_id:data.parent_id
                       },
                     ],
                     qty,
@@ -349,7 +361,8 @@ function ProductMain({
                       weight: data.weight,
                       USD: data.USD,
                       GBP: data.GBP,
-                      EUR: data.EUR
+                      EUR: data.EUR,
+                      parent_id:data.parent_id
                     }
                   );
                   setPage("checkout");
@@ -377,7 +390,8 @@ style={{
                         weight: data.weight,
                         USD: data.USD,
                         GBP: data.GBP,
-                        EUR: data.EUR
+                        EUR: data.EUR,
+                        parent_id:data.parent_id
                       },
                     ],
                     qty,
@@ -390,7 +404,8 @@ style={{
                       weight: data.weight,
                       USD: data.USD,
                       GBP: data.GBP,
-                      EUR: data.EUR
+                      EUR: data.EUR,
+                      parent_id:data.parent_id
                     }
                   );
                 }}>

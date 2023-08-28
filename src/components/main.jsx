@@ -31,6 +31,9 @@ import SizeChart from "./sizechart";
 import Shipment from "./shipment";
 import Orders from "./orders";
 import process_data from "../libs/process_product_data";
+import extract_ids from "../libs/extract_ids";
+import get_current_version from "../libs/getCurrentVersion";
+import update_cart from "../libs/updateCart";
 
 function Main({
   cart,
@@ -46,6 +49,7 @@ function Main({
   setViewStatus3,
   CartData3,
   setCartData3,
+  setcart
 }) {
   let [product, setProduct] = useState({});
   let navigate = useNavigate();
@@ -56,9 +60,35 @@ function Main({
       // props.history.push('/foo')
     }
   };
+
+
   const [symbolTab1, setSymbolTab] = useState({ ...symbolTab });
   const [currencyTab1, setCurrencyTab] = useState({ ...currencyTab });
   const [span, setSpan] = useState(0);
+
+
+  
+  let [trigger , setTrigger] = useState(false)
+  useEffect(()=>{
+    let cart = JSON.parse(localStorage.getItem('cart'))
+    if(Object.keys(cart).length === 0 ) return
+    let ids = extract_ids(cart)
+    console.log(ids,":ids",cart)
+    get_current_version(ids,(err,res)=>{
+      if(err){
+        //do sth
+        console.log(err)
+        return setTrigger(!trigger)
+      }
+  
+      let data = JSON.parse(res).data
+      let updatedCart = update_cart(data,cart)
+      setcart(updatedCart)
+      localStorage.setItem('cart', JSON.stringify(updatedCart))
+  // console.log(err,res, 'this is ,the thing i want to see')
+  })
+  },[])
+
 
   useEffect(() => {
     fetch_exchange((err, res) => {
@@ -177,6 +207,7 @@ function Main({
             setPage={setPage}
             setCart={setCart}
             cart={cart}
+            setcart={setcart}
           />
         )}
 
@@ -206,6 +237,7 @@ function Main({
             symbol={currency}
             cart={cart}
             setPage={setPage}
+            setcart={setcart}
           />
         )}
 
@@ -219,6 +251,7 @@ function Main({
             removeFromCart={removeFromCart}
             setPage={setPage}
             data={cart}
+            setcart={setcart}
           />
         )}
 

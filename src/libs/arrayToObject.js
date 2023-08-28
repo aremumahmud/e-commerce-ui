@@ -1,8 +1,8 @@
-function arrayToObject(array) {
+function arrayToObject(array, prop = '_id') {
     let arr = [...array]
     let result = {}
     arr.forEach(el => {
-        result[el._id] = el
+        result[el[prop]] = el
     })
 
     return result
