@@ -39,33 +39,36 @@ function Home({
   }, []);
  
   
-  
-  let [trigger , setTrigger] = useState(false)
-  useEffect(()=>{
-    let cart = JSON.parse(localStorage.getItem('cart'))
+  let [trigger, setTrigger] = useState(false);
+  useEffect(() => {
+    try{
+    let cart = JSON.parse(localStorage.getItem("cart"));
     if (Object.keys(cart).length === 0) {
       setCartno(0);
       localStorage.setItem("no", 0);
       return;
     }
-    let ids = extract_ids(cart)
-    //console.log(ids,":ids",cart)
-    get_current_version(ids,(err,res)=>{
-      if(err){
+    let ids = extract_ids(cart);
+    // console.log(ids,":ids",cart)
+    get_current_version(ids, (err, res) => {
+      if (err) {
         //do sth
-       // console.log(err)
-        return setTrigger(!trigger)
+        // console.log(err)
+        return setTrigger(!trigger);
       }
-  
-      let data = JSON.parse(res).data
-      let updatedCart = update_cart(data,cart)
+
+      let data = JSON.parse(res).data;
+      let updatedCart = update_cart(data, cart);
       let no = localStorage.getItem("no");
       setcart(updatedCart);
       setCartno(no);
-      localStorage.setItem('cart', JSON.stringify(updatedCart))
-  // console.log(err,res, 'this is ,the thing i want to see')
-  })
-  },[])
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      // console.log(err,res, 'this is ,the thing i want to see')
+    });
+  }catch(e){
+    alert(e)
+  }
+  }, []);
 
 
 let pages = paginate_products(data,6)

@@ -68,6 +68,7 @@ function Main({
 
   let [trigger, setTrigger] = useState(false);
   useEffect(() => {
+    try{
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (Object.keys(cart).length === 0) {
       setCartno(0);
@@ -91,6 +92,9 @@ function Main({
       localStorage.setItem("cart", JSON.stringify(updatedCart));
       // console.log(err,res, 'this is ,the thing i want to see')
     });
+  }catch(e){
+    alert(e)
+  }
   }, []);
 
   useEffect(() => {

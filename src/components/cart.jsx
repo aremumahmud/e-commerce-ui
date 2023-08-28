@@ -20,6 +20,7 @@ function Cart({
 }) {
   let [trigger, setTrigger] = useState(false);
   useEffect(() => {
+    try{
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (Object.keys(cart).length === 0) {
       setCartno(0);
@@ -27,7 +28,7 @@ function Cart({
       return;
     }
     let ids = extract_ids(cart);
-    //console.log(ids,":ids",cart)
+    // console.log(ids,":ids",cart)
     get_current_version(ids, (err, res) => {
       if (err) {
         //do sth
@@ -43,6 +44,9 @@ function Cart({
       localStorage.setItem("cart", JSON.stringify(updatedCart));
       // console.log(err,res, 'this is ,the thing i want to see')
     });
+  }catch(e){
+    alert(e)
+  }
   }, []);
 
   return (
