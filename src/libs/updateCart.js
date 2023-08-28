@@ -38,7 +38,7 @@ function update_cart(data, cart) {
             let diff = quantity - variety_quantity;
             let no = localStorage.getItem("no");
             localStorage.setItem("no", no - diff);
-            let new_qty = variety_quantity;
+            let new_qty = variety_quantity; //
             item.quantity_for_cart = new_qty; // else set the quantity of the item as the variety quantity
             //  return
         }
