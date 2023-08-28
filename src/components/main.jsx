@@ -93,8 +93,9 @@ function Main({
       // console.log(err,res, 'this is ,the thing i want to see')
     });
   }catch(e){
-    alert(localStorage.getItem("cart"))
+    //alert(localStorage.getItem("cart"))
     localStorage.setItem("cart", JSON.stringify({}));
+    localStorage.setItem("no", 0);
   }
   }, []);
 
