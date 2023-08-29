@@ -66,6 +66,33 @@ let [load1 , setLoad1]= useState(false)
                     }}></input>
                     
                   </p>
+                  <small>Upload Type</small>
+                  <p  className="description">
+                    <select type="number" className='simple_input partition' style={{
+                      borderRadius:'10px'
+                    }} name="" value={prod_data.uploadType} onChange={(e)=>{
+                      let dt = {...prod_data}
+                      dt.uploadType = e.target.value
+                      setData(dt)
+                    }}>
+                      {
+                          prod_data.uploadType === 'default' && <> 
+                          <option value="default">Default</option>
+                          <option value="one_pager">One Pager</option>
+                     
+                          </>
+                      }
+                      {
+                          prod_data.uploadType !== 'default' && <> 
+                          <option value="one_pager">One Pager</option>
+                          <option value="default">Default</option>
+                     
+                          </>
+                      }
+                      
+                    </select>
+                    
+                  </p>
                   <h2>Pricing</h2>
                   <p>
                       <sup>NGN</sup>
