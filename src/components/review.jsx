@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../css/review.css";
 import { nameTab } from "../config/currency";
+import calculate_virtual_discount from "../libs/virtual_discount";
 
 function Review({ cart, symbol, symbolTab, currencyTab }) {
   let [data, setData] = useState(Object.keys(cart).map((x) => cart[x]));
@@ -23,9 +24,9 @@ function Review({ cart, symbol, symbolTab, currencyTab }) {
             Price: {symbol}
             {
               
-                data[index][
+                calculate_virtual_discount(data.virtual_discount,data[index][
                     nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
-                  ].toFixed(2)
+                  ]).toFixed(2)
             }
           </p>
           <p>Quantity: {data[index].quantity_for_cart}</p>

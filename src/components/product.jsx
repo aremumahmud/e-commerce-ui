@@ -68,20 +68,22 @@ function Product({
                   className="medium"
                   style={{ textDecoration: "line-through" }}>
                   {symbol}
-                  {calculate_virtual_discount(
-                    info.virtual_discount || 0,
-                    info[nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]]
-                  ).toFixed(2)}
-                </p>
-              )}
-              {!isNaN(info.price) && (
-                <p style={{ color: "#d01345" }}>
-                  {symbol}
                   {
                     +info[
                       nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
                     ].toFixed(2)
                   }
+                </p>
+              )}
+
+              {!isNaN(info.price) && (
+                <p style={{ color: "#d01345" }}>
+                  {symbol}
+                  {calculate_virtual_discount(
+                    info.virtual_discount || 0,
+                    info[nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]]
+                  ).toFixed(2)}
+                 
                 </p>
               )}
             </div>

@@ -21,7 +21,7 @@ function update_cart(data, cart) {
         let quantity = item.quantity_for_cart; // get the current quantity for the cart
         if (variety_quantity === 0) {
             let no = localStorage.getItem("no");
-            localStorage.setItem("no", no - quantity);
+            localStorage.setItem("no", no == 0 ? 0 : (no - quantity));
             //alert("Sorry the item '" + item.name + "' size: " + item.size + " is sold out and has been removed from your cart ") // if the item is expended delete it from the  cart by not updateing it
             createNotificationWithImage(
                 "Notification from Glitzabelle Label",
@@ -59,3 +59,4 @@ function update_cart(data, cart) {
 }
 
 export default update_cart;
+art;

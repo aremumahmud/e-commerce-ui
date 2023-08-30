@@ -56,11 +56,17 @@ function CartItem({
         <div className="price">
           <p>
             {symbol}
-            {
+            {calculate_virtual_discount(
+                  info.virtual_discount,
+                  info[
+                    nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
+                  ]
+                ).toFixed(2)}
+            {/* {
                +info[
                 nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
               ].toFixed(2)
-            }
+            } */}
           </p>
         </div>
       </div>

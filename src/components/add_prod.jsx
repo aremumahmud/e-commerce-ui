@@ -738,14 +738,14 @@ function AddProd({ setPage }) {
           />
         </label>
 
-        <p>Virtual Discount</p>
+        <p>Virtual Discount (%)</p>
         <label htmlFor="">
           discount
           <input
             onChange={(e) => setDiscount(e.target.value)}
             type="number"
             className="simple_input"
-            placeholder="0kg"
+            placeholder="0%"
           />
         </label>
         <br /><br />

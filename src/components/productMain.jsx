@@ -1,8 +1,5 @@
 import "../css/productMain.css";
-import {
-  AiOutlineCar,
-  AiOutlineDeliveredProcedure,
-} from "react-icons/ai";
+import { AiOutlineCar, AiOutlineDeliveredProcedure } from "react-icons/ai";
 
 import Products from "./products";
 import { useEffect, useState } from "react";
@@ -27,18 +24,23 @@ function ProductMain({
 }) {
   //console.log(data,'rr')
   //console.log(datar)
-  if((!datar || Object.keys(datar).length === 0) ){
-    let data_from_localstorage = JSON.parse(localStorage.getItem('product_data')) 
-     if( (data_from_localstorage || Object.keys(data_from_localstorage).length !== 0)){
-      datar = data_from_localstorage
-     }else{
-      datar = {}
-     }
-    
+  if (!datar || Object.keys(datar).length === 0) {
+    let data_from_localstorage = JSON.parse(
+      localStorage.getItem("product_data")
+    );
+    if (
+      data_from_localstorage ||
+      Object.keys(data_from_localstorage).length !== 0
+    ) {
+      datar = data_from_localstorage;
+    } else {
+      datar = {};
+    }
   }
- 
+
   (!datar || Object.keys(datar).length === 0) && window.open("/home", "_self");
-  (datar || Object.keys(datar).length !== 0) && localStorage.setItem('product_data',  JSON.stringify(datar))
+  (datar || Object.keys(datar).length !== 0) &&
+    localStorage.setItem("product_data", JSON.stringify(datar));
   //  if(false){
   //   return (!datar || Object.keys(datar).length === 0 )&& setPage('home')
   //  }
@@ -72,200 +74,215 @@ function ProductMain({
           <div className="mainDisplay">
             <img src={currMain} alt="" />
           </div>
-          <div className="varietyDisplay" style={data.varieties.length !== 4  ?{
-            justifyContent:data.varieties.length === 4 ? 'space-between':'center',
-            gap:'2%'
-          }:{}}>
-            { data.varieties.length > 1 &&<div
-              className="variety"
-              onClick={() => {
-                window.scrollTo(0, 0);
-                setMain(data.varieties[0].image);
-                setData({
-                  ...data,
-                  varieties: data.varieties,
-                  sizes: data.varieties[0].sizes,
-                  _id: data.varieties[0].id,
-                  image: data.varieties[0].image,
-                });
-                
-              }}>
-              {" "}
-              <img src={data.varieties[0].image} alt="" />
-            </div>}
-            
-            { data.varieties[1] &&<div
-              className="variety"
-              onClick={() => {
-                window.scrollTo(0, 0);
+          <div
+            className="varietyDisplay"
+            style={
+              data.varieties.length !== 4
+                ? {
+                    justifyContent:
+                      data.varieties.length === 4 ? "space-between" : "center",
+                    gap: "2%",
+                  }
+                : {}
+            }>
+            {data.varieties.length > 1 && (
+              <div
+                className="variety"
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  setMain(data.varieties[0].image);
+                  setData({
+                    ...data,
+                    varieties: data.varieties,
+                    sizes: data.varieties[0].sizes,
+                    _id: data.varieties[0].id,
+                    image: data.varieties[0].image,
+                  });
+                }}>
+                {" "}
+                <img src={data.varieties[0].image} alt="" />
+              </div>
+            )}
 
-                if(data.uploadType !== 'default'){
-                  return setMain(
+            {data.varieties[1] && (
+              <div
+                className="variety"
+                onClick={() => {
+                  window.scrollTo(0, 0);
+
+                  if (data.uploadType !== "default") {
+                    return setMain(
+                      data.varieties[1]
+                        ? data.varieties[1].image
+                        : data.varieties[0].image
+                    );
+                  }
+
+                  setMain(
                     data.varieties[1]
                       ? data.varieties[1].image
                       : data.varieties[0].image
                   );
-                }
-             
-                setMain(
-                  data.varieties[1]
-                    ? data.varieties[1].image
-                    : data.varieties[0].image
-                );
-                setData({
-                  ...data,
-                  sizes: data.varieties[1]
-                    ? data.varieties[1].sizes
-                    : data.varieties[0].sizes,
-                  varieties: data.varieties,
-                  _id: data.varieties[1]
-                    ? data.varieties[1].id
-                    : data.varieties[0].id,
-                  image: data.varieties[1]
-                    ? data.varieties[1].image
-                    : data.varieties[0].image,
-                });
-              
-              }}>
-             
-              <img
-                src={
-                  data.varieties[1]
-                    ? data.varieties[1].image
-                    : data.varieties[0].image
-                }
-                alt=""
-              />
-            </div> }
-            { data.varieties[2] &&<div
-              className="variety"
-              onClick={() => {
-                window.scrollTo(0, 0);
+                  setData({
+                    ...data,
+                    sizes: data.varieties[1]
+                      ? data.varieties[1].sizes
+                      : data.varieties[0].sizes,
+                    varieties: data.varieties,
+                    _id: data.varieties[1]
+                      ? data.varieties[1].id
+                      : data.varieties[0].id,
+                    image: data.varieties[1]
+                      ? data.varieties[1].image
+                      : data.varieties[0].image,
+                  });
+                }}>
+                <img
+                  src={
+                    data.varieties[1]
+                      ? data.varieties[1].image
+                      : data.varieties[0].image
+                  }
+                  alt=""
+                />
+              </div>
+            )}
+            {data.varieties[2] && (
+              <div
+                className="variety"
+                onClick={() => {
+                  window.scrollTo(0, 0);
 
-                if(data.uploadType !== 'default'){
-                return setMain(
-                  data.varieties[2]
-                    ? data.varieties[2].image
-                    : data.varieties[0].image
-                );
-              }
-              setMain(
-                data.varieties[2]
-                  ? data.varieties[2].image
-                  : data.varieties[0].image
-              );
-                setData({
-                  ...data,
-                  varieties: data.varieties,
-                  sizes: data.varieties[2]
-                    ? data.varieties[2].sizes
-                    : data.varieties[0].sizes,
-                  _id: data.varieties[2]
-                    ? data.varieties[2].id
-                    : data.varieties[0].id,
-                  image: data.varieties[2]
-                    ? data.varieties[2].image
-                    : data.varieties[0].image,
-                });
-              }}>
-              {" "}
-              <img
-                src={
-                  data.varieties[2]
-                    ? data.varieties[2].image
-                    : data.varieties[0].image
-                }
-                alt=""
-              />
-            </div>}
-            { data.varieties[3]&& <div
-              className="variety"
-              onClick={() => {
-                window.scrollTo(0, 0);
+                  if (data.uploadType !== "default") {
+                    return setMain(
+                      data.varieties[2]
+                        ? data.varieties[2].image
+                        : data.varieties[0].image
+                    );
+                  }
+                  setMain(
+                    data.varieties[2]
+                      ? data.varieties[2].image
+                      : data.varieties[0].image
+                  );
+                  setData({
+                    ...data,
+                    varieties: data.varieties,
+                    sizes: data.varieties[2]
+                      ? data.varieties[2].sizes
+                      : data.varieties[0].sizes,
+                    _id: data.varieties[2]
+                      ? data.varieties[2].id
+                      : data.varieties[0].id,
+                    image: data.varieties[2]
+                      ? data.varieties[2].image
+                      : data.varieties[0].image,
+                  });
+                }}>
+                {" "}
+                <img
+                  src={
+                    data.varieties[2]
+                      ? data.varieties[2].image
+                      : data.varieties[0].image
+                  }
+                  alt=""
+                />
+              </div>
+            )}
+            {data.varieties[3] && (
+              <div
+                className="variety"
+                onClick={() => {
+                  window.scrollTo(0, 0);
 
-                if(data.uploadType !== 'default'){
-                return setMain(
-                  data.varieties[3]
-                    ? data.varieties[3].image
-                    : data.varieties[0].image
-                );}
-                setMain(
-                  data.varieties[3]
-                    ? data.varieties[3].image
-                    : data.varieties[0].image
-                );
-                setData({
-                  ...data,
-                  sizes: data.varieties[3]
-                    ? data.varieties[3].sizes
-                    : data.varieties[0].sizes,
-                  varieties: data.varieties,
-                  _id: data.varieties[3]
-                    ? data.varieties[3].id
-                    : data.varieties[0].id,
-                  image: data.varieties[3]
-                    ? data.varieties[3].image
-                    : data.varieties[0].image,
-                });
-              }}>
-              {" "}
-              <img
-                src={
-                  data.varieties[3]
-                    ? data.varieties[3].image
-                    : data.varieties[0].image
-                }
-                alt=""
-              />
-            </div>}
-           
+                  if (data.uploadType !== "default") {
+                    return setMain(
+                      data.varieties[3]
+                        ? data.varieties[3].image
+                        : data.varieties[0].image
+                    );
+                  }
+                  setMain(
+                    data.varieties[3]
+                      ? data.varieties[3].image
+                      : data.varieties[0].image
+                  );
+                  setData({
+                    ...data,
+                    sizes: data.varieties[3]
+                      ? data.varieties[3].sizes
+                      : data.varieties[0].sizes,
+                    varieties: data.varieties,
+                    _id: data.varieties[3]
+                      ? data.varieties[3].id
+                      : data.varieties[0].id,
+                    image: data.varieties[3]
+                      ? data.varieties[3].image
+                      : data.varieties[0].image,
+                  });
+                }}>
+                {" "}
+                <img
+                  src={
+                    data.varieties[3]
+                      ? data.varieties[3].image
+                      : data.varieties[0].image
+                  }
+                  alt=""
+                />
+              </div>
+            )}
           </div>
         </div>
         <div className="stockInfo">
           <div className="top">
             <p className="title">{data.name}</p>
             <br />
-            <div className="prices" style={{display:'flex',gap:'5px'}}>
-            {/* <p className="subTitle">Buy and adore with unlimited guarantee</p> */}
-            <p className="descrpTitle medium" style={{textDecoration:'line-through'}}>
-              {symbol}
-              {console.log(data[
-                  nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
-                ])}
-              {
-                calculate_virtual_discount(data.virtual_discount,data[
-                  nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
-                ]).toFixed(2)
-              }
-             
-            </p> 
-            {/* <sup>-30%</sup> */}
-            <p className="descrpTitle" style={{color:'#d01345'}}>
-              {symbol}
-              {
-                +data[
-                  nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
-                ].toFixed(2)
-              }
-              
-            </p>
-            
-          </div>
-<br />
-            <div className="description">{
-              data.description.split('\n').map(x=>{
-                let isList = x.search('•') > -1
-               // console.log(isList)
-                return x&&<>{
-                  isList?<> 
-                          {x}<br/>
-                        </>: <p className="instructions">{x}</p> 
-                }</>
-              })
-            }
-                  {/* <p >{data.description}</p> */}
+            <div className="prices" style={{ display: "flex", gap: "5px" }}>
+              {/* <p className="subTitle">Buy and adore with unlimited guarantee</p> */}
+              <p
+                className="descrpTitle medium"
+                style={{ textDecoration: "line-through" }}>
+                {symbol}
+                {
+                  +data[
+                    nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
+                  ].toFixed(2)
+                }
+              </p>
+              {/* <sup>-30%</sup> */}
+              <p className="descrpTitle" style={{ color: "#d01345" }}>
+                {symbol}
+                {calculate_virtual_discount(
+                  data.virtual_discount,
+                  data[nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]]
+                ).toFixed(2)}
+              </p>
             </div>
-            
+            <br />
+            <div className="description">
+              {data.description.split("\n").map((x) => {
+                let isList = x.search("•") > -1;
+                // console.log(isList)
+                return (
+                  x && (
+                    <>
+                      {isList ? (
+                        <>
+                          {x}
+                          <br />
+                        </>
+                      ) : (
+                        <p className="instructions">{x}</p>
+                      )}
+                    </>
+                  )
+                );
+              })}
+              {/* <p >{data.description}</p> */}
+            </div>
+
             {/* <div className="rating">
               <ul>
                 <li>
@@ -288,7 +305,6 @@ function ProductMain({
             </div> */}
           </div>
 
-          
           {/* <div className="chooseColor">
             <p className="subTitle">Choose Color </p>
             <div className="colorWrap">
@@ -316,21 +332,25 @@ function ProductMain({
           </div>
           <br />
           <div>
-          <p className='reeky'> Weight</p> <p className="descrpTitle">
-            {data.weight.toFixed(2)}kg         
-             </p>
+            <p className="reeky"> Weight</p>{" "}
+            <p className="descrpTitle">{data.weight.toFixed(1)}kg</p>
           </div>
-            
-          <Sizes setViewStatus={setViewStatus2} setOutOfStock={setOutOfStock} setSize={setSize} data={data} />
+
+          <Sizes
+            setViewStatus={setViewStatus2}
+            setOutOfStock={setOutOfStock}
+            setSize={setSize}
+            data={data}
+          />
           {outOfStock ? (
             <div class="out_of_stock">out of stock</div>
           ) : (
             <div className="ctas">
               <div
                 style={{
-                  display:"flex",
-                  alignItems:"center",
-                  justifyContents:"center"
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContents: "center",
                 }}
                 className="btn active"
                 onClick={() => {
@@ -347,7 +367,8 @@ function ProductMain({
                         USD: data.USD,
                         GBP: data.GBP,
                         EUR: data.EUR,
-                        parent_id:data.parent_id
+                        parent_id: data.parent_id,
+                        virtual_discount: data.virtual_discount
                       },
                     ],
                     qty,
@@ -362,7 +383,9 @@ function ProductMain({
                       USD: data.USD,
                       GBP: data.GBP,
                       EUR: data.EUR,
-                      parent_id:data.parent_id
+                      parent_id: data.parent_id,
+                      virtual_discount: data.virtual_discount
+                      
                     }
                   );
                   setPage("checkout");
@@ -370,12 +393,11 @@ function ProductMain({
                 Buy now
               </div>
               <div
-style={{
-                  display:"flex",
-                  alignItems:"center",
-                  justifyContents:"center"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContents: "center",
                 }}
-
                 className="btn"
                 onClick={() => {
                   setCart(
@@ -391,7 +413,9 @@ style={{
                         USD: data.USD,
                         GBP: data.GBP,
                         EUR: data.EUR,
-                        parent_id:data.parent_id
+                        parent_id: data.parent_id,
+                        virtual_discount: data.virtual_discount
+
                       },
                     ],
                     qty,
@@ -405,7 +429,8 @@ style={{
                       USD: data.USD,
                       GBP: data.GBP,
                       EUR: data.EUR,
-                      parent_id:data.parent_id
+                      parent_id: data.parent_id,
+                      virtual_discount: data.virtual_discount
                     }
                   );
                 }}>
@@ -427,12 +452,14 @@ style={{
                 style={{
                   fontSize: "small",
                 }}>
-                Check out our {" "}
-                <a  style={{
-                  color:'blue',
-                  textDecoration:'underline',
-                  fontSize:'small !important'
-                }} onClick={()=>setPage("shipping_policy")}>
+                Check out our{" "}
+                <a
+                  style={{
+                    color: "blue",
+                    textDecoration: "underline",
+                    fontSize: "small !important",
+                  }}
+                  onClick={() => setPage("shipping_policy")}>
                   shipping policy
                 </a>{" "}
               </p>
@@ -453,12 +480,14 @@ style={{
                 style={{
                   fontSize: "small ",
                 }}>
-                Check out our {" "}
-                <a style={{
-                  color:'blue',
-                  textDecoration:'underline',
-                  fontSize:'small !important'
-                }} onClick={()=>setPage("return_policy")}>
+                Check out our{" "}
+                <a
+                  style={{
+                    color: "blue",
+                    textDecoration: "underline",
+                    fontSize: "small !important",
+                  }}
+                  onClick={() => setPage("return_policy")}>
                   return policy
                 </a>{" "}
               </p>
@@ -472,9 +501,7 @@ style={{
             <Specs />
         </div> */}
         {/* <br /><br /> */}
-        <p className="topic">
-          Similar Items You Might Like
-        </p>
+        <p className="topic">Similar Items You Might Like</p>
         <Products
           setMain={setMain}
           setProduct={setData}
