@@ -58,7 +58,8 @@ function Checkout({
       // console.log(err,res, 'this is ,the thing i want to see')
     });
   }catch(e){
-    alert(e)
+    //alert(e)
+    
   }
   }, []);
 
