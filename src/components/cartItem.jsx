@@ -1,6 +1,7 @@
 import { AiOutlineDelete } from "react-icons/ai";
 import "../css/cartItem.css";
 import { nameTab } from "../config/currency";
+import calculate_virtual_discount from "../libs/virtual_discount";
 //import currencyTab, { symbolTab } from "../config/currency";
 
 function CartItem({

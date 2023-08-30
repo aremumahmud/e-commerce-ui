@@ -59,4 +59,3 @@ function update_cart(data, cart) {
 }
 
 export default update_cart;
-art;

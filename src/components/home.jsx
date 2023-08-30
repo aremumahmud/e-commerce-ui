@@ -72,22 +72,22 @@ function Home({
 
 
 let pages = paginate_products(data,6)
-//console.log(pages,":pages")
+console.log(pages,":pages")
 let [product_data , setProductData] = useState(pages[0]||[])
 let [active_index, setActiveIndex] = useState(0) 
 let set_data_for_pagination = (index)=>{
   window.scroll(0,0)
     if(index > (pages.length-1)){
       setActiveIndex(0)
-      return setProductData(pages[0])
+      return setProductData(pages[0]||[])
     }
     setActiveIndex(index)
-    setProductData(pages[index])
+    setProductData(pages[index]||[])
   } 
   useEffect(()=>{
   
     let pages = paginate_products(data,6)
-    setProductData(pages[0])
+    setProductData(pages[0]||[])
   },[data])
   
 //console.log(pages,'hnbnjmn nknh ')

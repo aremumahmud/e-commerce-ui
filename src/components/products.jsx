@@ -5,6 +5,7 @@ function Products({setMain,data,setCart , setPage,cart, setProduct, symbol, setV
   
   return (
     <div className="products">
+    
       {
       
         data.length ? data.filter(x=>{
