@@ -49,8 +49,9 @@ function Checkout({
         return setTrigger(!trigger);
       }
 
-      let data = JSON.parse(res).data;
-      let updatedCart = update_cart(data, cart);
+      let datan = JSON.parse(res).data;
+      // console.log(datan,'jnk,m ,',JSON.parse(res))
+       let updatedCart = update_cart(datan, cart);
       let no = localStorage.getItem("no");
       setcart(updatedCart);
       setCartno(no);
