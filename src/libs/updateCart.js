@@ -7,7 +7,9 @@ function update_cart(data, cart) {
     let updated_versions = arrayToObject(data); // convert the array in to an object of keys = _id
     let keys = Object.keys(cart);
     // console.log(data, cart)
+    let test = 0
     keys.forEach((key) => {
+        test++
         let item = cart[key];
         let item_size = item.size; // get the item size
         let parent_id = item.parent_id; // get its parent id
@@ -57,7 +59,7 @@ function update_cart(data, cart) {
         //  console.log(new_version)
         updated[key] = new_version; // using the initial key update the 'updated 'objetc
     });
-
+    console.log(test)
     return updated;
 }
 
