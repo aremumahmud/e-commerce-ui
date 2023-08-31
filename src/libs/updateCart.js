@@ -3,7 +3,7 @@ import createNotificationWithImage from "./create_notification";
 
 function update_cart(data, cart) {
     // let data = dta.data
-    console.log(data)
+    console.log(data.data)
     let updated = {};
     let updated_versions = arrayToObject(data); // convert the array in to an object of keys = _id
     let keys = Object.keys(cart);
