@@ -6,6 +6,7 @@ import calculate_virtual_discount from "../libs/virtual_discount";
 function Review({ cart, symbol, symbolTab, currencyTab }) {
   let [data, setData] = useState(Object.keys(cart).map((x) => cart[x]));
   let [index, setIndex] = useState(0);
+  console.log(data)
   return (
     <div className="review">
       <p className="topic">
@@ -23,8 +24,8 @@ function Review({ cart, symbol, symbolTab, currencyTab }) {
           <p>
             Price: {symbol}
             {
-              
-                calculate_virtual_discount(data.virtual_discount,data[index][
+             
+                calculate_virtual_discount(data[index].virtual_discount,data[index][
                     nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
                   ]).toFixed(2)
             }

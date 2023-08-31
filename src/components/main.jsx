@@ -94,6 +94,7 @@ function Main({
     });
   }catch(e){
     //alert(localStorage.getItem("cart"))
+    console.log(e,'error')
     localStorage.setItem("cart", JSON.stringify({}));
     localStorage.setItem("no", 0);
   }

@@ -2,6 +2,7 @@ import arrayToObject from "./arrayToObject";
 import createNotificationWithImage from "./create_notification";
 
 function update_cart(data, cart) {
+    console.log(data)
     let updated = {};
     let updated_versions = arrayToObject(data); // convert the array in to an object of keys = _id
     let keys = Object.keys(cart);
@@ -35,6 +36,7 @@ function update_cart(data, cart) {
             return;
         }
         if (quantity > variety_quantity) {
+            alert(quantity, variety_quantity, localStorage.getItem("no"))
             let diff = quantity - variety_quantity;
             let no = localStorage.getItem("no");
             localStorage.setItem("no", no - diff);
