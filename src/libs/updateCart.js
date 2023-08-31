@@ -2,20 +2,19 @@ import arrayToObject from "./arrayToObject";
 import createNotificationWithImage from "./create_notification";
 
 function update_cart(data, cart) {
-    console.log(data)
+    //console.log(data)
     let updated = {};
     let updated_versions = arrayToObject(data); // convert the array in to an object of keys = _id
     let keys = Object.keys(cart);
     // console.log(data, cart)
-    let test = 0
+    // let test = 0
     keys.forEach((key) => {
-        test++
+
         let item = cart[key];
         let item_size = item.size; // get the item size
         let parent_id = item.parent_id; // get its parent id
         let to_update_item_object = updated_versions[parent_id]; // get the updated version using its parent id
-        console.log('to_u', to_update_item_object)
-        console.log(item, updated_versions)
+        if (!to_update_item_object) return //fuck me!
         let variety = arrayToObject(to_update_item_object.varieties)[item._id]
             .sizes; //convert the varieties and then with items id gets the sizes of the item
         let varieties_sizes = arrayToObject(variety, "size"); // convert the array in to an object of keys = size
@@ -59,7 +58,7 @@ function update_cart(data, cart) {
         //  console.log(new_version)
         updated[key] = new_version; // using the initial key update the 'updated 'objetc
     });
-    console.log(test)
+
     return updated;
 }
 
