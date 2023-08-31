@@ -84,7 +84,7 @@ function Main({
         return setTrigger(!trigger);
       }
 
-      let updatedCart = update_cart( JSON.parse(res).data, cart);
+      let updatedCart = update_cart( JSON.parse(res), cart);
       let no = localStorage.getItem("no");
       setcart(updatedCart);
       setCartno(no);

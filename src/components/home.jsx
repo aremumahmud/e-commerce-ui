@@ -59,7 +59,7 @@ function Home({
 
       //let datan = JSON.parse(res).data;
      // console.log(datan,'jnk,m ,',JSON.parse(res))
-     let updatedCart = update_cart( JSON.parse(res).data, cart);
+     let updatedCart = update_cart( JSON.parse(res), cart);
       let no = localStorage.getItem("no");
       setcart(updatedCart);
       setCartno(no);
