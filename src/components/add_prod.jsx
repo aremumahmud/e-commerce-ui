@@ -769,7 +769,7 @@ function AddProd({ setPage }) {
             onChange={(e) => setUSD(e.target.value)}
             type="number"
             className="simple_input"
-            placeholder="0kg"
+            placeholder="0.00"
           />
         </label>
         <p>GBP Price</p>
@@ -779,7 +779,7 @@ function AddProd({ setPage }) {
             onChange={(e) => setGBP(e.target.value)}
             type="number"
             className="simple_input"
-            placeholder="0kg"
+            placeholder="0.00"
           />
         </label>
         <p>EUR Price</p>
@@ -789,7 +789,7 @@ function AddProd({ setPage }) {
             onChange={(e) => setEUR(e.target.value)}
             type="number"
             className="simple_input"
-            placeholder="0kg"
+            placeholder="0.00"
           />
         </label>
         {/* <p>Inventory</p>
