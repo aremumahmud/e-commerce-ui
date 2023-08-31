@@ -154,7 +154,7 @@ function Main({
       });
   }, [filter]);
   useEffect(() => {
-    load1 &&
+    if( load1 && navigator.onLine){
       getUserIP().then((res) => {
         // res = 'USD'
         let data2 = changeCurrency(data, "NGN", currencyTab1);
@@ -167,7 +167,12 @@ function Main({
         setCurrency(currencyTab1[res].symbol);
         // setCurrency('$')
         setLoad1(false);
+      }).catch(err=>{
+        setLoad1(false);
       });
+    }
+   
+      
   }, [data]);
   return (
     <>
