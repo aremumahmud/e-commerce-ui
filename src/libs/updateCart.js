@@ -1,9 +1,9 @@
 import arrayToObject from "./arrayToObject";
 import createNotificationWithImage from "./create_notification";
 
-function update_cart(data, cart) {
-    // let data = dta.data
-    console.log(data.data)
+function update_cart(dta, cart) {
+    let data = dta.data
+        //console.log(data.data)
     let updated = {};
     let updated_versions = arrayToObject(data); // convert the array in to an object of keys = _id
     let keys = Object.keys(cart);
@@ -16,6 +16,20 @@ function update_cart(data, cart) {
         let parent_id = item.parent_id; // get its parent id
         let to_update_item_object = updated_versions[parent_id]; // get the updated version using its parent id
         if (!to_update_item_object) {
+            let no = localStorage.getItem("no");
+            localStorage.setItem("no", no == 0 ? 0 : (no - item.quantity_for_cart));
+            createNotificationWithImage(
+                "Notification from Glitzabelle Label",
+                "Sorry the item '" +
+                item.name +
+                "' size: " +
+                item.size +
+                " is sold out and has been removed from your cart ",
+                item.image
+            );
+            return
+        }
+        if (to_update_item_object.varieties.length == 0) {
             let no = localStorage.getItem("no");
             localStorage.setItem("no", no == 0 ? 0 : (no - item.quantity_for_cart));
             createNotificationWithImage(
