@@ -1,7 +1,8 @@
 import arrayToObject from "./arrayToObject";
 import createNotificationWithImage from "./create_notification";
 
-function update_cart(data, cart) {
+function update_cart(dta, cart) {
+    let data = dta.data
     console.log(data)
     let updated = {};
     let updated_versions = arrayToObject(data); // convert the array in to an object of keys = _id
