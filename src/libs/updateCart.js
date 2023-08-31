@@ -14,7 +14,20 @@ function update_cart(data, cart) {
         let item_size = item.size; // get the item size
         let parent_id = item.parent_id; // get its parent id
         let to_update_item_object = updated_versions[parent_id]; // get the updated version using its parent id
-        if (!to_update_item_object) return //fuck me!
+        if (!to_update_item_object) {
+            let no = localStorage.getItem("no");
+            localStorage.setItem("no", no == 0 ? 0 : (no - item.quantity_for_cart));
+            createNotificationWithImage(
+                "Notification from Glitzabelle Label",
+                "Sorry the item '" +
+                item.name +
+                "' size: " +
+                item.size +
+                " is sold out and has been removed from your cart ",
+                item.image
+            );
+            return
+        } //fuck me!
         let variety = arrayToObject(to_update_item_object.varieties)[item._id]
             .sizes; //convert the varieties and then with items id gets the sizes of the item
         let varieties_sizes = arrayToObject(variety, "size"); // convert the array in to an object of keys = size
