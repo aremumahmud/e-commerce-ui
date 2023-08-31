@@ -35,8 +35,9 @@ function Cart({
         // console.log(err)
         return setTrigger(!trigger);
       }
-console.log(res,'jnk,m ,')
+
       let data = JSON.parse(res).data;
+      console.log(data,'jnk,m ,',JSON.parse(res))
       let updatedCart = update_cart(data, cart);
       let no = localStorage.getItem("no");
       setcart(updatedCart);
