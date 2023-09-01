@@ -5,6 +5,7 @@ import { useState } from "react";
 import arrayToObject from "../libs/arraytoObj_sizebased";
 import calculate_virtual_discount from "../libs/virtual_discount";
 import { nameTab } from "../config/currency";
+import convertCloudinaryURL from "../libs/convert_to_medium_quality";
 
 function Product({
   setMain,
@@ -42,7 +43,7 @@ function Product({
             //  window.scroll(0,0)
             setPage("product");
             setProduct(info);
-            setMain && setMain(info.image || info.mainImage);
+            setMain && setMain(convertCloudinaryURL(info.image || info.mainImage));
           }}>
           <div className="heart" style={{ padding: "10px" }}>
             <p style={{ color: "#d01345", fontSize: "small", padding: "5px" }}>
@@ -51,7 +52,7 @@ function Product({
             {/* <AiOutlineHeart /> */}
           </div>
           {}
-          <img src={info.image || info.mainImage} alt="" />
+          <img src={convertCloudinaryURL(info.image || info.mainImage) } alt="" />
         </div>
         <div className="productInfo">
           <div
