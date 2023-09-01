@@ -3,6 +3,7 @@ import "../css/products.css";
 import { useState } from "react";
 import modify_product from "../libs/modify_product";
 import delete_product from "../libs/delete_product";
+import convertCloudinaryURL from "../libs/convert_to_medium_quality";
 
 function Product({ data, parent }) {
   let [load, setLoad] = useState(false);
@@ -16,7 +17,7 @@ function Product({ data, parent }) {
             <AiOutlineHeart />
           </div>
           {}
-          <img src={prod_data.image} alt="" />
+          <img src={convertCloudinaryURL(prod_data.image) } alt="" />
         </div>
         {
          prod_data.sizes.length && <>
