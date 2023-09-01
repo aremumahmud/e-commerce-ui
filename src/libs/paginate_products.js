@@ -1,4 +1,11 @@
-function paginate_products(products, n) {
+function paginate_products(product_data, n) {
+
+    let products = product_data.reverse()
+
+    if (!products) {
+        return []
+    }
+
     products = products.filter(x => x.mode !== 'servant')
     const subarrays = [];
 

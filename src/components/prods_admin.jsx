@@ -55,6 +55,23 @@ function Product({ data, parent }) {
                     setData(dt);
                   }}></textarea>
               </p>
+
+              <small>Category</small>
+              <p className="description">
+                <input
+                  className="simple_input partition"
+                  style={{
+                    borderRadius: "10px",
+                  }}
+                  name=""
+                  value={prod_data.category}
+                  onChange={(e) => {
+                    let dt = { ...prod_data };
+                    dt.category = e.target.value;
+                    setData(dt);
+                  }}></input>
+              </p>
+
               <small>weight (kgs)</small>
               <p className="description">
                 <input
