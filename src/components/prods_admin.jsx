@@ -34,6 +34,7 @@ function Product({ data, parent }) {
                   onChange={(e) => {
                     let dt = { ...prod_data };
                     dt.parentProduct = e.target.value;
+                    dt.name = e.target.value
                     setData(dt);
                   }}
                 />

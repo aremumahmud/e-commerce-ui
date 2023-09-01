@@ -89,9 +89,10 @@ let set_data_for_pagination = (index)=>{
   
     let pages = paginate_products([...data],6)
     setProductData(pages[0]||[])
+    console.log(data,'jhjk,n')
   },[data])
   
-//console.log(pages,'hnbnjmn nknh ')
+console.log('hnbnjmn nknh ',product_data)
   return (
     <>
       <br />
