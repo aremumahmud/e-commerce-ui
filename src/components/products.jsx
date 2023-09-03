@@ -4,7 +4,7 @@ import Product from "./product";
 function Products({setMain,data,setCart , setPage,cart, setProduct, symbol, setViewStatus3, setCartData3, currencyTab,symbolTab}) {
   
   return (
-    <div className="products">
+    <div className="products" style={data.length?{}:{ gridTemplateColumns: '100%'}}>
     
       {
       
