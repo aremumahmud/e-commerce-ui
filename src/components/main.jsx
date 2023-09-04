@@ -66,39 +66,7 @@ function Main({
   const [currencyTab1, setCurrencyTab] = useState({ ...currencyTab });
   const [span, setSpan] = useState(0);
 
-  let [trigger, setTrigger] = useState(false);
-  useEffect(() => {
-    try{
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    if (Object.keys(cart).length === 0) {
-      setCartno(0);
-      localStorage.setItem("no", 0);
-      return;
-    }
-    let ids = extract_ids(cart);
-    // console.log(ids,":ids",cart)
-    get_current_version(ids, (err, res) => {
-      if (err) {
-        //do sth
-        // console.log(err)
-        return setTrigger(!trigger);
-      }
-
-      let updatedCart = update_cart( JSON.parse(res), cart);
-      let no = localStorage.getItem("no");
-      setcart(updatedCart);
-      setCartno(no);
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-      // console.log(err,res, 'this is ,the thing i want to see')
-    });
-  }catch(e){
-    //alert(localStorage.getItem("cart"))
-    console.log(e,'error')
-    localStorage.setItem("cart", JSON.stringify({}));
-    localStorage.setItem("no", 0);
-  }
-  }, []);
-
+ 
   useEffect(() => {
     fetch_exchange((err, res) => {
       if (err) return setSpan((prevSpan) => prevSpan + 1);
@@ -118,6 +86,53 @@ function Main({
   let [currency, setCurrency] = useState("₦");
   const { paged } = useParams();
   setPage1(paged || "home");
+ 
+  // if(paged === 'success'){
+  //   cleanCart()
+  // }
+
+  let [trigger, setTrigger] = useState(false);
+  useEffect(() => {
+    try{
+      alert(paged)
+    if(paged === "success") {
+      alert('hel')
+       localStorage.setItem('cart','{}')
+      localStorage.setItem('no',0)
+      return cleanCart()
+    }
+
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (Object.keys(cart).length === 0) {
+      setCartno(0);
+      localStorage.setItem("no", 0);
+      return;
+    }
+    let ids = extract_ids(cart);
+    // console.log(ids,":ids",cart)
+    get_current_version(ids, (err, res) => {
+      if (err) {
+        //do sth
+        // console.log(err)
+        return setTrigger(!trigger);
+      }
+
+      let updatedCart = update_cart( JSON.parse(res), JSON.parse(localStorage.getItem("cart")));
+      let no = localStorage.getItem("no");
+      setcart(updatedCart);
+      setCartno(no);
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      // console.log(err,res, 'this is ,the thing i want to see')
+    });
+  }catch(e){
+    //alert(localStorage.getItem("cart"))
+    console.log(e,'error')
+    localStorage.setItem("cart", JSON.stringify({}));
+    localStorage.setItem("no", 0);
+  }
+  }, []);
+
+
 
   let [ViewData, setViewData] = useState({});
   let [ViewStatus, setViewStatus] = useState("none");

@@ -1,12 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Path from "./path";
 import Payment from "./payment";
 
 function PaymentSucesss({setPage , cleanCart}){
-    useEffect(()=>{
-      localStorage.removeItem('cart')
+    
+      localStorage.setItem('cart','{}')
+      localStorage.setItem('no',0)
       cleanCart()
-    },[])
+   
     return (
         <>
          <Path
