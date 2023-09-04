@@ -26,7 +26,7 @@ function CartItem({
           </div>
           <div className="productInfo">
             <p className="subTopic">{info.name}</p>
-            <p>{"universal"}</p>
+            <p>weight: {info.weight}kg</p>
             <p>size: {info.size}</p>
           </div>
         </div>
