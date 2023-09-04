@@ -94,9 +94,9 @@ function Main({
   let [trigger, setTrigger] = useState(false);
   useEffect(() => {
     try{
-      alert(paged)
+      //alert(paged)
     if(paged === "success") {
-      alert('hel')
+      //alert('hel')
        localStorage.setItem('cart','{}')
       localStorage.setItem('no',0)
       return cleanCart()
