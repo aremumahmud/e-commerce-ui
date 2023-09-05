@@ -81,7 +81,7 @@ function Product({
               )}
 
               {!isNaN(info.price) && (
-                <p style={data.virtual_discount?{ color: "#d01345" }:{}}>
+                <p style={info.virtual_discount?{ color: "#d01345" }:{}}>
                   {symbol}
                   {calculate_virtual_discount(
                     info.virtual_discount || 0,

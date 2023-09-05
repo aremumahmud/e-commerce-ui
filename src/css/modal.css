@@ -72,6 +72,14 @@
     font-weight: 600;
 }
 
+.read .span {
+    background: transparent;
+    border: none;
+    height: 100%!important;
+    outline: none;
+    width: 100%!important;
+}
+
 .read {
     background-color: #004225;
     color: rgba(255, 255, 255, 1);
