@@ -4,18 +4,19 @@
         }
         
         .stockImages {
-            width: 50%;
+            width: 45%;
             padding: 10px;
             padding-top: 0;
         }
         
         .stockImages .mainDisplay {
-            width: 100%;
+            width: fit-content;
             background-color: #cccccc8c;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
+            height: fit-content;
         }
         
         .stockImages .mainDisplay img {
@@ -26,11 +27,13 @@
         }
         
         .varietyDisplay {
-            height: 170px;
-            padding-top: 20px;
+            gap: 30px;
+            height: 100%;
+            /* padding-top: 20px; */
             display: flex;
-            justify-content: space-between;
+            /* justify-content: space-between; */
             align-items: center;
+            flex-direction: column;
         }
         
         .varietyDisplay .variety {
@@ -40,7 +43,8 @@
             background: #cccccc59;
             height: 100%;
             border-radius: 10px;
-            width: 23%;
+            width: 190%;
+            height: 100px;
         }
         
         .varietyDisplay .variety img {
@@ -67,6 +71,10 @@
             margin-top: 20px;
         }
          */
+        
+        .green {
+            border: 3px solid #004225;
+        }
         
         .prices .subTitle {
             font-size: 20px;
@@ -102,6 +110,13 @@
             border-radius: 50%;
             background: linear-gradient(black, gray);
             margin-right: 10px;
+        }
+        
+        .image_wrapper_stock {
+            display: flex;
+            gap: 80px;
+            justify-content: center;
+            align-items: center;
         }
         
         .increment {

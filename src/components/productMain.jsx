@@ -64,6 +64,8 @@ function ProductMain({
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  let [active , setAcive] = useState(0)
   // useEffect(() => {
   //   console.log(data, "this friuc");
   // }, [data]);
@@ -71,6 +73,7 @@ function ProductMain({
     <>
       <div className="mainDescription">
         <div className="stockImages">
+        <div className="image_wrapper_stock" >
           <div className="mainDisplay">
             <img src={currMain} alt="" />
           </div>
@@ -87,9 +90,10 @@ function ProductMain({
             }>
             {data.varieties.length > 1 && (
               <div
-                className="variety"
+                className={active === 0?"variety green":'variety'}
                 onClick={() => {
                   window.scrollTo(0, 0);
+                  setAcive(0)
                   setMain(data.varieties[0].image);
                   setData({
                     ...data,
@@ -106,10 +110,10 @@ function ProductMain({
 
             {data.varieties[1] && (
               <div
-                className="variety"
+              className={active === 1?"variety green":'variety'}
                 onClick={() => {
                   window.scrollTo(0, 0);
-
+                  setAcive(1)
                   if (data.uploadType !== "default") {
                     return setMain(
                       data.varieties[1]
@@ -149,8 +153,9 @@ function ProductMain({
             )}
             {data.varieties[2] && (
               <div
-                className="variety"
+              className={active === 2?"variety green":'variety'}
                 onClick={() => {
+                  setAcive(2)
                   window.scrollTo(0, 0);
 
                   if (data.uploadType !== "default") {
@@ -192,10 +197,10 @@ function ProductMain({
             )}
             {data.varieties[3] && (
               <div
-                className="variety"
+              className={active === 3?"variety green":'variety'}
                 onClick={() => {
                   window.scrollTo(0, 0);
-
+                  setAcive(3)
                   if (data.uploadType !== "default") {
                     return setMain(
                       data.varieties[3]
@@ -234,6 +239,7 @@ function ProductMain({
               </div>
             )}
           </div>
+        </div>
         </div>
         <div className="stockInfo">
           <div className="top">

@@ -2,6 +2,7 @@ let getDoc = (x) => document.getElementsByName(x)[0]
 
 
 let validate = (ids, isNaij) => {
+    console.log(ids, "ids")
     let results = []
     for (let id = 0; id < ids.length; id++) {
         // console.log(ids)

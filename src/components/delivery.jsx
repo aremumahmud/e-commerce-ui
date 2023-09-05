@@ -46,6 +46,15 @@ let [effecrDeprnd , setEffectDepend] = useState(1)
   },[effecrDeprnd])
   
 
+  let [mode , setMode]  = useState('')
+  let mode_catcher = (e)=>{
+    let value = e.target.value.trim()
+    if(value){
+       setMode(value)
+       valid(e)
+    }
+  }
+
   return (
     <div
       className="delivery"
@@ -80,8 +89,20 @@ let [effecrDeprnd , setEffectDepend] = useState(1)
             placeholder="Type Here ..."
           />
         </div>
-
         <div className="wrapInput long">
+          <p>
+            Preferred shipping mode<sup>*</sup>
+          </p>
+          <select onChange={mode_catcher} type="text" name="delivery_type" id="">
+            <option value="">Choose preferred</option>
+            <option value="pickup">Local Pickup</option>
+            <option value="delivery">Delivery</option>
+            
+          </select>
+        </div>
+        {
+         mode === 'delivery'  && <>
+           <div className="wrapInput long">
           <p>
             Shipping Address<sup>*</sup>
           </p>
@@ -158,6 +179,10 @@ let [effecrDeprnd , setEffectDepend] = useState(1)
           />
         </div>
 
+          </>
+        }
+        
+       
         <div className="wrapInput">
           <p>
             {" "}

@@ -157,8 +157,9 @@ function Checkout({
       setIsNaij(false);
       setIsLagos(false);
       // alert('data'+data.country)
-      //console.log('shipOnCountry,weight')
-      let shipOnCountry = calculateTotal(
+     // console.log('shipOnCountry,weight',data.delivery_type)
+      if(data.delivery_type === 'delivery'){
+        let shipOnCountry = calculateTotal(
         ship[data.country.split(" ").join("_")],
         weight
       );
@@ -173,6 +174,12 @@ function Checkout({
       setDeliv(p);
       // console.log(p,'in any case 1',)
       setDeliv1(shipOnCountry || shipOnRegion || fallback);
+      }else{
+        setDeliv(0);
+        // console.log(p,'in any case 1',)
+        setDeliv1(0);
+      }
+      
     }
 
     if (data.state) {
@@ -253,10 +260,12 @@ function Checkout({
             symbol={symbol}
             cart={cart}
           />
-          <div className="checkbox">
+          {/* <div className="checkbox">
             <input type="checkbox" name="" id="" />
-            Returning Customer
-          </div>
+            Pick up your package?
+            p
+          </div> */}
+          <br />
           <Delivery
             isLagos={isLagos}
             isNaij={isNaij}

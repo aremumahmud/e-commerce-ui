@@ -155,6 +155,7 @@
             .varietyDisplay {
                 height: 170px !important;
                 width: 90% !important;
+                flex-direction: row !important;
                 /* border: 1px solid; */
             }
             .stockInfo {
@@ -409,6 +410,13 @@
             }
             .fitme {
                 width: 100%;
+            }
+            .image_wrapper_stock {
+                flex-direction: column !important;
+                gap: 0px !important;
+            }
+            .top .title {
+                font-size: 20px !important;
             }
         }
         

@@ -144,6 +144,10 @@
         align-items: center;
         /* border: 1px solid; */
     }
+    .image_wrapper_stock {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
     .stockImages .mainDisplay {
         width: 90% !important;
         margin-top: 25px;
@@ -151,7 +155,12 @@
     .varietyDisplay {
         height: 100px !important;
         width: 90% !important;
+        flex-direction: row !important;
+        ;
         /* border: 1px solid; */
+    }
+    .varietyDisplay .variety {
+        height: 90px !important;
     }
     .stockInfo {
         width: 99% !important;
@@ -166,6 +175,9 @@
     }
     .top .description {
         margin-right: 0px !important;
+    }
+    .top .title {
+        font-size: 20px !important;
     }
     .increment {
         width: 75% !important;
