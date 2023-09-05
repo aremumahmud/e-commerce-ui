@@ -21,7 +21,7 @@ function SizeChart({ display, setViewStatus }) {
         </div>
         <SizeTable />
         <p class="message fitme">
-          Use this chart to check out what fits you best!
+          Use this chart to determine what fits you best!
         </p>
 
         <div class="actions1">

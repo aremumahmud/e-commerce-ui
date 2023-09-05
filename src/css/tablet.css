@@ -149,7 +149,7 @@
             }
             .stockImages .mainDisplay {
                 width: 90% !important;
-                height: 700px !important;
+                /* height: 700px !important; */
                 margin-top: 25px;
             }
             .varietyDisplay {
