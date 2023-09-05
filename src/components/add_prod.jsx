@@ -782,7 +782,7 @@ function AddProd({ setPage }) {
             placeholder="0.00"
           />
         </label>
-        <p>EUR Price</p>
+        {/* <p>EUR Price</p>
         <label htmlFor="">
           Euro
           <input
@@ -791,7 +791,7 @@ function AddProd({ setPage }) {
             className="simple_input"
             placeholder="0.00"
           />
-        </label>
+        </label> */}
         {/* <p>Inventory</p>
             <label htmlFor="">
                 Quantity

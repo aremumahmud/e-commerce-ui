@@ -32,7 +32,7 @@ function Filter({setFilter , setLoad,categories, search,setCurrency,symbol}) {
                 <option value="$" selected={symbol === "$"}>USD</option>
                 <option value="£" selected={symbol === "£"}>GBP</option>
                 <option value="₦" selected={symbol === "₦"}>NGN</option>
-                <option value="€" selected={symbol === "€"}>EUR</option>
+                {/* <option value="€" selected={symbol === "€"}>EUR</option> */}
             </select>
           </li>
           {/* <li  className="nonee">

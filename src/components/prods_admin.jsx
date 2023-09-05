@@ -186,7 +186,7 @@ function Product({ data, parent }) {
                   }}
                 />
               </p>
-              <p>
+              {/* <p>
                 <sup>EUR</sup>
 
                 <input
@@ -202,7 +202,7 @@ function Product({ data, parent }) {
                     setData(dt);
                   }}
                 />
-              </p>
+              </p> */}
               {/* <div className="rating">
                     <ul>
                       <li>

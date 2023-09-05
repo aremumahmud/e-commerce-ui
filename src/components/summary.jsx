@@ -55,7 +55,7 @@ function Summary({
   }
 
   let change = (e) => {
-    manageChecked(["USD", "EUR", "GBP", "NGN"], e.target.id);
+    manageChecked(["USD", "GBP", "NGN"], e.target.id);
     setCurrency(currencyTab[e.target.id].symbol);
   };
 
@@ -75,7 +75,7 @@ function Summary({
     // )
 
     document.getElementById(nameTab[symbol]).checked = true;
-    manageChecked(["USD", "EUR", "GBP", "NGN"], nameTab[symbol]);
+    manageChecked(["USD","GBP", "NGN"], nameTab[symbol]);
   }, [symbol]);
   return (
     <>
@@ -122,12 +122,12 @@ function Summary({
             USD <b>($)</b>
           </p>
         </div>
-        <div className="radio">
+        {/* <div className="radio">
           <input type="radio" name="" id="EUR" onChange={change} />
           <p>
             EUR <b>(€)</b>
           </p>
-        </div>
+        </div> */}
         <div className="radio">
           <input type="radio" name="" id="GBP" onChange={change} />
           <p>
