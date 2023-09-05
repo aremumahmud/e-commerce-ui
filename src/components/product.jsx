@@ -45,12 +45,15 @@ function Product({
             setProduct(info);
             setMain && setMain(convertCloudinaryURL(info.image || info.mainImage));
           }}>
-          <div className="heart" style={{ padding: "10px" }}>
+            {info.virtual_discount &&
+              <div className="heart" style={{ padding: "10px" }}>
             <p style={{ color: "#d01345", fontSize: "small", padding: "5px" }}>
               -{info.virtual_discount || 0}%
             </p>
             {/* <AiOutlineHeart /> */}
           </div>
+            }
+          
           {}
           <img src={convertCloudinaryURL(info.image || info.mainImage) } alt="" />
         </div>
@@ -64,7 +67,7 @@ function Product({
             className="name">
             <p>{info.name}</p>
             <div className="discount-way">
-              {!isNaN(info.price) && (
+              {(!isNaN(info.price) && info.virtual_discount )&& (
                 <p
                   className="medium"
                   style={{ textDecoration: "line-through" }}>
@@ -78,7 +81,7 @@ function Product({
               )}
 
               {!isNaN(info.price) && (
-                <p style={{ color: "#d01345" }}>
+                <p style={data.virtual_discount?{ color: "#d01345" }:{}}>
                   {symbol}
                   {calculate_virtual_discount(
                     info.virtual_discount || 0,

@@ -247,7 +247,7 @@ function ProductMain({
             <br />
             <div className="prices" style={{ display: "flex", gap: "5px" }}>
               {/* <p className="subTitle">Buy and adore with unlimited guarantee</p> */}
-              <p
+              {data.virtual_discount && <p
                 className="descrpTitle medium"
                 style={{ textDecoration: "line-through" }}>
                 {symbol}
@@ -256,9 +256,9 @@ function ProductMain({
                     nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]
                   ].toFixed(2)
                 }
-              </p>
+              </p>}
               {/* <sup>-30%</sup> */}
-              <p className="descrpTitle" style={{ color: "#d01345" }}>
+              <p className="descrpTitle" style={data.virtual_discount?{ color: "#d01345" }:{}}>
                 {symbol}
                 {calculate_virtual_discount(
                   data.virtual_discount,
