@@ -12,8 +12,13 @@ let validate = (ids, isNaij) => {
             if (!isNaij && idn === 'state') {
                 return
             }
-            results.push(1)
-            getDoc(idn).style.border = '2px solid red'
+            if (idn == 'zip_code') {
+                getDoc(idn).style.border = 'none'
+            } else {
+                results.push(1)
+                getDoc(idn).style.border = '2px solid red'
+            }
+
         } else {
             getDoc(idn).style.border = 'none'
         }
