@@ -13,6 +13,7 @@ import get_user_info from "../libs/get_user_info";
 function Dash({ orders, setViewStatus, setViewData, loader, refresh }) {
   let [page, setPage] = useState(true);
   let [user_loadr, set_user_loader] = useState(true);
+  let [refr, set_refr] = useState(false);
   let [data, setData] = useState({});
 
   useEffect(() => {
@@ -20,6 +21,10 @@ function Dash({ orders, setViewStatus, setViewData, loader, refresh }) {
       console.log(err, res);
       set_user_loader(false)
       let result = JSON.parse(res);
+
+      if(result.error){
+        return set_refr(true)
+      }
       setData(result.data);
     });
   }, []);
@@ -79,7 +84,14 @@ function Dash({ orders, setViewStatus, setViewData, loader, refresh }) {
               <div className="loader d"></div>
             </div>
           )}
-          {!user_loadr && (
+          {refr && (
+            <div className="loadings">
+              <div className="nony h">
+                Please refresh this page or check your internet connection
+              </div>
+            </div>
+          )}
+          {(!user_loadr && !refr) && (
             <>
               {" "}
               <p
