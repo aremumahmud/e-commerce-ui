@@ -47,11 +47,8 @@ let sized = data.sizes
         
     }
     return (
-        <> <p className='reeky'> sizes</p> 
-        <small onClick={()=>setViewStatus('flex')} style={{
-            textDecoration:'underline',
-           
-          }}> <b>Checkout our size chart</b></small>
+        <> <p className='reeky'> Sizes</p> 
+        
           
         <div className='sizes1'>
             {
@@ -61,6 +58,10 @@ let sized = data.sizes
             }
            
         </div>
+        <small onClick={()=>setViewStatus('flex')} style={{
+            textDecoration:'underline',
+           
+          }}> <b>Checkout our size chart</b></small>
         </>
         
     )
