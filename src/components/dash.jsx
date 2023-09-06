@@ -1,98 +1,187 @@
-import {  AiOutlineLogout, AiOutlineSetting, AiOutlineUser, AiOutlineWarning } from 'react-icons/ai'
-import '../css/dashboard.css'
-import Tile from './tile'
-import { useState } from 'react'
-import delete_user from '../libs/deleteUser'
+import {
+  AiOutlineLogout,
+  AiOutlineSetting,
+  AiOutlineUser,
+  AiOutlineWarning,
+} from "react-icons/ai";
+import "../css/dashboard.css";
+import Tile from "./tile";
+import { useEffect, useState } from "react";
+import delete_user from "../libs/deleteUser";
+import get_user_info from "../libs/get_user_info";
 
-function Dash({orders ,setViewStatus , setViewData , loader,refresh}){
+function Dash({ orders, setViewStatus, setViewData, loader, refresh }) {
+  let [page, setPage] = useState(true);
+  let [user_loadr, set_user_loader] = useState(true);
+  let [data, setData] = useState({});
 
-    let [page , setPage] = useState(true)
-    return(
-        <div class="split_me1" style={{
-            display:'flex'
-        }}>
-    <div class="one_1">
+  useEffect(() => {
+    get_user_info((err, res) => {
+      console.log(err, res);
+      set_user_loader(false)
+      let result = JSON.parse(res);
+      setData(result.data);
+    });
+  }, []);
+
+  return (
+    <div
+      class="split_me1"
+      style={{
+        display: "flex",
+      }}>
+      <div class="one_1">
         <div class="nav">
-            <ul>
-                <li onClick={()=>setPage(true)} ><AiOutlineUser className='icony' /></li>
-                <li onClick={()=>setPage(false)}><AiOutlineSetting  className='icony'  /></li>
-                {/* <li><AiOutlinePayCircle className='icony'  /></li> */}
-            </ul>
+          <ul>
+            <li onClick={() => setPage(true)}>
+              <AiOutlineUser className="icony" />
+            </li>
+            <li onClick={() => setPage(false)}>
+              <AiOutlineSetting className="icony" />
+            </li>
+            {/* <li><AiOutlinePayCircle className='icony'  /></li> */}
+          </ul>
         </div>
-    </div>{
-        page ? <div class="one_2">
-        <p class="header11">Orders</p>
-        {
-            loader && <div className='loadings'>
-                <div className="loader d"></div>
+      </div>
+      {page ? (
+        <div class="one_2">
+          <p class="header11">Orders</p>
+          {loader && (
+            <div className="loadings">
+              <div className="loader d"></div>
             </div>
-        }{
-            loader === false && orders.length === 0 && !refresh && <div className='loadings'>
-            <div className="nony">No orders yet</div>
+          )}
+          {loader === false && orders.length === 0 && !refresh && (
+            <div className="loadings">
+              <div className="nony">No orders yet</div>
+            </div>
+          )}
+          {refresh && (
+            <div className="loadings">
+              <div className="nony h">
+                Please refresh this page or check your internet connection
+              </div>
+            </div>
+          )}
+          {orders.map((x) => (
+            <Tile
+              setViewStatus={setViewStatus}
+              setViewData={setViewData}
+              data={x}
+            />
+          ))}
         </div>
-        }{
-            refresh && <div className='loadings'>
-            <div className="nony h">Please refresh this page or check your internet connection</div>
+      ) : (
+        <div class="one_2">
+          <p class="header11">User Actions</p>
+          {user_loadr && (
+            <div className="loadings">
+              <div className="loader d"></div>
+            </div>
+          )}
+          {!user_loadr && (
+            <>
+              {" "}
+              <p
+                style={{
+                  padding: "10px",
+                  color: " #004225",
+                  width: "fit-content",
+                  marginBottom: "10px",
+                  fontWeight: "600",
+                }}>
+                Username :{" "}
+                <span
+                  style={{
+                    // padding:'10px',
+                    fontWeight: "400",
+                  }}>
+                  {data.username}
+                </span>
+              </p>
+              <p
+                style={{
+                  padding: "10px",
+                  color: " #004225",
+                  width: "fit-content",
+                  marginBottom: "10px",
+                  fontWeight: "600",
+                }}>
+                Email address :{" "}
+                <span
+                  style={{
+                    // padding:'10px',
+                    fontWeight: "400",
+                  }}>
+                  {data.email_address}
+                </span>
+              </p>
+              <br />
+              <p
+                style={{
+                  padding: "10px",
+                  color: " #004225",
+                  border: "1px solid  #004225",
+                  width: "fit-content",
+                  borderRadius: "10px",
+                  marginBottom: "10px",
+                }}
+                onClick={() => {
+                  let conf = window.confirm("Are you want to Log Out?");
+                  if (conf) {
+                    localStorage.removeItem("TokenID");
+                    window.open("/home", "_self");
+                  }
+                }}>
+                {" "}
+                <AiOutlineLogout /> Log out
+              </p>
+              <p
+                style={{
+                  padding: "10px",
+                  color: "red",
+                  border: "1px solid red",
+                  width: "fit-content",
+                  borderRadius: "10px",
+                }}
+                onClick={() => {
+                  window.confirm("Are you want to DEACTIVATE YOUR ACCOUNT?") &&
+                    delete_user((err, res) => {
+                      //setLoad1(false)
+                      //if(err) return alert('Sorry an unexpected error occured!')
+                      let dt = JSON.parse(res);
+
+                      if (dt.authorized == "none") {
+                        alert(
+                          "Please sign up as admin to carry out this operation"
+                        );
+                        return window.open("/users/login", "_self");
+                      }
+
+                      if (!dt.success)
+                        return alert("Sorry an unexpected error occured!");
+                      localStorage.removeItem("TokenID");
+                      alert(dt.message);
+                      window.open("/home", "_self");
+                    });
+                }}>
+                <AiOutlineWarning /> Deactivate your Account
+              </p>
+            </>
+          )}
         </div>
-        }
-       {
-        orders.map(x=><Tile setViewStatus={setViewStatus} setViewData={setViewData} data={x} />)
-       }
-    </div>: <div class="one_2">
-    <p class="header11">User Actions</p>
-    <p style={{
-        padding:'10px'
-        ,color:' #004225',
-        border:'1px solid  #004225',
-        width:'fit-content',
-        borderRadius:'10px',
-        marginBottom:'10px'
-    }} onClick={()=>{
-        let conf = window.confirm('Are you want to Log Out?')
-        if(conf){
-            localStorage.removeItem('TokenID')
-            window.open('/home','_self')
-        }
-        
-    }}> <AiOutlineLogout /> Log out</p>
-    <p style={{
-        padding:'10px'
-        ,color:'red',
-        border:'1px solid red',
-        width:'fit-content',
-        borderRadius:'10px'
-    }} onClick={()=>{
-        window.confirm('Are you want to DEACTIVATE YOUR ACCOUNT?') && delete_user((err,res)=>{
-           
-            //setLoad1(false)
-            //if(err) return alert('Sorry an unexpected error occured!')
-            let dt = JSON.parse(res)
-           
-            if(dt.authorized == 'none') {
-              alert('Please sign up as admin to carry out this operation')
-              return window.open('/users/login','_self')
-            }
-            
-            if(!dt.success) return alert('Sorry an unexpected error occured!')
-            localStorage.removeItem('TokenID')
-            alert(dt.message)
-            window.open('/home','_self')
-        })
-    }}><AiOutlineWarning /> Deactivate your Account</p>
-    </div>
-    }
-    
-    <div class="location">
-    {/* <div className="center">
+      )}
+
+      <div class="location">
+        {/* <div className="center">
          <!-- <p class="topic_me">Click on an order to reveal its location</p> -->
         <p><span class="topic_me">Location: </span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur sunt quasi, repellat nulla assumenda voluptatem, exercitationem temporibus magnam, modi iste qui rem nam dolorum ea animi aliquid minima
             adipisci explicabo.
         </p>
     </div> */}
-       
+      </div>
     </div>
-</div>
-    )
+  );
 }
 
-export default Dash
+export default Dash;
