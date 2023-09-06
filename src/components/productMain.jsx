@@ -84,7 +84,7 @@ function ProductMain({
                 ? {
                     justifyContent:
                       data.varieties.length === 4 ? "space-between" : "center",
-                    gap: "2%",
+                    gap: "3%",
                   }
                 : {}
             }>
