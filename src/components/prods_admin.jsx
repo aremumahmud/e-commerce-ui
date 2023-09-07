@@ -313,7 +313,7 @@ function Product({ data, parent }) {
           onClick={() => {
             setLoad1(true);
             window.confirm("Are you sure you want to delete this product?") &&
-              delete_product(prod_data._id, (err, res) => {
+              delete_product(prod_data._id,prod_data.parent_id, (err, res) => {
                 setLoad1(false);
                 //if(err) return alert('Sorry an unexpected error occured!')
                 let dt = JSON.parse(res);
