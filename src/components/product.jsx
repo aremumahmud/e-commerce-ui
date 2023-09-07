@@ -38,7 +38,7 @@ function Product({
     <>
       <div className="product">
         <div
-          className="imageDisplay"
+          className={info.image?'imageDisplay':'imageDisplay height_preloader'}
           onClick={() => {
             //  window.scroll(0,0)
             setPage("product");
@@ -54,9 +54,15 @@ function Product({
           </div>
             }
           
-          {}
-          <img src={convertCloudinaryURL(info.image || info.mainImage) } alt="" />
-        </div>
+          {
+            !info.image && <div className="loader d"></div>
+          }
+          {
+            
+            info.image && <img src={convertCloudinaryURL(info.image || info.mainImage) } alt="" />
+       
+          }
+           </div>
         <div className="productInfo">
           <div
             onClick={() => {

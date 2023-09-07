@@ -419,9 +419,8 @@
                 font-size: 20px !important;
             }
         }
-        
-        @media (min-width:891px)and (max-width:1249px) {
+        /* @media (min-width:891px)and (max-width:1249px) {
             .product .imageDisplay {
                 height: 900px !important;
             }
-        }
+        } */
