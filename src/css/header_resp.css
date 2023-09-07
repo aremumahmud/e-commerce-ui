@@ -70,8 +70,11 @@
         grid-template-columns: auto !important;
         gap: 7px !important;
     }
+    .height_preloader {
+        height: 300px !important;
+    }
     .product .imageDisplay {
-        height: fit-content !important;
+        height: fit-content;
     }
     .productInfo .name p {
         font-size: small !important;
