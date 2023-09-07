@@ -8,6 +8,7 @@ import Sizes from "./sizes";
 import arrayToObject from "../libs/arraytoObj_sizebased";
 import calculate_virtual_discount from "../libs/virtual_discount";
 import { nameTab } from "../config/currency";
+import convertCloudinaryURL from "../libs/convert_to_medium_quality";
 
 function ProductMain({
   setCart,
@@ -75,7 +76,10 @@ function ProductMain({
         <div className="stockImages">
         <div className="image_wrapper_stock" >
           <div className="mainDisplay">
-            <img src={currMain} alt="" />
+            <img src={convertCloudinaryURL(currMain)} alt="" />
+            {
+            !currMain && <div className="loader d"></div>
+          }
           </div>
           <div
             className="varietyDisplay"
@@ -104,7 +108,7 @@ function ProductMain({
                   });
                 }}>
                 {" "}
-                <img src={data.varieties[0].image} alt="" />
+                <img src={convertCloudinaryURL(data.varieties[0].image)} alt="" />
               </div>
             )}
 
@@ -143,9 +147,10 @@ function ProductMain({
                 }}>
                 <img
                   src={
+                    convertCloudinaryURL(
                     data.varieties[1]
                       ? data.varieties[1].image
-                      : data.varieties[0].image
+                      : data.varieties[0].image)
                   }
                   alt=""
                 />
@@ -187,9 +192,10 @@ function ProductMain({
                 {" "}
                 <img
                   src={
+                    convertCloudinaryURL(
                     data.varieties[2]
                       ? data.varieties[2].image
-                      : data.varieties[0].image
+                      : data.varieties[0].image)
                   }
                   alt=""
                 />
@@ -230,9 +236,10 @@ function ProductMain({
                 {" "}
                 <img
                   src={
+                    convertCloudinaryURL(
                     data.varieties[3]
                       ? data.varieties[3].image
-                      : data.varieties[0].image
+                      : data.varieties[0].image)
                   }
                   alt=""
                 />
