@@ -44,7 +44,7 @@ function AddProd({ setPage }) {
   let [pending4, setPending4] = useState(false);
 
   let [weight, setweight] = useState(1);
-  let [virtual_discount, setDiscount] = useState(30);
+  let [virtual_discount, setDiscount] = useState(0);
 
   let [USD, setUSD] = useState(0);
   let [GBP, setGBP] = useState(0);
