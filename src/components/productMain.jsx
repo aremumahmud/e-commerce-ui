@@ -9,6 +9,7 @@ import arrayToObject from "../libs/arraytoObj_sizebased";
 import calculate_virtual_discount from "../libs/virtual_discount";
 import { nameTab } from "../config/currency";
 import convertCloudinaryURL from "../libs/convert_to_medium_quality";
+import removeDuplicates from "../libs/remove_duplicates";
 
 function ProductMain({
   setCart,
@@ -528,11 +529,11 @@ function ProductMain({
           symbolTab={symbolTab}
           data={
             productData.length <= 4
-              ? productData
-              : [0, 1, 2, 3].map(
+              ? removeDuplicates(productData,'_id')
+              : removeDuplicates([0, 1, 2, 3].map(
                   (x) =>
                     productData[Math.floor(Math.random() * productData.length)]
-                )
+                ).filter(xn => xn._id != data._id),'_id')
           }
         />
         <br />
