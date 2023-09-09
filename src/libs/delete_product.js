@@ -1,6 +1,6 @@
 import pic from './uri'
 
-export default function delete_product(id, parent, cb) {
+export default function delete_product(id, parent, mode, cb) {
     // console.log(price)
     let use = pic.delete_product_uri
     fetch(use, {
@@ -13,7 +13,8 @@ export default function delete_product(id, parent, cb) {
         },
         body: JSON.stringify({
             id,
-            parent
+            parent,
+            mode
         })
     }).then(res => {
         return res.text()

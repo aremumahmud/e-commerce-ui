@@ -1,0 +1,325 @@
+"filename", "language", "HTML", "JavaScript", "CSS", "XML", "JavaScript JSX", "JSON", "Markdown", "comment", "blank", "total"
+"c:\Users\HP\Desktop\jj\e-commerce-ui\README.md", "Markdown", 0, 0, 0, 0, 0, 0, 38, 0, 33, 71
+"c:\Users\HP\Desktop\jj\e-commerce-ui\data.json", "JSON", 0, 0, 0, 0, 0, 73, 0, 0, 0, 73
+"c:\Users\HP\Desktop\jj\e-commerce-ui\email.css", "CSS", 0, 0, 67, 0, 0, 0, 0, 2, 13, 82
+"c:\Users\HP\Desktop\jj\e-commerce-ui\email.html", "HTML", 61, 0, 0, 0, 0, 0, 0, 2, 13, 76
+"c:\Users\HP\Desktop\jj\e-commerce-ui\exer.js", "JavaScript", 0, 4, 0, 0, 0, 0, 0, 21, 7, 32
+"c:\Users\HP\Desktop\jj\e-commerce-ui\generateEmail.js", "JavaScript", 0, 204, 0, 0, 0, 0, 0, 0, 22, 226
+"c:\Users\HP\Desktop\jj\e-commerce-ui\hh.html", "HTML", 135, 0, 0, 0, 0, 0, 0, 1, 16, 152
+"c:\Users\HP\Desktop\jj\e-commerce-ui\libs\authenticate.js", "JavaScript", 0, 39, 0, 0, 0, 0, 0, 0, 4, 43
+"c:\Users\HP\Desktop\jj\e-commerce-ui\libs\socket.js", "JavaScript", 0, 5, 0, 0, 0, 0, 0, 0, 2, 7
+"c:\Users\HP\Desktop\jj\e-commerce-ui\package-lock.json", "JSON", 0, 0, 0, 0, 0, 29372, 0, 0, 1, 29373
+"c:\Users\HP\Desktop\jj\e-commerce-ui\package.json", "JSON", 0, 0, 0, 0, 0, 45, 0, 0, 1, 46
+"c:\Users\HP\Desktop\jj\e-commerce-ui\public\imgs\undraw_successful_purchase_re_mpig.svg", "XML", 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"c:\Users\HP\Desktop\jj\e-commerce-ui\public\index.html", "HTML", 35, 0, 0, 0, 0, 0, 0, 28, 5, 68
+"c:\Users\HP\Desktop\jj\e-commerce-ui\public\let.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 24, 7, 31
+"c:\Users\HP\Desktop\jj\e-commerce-ui\public\manifest.json", "JSON", 0, 0, 0, 0, 0, 25, 0, 0, 1, 26
+"c:\Users\HP\Desktop\jj\e-commerce-ui\public\person (1).svg", "XML", 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"c:\Users\HP\Desktop\jj\e-commerce-ui\public\person.svg", "XML", 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\App.css", "CSS", 0, 0, 116, 0, 0, 0, 0, 4, 18, 138
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\App.js", "JavaScript", 0, 13, 0, 0, 0, 0, 0, 0, 5, 18
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\App.test.js", "JavaScript", 0, 7, 0, 0, 0, 0, 0, 0, 2, 9
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\Untitled-1.js", "JavaScript", 0, 126, 0, 0, 0, 0, 0, 25, 19, 170
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\CartModalSucess.jsx", "JavaScript JSX", 0, 0, 0, 0, 30, 0, 0, 9, 5, 44
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\about.jsx", "JavaScript JSX", 0, 0, 0, 0, 24, 0, 0, 1, 4, 29
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\aboutProduct.jsx", "JavaScript JSX", 0, 0, 0, 0, 18, 0, 0, 0, 4, 22
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\about_pic.jsx", "JavaScript JSX", 0, 0, 0, 0, 13, 0, 0, 0, 6, 19
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\addProducts.jsx", "JavaScript JSX", 0, 0, 0, 0, 195, 0, 0, 13, 36, 244
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\add_prod.jsx", "JavaScript JSX", 0, 0, 0, 0, 733, 0, 0, 60, 27, 820
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\calculations.jsx", "JavaScript JSX", 0, 0, 0, 0, 33, 0, 0, 0, 5, 38
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\cart.jsx", "JavaScript JSX", 0, 0, 0, 0, 86, 0, 0, 5, 7, 98
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\cartItem.jsx", "JavaScript JSX", 0, 0, 0, 0, 69, 0, 0, 10, 3, 82
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\checkout.jsx", "JavaScript JSX", 0, 0, 0, 0, 236, 0, 0, 43, 27, 306
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\dash.jsx", "JavaScript JSX", 0, 0, 0, 0, 180, 0, 0, 11, 9, 200
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\dashboard.jsx", "JavaScript JSX", 0, 0, 0, 0, 39, 0, 0, 1, 6, 46
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\delivery.jsx", "JavaScript JSX", 0, 0, 0, 0, 192, 0, 0, 12, 19, 223
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\discount.jsx", "JavaScript JSX", 0, 0, 0, 0, 75, 0, 0, 1, 17, 93
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\display.jsx", "JavaScript JSX", 0, 0, 0, 0, 16, 0, 0, 6, 2, 24
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\exchange.jsx", "JavaScript JSX", 0, 0, 0, 0, 69, 0, 0, 2, 13, 84
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\filter.jsx", "JavaScript JSX", 0, 0, 0, 0, 45, 0, 0, 31, 4, 80
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\footer.jsx", "JavaScript JSX", 0, 0, 0, 0, 61, 0, 0, 3, 5, 69
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\forgotModal.jsx", "JavaScript JSX", 0, 0, 0, 0, 143, 0, 0, 4, 17, 164
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\header.jsx", "JavaScript JSX", 0, 0, 0, 0, 27, 0, 0, 0, 3, 30
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\home.jsx", "JavaScript JSX", 0, 0, 0, 0, 107, 0, 0, 15, 13, 135
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\landing.jsx", "JavaScript JSX", 0, 0, 0, 0, 201, 0, 0, 71, 32, 304
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\login.jsx", "JavaScript JSX", 0, 0, 0, 0, 115, 0, 0, 36, 18, 169
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\main.jsx", "JavaScript JSX", 0, 0, 0, 0, 268, 0, 0, 27, 26, 321
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\modal.jsx", "JavaScript JSX", 0, 0, 0, 0, 33, 0, 0, 0, 7, 40
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\orders.jsx", "JavaScript JSX", 0, 0, 0, 0, 62, 0, 0, 2, 11, 75
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\pagination.jsx", "JavaScript JSX", 0, 0, 0, 0, 14, 0, 0, 4, 3, 21
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\path.jsx", "JavaScript JSX", 0, 0, 0, 0, 24, 0, 0, 2, 8, 34
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\payment.jsx", "JavaScript JSX", 0, 0, 0, 0, 21, 0, 0, 0, 1, 22
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\payment_success.jsx", "JavaScript JSX", 0, 0, 0, 0, 21, 0, 0, 0, 4, 25
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\policy.jsx", "JavaScript JSX", 0, 0, 0, 0, 43, 0, 0, 1, 5, 49
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\prodView.jsx", "JavaScript JSX", 0, 0, 0, 0, 20, 0, 0, 0, 2, 22
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\prod_admin.jsx", "JavaScript JSX", 0, 0, 0, 0, 14, 0, 0, 0, 4, 18
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\prods_admin.jsx", "JavaScript JSX", 0, 0, 0, 0, 287, 0, 0, 40, 13, 340
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\product.jsx", "JavaScript JSX", 0, 0, 0, 0, 92, 0, 0, 52, 9, 153
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\productMain.jsx", "JavaScript JSX", 0, 0, 0, 0, 473, 0, 0, 57, 17, 547
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\products.jsx", "JavaScript JSX", 0, 0, 0, 0, 19, 0, 0, 0, 7, 26
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\products_admin.jsx", "JavaScript JSX", 0, 0, 0, 0, 26, 0, 0, 0, 5, 31
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\returnPolicy.jsx", "JavaScript JSX", 0, 0, 0, 0, 140, 0, 0, 1, 4, 145
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\review.jsx", "JavaScript JSX", 0, 0, 0, 0, 47, 0, 0, 0, 4, 51
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\shipment.jsx", "JavaScript JSX", 0, 0, 0, 0, 105, 0, 0, 2, 6, 113
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\sizechart.jsx", "JavaScript JSX", 0, 0, 0, 0, 34, 0, 0, 0, 4, 38
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\sizes.jsx", "JavaScript JSX", 0, 0, 0, 0, 50, 0, 0, 2, 19, 71
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\specs.jsx", "JavaScript JSX", 0, 0, 0, 0, 40, 0, 0, 0, 4, 44
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\summary.jsx", "JavaScript JSX", 0, 0, 0, 0, 158, 0, 0, 55, 14, 227
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\tab.jsx", "JavaScript JSX", 0, 0, 0, 0, 28, 0, 0, 0, 3, 31
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\table.jsx", "JavaScript JSX", 0, 0, 0, 0, 66, 0, 0, 0, 3, 69
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\tile.jsx", "JavaScript JSX", 0, 0, 0, 0, 19, 0, 0, 0, 2, 21
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\tileAlert.jsx", "JavaScript JSX", 0, 0, 0, 0, 17, 0, 0, 2, 2, 21
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\topNav.jsx", "JavaScript JSX", 0, 0, 0, 0, 59, 0, 0, 11, 3, 73
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\components\view.jsx", "JavaScript JSX", 0, 0, 0, 0, 97, 0, 0, 33, 9, 139
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\config\config.js", "JavaScript", 0, 4, 0, 0, 0, 0, 0, 1, 0, 5
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\config\continent.js", "JavaScript", 0, 234, 0, 0, 0, 0, 0, 0, 1, 235
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\config\currency.js", "JavaScript", 0, 22, 0, 0, 0, 0, 0, 0, 2, 24
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\about.css", "CSS", 0, 0, 41, 0, 0, 0, 0, 0, 7, 48
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\aboutPic.css", "CSS", 0, 0, 59, 0, 0, 0, 0, 0, 15, 74
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\add_prod.css", "CSS", 0, 0, 115, 0, 0, 0, 0, 19, 19, 153
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\addproducts.css", "CSS", 0, 0, 99, 0, 0, 0, 0, 3, 15, 117
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\calculations.css", "CSS", 0, 0, 12, 0, 0, 0, 0, 0, 2, 14
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\cart.css", "CSS", 0, 0, 26, 0, 0, 0, 0, 2, 4, 32
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\cartItem.css", "CSS", 0, 0, 85, 0, 0, 0, 0, 4, 15, 104
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\checkout.css", "CSS", 0, 0, 36, 0, 0, 0, 0, 1, 5, 42
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\dashboard.css", "CSS", 0, 0, 94, 0, 0, 0, 0, 23, 20, 137
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\delivery.css", "CSS", 0, 0, 54, 0, 0, 0, 0, 0, 10, 64
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\display.css", "CSS", 0, 0, 42, 0, 0, 0, 0, 6, 5, 53
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\exchange.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\filter.css", "CSS", 0, 0, 50, 0, 0, 0, 0, 0, 7, 57
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\footer.css", "CSS", 0, 0, 74, 0, 0, 0, 0, 0, 14, 88
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\header.css", "CSS", 0, 0, 25, 0, 0, 0, 0, 0, 2, 27
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\header_resp.css", "CSS", 0, 0, 418, 0, 0, 0, 0, 10, 0, 428
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\login.css", "CSS", 0, 0, 202, 0, 0, 0, 0, 12, 34, 248
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\main.css", "CSS", 0, 0, 20, 0, 0, 0, 0, 0, 2, 22
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\modal.css", "CSS", 0, 0, 99, 0, 0, 0, 0, 0, 16, 115
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\pagination.css", "CSS", 0, 0, 29, 0, 0, 0, 0, 0, 3, 32
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\path.css", "CSS", 0, 0, 19, 0, 0, 0, 0, 0, 3, 22
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\policy.css", "CSS", 0, 0, 53, 0, 0, 0, 0, 2, 10, 65
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\prod_admin.css", "CSS", 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\productMain.css", "CSS", 0, 0, 184, 0, 0, 0, 0, 9, 34, 227
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\products.css", "CSS", 0, 0, 107, 0, 0, 0, 0, 6, 15, 128
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\review.css", "CSS", 0, 0, 58, 0, 0, 0, 0, 1, 8, 67
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\sizes.css", "CSS", 0, 0, 27, 0, 0, 0, 0, 1, 3, 31
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\sizetable.css", "CSS", 0, 0, 16, 0, 0, 0, 0, 0, 2, 18
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\specs.css", "CSS", 0, 0, 7, 0, 0, 0, 0, 0, 1, 8
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\success.css", "CSS", 0, 0, 30, 0, 0, 0, 0, 7, 5, 42
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\summary.css", "CSS", 0, 0, 65, 0, 0, 0, 0, 0, 11, 76
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\tab.css", "CSS", 0, 0, 14, 0, 0, 0, 0, 2, 1, 17
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\tablet.css", "CSS", 0, 0, 400, 0, 0, 0, 0, 26, 0, 426
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\topnav.css", "CSS", 0, 0, 76, 0, 0, 0, 0, 11, 12, 99
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\css\view.css", "CSS", 0, 0, 70, 0, 0, 0, 0, 1, 15, 86
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\index.css", "CSS", 0, 0, 10, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\index.js", "JavaScript", 0, 10, 0, 0, 0, 0, 0, 3, 4, 17
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\arrayToObject.js", "JavaScript", 0, 9, 0, 0, 0, 0, 0, 0, 2, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\arraytoObj_sizebased.js", "JavaScript", 0, 9, 0, 0, 0, 0, 0, 0, 2, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\authenticate.js", "JavaScript", 0, 42, 0, 0, 0, 0, 0, 1, 8, 51
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\calculate.js", "JavaScript", 0, 13, 0, 0, 0, 0, 0, 5, 2, 20
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\calculateAddShip.js", "JavaScript", 0, 16, 0, 0, 0, 0, 0, 7, 3, 26
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\calculateWeight.js", "JavaScript", 0, 8, 0, 0, 0, 0, 0, 0, 3, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\changeCurrency.js", "JavaScript", 0, 20, 0, 0, 0, 0, 0, 1, 5, 26
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\change_password.js", "JavaScript", 0, 10, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\convert_to_medium_quality.js", "JavaScript", 0, 13, 0, 0, 0, 0, 0, 4, 6, 23
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\country.js", "JavaScript", 0, 12, 0, 0, 0, 0, 0, 0, 2, 14
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\create_discount.js", "JavaScript", 0, 28, 0, 0, 0, 0, 0, 1, 1, 30
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\create_notification.js", "JavaScript", 0, 36, 0, 0, 0, 0, 0, 6, 8, 50
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\currencies.js", "JavaScript", 0, 10, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\deleteUser.js", "JavaScript", 0, 19, 0, 0, 0, 0, 0, 1, 2, 22
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\delete_product.js", "JavaScript", 0, 24, 0, 0, 0, 0, 0, 1, 1, 26
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\destroy_discount.js", "JavaScript", 0, 22, 0, 0, 0, 0, 0, 1, 2, 25
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\extract_ids.js", "JavaScript", 0, 12, 0, 0, 0, 0, 0, 0, 2, 14
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\fetch_all_orders.js", "JavaScript", 0, 18, 0, 0, 0, 0, 0, 0, 1, 19
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\fetch_orders.js", "JavaScript", 0, 18, 0, 0, 0, 0, 0, 0, 1, 19
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\geolocate.js", "JavaScript", 0, 12, 0, 0, 0, 0, 0, 0, 2, 14
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\getCurrentVersion.js", "JavaScript", 0, 23, 0, 0, 0, 0, 0, 1, 2, 26
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\getDiscounts.js", "JavaScript", 0, 10, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\getShipment.js", "JavaScript", 0, 10, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\get_category.js", "JavaScript", 0, 10, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\get_user_info.js", "JavaScript", 0, 18, 0, 0, 0, 0, 0, 0, 1, 19
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\lagos_cities.js", "JavaScript", 0, 74, 0, 0, 0, 0, 0, 0, 2, 76
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\load_image.js", "JavaScript", 0, 25, 0, 0, 0, 0, 0, 5, 7, 37
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\load_product.js", "JavaScript", 0, 12, 0, 0, 0, 0, 0, 4, 5, 21
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\manageChecked.js", "JavaScript", 0, 8, 0, 0, 0, 0, 0, 0, 3, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\modify_exchange.js", "JavaScript", 0, 24, 0, 0, 0, 0, 0, 5, 2, 31
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\modify_product.js", "JavaScript", 0, 24, 0, 0, 0, 0, 0, 1, 1, 26
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\modify_shipment.js", "JavaScript", 0, 24, 0, 0, 0, 0, 0, 5, 1, 30
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\paginate_products.js", "JavaScript", 0, 16, 0, 0, 0, 0, 0, 5, 8, 29
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\process_product_data.js", "JavaScript", 0, 19, 0, 0, 0, 0, 0, 4, 4, 27
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\remove_duplicates.js", "JavaScript", 0, 12, 0, 0, 0, 0, 0, 4, 3, 19
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\restructure.js", "JavaScript", 0, 17, 0, 0, 0, 0, 0, 18, 5, 40
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\search_products.js", "JavaScript", 0, 11, 0, 0, 0, 0, 0, 0, 1, 12
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\send_locked_to_be.js", "JavaScript", 0, 31, 0, 0, 0, 0, 0, 1, 1, 33
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\send_otp.js", "JavaScript", 0, 10, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\send_product.js", "JavaScript", 0, 16, 0, 0, 0, 0, 0, 0, 1, 17
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\suscribe.js", "JavaScript", 0, 10, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\test.js", "JavaScript", 0, 2, 0, 0, 0, 0, 0, 0, 0, 2
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\updateCart.js", "JavaScript", 0, 79, 0, 0, 0, 0, 0, 9, 5, 93
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\uploadImage.js", "JavaScript", 0, 15, 0, 0, 0, 0, 0, 3, 4, 22
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\uri.js", "JavaScript", 0, 29, 0, 0, 0, 0, 0, 25, 5, 59
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\validate.js", "JavaScript", 0, 24, 0, 0, 0, 0, 0, 3, 6, 33
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\validate_deets.js", "JavaScript", 0, 23, 0, 0, 0, 0, 0, 2, 9, 34
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\verify_admin.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\verify_discount.js", "JavaScript", 0, 10, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\verify_otp.js", "JavaScript", 0, 10, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\libs\virtual_discount.js", "JavaScript", 0, 5, 0, 0, 0, 0, 0, 0, 2, 7
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\logo.svg", "XML", 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\reportWebVitals.js", "JavaScript", 0, 12, 0, 0, 0, 0, 0, 0, 2, 14
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\setupTests.js", "JavaScript", 0, 1, 0, 0, 0, 0, 0, 4, 1, 6
+"c:\Users\HP\Desktop\jj\e-commerce-ui\src\socket.js", "JavaScript", 0, 3, 0, 0, 0, 0, 0, 1, 2, 6
+"c:\Users\HP\Desktop\jj\e-commerce-ui\test.css", "CSS", 0, 0, 50, 0, 0, 0, 0, 3, 9, 62
+"c:\Users\HP\Desktop\jj\e-commerce-ui\test.html", "HTML", 41, 0, 0, 0, 0, 0, 0, 0, 7, 48
+"c:\Users\HP\Desktop\jj\e-commerce-ui\undraw_winners_re_wr1l.svg", "XML", 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\README.md", "Markdown", 0, 0, 0, 0, 0, 0, -38, 0, -33, -71
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\data.json", "JSON", 0, 0, 0, 0, 0, -73, 0, 0, 0, -73
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\email.css", "CSS", 0, 0, -67, 0, 0, 0, 0, -2, -13, -82
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\email.html", "HTML", -61, 0, 0, 0, 0, 0, 0, -2, -13, -76
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\exer.js", "JavaScript", 0, -4, 0, 0, 0, 0, 0, -21, -7, -32
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\generateEmail.js", "JavaScript", 0, -204, 0, 0, 0, 0, 0, 0, -22, -226
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\hh.html", "HTML", -135, 0, 0, 0, 0, 0, 0, -1, -16, -152
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\libs\authenticate.js", "JavaScript", 0, -39, 0, 0, 0, 0, 0, 0, -4, -43
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\libs\socket.js", "JavaScript", 0, -5, 0, 0, 0, 0, 0, 0, -2, -7
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\package-lock.json", "JSON", 0, 0, 0, 0, 0, -29372, 0, 0, -1, -29373
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\package.json", "JSON", 0, 0, 0, 0, 0, -45, 0, 0, -1, -46
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\public\imgs\undraw_successful_purchase_re_mpig.svg", "XML", 0, 0, 0, -1, 0, 0, 0, 0, 0, -1
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\public\index.html", "HTML", -37, 0, 0, 0, 0, 0, 0, -28, -5, -70
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\public\let.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, -24, -7, -31
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\public\manifest.json", "JSON", 0, 0, 0, 0, 0, -25, 0, 0, -1, -26
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\public\person (1).svg", "XML", 0, 0, 0, -1, 0, 0, 0, 0, 0, -1
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\public\person.svg", "XML", 0, 0, 0, -1, 0, 0, 0, 0, 0, -1
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\App.css", "CSS", 0, 0, -86, 0, 0, 0, 0, -4, -12, -102
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\App.js", "JavaScript", 0, -13, 0, 0, 0, 0, 0, 0, -5, -18
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\App.test.js", "JavaScript", 0, -7, 0, 0, 0, 0, 0, 0, -2, -9
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\Untitled-1.js", "JavaScript", 0, -126, 0, 0, 0, 0, 0, -25, -19, -170
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\CartModalSucess.jsx", "JavaScript JSX", 0, 0, 0, 0, -30, 0, 0, -9, -5, -44
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\about.jsx", "JavaScript JSX", 0, 0, 0, 0, -24, 0, 0, -1, -4, -29
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\aboutProduct.jsx", "JavaScript JSX", 0, 0, 0, 0, -17, 0, 0, 0, -4, -21
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\about_pic.jsx", "JavaScript JSX", 0, 0, 0, 0, -12, 0, 0, 0, -4, -16
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\addProducts.jsx", "JavaScript JSX", 0, 0, 0, 0, -195, 0, 0, -13, -36, -244
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\add_prod.jsx", "JavaScript JSX", 0, 0, 0, 0, -420, 0, 0, -50, -63, -533
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\calculations.jsx", "JavaScript JSX", 0, 0, 0, 0, -33, 0, 0, 0, -5, -38
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\cart.jsx", "JavaScript JSX", 0, 0, 0, 0, -31, 0, 0, 0, -7, -38
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\cartItem.jsx", "JavaScript JSX", 0, 0, 0, 0, -42, 0, 0, -5, -4, -51
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\checkout.jsx", "JavaScript JSX", 0, 0, 0, 0, -105, 0, 0, -5, -18, -128
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\dash.jsx", "JavaScript JSX", 0, 0, 0, 0, -83, 0, 0, -9, -7, -99
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\dashboard.jsx", "JavaScript JSX", 0, 0, 0, 0, -40, 0, 0, -1, -5, -46
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\delivery.jsx", "JavaScript JSX", 0, 0, 0, 0, -58, 0, 0, -11, -11, -80
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\discount.jsx", "JavaScript JSX", 0, 0, 0, 0, -45, 0, 0, -3, -14, -62
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\display.jsx", "JavaScript JSX", 0, 0, 0, 0, -16, 0, 0, -6, -2, -24
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\exchange.jsx", "JavaScript JSX", 0, 0, 0, 0, -71, 0, 0, -2, -11, -84
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\filter.jsx", "JavaScript JSX", 0, 0, 0, 0, -46, 0, 0, -30, -4, -80
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\footer.jsx", "JavaScript JSX", 0, 0, 0, 0, -61, 0, 0, -3, -5, -69
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\forgotModal.jsx", "JavaScript JSX", 0, 0, 0, 0, -146, 0, 0, -4, -14, -164
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\header.jsx", "JavaScript JSX", 0, 0, 0, 0, -27, 0, 0, 0, -3, -30
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\home.jsx", "JavaScript JSX", 0, 0, 0, 0, -31, 0, 0, -5, -6, -42
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\landing.jsx", "JavaScript JSX", 0, 0, 0, 0, -191, 0, 0, -71, -56, -318
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\login.jsx", "JavaScript JSX", 0, 0, 0, 0, -115, 0, 0, -36, -18, -169
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\main.jsx", "JavaScript JSX", 0, 0, 0, 0, -166, 0, 0, -12, -28, -206
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\modal.jsx", "JavaScript JSX", 0, 0, 0, 0, -33, 0, 0, 0, -7, -40
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\pagination.jsx", "JavaScript JSX", 0, 0, 0, 0, -12, 0, 0, 0, -2, -14
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\path.jsx", "JavaScript JSX", 0, 0, 0, 0, -24, 0, 0, -2, -8, -34
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\payment.jsx", "JavaScript JSX", 0, 0, 0, 0, -21, 0, 0, 0, -1, -22
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\payment_success.jsx", "JavaScript JSX", 0, 0, 0, 0, -22, 0, 0, 0, -2, -24
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\policy.jsx", "JavaScript JSX", 0, 0, 0, 0, -44, 0, 0, -1, -5, -50
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\prodView.jsx", "JavaScript JSX", 0, 0, 0, 0, -20, 0, 0, 0, -2, -22
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\prod_admin.jsx", "JavaScript JSX", 0, 0, 0, 0, -14, 0, 0, 0, -4, -18
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\prods_admin.jsx", "JavaScript JSX", 0, 0, 0, 0, -135, 0, 0, -23, -18, -176
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\product.jsx", "JavaScript JSX", 0, 0, 0, 0, -52, 0, 0, -43, -9, -104
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\productMain.jsx", "JavaScript JSX", 0, 0, 0, 0, -365, 0, 0, -51, -10, -426
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\products.jsx", "JavaScript JSX", 0, 0, 0, 0, -20, 0, 0, 0, -5, -25
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\products_admin.jsx", "JavaScript JSX", 0, 0, 0, 0, -27, 0, 0, 0, -4, -31
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\returnPolicy.jsx", "JavaScript JSX", 0, 0, 0, 0, -140, 0, 0, -1, -4, -145
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\review.jsx", "JavaScript JSX", 0, 0, 0, 0, -30, 0, 0, 0, -4, -34
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\shipment.jsx", "JavaScript JSX", 0, 0, 0, 0, -72, 0, 0, -2, -11, -85
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\sizechart.jsx", "JavaScript JSX", 0, 0, 0, 0, -34, 0, 0, 0, -5, -39
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\sizes.jsx", "JavaScript JSX", 0, 0, 0, 0, -53, 0, 0, -2, -15, -70
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\specs.jsx", "JavaScript JSX", 0, 0, 0, 0, -40, 0, 0, 0, -4, -44
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\summary.jsx", "JavaScript JSX", 0, 0, 0, 0, -159, 0, 0, -49, -13, -221
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\tab.jsx", "JavaScript JSX", 0, 0, 0, 0, -25, 0, 0, 0, -3, -28
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\table.jsx", "JavaScript JSX", 0, 0, 0, 0, -66, 0, 0, 0, -3, -69
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\tile.jsx", "JavaScript JSX", 0, 0, 0, 0, -19, 0, 0, 0, -2, -21
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\tileAlert.jsx", "JavaScript JSX", 0, 0, 0, 0, -18, 0, 0, -2, -2, -22
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\topNav.jsx", "JavaScript JSX", 0, 0, 0, 0, -39, 0, 0, -11, -4, -54
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\components\view.jsx", "JavaScript JSX", 0, 0, 0, 0, -97, 0, 0, -33, -9, -139
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\config\config.js", "JavaScript", 0, -4, 0, 0, 0, 0, 0, -1, 0, -5
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\config\currency.js", "JavaScript", 0, -22, 0, 0, 0, 0, 0, 0, -2, -24
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\about.css", "CSS", 0, 0, -41, 0, 0, 0, 0, 0, -7, -48
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\aboutPic.css", "CSS", 0, 0, -59, 0, 0, 0, 0, 0, -15, -74
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\add_prod.css", "CSS", 0, 0, -115, 0, 0, 0, 0, -19, -19, -153
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\addproducts.css", "CSS", 0, 0, -99, 0, 0, 0, 0, -3, -15, -117
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\calculations.css", "CSS", 0, 0, -12, 0, 0, 0, 0, 0, -2, -14
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\cart.css", "CSS", 0, 0, -26, 0, 0, 0, 0, -2, -4, -32
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\cartItem.css", "CSS", 0, 0, -85, 0, 0, 0, 0, -4, -15, -104
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\checkout.css", "CSS", 0, 0, -37, 0, 0, 0, 0, 0, -5, -42
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\dashboard.css", "CSS", 0, 0, -94, 0, 0, 0, 0, -23, -20, -137
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\delivery.css", "CSS", 0, 0, -54, 0, 0, 0, 0, 0, -10, -64
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\display.css", "CSS", 0, 0, -42, 0, 0, 0, 0, -6, -5, -53
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\exchange.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 0, -1, -1
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\filter.css", "CSS", 0, 0, -49, 0, 0, 0, 0, 0, -7, -56
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\footer.css", "CSS", 0, 0, -74, 0, 0, 0, 0, 0, -14, -88
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\header.css", "CSS", 0, 0, -25, 0, 0, 0, 0, 0, -2, -27
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\header_resp.css", "CSS", 0, 0, -397, 0, 0, 0, 0, -10, 0, -407
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\login.css", "CSS", 0, 0, -202, 0, 0, 0, 0, -12, -34, -248
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\main.css", "CSS", 0, 0, -20, 0, 0, 0, 0, 0, -2, -22
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\modal.css", "CSS", 0, 0, -89, 0, 0, 0, 0, 0, -14, -103
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\pagination.css", "CSS", 0, 0, -29, 0, 0, 0, 0, 0, -3, -32
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\path.css", "CSS", 0, 0, -19, 0, 0, 0, 0, 0, -3, -22
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\policy.css", "CSS", 0, 0, -53, 0, 0, 0, 0, -2, -10, -65
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\prod_admin.css", "CSS", 0, 0, -3, 0, 0, 0, 0, 0, 0, -3
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\productMain.css", "CSS", 0, 0, -178, 0, 0, 0, 0, -1, -33, -212
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\products.css", "CSS", 0, 0, -98, 0, 0, 0, 0, -6, -14, -118
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\review.css", "CSS", 0, 0, -58, 0, 0, 0, 0, -1, -8, -67
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\sizes.css", "CSS", 0, 0, -28, 0, 0, 0, 0, 0, -3, -31
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\sizetable.css", "CSS", 0, 0, -16, 0, 0, 0, 0, 0, -2, -18
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\specs.css", "CSS", 0, 0, -7, 0, 0, 0, 0, 0, -1, -8
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\success.css", "CSS", 0, 0, -30, 0, 0, 0, 0, -7, -5, -42
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\summary.css", "CSS", 0, 0, -65, 0, 0, 0, 0, 0, -11, -76
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\tab.css", "CSS", 0, 0, -14, 0, 0, 0, 0, -2, -1, -17
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\tablet.css", "CSS", 0, 0, -397, 0, 0, 0, 0, -10, 0, -407
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\topnav.css", "CSS", 0, 0, -74, 0, 0, 0, 0, -11, -12, -97
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\css\view.css", "CSS", 0, 0, -70, 0, 0, 0, 0, -1, -15, -86
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\index.css", "CSS", 0, 0, -10, 0, 0, 0, 0, 0, -1, -11
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\index.js", "JavaScript", 0, -10, 0, 0, 0, 0, 0, -3, -4, -17
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\arrayToObject.js", "JavaScript", 0, -9, 0, 0, 0, 0, 0, 0, -2, -11
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\arraytoObj_sizebased.js", "JavaScript", 0, -9, 0, 0, 0, 0, 0, 0, -2, -11
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\authenticate.js", "JavaScript", 0, -44, 0, 0, 0, 0, 0, -1, -6, -51
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\calculate.js", "JavaScript", 0, -10, 0, 0, 0, 0, 0, -5, -1, -16
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\changeCurrency.js", "JavaScript", 0, -21, 0, 0, 0, 0, 0, -1, -4, -26
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\change_password.js", "JavaScript", 0, -10, 0, 0, 0, 0, 0, 0, -1, -11
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\country.js", "JavaScript", 0, -12, 0, 0, 0, 0, 0, 0, -2, -14
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\create_discount.js", "JavaScript", 0, -26, 0, 0, 0, 0, 0, -1, -1, -28
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\currencies.js", "JavaScript", 0, -10, 0, 0, 0, 0, 0, 0, -1, -11
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\deleteUser.js", "JavaScript", 0, -19, 0, 0, 0, 0, 0, -1, -2, -22
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\delete_product.js", "JavaScript", 0, -22, 0, 0, 0, 0, 0, -1, -1, -24
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\fetch_orders.js", "JavaScript", 0, -18, 0, 0, 0, 0, 0, 0, -1, -19
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\geolocate.js", "JavaScript", 0, -12, 0, 0, 0, 0, 0, 0, -2, -14
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\getShipment.js", "JavaScript", 0, -10, 0, 0, 0, 0, 0, 0, -1, -11
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\get_category.js", "JavaScript", 0, -10, 0, 0, 0, 0, 0, 0, -1, -11
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\load_image.js", "JavaScript", 0, -26, 0, 0, 0, 0, 0, -5, -6, -37
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\load_product.js", "JavaScript", 0, -13, 0, 0, 0, 0, 0, -3, -5, -21
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\manageChecked.js", "JavaScript", 0, -8, 0, 0, 0, 0, 0, 0, -3, -11
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\modify_exchange.js", "JavaScript", 0, -24, 0, 0, 0, 0, 0, -5, -2, -31
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\modify_product.js", "JavaScript", 0, -24, 0, 0, 0, 0, 0, -1, -1, -26
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\modify_shipment.js", "JavaScript", 0, -24, 0, 0, 0, 0, 0, -5, -1, -30
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\process_product_data.js", "JavaScript", 0, -17, 0, 0, 0, 0, 0, -1, -4, -22
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\restructure.js", "JavaScript", 0, -17, 0, 0, 0, 0, 0, -18, -5, -40
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\search_products.js", "JavaScript", 0, -11, 0, 0, 0, 0, 0, 0, -1, -12
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\send_locked_to_be.js", "JavaScript", 0, -31, 0, 0, 0, 0, 0, -1, -1, -33
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\send_otp.js", "JavaScript", 0, -10, 0, 0, 0, 0, 0, 0, -1, -11
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\send_product.js", "JavaScript", 0, -16, 0, 0, 0, 0, 0, 0, -1, -17
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\suscribe.js", "JavaScript", 0, -10, 0, 0, 0, 0, 0, 0, -1, -11
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\test.js", "JavaScript", 0, -2, 0, 0, 0, 0, 0, 0, 0, -2
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\uploadImage.js", "JavaScript", 0, -15, 0, 0, 0, 0, 0, -3, -4, -22
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\uri.js", "JavaScript", 0, -24, 0, 0, 0, 0, 0, -25, -4, -53
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\validate.js", "JavaScript", 0, -24, 0, 0, 0, 0, 0, -3, -6, -33
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\validate_deets.js", "JavaScript", 0, -15, 0, 0, 0, 0, 0, -3, -5, -23
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\verify_admin.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, -1, -1
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\verify_discount.js", "JavaScript", 0, -10, 0, 0, 0, 0, 0, 0, -1, -11
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\libs\verify_otp.js", "JavaScript", 0, -10, 0, 0, 0, 0, 0, 0, -1, -11
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\logo.svg", "XML", 0, 0, 0, -1, 0, 0, 0, 0, 0, -1
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\reportWebVitals.js", "JavaScript", 0, -12, 0, 0, 0, 0, 0, 0, -2, -14
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\setupTests.js", "JavaScript", 0, -1, 0, 0, 0, 0, 0, -4, -1, -6
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\src\socket.js", "JavaScript", 0, -3, 0, 0, 0, 0, 0, -1, -2, -6
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\test.css", "CSS", 0, 0, -50, 0, 0, 0, 0, -3, -9, -62
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\test.html", "HTML", -41, 0, 0, 0, 0, 0, 0, 0, -7, -48
+"c:\Users\HP\Documents\e-commerce\e-commerce-ui\undraw_winners_re_wr1l.svg", "XML", 0, 0, 0, -1, 0, 0, 0, 0, 0, -1
+"Total", "-", -2, 613, 80, 0, 1398, 0, 0, 195, 61, 2345

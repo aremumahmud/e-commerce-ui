@@ -20,6 +20,15 @@ function Product({ data, parent }) {
           <img src={convertCloudinaryURL(prod_data.image) } alt="" />
         </div>
         {
+          prod_data.mode === 'ruler' && <p  style={{
+                width: "90%",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+              }}
+              className="button">master</p>
+        }
+        {
          prod_data.sizes.length && <>
             <div className="productInfo">
               <small>title</small>
@@ -228,7 +237,7 @@ function Product({ data, parent }) {
                 style={{
                   alignItems: "center",
                   display: "flex",
-                  alignItems: "center",
+                  
                 }}>
                 <AiFillDatabase />
                 <input
@@ -282,7 +291,7 @@ function Product({ data, parent }) {
                   //if(err) return alert('Sorry an unexpected error occured!')
                   let dt = JSON.parse(res);
 
-                  if (dt.authorized == "none") {
+                  if (dt.authorized === "none") {
                     alert(
                       "Please sign up as admin to carry out this operation"
                     );
@@ -313,12 +322,12 @@ function Product({ data, parent }) {
           onClick={() => {
             setLoad1(true);
             window.confirm("Are you sure you want to delete this product?") &&
-              delete_product(prod_data._id,prod_data.parent_id, (err, res) => {
+              delete_product(prod_data._id,prod_data.parent_id,prod_data.mode, (err, res) => {
                 setLoad1(false);
                 //if(err) return alert('Sorry an unexpected error occured!')
                 let dt = JSON.parse(res);
 
-                if (dt.authorized == "none") {
+                if (dt.authorized === "none") {
                   alert("Please sign up as admin to carry out this operation");
                   return window.open("/users/login", "_self");
                 }
