@@ -35,8 +35,8 @@ function Policy(){
             <div class="policy">
                 <p class="header201">INTERNATIONAL SHIPPING</p>
                 <p class="description12">
-                    All international orders are trackable. Delivery time for international orders is 5-10 working days after order placement.
-                </p>
+                    International orders are fulfilled by DHL and are trackable. Delivery time for international orders is 5-10 working days after order placement
+                 </p>
             </div>
 
         </div>

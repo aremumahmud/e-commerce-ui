@@ -71,7 +71,7 @@ function Home({
   }
   }, []);
 
-let pages = paginate_products([...data],6)
+let pages = paginate_products([...data],50)
 
 let [product_data , setProductData] = useState(pages[0]||[])
 let [active_index, setActiveIndex] = useState(0) 
@@ -87,7 +87,7 @@ let set_data_for_pagination = (index)=>{
   } 
   useEffect(()=>{
   
-    let pages = paginate_products([...data],6)
+    let pages = paginate_products([...data],50)
     setProductData(pages[0]||[])
    // console.log(data,'jhjk,n')
   },[data])

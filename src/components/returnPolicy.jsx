@@ -131,7 +131,7 @@ function ReturnPolicy() {
           do not hesitate to contact us. We are always happy to help!
         </p><br />
         <p style={{ fontWeight: 500 }}>
-          Contact: +2348052200994 or email:  <a href="mailto:info@glitzabellelabel.com">info@glitzabellelabel.com</a> or 
+          Contact: +2348025926292 or email:  <a href="mailto:info@glitzabellelabel.com">info@glitzabellelabel.com</a> or 
           <a href="mailto:glitzabellelabel@gmail.com"> glitzabellelabel@gmail.com.</a> 
         </p>
       </div>
