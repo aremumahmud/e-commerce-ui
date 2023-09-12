@@ -239,7 +239,7 @@ function AddProd({ setPage }) {
                 {pending && <div className="loader big"></div>}
                 {done ? <AiFillDelete size={20} /> : "upload images"}
               </div>
-              <form id="form1" action="">
+              <form style={{display:'none'}} id="form1" action="">
                 <input
                   name="picture"
                   onChange={(e) =>
@@ -266,7 +266,7 @@ function AddProd({ setPage }) {
                 {pending2 && <div className="loader big"></div>}
                 {done2 ? <AiFillDelete size={20} /> : "upload images"}
               </div>
-              <form id="form2" action="">
+              <form style={{display:'none'}} id="form2" action="">
                 <input
                   name="picture"
                   onChange={(e) =>
@@ -289,7 +289,7 @@ function AddProd({ setPage }) {
               className="image"
               onClick={() => placeholder(`image${3}`, `file${3}`)}
               id="image3">
-              <form id="form3" action="">
+              <form style={{display:'none'}} id="form3" action="">
                 <input
                   name="picture"
                   onChange={(e) =>
@@ -316,7 +316,7 @@ function AddProd({ setPage }) {
               className="image"
               onClick={() => placeholder(`image${4}`, `file${4}`)}
               id="image4">
-              <form id="form4" action="">
+              <form style={{display:'none'}} id="form4" action="">
                 <input
                   name="picture"
                   onChange={(e) =>

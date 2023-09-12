@@ -156,7 +156,7 @@ function Product({ data, parent }) {
                   type="number"
                   onChange={(e) => {
                     let dt = { ...prod_data };
-                    dt.price = parseInt(e.target.value);
+                    dt.price = e.target.value;
                     setData(dt);
                   }}
                 />
@@ -173,7 +173,7 @@ function Product({ data, parent }) {
                   type="number"
                   onChange={(e) => {
                     let dt = { ...prod_data };
-                    dt.USD = parseInt(e.target.value);
+                    dt.USD = e.target.value;
                     setData(dt);
                   }}
                 />
@@ -190,7 +190,7 @@ function Product({ data, parent }) {
                   type="number"
                   onChange={(e) => {
                     let dt = { ...prod_data };
-                    dt.GBP = parseInt(e.target.value);
+                    dt.GBP = e.target.value;
                     setData(dt);
                   }}
                 />
