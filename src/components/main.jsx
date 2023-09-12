@@ -179,7 +179,9 @@ function Main({
           return;
         }
         setData(data2[0]);
-        setCurrency(currencyTab1[res].symbol);
+
+        let curr_currency= currencyTab1[res]
+        setCurrency(curr_currency?curr_currency.symbol:'$');
         // setCurrency('$')
         setLoad1(false);
       }).catch(err=>{
