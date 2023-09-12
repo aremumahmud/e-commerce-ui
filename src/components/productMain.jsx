@@ -255,7 +255,7 @@ function ProductMain({
             <br />
             <div className="prices" style={{ display: "flex", gap: "5px" }}>
               {/* <p className="subTitle">Buy and adore with unlimited guarantee</p> */}
-              {data.virtual_discount && <p
+              {data.virtual_discount !== 0 && <p
                 className="descrpTitle medium"
                 style={{ textDecoration: "line-through" }}>
                 {symbol}

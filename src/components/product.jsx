@@ -38,31 +38,34 @@ function Product({
     <>
       <div className="product">
         <div
-          className={info.image?'imageDisplay':'imageDisplay height_preloader'}
+          className={
+            info.image ? "imageDisplay" : "imageDisplay height_preloader"
+          }
           onClick={() => {
             //  window.scroll(0,0)
             setPage("product");
             setProduct(info);
-            setMain && setMain(convertCloudinaryURL(info.image || info.mainImage));
+            setMain &&
+              setMain(convertCloudinaryURL(info.image || info.mainImage));
           }}>
-            {info.virtual_discount &&
-              <div className="heart" style={{ padding: "10px" }}>
-            <p style={{ color: "#d01345", fontSize: "small", padding: "5px" }}>
-              -{info.virtual_discount || 0}%
-            </p>
-            {/* <AiOutlineHeart /> */}
-          </div>
-            }
-          
-          {
-            !info.image && <div className="loader d"></div>
-          }
-          {
-            
-            info.image && <img src={convertCloudinaryURL(info.image || info.mainImage) } alt="" />
-       
-          }
-           </div>
+          {info.virtual_discount ? (
+            <div className="heart" style={{ padding: "10px" }}>
+              <p
+                style={{ color: "#d01345", fontSize: "small", padding: "5px" }}>
+                -{info.virtual_discount || 0}%
+              </p>
+              {/* <AiOutlineHeart /> */}
+            </div>
+          ):''}
+
+          {!info.image && <div className="loader d"></div>}
+          {info.image && (
+            <img
+              src={convertCloudinaryURL(info.image || info.mainImage)}
+              alt=""
+            />
+          )}
+        </div>
         <div className="productInfo">
           <div
             onClick={() => {
@@ -73,7 +76,7 @@ function Product({
             className="name">
             <p>{info.name}</p>
             <div className="discount-way">
-              {(!isNaN(info.price) && info.virtual_discount )&& (
+              {(!isNaN(info.price) && info.virtual_discount !== 0) && (
                 <p
                   className="medium"
                   style={{ textDecoration: "line-through" }}>
@@ -87,13 +90,12 @@ function Product({
               )}
 
               {!isNaN(info.price) && (
-                <p style={info.virtual_discount?{ color: "#d01345" }:{}}>
+                <p style={info.virtual_discount ? { color: "#d01345" } : {}}>
                   {symbol}
                   {calculate_virtual_discount(
                     info.virtual_discount || 0,
                     info[nameTab[symbol] === "NGN" ? "price" : nameTab[symbol]]
                   ).toFixed(2)}
-                 
                 </p>
               )}
             </div>
