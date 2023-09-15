@@ -28,7 +28,7 @@
 .wrapInput input {
     width: 90%;
     padding: 9px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border: none;
     outline: none;
     margin-top: 10px;
@@ -39,7 +39,7 @@
 .wrapInput select {
     width: 90%;
     padding: 9px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border: none;
     outline: none;
     margin-top: 10px;
