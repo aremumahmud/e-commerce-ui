@@ -16,7 +16,7 @@
         background-color: #cccccc6e;
         padding: 10px;
         font-weight: 700;
-        border-radius: 24px;
+        /* border-radius: 24px; */
     }
     
     .filters .filter ul li select {
@@ -36,7 +36,7 @@
         margin: 20px;
         border: 1px solid #ccc;
         padding: 10px;
-        border-radius: 24px;
+        /* border-radius: 24px; */
         box-shadow: rgba(22, 17, 17, 0.05) 0px 0px 0px 1px;
         display: flex;
     }

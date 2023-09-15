@@ -5,6 +5,7 @@ import update_cart from "../libs/updateCart";
 import CartItem from "./cartItem";
 import Path from "./path";
 import { useEffect, useState } from "react";
+import Space from "./space";
 
 function Cart({
   data,
@@ -69,7 +70,7 @@ function Cart({
             Proceed to Checkout
           </div>
         </div>
-
+        <Space /><br />
         {data &&
           Object.keys(data)
             .map((x) => data[x])

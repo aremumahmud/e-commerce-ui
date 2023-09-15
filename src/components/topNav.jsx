@@ -1,5 +1,6 @@
 import {
   AiOutlineSearch,
+  AiOutlineShopping,
   AiOutlineShoppingCart,
   AiOutlineUser,
 } from "react-icons/ai";
@@ -13,7 +14,7 @@ function TopNav({ cart, setPage, search, searchLoader, setSearchLoader }) {
       <div className="topNav">
         <a href="/home" class="logo">
           {/* <p>Glitz<span>abellelabel</span></p> */}
-          <img src="\imgs\67957883-348A-45E4-BD1E-E956B290647F~2.jpg" alt="" />
+          <img src="\imgs\3.png" alt="" />
         </a>
         <div className="navigations">
           {/* <ul>
@@ -55,13 +56,13 @@ function TopNav({ cart, setPage, search, searchLoader, setSearchLoader }) {
               );
               return a ? setPage("users/signup") : "";
             }}>
-            <AiOutlineUser style={{ fontWeight: "bold" }} />
-            User
+            <AiOutlineUser size={25} style={{ fontWeight: "bold" }} />
+            {/* User */}
           </p>
           <p onClick={() => setPage("cart")}>
             <span className="qty">{cart}</span>
-            <AiOutlineShoppingCart style={{ fontWeight: "bold" }} />
-            Cart
+            <AiOutlineShopping size={25} style={{ fontWeight: "bold" }} />
+            {/* Cart */}
           </p>
         </div>
       </div>

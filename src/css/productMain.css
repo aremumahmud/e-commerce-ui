@@ -12,7 +12,7 @@
         .stockImages .mainDisplay {
             width: fit-content;
             background-color: #cccccc8c;
-            border-radius: 10px;
+            /* border-radius: 10px; */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -22,7 +22,7 @@
         .stockImages .mainDisplay img {
             width: 100%;
             height: 100%;
-            border-radius: 10px;
+            /* border-radius: 10px; */
             object-fit: cover;
         }
         
@@ -42,7 +42,7 @@
             justify-content: center;
             background: #cccccc59;
             height: 100%;
-            border-radius: 10px;
+            /* border-radius: 10px; */
             width: 190%;
             height: 100px;
         }
@@ -50,7 +50,7 @@
         .varietyDisplay .variety img {
             width: 100%;
             height: 100%;
-            border-radius: 10px;
+            /* border-radius: 10px; */
             object-fit: cover;
             object-position: top;
         }
@@ -74,7 +74,7 @@
          */
         
         .green {
-            border: 3px solid #004225;
+            border: 3px solid #000;
         }
         
         .prices .subTitle {
@@ -117,7 +117,7 @@
             display: flex;
             gap: 80px;
             justify-content: center;
-            align-items: center;
+            /* align-items: center; */
         }
         
         .increment {
@@ -131,7 +131,7 @@
         .incrementor {
             padding: 10px;
             display: flex;
-            border-radius: 25px;
+            /* border-radius: 25px; */
             background-color: #cccccc59;
             width: 50%;
             justify-content: space-between;
@@ -157,20 +157,20 @@
         
         .ctas .btn {
             padding: 10px;
-            border: 2px solid #004225;
-            border-radius: 24px;
+            border: 2px solid #000;
+            /* border-radius: 24px; */
             margin-right: 10px;
             padding-left: 40px;
             padding-right: 40px;
             width: 50%;
             text-align: center;
-            color: #004225;
+            color: #000;
             font-weight: 700;
             font-size: small;
         }
         
         .ctas .active {
-            background-color: #004225;
+            background-color: #000;
             color: #ffffff;
         }
         

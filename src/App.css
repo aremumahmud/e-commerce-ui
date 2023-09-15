@@ -47,7 +47,8 @@ input[type=radio] {
 }
 
 .logo img {
-    width: 200px
+    width: 170px;
+    padding: 10px;
 }
 
 .red {
@@ -135,4 +136,13 @@ input[type=radio] {
 
 .height_preloader {
     height: 450px !important;
+}
+
+.padding10px {
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.mobile {
+    display: none !important;
 }

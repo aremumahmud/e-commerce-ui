@@ -10,6 +10,7 @@ import calculate_virtual_discount from "../libs/virtual_discount";
 import { nameTab } from "../config/currency";
 import convertCloudinaryURL from "../libs/convert_to_medium_quality";
 import removeDuplicates from "../libs/remove_duplicates";
+import Space from "./space";
 
 function ProductMain({
   setCart,
@@ -81,6 +82,9 @@ function ProductMain({
             {
             !currMain && <div className="loader d"></div>
           }
+          </div>
+          <div>
+            <p className="padding10px">Variants</p>
           </div>
           <div
             className="varietyDisplay"
@@ -448,7 +452,7 @@ function ProductMain({
                     }
                   );
                 }}>
-                Add to Cart
+                Add to Bag
               </div>
             </div>
           )}
@@ -509,6 +513,8 @@ function ProductMain({
           </div>
         </div>
       </div>
+      <br />
+      <Space />
       <div className="item_specs">
         {/* <p className="topic">Apple Airpods Max Wireless HeadPhones Full Specifications</p>
         <div className="twin">

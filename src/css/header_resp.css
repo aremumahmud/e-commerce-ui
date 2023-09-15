@@ -18,7 +18,7 @@
     }
     .container {
         width: 100%;
-        border: 1px solid white;
+        /* border: 1px solid white; */
         border-right: none;
         margin-left: 0px !important;
         margin-right: -2px !important;
@@ -43,7 +43,7 @@
         width: 100% !important;
         margin-top: 0 !important;
         top: 0 !important;
-        padding-top: 10px !important
+        /* padding-top: 10px !important */
     }
     .navigations {
         display: none;
@@ -140,11 +140,12 @@
         flex-direction: column;
     }
     .stockImages {
-        width: 99% !important;
+        width: 100% !important;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0 !important;
         /* border: 1px solid; */
     }
     .image_wrapper_stock {
@@ -152,14 +153,14 @@
         gap: 20px !important;
     }
     .stockImages .mainDisplay {
-        width: 90% !important;
-        margin-top: 25px;
+        width: 100% !important;
+        margin-top: 68px;
     }
     .varietyDisplay {
         height: 100px !important;
-        width: 90% !important;
+        width: 100% !important;
         flex-direction: row !important;
-        ;
+        padding: 10px;
         /* border: 1px solid; */
     }
     .varietyDisplay .variety {
@@ -170,7 +171,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center !important;
-        padding-left: 7.3%;
+        padding-left: 10px;
+        margin-top: 10px;
         /* border: 1px solid; */
     }
     .chooseColor {
@@ -190,11 +192,14 @@
         margin-top: 7px !important;
     }
     .item_specs {
-        margin-top: 80px !important;
+        margin-top: 0px !important;
     }
     .item_specs .twin {
         margin-left: 7.3%;
         margin-right: 7.3%;
+    }
+    .desktop {
+        display: none;
     }
     .item_specs .topic {
         margin-left: 7.3% !important;
@@ -202,8 +207,8 @@
         margin-right: 7.3%;
     }
     .productImage {
-        height: 100px !important;
-        width: 100% !important;
+        height: fit-content !important;
+        width: 32% !important;
         padding: 4px !important;
     }
     .cartItem {
@@ -214,6 +219,9 @@
     .cartItem .productInfo {
         margin-top: 0px !important;
         margin-right: 18.3px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
     .cartItem .productInfo .subTopic {
         margin-top: 15px !important;
@@ -237,6 +245,7 @@
     .checkCta {
         margin-left: 3% !important;
         margin-right: 4%;
+        padding-top: 68px;
     }
     .product .imageDisplay .heart {
         left: 87% !important;
@@ -311,7 +320,7 @@
         padding: 5px !important;
     }
     .max {
-        width: 45% !important;
+        width: 100% !important;
         margin-left: 3% !important;
     }
     .text p {
@@ -371,6 +380,7 @@
         font-size: 20px !important;
     }
     .path ul {
+        display: none !important;
         padding-top: 90px !important;
         padding-bottom: 0px !important;
         margin-top: 20px !important;
@@ -383,7 +393,7 @@
     }
     .qty {
         font-size: smaller !important;
-        top: 10px !important;
+        top: 0px !important;
         left: 92% !important;
     }
     .read .span {

@@ -14,7 +14,7 @@
     color: white;
     background-color: #004225;
     /* height: 50px; */
-    border-radius: 24px;
+    /* border-radius: 24px; */
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -24,9 +24,9 @@
     align-items: center;
     justify-content: center;
     height: 400px;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 .empty_space p {
-    font-size: 30px;
+    font-size: 20px;
 }
