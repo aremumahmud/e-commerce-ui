@@ -461,7 +461,6 @@ function ProductMain({
             <div className="info">
               <p className="topic">
                 <AiOutlineCar
-                  className="orange"
                   style={{ marginRight: "5px" }}
                 />
                 Delivery and Shipping
@@ -489,7 +488,7 @@ function ProductMain({
                 }}
                 className="topic">
                 <AiOutlineDeliveredProcedure
-                  className="orange"
+                 
                   style={{ marginRight: "5px" }}
                 />
                 Return Policy

@@ -8,7 +8,7 @@
 .large3 {
     font-size: 30px;
     color: black;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 .tab {
@@ -32,7 +32,7 @@
 }
 
 .deets ul li {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .apart {

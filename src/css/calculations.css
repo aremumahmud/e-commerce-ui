@@ -4,7 +4,7 @@
 }
 
 .specsTable tr td:first-child {
-    font-weight: 800;
+    font-weight: 500;
     text-align: left;
     width: 200px;
 }

@@ -133,6 +133,8 @@ input[type=radio] {
 .discount-way {
     display: flex;
     gap: 10px;
+    color: #666;
+    font-weight: 700;
 }
 
 .medium {

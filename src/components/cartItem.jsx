@@ -81,7 +81,7 @@ function CartItem({
           </div>
           <div className="productInfo">
             <div className="product_price">
-              <p style={{ fontWeight: "700" }}>
+              <p style={{ fontWeight: "500" }}>
                 {symbol}
                 {calculate_virtual_discount(
                   info.virtual_discount,
@@ -101,7 +101,7 @@ function CartItem({
               <p>
                 weight {info.weight}kg <span>| size {info.size}</span>
               </p>
-              <p style={{ fontWeight: "600" }}> Qty {info.quantity_for_cart}</p>
+              <p style={{ fontWeight: "500" }}> Qty {info.quantity_for_cart}</p>
             </div>
           </div>
           <div onClick={() => {

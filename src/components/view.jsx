@@ -34,9 +34,9 @@ function ViewModal({display,setViewStatus,data}) {
         {
             page === 'delivery' &&
             <>
-            Time of order : <br /> <b>{new Date(data.createdAt).toString()}</b>
+            Time of order : <br /> <b style={{fontWeight:500}}>{new Date(data.createdAt).toString()}</b>
              <p class="message">
-              <p><b>Order number: #{data.orderId || 'no order id' }</b> </p>
+              <p style={{fontWeight:500}}>Order number: #{data.orderId || 'no order id' } </p>
           These are the delivery information you provided at the checkout
         </p>
         <br />
