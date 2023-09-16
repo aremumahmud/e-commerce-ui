@@ -154,6 +154,7 @@ function CartItem({
       <br />
       <br />
     <hr />
+    <br />
     </>
   );
 }
