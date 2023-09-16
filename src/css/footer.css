@@ -23,6 +23,7 @@ footer ul li {
 
 footer p {
     margin-bottom: 0px;
+    font-weight: 500;
 }
 
 .other {
@@ -43,7 +44,7 @@ footer p {
     background-color: #000;
     /* border-radius: 24px; */
     color: white;
-    font-weight: 600;
+    font-weight: 500;
     padding-left: 20px;
     padding-right: 20px;
 }

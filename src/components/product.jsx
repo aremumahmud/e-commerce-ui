@@ -79,7 +79,7 @@ function Product({
               {(!isNaN(info.price) && info.virtual_discount !== 0) && (
                 <p
                   className="medium"
-                  style={{ textDecoration: "line-through" }}>
+                  style={{ textDecoration: "line-through",marginRight:'10px' }}>
                   {symbol}
                   {
                     +info[
