@@ -11,7 +11,7 @@
     list-style: none;
     padding: 10px;
     background-color: #cccccc80;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     height: 80px;
     width: 80px;
     margin: 10px;
@@ -24,7 +24,7 @@
 
 .pagination .active {
     color: #ffffff;
-    background-color: #004225;
+    background-color: #000;
 }
 
 .pagination .next {

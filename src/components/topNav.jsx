@@ -61,7 +61,7 @@ function TopNav({ cart, setPage, search, searchLoader, setSearchLoader }) {
           </p>
           <p onClick={() => setPage("cart")}>
             <span className="qty">{cart}</span>
-            <AiOutlineShopping size={25} style={{ fontWeight: "bold" }} />
+            <AiOutlineShopping size={27} style={{ fontWeight: "bold" }} />
             {/* Cart */}
           </p>
         </div>
