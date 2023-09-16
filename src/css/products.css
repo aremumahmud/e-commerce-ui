@@ -19,7 +19,6 @@
 .product .imageDisplay {
     height: fit-content;
     background-color: #cccccc59;
-    border-radius: 10px;
     margin-bottom: 15px;
     position: relative;
     display: flex;
@@ -51,7 +50,7 @@
 .productInfo .name {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 
 .productInfo .name p {
@@ -103,7 +102,7 @@
     height: 2vmin;
     border-radius: 50%;
     border: 2px solid white;
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid #000000;
     animation: loader-spin infinite 2s linear;
 }
 

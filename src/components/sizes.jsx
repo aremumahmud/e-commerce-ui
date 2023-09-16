@@ -60,8 +60,9 @@ let sized = data.sizes
         </div>
         <small onClick={()=>setViewStatus('flex')} style={{
             textDecoration:'underline',
+            fontWeight: 500
            
-          }}> <b>Checkout our size chart</b></small>
+          }}> Checkout our size chart</small>
         </>
         
     )

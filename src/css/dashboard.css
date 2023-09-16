@@ -137,7 +137,7 @@ span {
 .loadings {
     /* border: 1px solid; */
     height: 50%;
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,7 +146,7 @@ span {
 .d {
     width: 50px !important;
     height: 50px !important;
-    border-bottom-color: #004225 !important;
+    border-bottom-color: #000 !important;
 }
 
 .nony {
