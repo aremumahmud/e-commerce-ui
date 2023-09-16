@@ -1,6 +1,7 @@
 import {
   AiOutlineLogout,
   AiOutlineSetting,
+  AiOutlineShopping,
   AiOutlineUser,
   AiOutlineWarning,
 } from "react-icons/ai";
@@ -35,7 +36,7 @@ function Dash({ orders, setViewStatus, setViewData, loader, refresh }) {
       style={{
         display: "flex",
       }}>
-      <div class="one_1">
+      <div class="one_1 desktop">
         <div class="nav">
           <ul>
             <li onClick={() => setPage(true)}>
@@ -44,13 +45,24 @@ function Dash({ orders, setViewStatus, setViewData, loader, refresh }) {
             <li onClick={() => setPage(false)}>
               <AiOutlineSetting className="icony" />
             </li>
-            {/* <li><AiOutlinePayCircle className='icony'  /></li> */}
-          </ul>
+            </ul>
         </div>
       </div>
       {page ? (
         <div class="one_2">
-          <p class="header11">Orders</p>
+          <p class="header11">Dashboard</p>
+          <div class="nav mobile">
+          <ul>
+            <li onClick={() => setPage(true)}>
+              <AiOutlineShopping className="icony" />
+            </li>
+            <li onClick={() => setPage(false)}>
+              <AiOutlineUser className="icony" />
+            </li>
+            </ul>
+        </div>
+        <br />
+        <p class="sub_header11">Orders</p>
           {loader && (
             <div className="loadings">
               <div className="loader d"></div>
@@ -78,7 +90,19 @@ function Dash({ orders, setViewStatus, setViewData, loader, refresh }) {
         </div>
       ) : (
         <div class="one_2">
-          <p class="header11">User Actions</p>
+        <p class="header11">Dashboard</p>
+          <div class="nav mobile">
+          <ul>
+            <li onClick={() => setPage(true)}>
+              <AiOutlineShopping className="icony" />
+            </li>
+            <li onClick={() => setPage(false)}>
+              <AiOutlineUser className="icony" />
+            </li>
+            </ul>
+        </div>
+        <br />
+        <p class="sub_header11">User Actions</p>
           {user_loadr && (
             <div className="loadings">
               <div className="loader d"></div>
