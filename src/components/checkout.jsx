@@ -15,6 +15,7 @@ import calculateWeight from "../libs/calculateWeight";
 import extract_ids from "../libs/extract_ids";
 import get_current_version from "../libs/getCurrentVersion";
 import update_cart from "../libs/updateCart";
+import Space from "./space";
 
 function Checkout({
   setCurrency,
@@ -265,7 +266,13 @@ function Checkout({
             Pick up your package?
             p
           </div> */}
+         
           <br />
+          <div className="mobile top-me">
+            <p>Checkout</p>
+            {/* <Space /> */}
+          </div>
+          
           <Delivery
             isLagos={isLagos}
             isNaij={isNaij}

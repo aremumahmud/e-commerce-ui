@@ -70,7 +70,10 @@ function Cart({
             Proceed to Checkout
           </div>
         </div>
-        <Space /><br />
+        <Space />
+        <br />
+        <br />
+        {/* <br /> */}
         {data &&
           Object.keys(data)
             .map((x) => data[x])

@@ -17,7 +17,8 @@ function CartItem({
     <>
       {" "}
       <br />
-      <div className="cartItem mobile">
+     
+      <div className="cartItem desktop">
         {/* <div className="checkBox little">
         <input type="checkbox" name="" id="" />
       </div> */}
@@ -70,7 +71,7 @@ function CartItem({
           </p>
         </div>
       </div>
-      <div className="cartItem desktop">
+      <div className="cartItem mobile">
         {/* <div className="checkBox little">
         <input type="checkbox" name="" id="" />
       </div> */}
@@ -152,7 +153,7 @@ function CartItem({
       </div>
       <br />
       <br />
-      {/* <hr /> */}
+    <hr />
     </>
   );
 }

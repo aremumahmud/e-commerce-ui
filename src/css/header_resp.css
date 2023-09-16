@@ -109,7 +109,7 @@
     .topic {
         font-size: 20px !important;
         margin-left: 5px !important;
-        font-weight: 800 !important;
+        font-weight: 500 !important;
     }
     .pagination .pageBtn {
         width: 50px !important;
@@ -199,7 +199,10 @@
         margin-right: 7.3%;
     }
     .desktop {
-        display: none;
+        display: none !important;
+    }
+    .mobile {
+        display: flex !important;
     }
     .item_specs .topic {
         margin-left: 7.3% !important;
@@ -209,7 +212,7 @@
     .productImage {
         height: fit-content !important;
         width: 32% !important;
-        padding: 4px !important;
+        padding: 0px !important;
     }
     .cartItem {
         align-items: center;
@@ -276,6 +279,7 @@
         border: none !important;
         padding-left: 2% !important;
         padding-right: 0% !important;
+        margin-top: 0px;
     }
     .wrapInput input {
         font-size: small !important;
@@ -293,6 +297,15 @@
         padding: 10px;
         background-color: #004225;
         color: #ffffff;
+    }
+    .top-me {
+        margin-top: 70px;
+        height: 60px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-me p {
+        font-size: x-large;
     }
     .prev {
         display: block !important;

@@ -144,5 +144,9 @@ input[type=radio] {
 }
 
 .mobile {
-    display: none !important;
+    display: none;
+}
+
+.desktop {
+    display: flex;
 }

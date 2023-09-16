@@ -420,7 +420,10 @@
                 font-size: 20px !important;
             }
             .desktop {
-                display: none;
+                display: flex !important;
+            }
+            .mobile {
+                display: none !important;
             }
         }
         /* @media (min-width:891px)and (max-width:1249px) {
