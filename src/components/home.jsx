@@ -108,7 +108,7 @@ let set_data_for_pagination = (index)=>{
         setFilter={setFilter}
       />
 <br /><br />
-    <p class="sub_header11">Dhalia Collections</p>
+    <p class="sub_header11">Dahlia Collections</p>
       {/* <p className="topic">Top Fashion For You!</p> */}
       <Products
         currencyTab={currencyTab}

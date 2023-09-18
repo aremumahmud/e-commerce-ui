@@ -4,7 +4,7 @@ function Payment({setPage}){
         <div class="center_me">
     <div class="split_me">
         <div class="image" style={{background:'none'}}>
-            <img src="/imgs/undraw_successful_purchase_re_mpig.svg" />
+            <img src="/imgs/undraw_successful_purchase_re_mpig (1).svg" />
         </div><br /><br />
         <div class="text">
             <p> 

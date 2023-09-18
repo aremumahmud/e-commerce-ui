@@ -11,6 +11,7 @@ import { nameTab } from "../config/currency";
 import convertCloudinaryURL from "../libs/convert_to_medium_quality";
 import removeDuplicates from "../libs/remove_duplicates";
 import Space from "./space";
+import getSizeQuantity from "../libs/getSizeQuantity";
 
 function ProductMain({
   setCart,
@@ -55,7 +56,9 @@ function ProductMain({
   let [qty, setQuantity] = useState(1);
   let [outOfStock, setOutOfStock] = useState(false);
   let increase = () => {
-    if (qty >= inventory) return;
+   // = size[]
+    let inv_sizes = getSizeQuantity(data.sizes , size)
+    if (qty >= inv_sizes) return;
     setQuantity(qty + 1);
     //setCart({})
   };
@@ -359,6 +362,7 @@ function ProductMain({
             setOutOfStock={setOutOfStock}
             setSize={setSize}
             data={data}
+            setQuantity={setQuantity}
           />
           {outOfStock ? (
             <div class="out_of_stock">out of stock</div>

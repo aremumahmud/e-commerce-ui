@@ -4,7 +4,7 @@ import TileAlert from './tileAlert';
 function CartModal({display,data , setViewStatus}) {
   return (
     <div style={{display}} className="modalWrap">
-      <div className="card  animate__animated animate__bounce">
+      <div className="card animate__animated animate__zoomInDown  ">
         <div className="header1">
           <span className="icon1">
             <svg

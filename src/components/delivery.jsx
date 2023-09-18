@@ -182,7 +182,7 @@ let [effecrDeprnd , setEffectDepend] = useState(1)
           </>
         }
         {
-          mode === 'pickup' &&  <p style={{fontWeight:500,padding:'10px'}}> <span style={{fontWeight:800}}>Pickup Location: </span>16, Oremeji Avenue, off Bamishile Street, Egbeda, Lagos State, Nigeria. <br /> Postcode: 102213</p>
+          mode === 'pickup' &&  <p style={{fontWeight:500,padding:'10px',fontSize:'small'}}> <span style={{fontWeight:500, fontSize:'17px !important'}}>Pickup Location: </span>16, Oremeji Avenue, off Bamishile Street, Egbeda, Lagos State, Nigeria. <br /> Postcode: 102213</p>
         }
         
        

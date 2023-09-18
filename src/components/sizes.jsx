@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import '../css/sizes.css'
 import arrayToObject from '../libs/arraytoObj_sizebased'
 
-function Sizes({data,setSize,setOutOfStock,setViewStatus}){
+function Sizes({data,setSize,setOutOfStock,setViewStatus,setQuantity}){
 let sized = data.sizes
     useEffect(()=>{
        if(sized.length){
@@ -26,6 +26,7 @@ let sized = data.sizes
     
 
     let manageClicked = (e)=>{
+        setQuantity(1)
         let size = e.target.innerHTML
         setSize && setSize(size)
         e.target.classList.add('active8')
