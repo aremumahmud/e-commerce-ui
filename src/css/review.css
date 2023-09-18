@@ -7,7 +7,7 @@
 }
 
 .review .topic {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .item_img {
@@ -36,7 +36,7 @@
 }
 
 .items .info p:first-child {
-    font-weight: 800;
+    font-weight: 500;
     font-size: 27px;
 }
 
