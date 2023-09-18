@@ -14,12 +14,13 @@
     justify-content: center; */
     width: 100%;
     margin-left: 10px;
+    gap: 30px;
     /* flex-direction: row-reverse; */
 }
 
 .one_1 {
     /* border: 1px solid; */
-    width: 10%;
+    width: 4%;
     display: flex;
     justify-content: center;
 }

@@ -4,7 +4,7 @@
 
 .path ul {
     margin: 0;
-    padding-top: 170px;
+    padding-top: 140px;
     width: 100%;
     padding-left: 0;
     padding-bottom: 50px;
@@ -18,5 +18,5 @@
 }
 
 .bold {
-    font-weight: 800;
+    font-weight: 500;
 }

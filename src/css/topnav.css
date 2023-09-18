@@ -10,8 +10,8 @@
     color: white;
     z-index: 1;
     /* border: 1px solid; */
-    background-color: #000000;
-    /* padding-top: 40px */
+    background-color: #ffffff;
+    padding-top: 25px
 }
 
 .logo p {
@@ -54,6 +54,7 @@
     font-weight: bold;
     align-items: center;
     display: flex;
+    color: #000;
 }
 
 .usersection p {
@@ -87,12 +88,12 @@
 
 .qty {
     position: absolute;
-    top: 40px;
+    top: 30px;
     left: 98%;
     padding: 6px;
     /* background-color: #004225; */
     border-radius: 50%;
-    color: #ffff;
+    color: #000;
     font-weight: 600;
     height: 25px;
     display: flex;

@@ -38,6 +38,9 @@
                 height: 230px !important;
                 margin-top: 150px !important;
             }
+            .usersection {
+                color: #ffffff !important;
+            }
             .cont {
                 width: 100%;
             }
@@ -46,7 +49,8 @@
                 width: 100% !important;
                 margin-top: 0 !important;
                 top: 0 !important;
-                padding-top: 10px !important
+                padding-top: 10px !important;
+                background-color: #000 !important;
             }
             .navigations {
                 display: none;
@@ -375,6 +379,7 @@
                 font-size: smaller !important;
                 top: 0px !important;
                 left: 95% !important;
+                color: #ffffff !important;
             }
             .read .span {
                 width: 100% !important;
@@ -424,6 +429,9 @@
             }
             .mobile {
                 display: none !important;
+            }
+            .topNav img {
+                content: url(../../public/imgs/3.png) !important
             }
         }
         /* @media (min-width:891px)and (max-width:1249px) {
