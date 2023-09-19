@@ -66,7 +66,6 @@ function Main({
   const [currencyTab1, setCurrencyTab] = useState({ ...currencyTab });
   const [span, setSpan] = useState(0);
 
- 
   useEffect(() => {
     fetch_exchange((err, res) => {
       if (err) return setSpan((prevSpan) => prevSpan + 1);
@@ -86,53 +85,54 @@ function Main({
   let [currency, setCurrency] = useState("₦");
   const { paged } = useParams();
   setPage1(paged || "home");
- 
+
   // if(paged === 'success'){
   //   cleanCart()
   // }
 
   let [trigger, setTrigger] = useState(false);
   useEffect(() => {
-    try{
+    try {
       //alert(paged)
-    if(paged === "success") {
-      //alert('hel')
-       localStorage.setItem('cart','{}')
-      localStorage.setItem('no',0)
-      return cleanCart()
-    }
-
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    if (Object.keys(cart).length === 0) {
-      setCartno(0);
-      localStorage.setItem("no", 0);
-      return;
-    }
-    let ids = extract_ids(cart);
-    // console.log(ids,":ids",cart)
-    get_current_version(ids, (err, res) => {
-      if (err) {
-        //do sth
-        // console.log(err)
-        return setTrigger(!trigger);
+      if (paged === "success") {
+        //alert('hel')
+        localStorage.setItem("cart", "{}");
+        localStorage.setItem("no", 0);
+        return cleanCart();
       }
 
-      let updatedCart = update_cart( JSON.parse(res), JSON.parse(localStorage.getItem("cart")));
-      let no = localStorage.getItem("no");
-      setcart(updatedCart);
-      setCartno(no);
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-      // console.log(err,res, 'this is ,the thing i want to see')
-    });
-  }catch(e){
-    //alert(localStorage.getItem("cart"))
-    console.log(e,'error')
-    localStorage.setItem("cart", JSON.stringify({}));
-    localStorage.setItem("no", 0);
-  }
+      let cart = JSON.parse(localStorage.getItem("cart"));
+      if (Object.keys(cart).length === 0) {
+        setCartno(0);
+        localStorage.setItem("no", 0);
+        return;
+      }
+      let ids = extract_ids(cart);
+      // console.log(ids,":ids",cart)
+      get_current_version(ids, (err, res) => {
+        if (err) {
+          //do sth
+          // console.log(err)
+          return setTrigger(!trigger);
+        }
+
+        let updatedCart = update_cart(
+          JSON.parse(res),
+          JSON.parse(localStorage.getItem("cart"))
+        );
+        let no = localStorage.getItem("no");
+        setcart(updatedCart);
+        setCartno(no);
+        localStorage.setItem("cart", JSON.stringify(updatedCart));
+        // console.log(err,res, 'this is ,the thing i want to see')
+      });
+    } catch (e) {
+      //alert(localStorage.getItem("cart"))
+      console.log(e, "error");
+      localStorage.setItem("cart", JSON.stringify({}));
+      localStorage.setItem("no", 0);
+    }
   }, []);
-
-
 
   let [ViewData, setViewData] = useState({});
   let [ViewStatus, setViewStatus] = useState("none");
@@ -159,38 +159,40 @@ function Main({
     });
   };
   useEffect(() => {
-    load &&
-      load_products(filter, (err, res) => {
-        //console.log(err,',lhjgz,mb')
-        alert(err)
-        if (err) return setViewStatus1("flex");
-        setLoad(false);
-        // console.log(res,'uyhkuj')
-        setData(res);
-      });
-  }, [filter]);
-  useEffect(() => {
-    if( load1 && navigator.onLine){
-      getUserIP().then((res) => {
-        // res = 'USD'
-        let data2 = changeCurrency(data, "NGN", currencyTab1);
-        // console.log(data2,'jayz')
-        // console.log(isNaN(data2[0][0].price))
-        if (isNaN(data2[0][0].price)) {
-          return;
-        }
-        setData(data2[0]);
-
-        let curr_currency= currencyTab1[res]
-        setCurrency(curr_currency?curr_currency.symbol:'$');
-        // setCurrency('$')
-        setLoad1(false);
-      }).catch(err=>{
-        setLoad1(false);
-      });
+    if (paged == "home") {
+      load &&
+        load_products(filter, (err, res) => {
+          console.log(err, ",lhjgz,mb");
+         // alert(err.toString());
+          if (err) return setViewStatus1("flex");
+          setLoad(false);
+          // console.log(res,'uyhkuj')
+          setData(res);
+        });
     }
-   
-      
+  }, [filter, paged]);
+  useEffect(() => {
+    if (load1 && navigator.onLine) {
+      getUserIP()
+        .then((res) => {
+          // res = 'USD'
+          let data2 = changeCurrency(data, "NGN", currencyTab1);
+          // console.log(data2,'jayz')
+          // console.log(isNaN(data2[0][0].price))
+          if (isNaN(data2[0][0].price)) {
+            return;
+          }
+          setData(data2[0]);
+
+          let curr_currency = currencyTab1[res];
+          setCurrency(curr_currency ? curr_currency.symbol : "$");
+          // setCurrency('$')
+          setLoad1(false);
+        })
+        .catch((err) => {
+          setLoad1(false);
+        });
+    }
   }, [data]);
   return (
     <>
