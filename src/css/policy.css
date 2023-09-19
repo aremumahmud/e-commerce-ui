@@ -23,22 +23,22 @@
 }
 
 .topic_header .titlepolicy {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
 }
 
 .policy .header201 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
 }
 
 .topic_header .titlepolicy {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
 }
 
 .policy .header {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
 }
 
@@ -55,4 +55,11 @@
 
 .norms li {
     margin-bottom: 10px;
+}
+
+h3,
+h2,
+h1,
+h4 {
+    font-weight: 500;
 }

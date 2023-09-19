@@ -57,7 +57,7 @@ function ReturnPolicy() {
           it right.
         </p>
         <br />
-        <p style={{ fontWeight: 800 }}>
+        <p style={{ fontWeight: 500 }}>
           To initiate a return, please follow these steps:
         </p>
         <br />
@@ -79,7 +79,7 @@ function ReturnPolicy() {
           </li>
         </ol>
         <br />
-        <p style={{ fontWeight: 800 }}>
+        <p style={{ fontWeight: 500 }}>
           Things to note while initiating a return;
         </p>
         <br />
@@ -119,7 +119,7 @@ function ReturnPolicy() {
           </li>
         </ol>
         <br />
-        <p style={{ fontWeight: 800 }}>RETURN ADDRESS:</p>
+        <p style={{ fontWeight: 500 }}>RETURN ADDRESS:</p>
         <br />
         <p class="description12">
           16, Oremeji Avenue, off Bamishile Street, Egbeda, Lagos State,
