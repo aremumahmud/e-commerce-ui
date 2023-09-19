@@ -162,6 +162,7 @@ function Main({
     load &&
       load_products(filter, (err, res) => {
         //console.log(err,',lhjgz,mb')
+        alert(err)
         if (err) return setViewStatus1("flex");
         setLoad(false);
         // console.log(res,'uyhkuj')
