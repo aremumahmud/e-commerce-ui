@@ -87,7 +87,7 @@ function ProductMain({
           }
           </div>
           <div>
-            <p className="padding10px">Variants</p>
+            <p className="padding10px mobile ">Variants</p>
           </div>
           <div
             className="varietyDisplay"
@@ -95,7 +95,7 @@ function ProductMain({
               data.varieties.length !== 4
                 ? {
                     justifyContent:
-                      data.varieties.length === 4 ? "space-between" : "center",
+                      data.varieties.length === 4 ? "space-between" : "flex-start",
                     gap: "3%",
                   }
                 : {}
