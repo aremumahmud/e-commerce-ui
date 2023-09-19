@@ -7,8 +7,8 @@ function About({ setPage , data }) {
       <div className="descriptionSection">
         <p className="title">About Glitzabelle Label</p>
         <p className="description">
-          Welcome to our online fashion store! At Glitzabelle Label, we're dedicated to creating stylish pieces for women all over the world. Whether you're looking for something sophisticated, fun, modest or unique, we have something for you. Our goal is to help women look and feel their best, no matter what their personal style may be. Enjoy a seamless shopping experience with secure payment options and expedited delivery services. We can't wait to see our pieces on you. Thank you for choosing Glitzabelle Label.
-        </p>
+          Glitzabelle Label is a desirable fashion brand for women. We create stylish clothes that are made to last. We are committed to helping women look and feel their best regardless of their personal style. Each piece is a labour of love from Lagos. ❤️
+         </p>
         <div className="cta">
           <div className="btn active" onClick={() => setPage('users/login')}>Log in</div>
           <div className="btn" onClick={() => setPage('users/signup')}>Sign up</div>
