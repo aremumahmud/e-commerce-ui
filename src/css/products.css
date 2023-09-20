@@ -31,9 +31,9 @@
     left: 87%;
     top: 5%;
     background-color: #ffffff;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     width: 35px;
-    height: 35px;
+    /* height: 35px; */
     display: flex;
     align-items: center;
     justify-content: center;

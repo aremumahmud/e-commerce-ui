@@ -153,6 +153,13 @@ input[type=radio] {
     font-size: large;
 }
 
+.padding20px {
+    padding-left: 20px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    font-size: x-large;
+}
+
 .mobile {
     display: none;
 }

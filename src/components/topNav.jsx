@@ -12,10 +12,10 @@ function TopNav({ cart, setPage, search, searchLoader, setSearchLoader }) {
   return (
     <div className="wrap">
       <div className="topNav">
-        <a href="/home" class="logo">
+        <div onClick={()=>setPage('home')} class="logo">
           {/* <p>Glitz<span>abellelabel</span></p> */}
           <img src="\imgs\67957883-348A-45E4-BD1E-E956B290647F~2.jpg" alt="" />
-        </a>
+        </div>
         <div className="navigations">
           {/* <ul>
                     <li>

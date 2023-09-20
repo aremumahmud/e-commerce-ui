@@ -49,7 +49,7 @@ function Product({
               setMain(convertCloudinaryURL(info.image || info.mainImage));
           }}>
           {info.virtual_discount ? (
-            <div className="heart" style={{ padding: "10px" }}>
+            <div className="heart" style={{ padding: "2px 10px 0px 10px" }}>
               <p
                 style={{ color: "#d01345", fontSize: "small", padding: "5px" }}>
                 -{info.virtual_discount || 0}%

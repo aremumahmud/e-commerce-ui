@@ -86,8 +86,11 @@ function ProductMain({
             !currMain && <div className="loader d"></div>
           }
           </div>
-          <div>
-            <p className="padding10px mobile ">Variants</p>
+          <div className="mobile">
+            <p className="padding10px">Variants</p>
+          </div>
+          <div className="desktop">
+            <p className="padding20px">Variants</p>
           </div>
           <div
             className="varietyDisplay"
