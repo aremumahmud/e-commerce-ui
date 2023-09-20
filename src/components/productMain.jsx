@@ -25,6 +25,7 @@ function ProductMain({
   cart,
   currencyTab,
   symbolTab,
+  setCategory
 }) {
   //console.log(data,'rr')
   //console.log(datar)
@@ -37,6 +38,7 @@ function ProductMain({
       Object.keys(data_from_localstorage).length !== 0
     ) {
       datar = data_from_localstorage;
+      setCategory(datar.category)
     } else {
       datar = {};
     }
@@ -89,7 +91,7 @@ function ProductMain({
           <div className="mobile">
             <p className="padding10px">Variants</p>
           </div>
-          <div className="desktop">
+          <div className="tab_resp">
             <p className="padding20px">Variants</p>
           </div>
           <div
@@ -99,7 +101,6 @@ function ProductMain({
                 ? {
                     justifyContent:
                       data.varieties.length === 4 ? "space-between" : "flex-start",
-                    gap: "3%",
                   }
                 : {}
             }>

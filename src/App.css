@@ -153,6 +153,10 @@ input[type=radio] {
     font-size: large;
 }
 
+.tab_resp {
+    display: none;
+}
+
 .padding20px {
     padding-left: 20px;
     font-weight: 400;

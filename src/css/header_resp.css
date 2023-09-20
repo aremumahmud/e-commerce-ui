@@ -458,4 +458,7 @@
     .stockInfo .top {
         margin-top: 20px;
     }
+    .tab_resp {
+        display: none !important;
+    }
 }

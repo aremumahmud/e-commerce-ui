@@ -434,7 +434,7 @@
                 .mobile {
                     display: none !important;
                 }
-                .tab {
+                .tab_resp {
                     display: flex !important;
                 }
                 .topNav img {

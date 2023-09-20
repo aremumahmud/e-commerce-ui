@@ -232,7 +232,7 @@ function AddProd({ setPage }) {
         <label htmlFor="">
           <p> Media</p>
           <div className="images">
-            <div className="image" id="image1">
+            <div className="image_add_prod" id="image1">
               <div
                 className="cover_me"
                 onClick={() => placeholder(`image${1}`, `file${1}`)}>
@@ -259,7 +259,7 @@ function AddProd({ setPage }) {
               </form>
             </div>
             <div
-              className="image"
+              className="image_add_prod"
               onClick={() => placeholder(`image${2}`, `file${2}`)}
               id="image2">
               <div className="cover_me">
@@ -286,7 +286,7 @@ function AddProd({ setPage }) {
               </form>
             </div>
             <div
-              className="image"
+              className="image_add_prod"
               onClick={() => placeholder(`image${3}`, `file${3}`)}
               id="image3">
               <form style={{display:'none'}} id="form3" action="">
@@ -313,7 +313,7 @@ function AddProd({ setPage }) {
               </div>
             </div>
             <div
-              className="image"
+              className="image_add_prod"
               onClick={() => placeholder(`image${4}`, `file${4}`)}
               id="image4">
               <form style={{display:'none'}} id="form4" action="">
