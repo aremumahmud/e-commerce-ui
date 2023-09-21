@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react'
 import '../css/prod_admin.css'
 import Products from './prod_admin'
-import load_products from '../libs/load_product'
+import  { load_products_raw } from '../libs/load_product'
 import Tab from './tab'
+import ProductView from './prod_view'
 
 function ProductsAdmin({setPage}){
     let [data, setData] = useState([])
     
     useEffect(()=>{
-        load_products('all',(err,res)=>{
+        load_products_raw('all',(err,res)=>{
             if(err) return  alert('error loading products')
             setData(res)
-        console.log(data)
+            console.log(data)
 
         })
     },[])
@@ -23,7 +24,12 @@ function ProductsAdmin({setPage}){
         no:'2'
       }} setPage={setPage}/>
            <hr /><br />
-            <Products data={data.reverse()} />
+           {
+            data.reverse().map(data_=>{
+                return <ProductView data_={data_} /> 
+            })
+           }
+            {/* <Products data={data.reverse()} /> */}
         </div>
     )
 }

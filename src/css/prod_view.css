@@ -1,0 +1,18 @@
+.tile_ {
+    padding: 15px;
+    margin-bottom: 10px;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.tile_ p:first-child {
+    font-weight: 500;
+    font-size: larger;
+}
+
+.tile_ p:last-child {
+    font-size: small;
+}

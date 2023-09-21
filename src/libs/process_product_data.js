@@ -5,6 +5,10 @@ function process_data(data) {
 }
 
 
+function raw_data(data) {
+    return data.data.map(x => helper(x))
+}
+
 function helper(data) {
     //console.log(',helper ', data)
     if (data.varieties.length === 0) return []
@@ -25,3 +29,4 @@ function helper(data) {
     return varieties
 }
 export default process_data
+export { raw_data }
