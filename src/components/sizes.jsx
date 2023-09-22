@@ -63,7 +63,7 @@ let sized = data.sizes
             textDecoration:'underline',
             fontWeight: 500
            
-          }}> Checkout our size chart</small>
+          }}>Size Chart</small>
         </>
         
     )

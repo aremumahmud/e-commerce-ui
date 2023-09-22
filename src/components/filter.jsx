@@ -1,8 +1,14 @@
 import {  AiOutlineSearch } from "react-icons/ai";
 import "../css/filter.css";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
+
 
 function Filter({setFilter , setLoad,categories, search,setCurrency,symbol}) {
-
+  let flags = {
+    $:'us',
+    "£":'gb',
+    "₦" :'ng'
+  }
   let change = e=>{
     var select = e.target;
     var value = select.options[select.selectedIndex].value;
@@ -26,10 +32,11 @@ function Filter({setFilter , setLoad,categories, search,setCurrency,symbol}) {
             </select>
           </li>
           <li className="ml-non">
+            <span className={"fi fi-"+flags[symbol]}></span>
             <select name="" id=""  onChange={(e)=>{
                 setCurrency(e.target.value)
             }} >
-                <option value="$" selected={symbol === "$"}>USD</option>
+                <option value="$" selected={symbol === "$"}> <span class="fi fi-gr"></span> USD</option>
                 <option value="£" selected={symbol === "£"}>GBP</option>
                 <option value="₦" selected={symbol === "₦"}>NGN</option>
                 {/* <option value="€" selected={symbol === "€"}>EUR</option> */}

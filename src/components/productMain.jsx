@@ -89,10 +89,10 @@ function ProductMain({
           }
           </div>
           <div className="mobile">
-            <p className="padding10px">Variants</p>
+            <p className="padding10px">Product Views</p>
           </div>
           <div className="tab_resp">
-            <p className="padding20px">Variants</p>
+            <p className="padding20px">Product Views</p>
           </div>
           <div
             className="varietyDisplay"
