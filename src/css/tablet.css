@@ -422,7 +422,7 @@
                 }
                 .image_wrapper_stock {
                     flex-direction: column !important;
-                    gap: 20px !important;
+                    gap: 30px !important;
                     margin-bottom: 50px;
                 }
                 .top .title {

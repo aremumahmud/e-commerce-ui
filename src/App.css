@@ -11,6 +11,12 @@
     /* font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif; */
 }
 
+select {
+    appearance: auto;
+    -webkit-appearance: auto;
+    color: #000000;
+}
+
 body {
     background-color: white;
 }

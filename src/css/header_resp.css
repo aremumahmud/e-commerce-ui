@@ -154,7 +154,7 @@
     }
     .image_wrapper_stock {
         flex-direction: column !important;
-        gap: 10px !important;
+        gap: 20px !important;
     }
     .stockImages .mainDisplay {
         width: 100% !important;

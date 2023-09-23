@@ -88,12 +88,12 @@ function ProductMain({
             !currMain && <div className="loader d"></div>
           }
           </div>
-          <div className="mobile">
+          {/* <div className="mobile">
             <p className="padding10px">Product Views</p>
-          </div>
-          <div className="tab_resp">
+          </div> */}
+          {/* <div className="tab_resp">
             <p className="padding20px">Product Views</p>
-          </div>
+          </div> */}
           <div
             className="varietyDisplay"
             style={

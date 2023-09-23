@@ -127,8 +127,13 @@ let set_data_for_pagination = (index)=>{
       <Products  setViewStatus3={setViewStatus3} setCartData3={setCartData3} symbol={symbol} setProduct={setProduct}  cart={cart} setPage={setPage} setCart={setCart} data={[0, 1, 2, 3].map(i=>data[i])} />
       <br /> */}
       <About data={data[0] ? data[0].varieties : []} setPage={setPage} />
+      {
+        !localStorage.getItem("TokenID") && <>
+        <br />
       <br />
-      <br />
+        </>
+        
+      }
     </>
   );
 }

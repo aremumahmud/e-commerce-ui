@@ -9,10 +9,12 @@ function About({ setPage , data }) {
         <p className="description">
           Glitzabelle Label is a desirable fashion brand for women. We create stylish clothes that are made to last. We are committed to helping women look and feel their best regardless of their personal style. Each piece is a labour of love from Lagos. ❤️
          </p>
-        <div className="cta">
+        {
+          !localStorage.getItem("TokenID") &&
+          <div className="cta">
           <div className="btn active" onClick={() => setPage('users/login')}>Log in</div>
           <div className="btn" onClick={() => setPage('users/signup')}>Sign up</div>
-        </div>
+        </div>}
       </div>
       <div className="imageSection">
         {/* <img src="/imgs/51+Ev5UmxvL._AC_UL320_-removebg-preview (1).png" alt="" /> */}
