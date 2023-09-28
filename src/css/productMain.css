@@ -17,6 +17,7 @@
             align-items: center;
             justify-content: center;
             height: fit-content;
+            position: relative;
         }
         
         .stockImages .mainDisplay img {
@@ -224,4 +225,19 @@
             color: red;
             font-size: medium;
             border: 1px solid red
+        }
+        
+        .tracker {
+            z-index: 999;
+            position: absolute;
+            top: 90%;
+        }
+        
+        .tracker ul {
+            padding: 0;
+        }
+        
+        .tracker ul li {
+            display: inline;
+            padding: 5px;
         }

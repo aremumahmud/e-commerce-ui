@@ -1,5 +1,5 @@
 import "../css/productMain.css";
-import { AiOutlineCar, AiOutlineDeliveredProcedure } from "react-icons/ai";
+import { AiFillCiCircle, AiOutlineCar, AiOutlineDeliveredProcedure } from "react-icons/ai";
 
 import Products from "./products";
 import { useEffect, useState } from "react";
@@ -136,6 +136,14 @@ function ProductMain({
         <div className="image_wrapper_stock" >
           <div className="mainDisplay" id="main_display">
             {/* <img src={convertCloudinaryURL(currMain)} alt="" /> */}
+            <div className="tracker">
+             <ul>
+              {
+                 carousel_data.map((n,i)=> <li><AiFillCiCircle style={{border:`${active === i?2:0.5}px solid black`, borderRadius:'50%'}} color="#ccc" /></li>)
+              }
+            
+             </ul>
+            </div>
             {
               carousel_data.map((d,i)=>{
 
