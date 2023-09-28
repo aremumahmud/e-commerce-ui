@@ -95,11 +95,11 @@ function ProductMain({
     //console.log('lerf',i, clone_data[i+1])
 
     if(!clone_data[i+1]) return
-
+    setAcive(i+1)
     clone_data[i].active = false
     clone_data[i+1].active = true
     currentSlide++
-    setCarousel_data(clone_data)
+    setCarousel_data(clone_data) 
     isActivateSwipe = false
   }
 
@@ -108,6 +108,7 @@ function ProductMain({
 //console.log('right',i,clone_data)
     if(!clone_data[i-1]) return
 
+    setAcive(i-1)
     clone_data[i].active = false
     clone_data[i-1].active = true
    currentSlide--
