@@ -138,7 +138,7 @@ function ProductMain({
             {
               carousel_data.map((d,i)=>{
 
-                return <img style={{display:d.active?'block':'none'}} src={convertCloudinaryURL(d.image)} alt="" />
+                return <img className="animate__animated animate__fadeIn" style={{display:d.active?'block':'none'}} src={convertCloudinaryURL(d.image)} alt="" />
               
               }) 
             }
