@@ -55,7 +55,7 @@ function ProductMain({
   // window.scrollTo(0,0)
   let [data, setData] = useState(datar);
   let [size, setSize] = useState(data.sizes[0] ? data.sizes[0].size : "");
-  let [currMain, setMain] = useState(data.image || data.mainImage);
+  let currMain = data.image || data.mainImage;
   let inventory = data.quantity;
   let [qty, setQuantity] = useState(1);
   let [outOfStock, setOutOfStock] = useState(false);
@@ -71,15 +71,59 @@ function ProductMain({
     setQuantity(qty - 1);
     //setCart({},true)
   };
+
+ 
+  let currentSlide =0
   let isActivateSwipe = false
+  let [carousel_data, setCarousel_data] = useState(data.varieties.map((x,i)=>({active:i===0?true:false,image:x.image})))
+  
+
+  let setMain = (image)=>{
+    const updatedData = carousel_data.map((item,i) =>{
+    if(item.image === image) currentSlide = i
+     return { 
+      ...item,
+      active: item.image === image
+    }
+    });
+    setCarousel_data(updatedData)
+
+  }
+
+  let swipeLeft = (i)=>{
+    let clone_data = [...carousel_data]
+    //console.log('lerf',i, clone_data[i+1])
+
+    if(!clone_data[i+1]) return
+
+    clone_data[i].active = false
+    clone_data[i+1].active = true
+    currentSlide++
+    setCarousel_data(clone_data)
+    isActivateSwipe = false
+  }
+
+  let swipeRight = (i)=>{
+    let clone_data = [...carousel_data]
+//console.log('right',i,clone_data)
+    if(!clone_data[i-1]) return
+
+    clone_data[i].active = false
+    clone_data[i-1].active = true
+   currentSlide--
+    setCarousel_data(clone_data)
+    isActivateSwipe = false
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0);
     if(!isActivateSwipe){
-         activateSwiprListener('main_display')
+         activateSwiprListener('main_display',()=>swipeLeft(currentSlide),()=>swipeRight(currentSlide))
          isActivateSwipe = true
     }
-  }, []);
+  }, [isActivateSwipe]);
 
+  
   let [active , setAcive] = useState(0)
   // useEffect(() => {
   //   console.log(data, "this friuc");
@@ -90,7 +134,14 @@ function ProductMain({
         <div className="stockImages">
         <div className="image_wrapper_stock" >
           <div className="mainDisplay" id="main_display">
-            <img src={convertCloudinaryURL(currMain)} alt="" />
+            {/* <img src={convertCloudinaryURL(currMain)} alt="" /> */}
+            {
+              carousel_data.map((d,i)=>{
+
+                return <img style={{display:d.active?'block':'none'}} src={convertCloudinaryURL(d.image)} alt="" />
+              
+              }) 
+            }
             {
             !currMain && <div className="loader d"></div>
           }

@@ -1,4 +1,4 @@
-function activateSwiprListener(el) {
+function activateSwiprListener(el, swipeLeft, swipeRight) {
     const swipeDiv = document.getElementById(el);
     let startX, startY, endX, endY;
     let swipeListenerAttached = false;
@@ -30,10 +30,12 @@ function activateSwiprListener(el) {
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
                 if (deltaX > 0) {
                     // Swiped right
-                    alert('Swiped right');
+                    swipeRight()
+                        // alert('Swiped right');
                 } else {
                     // Swiped left
-                    alert('Swiped left');
+                    swipeLeft()
+                        // alert('Swiped left');
                 }
             }
 
