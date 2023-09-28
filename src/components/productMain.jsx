@@ -12,6 +12,7 @@ import convertCloudinaryURL from "../libs/convert_to_medium_quality";
 import removeDuplicates from "../libs/remove_duplicates";
 import Space from "./space";
 import getSizeQuantity from "../libs/getSizeQuantity";
+import activateSwiprListener from "../libs/checkifSwiped";
 
 function ProductMain({
   setCart,
@@ -28,6 +29,7 @@ function ProductMain({
   setCategory
 }) {
   //console.log(data,'rr')
+
   //console.log(datar)
   if (!datar || Object.keys(datar).length === 0) {
     let data_from_localstorage = JSON.parse(
@@ -69,8 +71,13 @@ function ProductMain({
     setQuantity(qty - 1);
     //setCart({},true)
   };
+  let isActivateSwipe = false
   useEffect(() => {
     window.scrollTo(0, 0);
+    if(!isActivateSwipe){
+         activateSwiprListener('main_display')
+         isActivateSwipe = true
+    }
   }, []);
 
   let [active , setAcive] = useState(0)
@@ -82,7 +89,7 @@ function ProductMain({
       <div className="mainDescription">
         <div className="stockImages">
         <div className="image_wrapper_stock" >
-          <div className="mainDisplay">
+          <div className="mainDisplay" id="main_display">
             <img src={convertCloudinaryURL(currMain)} alt="" />
             {
             !currMain && <div className="loader d"></div>
