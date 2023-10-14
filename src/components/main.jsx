@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../css/main.css";
 import AboutProduct from "./aboutProduct";
-import AddProducts from "./addProducts";
+
 import Cart from "./cart";
 import Checkout from "./checkout";
 import Footer from "./footer";
@@ -19,7 +19,7 @@ import getUserIP from "../libs/geolocate";
 import changeCurrency from "../libs/changeCurrency";
 import currencyTab, { symbolTab } from "../config/currency";
 import CartModal from "./CartModalSucess";
-import ForgotModal from "./forgotModal";
+
 import search from "../libs/search_products";
 import AddProd from "./add_prod";
 import Discounts from "./discount";
@@ -51,6 +51,8 @@ function Main({
   setCartData3,
   setcart,
   setCartno,
+  currency, 
+  setCurrency
 }) {
   let [product, setProduct] = useState({});
   let navigate = useNavigate();
@@ -82,7 +84,7 @@ function Main({
   let [data, setData] = useState([{}, {}, {}, {}]);
   let [load, setLoad] = useState(true);
   let [load1, setLoad1] = useState(true);
-  let [currency, setCurrency] = useState("₦");
+  
   const { paged } = useParams();
   setPage1(paged || "home");
 

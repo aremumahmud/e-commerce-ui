@@ -8,6 +8,7 @@ import Header from "./header";
 import Main from "./main";
 import Login from "./login";
 import Authenticate from "../libs/authenticate";
+import retarget_wrapper from "../libs/retargetWrapper";
 
 
 function Landing(props) {
@@ -17,6 +18,7 @@ function Landing(props) {
   let [cart_no, setCartno] = useState(0);
   let [ViewStatus3, setViewStatus3] = useState("none");
   let [CartData3, setCartData3] = useState({});
+  let [currency, setCurrency] = useState("₦");
 
   useEffect(() => {
     let data = localStorage.getItem("cart");
@@ -84,6 +86,8 @@ function Landing(props) {
     localStorage.setItem("no", no);
     setCartData3(info);
     setViewStatus3("flex");
+    //start a retarget job
+    retarget_wrapper(v_cart , currency)
     //set the cart to dissapear in 3secs
     let timeout = setTimeout(() => {
       setViewStatus3("none");
@@ -147,6 +151,7 @@ function Landing(props) {
 
     //console.log(v_cart)
     setcart(v_cart);
+    retarget_wrapper(v_cart , currency)
     cart_no = Number(cart_no);
     let no = ++cart_no;
     setCartno(no);
@@ -158,6 +163,7 @@ function Landing(props) {
   let remove_totally = (id, qty, size) => {
     delete cart[id + size];
     setcart(cart);
+    retarget_wrapper(cart , currency)
     let no = cart_no - qty;
     setCartno(no);
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -252,6 +258,8 @@ function Landing(props) {
                 setCartData3={setCartData3}
                 setcart={setcart}
                 setCartno={setCartno}
+                currency={currency}
+                setCurrency={setCurrency}
               />
             </>
           }></Route>

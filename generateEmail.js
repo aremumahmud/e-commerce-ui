@@ -55,15 +55,15 @@ let template = (data) => `
 <br>
 <div >
 <p>Hi ${data.first_name}</p><br>
-<p>You have sucessfuly placed an order at Glitzabelle stores! We are pleased let you know we are already working on shipping your order to your location.
+<p>We hope this email finds you well. At Glitzabellelabel we noticed that you recently added some fantastic items to your cart but haven't completed your purchase yet. We're here to help and make sure you don't miss out on the products you loved.
 </p>
 </div>
 <br>
 <div class="topic2"><br>
-<p>In the meantime here's a reminder of what you ordered</p>
+<p>Here's a reminder of what you've left behind in your cart:</p>
 <!-- <p>Here is/are your orders list</p> -->
 </div>
-<h3>[Order #${data.orderId}] (${new Date(data.createdAt).toString().split(' ').filter((x,i)=> i<4).join(' ')})</h3>
+<h3>Date (${new Date(data.createdAt).toString().split(' ').filter((x,i)=> i<4).join(' ')})</h3>
 <br>
 <table>
 <tbody>
@@ -77,62 +77,36 @@ let template = (data) => `
 `
 
 let end = (data, total) => `
-<tr>
-    <th colspan='3'>Subtotal</th>
-    
-    <th>${data.currency + String(data.total-total)}</th>
-</tr>
-<tr>
-    <th colspan='3'>Subtotal</th>
-    
-    <th>${data.currency + String(data.total)}</th>
-</tr>
-<tr>
-    <th colspan='3'>Payment Method</th>
-    
-    <th>${data.payment_method.split('_').join(' ')}</th>
-</tr>
-</tbody>
-</table>
-<br />
-<div class="topic2">
-    <p>Here is/are your orders details</p>
-    <br />
-</div>
-<table style="font-size:12px">
-<tbody>
-<tr>
-  <td>City:</td>
-  <td>${data.city}</td>
-  
-</tr>
-<tr>
-  <td>Zip Code:</td>
-  <td>${data.zip_code}</td>
-</tr>
-<tr>
-  <td>First Name:</td>
-  <td>${data.first_name}</td>
-</tr>
-<tr>
-  <td>Last Name:</td>
-  <td>${data.last_name}</td>
-</tr>
-<tr>
-  <td>Email Address:</td>
-  <td>${data.email_address}</td>
-</tr>
-<tr>
-  <td>Phone Number:</td>
-  <td>${data.phone_number}</td>
-</tr>
-<tr>
-  <td>Current Address:</td>
-  <td>${data.address}</td>
-</tr>
 </tbody>
 
 </table>
+<br/><br/>
+<p>Don't let these incredible products slip away! When you complete your purchase, you'll enjoy:</p>
+<ol>
+<li>Fast and Secure Checkout: Our payment process is quick, easy, and 100% secure.</li>
+<li>Hassle-Free Returns: We have a no-questions-asked return policy for your peace of mind.</li>
+<li>24/7 Customer Support: Our team is always here to assist you with any questions or concerns.</li>
+
+</ol>
+<br/>
+
+
+
+<p>To complete your order, simply click the link below:</p><br/>
+<a href='https://e-commerce-ui-ruddy.vercel.app/checkout'>Complete Your Purchase</a>
+<br/><br/>
+<p>If you have any questions or need assistance with your order, please feel free to reply to this email, and our friendly customer support team will be happy to help you.</p>
+<br/>
+
+Thank you for considering Glitzabellelabel for your shopping needs. We can't wait to welcome you as a valued customer!
+<br/>
+<p>Sincerely,</p>
+<br/><br/>
+[The Dev Team]<br/>
+[Glitzabellelabel]<br/>
+[https://e-commerce-ui-ruddy.vercel.app/home]<br/>
+[+34 555 555 555]
+
 <footer>
             <hr />
            
@@ -162,23 +136,14 @@ let product = (x, data) => `
     <td>${x.parent_product}</td>
     <td>${x.size || '55'}</td>
     <td>${x.quantity}</td>
-    <td>${data.currency +  String(+(x.price/currencyTab[data.currency].price_in_naira).toFixed(2))}</td>
+    <td>${data.currency +  String(+(x.price).toFixed(2))}</td>
 </tr>
 
 `
 
 let j = {
-    "_id": {
-        "$oid": "649a2749d6ef6aff3e79978d"
-    },
-    "reference": "4426289",
-    "first_name": "Mahmud",
-    "last_name": "Aremu234",
-    "phone_number": "+2347064552617",
-    "email_address": "aremumahmud2003@gmail.com",
-    "city": "Ilorin ",
-    "zip_code": "",
-    "address": "University road tanke bubu ilorin Kwara state ",
+    first_name: 'mahmud',
+    currency: '$',
     "products": [{
             "image": "https://res.cloudinary.com/dvauarkh6/image/upload/v1687434380/DEV/yt510bn2e59gju39vjoc.jpg",
             "id": "6494355cdd83ccf29398f2ff",
@@ -196,10 +161,6 @@ let j = {
             "size": "8"
         }
     ],
-    "orderId": 1003,
-    "total": 47000,
-    "currency": "NGN",
-    "payment_method": "bank_transfer",
     "createdAt": "2023-06-27T00:03:21.444Z",
     "updatedAt": "2023-06-27T00:03:21.444Z",
     "__v": 0
@@ -213,8 +174,8 @@ function generate(points) {
     let clone = [...points.products]
     clone.forEach(x => {
         console.log(x.price)
-        console.log(+(x.price / currencyTab[points.currency].price_in_naira).toFixed(2))
-        total += +((x.price / currencyTab[points.currency].price_in_naira) * x.quantity).toFixed(2)
+        console.log(+(x.price).toFixed(2))
+        total += +((x.price) * x.quantity).toFixed(2)
     })
 
     let template_final = template(points) + prods + end(points, total)

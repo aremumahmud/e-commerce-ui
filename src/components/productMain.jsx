@@ -1,5 +1,5 @@
 import "../css/productMain.css";
-import { AiFillCiCircle, AiOutlineCar, AiOutlineDeliveredProcedure } from "react-icons/ai";
+import { AiFillBackward, AiFillCiCircle, AiFillForward, AiOutlineCar, AiOutlineDeliveredProcedure } from "react-icons/ai";
 
 import Products from "./products";
 import { useEffect, useState } from "react";
@@ -136,7 +136,7 @@ function ProductMain({
         <div className="image_wrapper_stock" >
           <div className="mainDisplay" id="main_display">
             {/* <img src={convertCloudinaryURL(currMain)} alt="" /> */}
-            <div className="tracker">
+            <div className="tracker mobile">
              <ul>
               {
                  carousel_data.map((n,i)=> <li><AiFillCiCircle style={{border:`${active === i?2:0.5}px solid black`, borderRadius:'50%'}} color="#ccc" /></li>)
@@ -144,6 +144,18 @@ function ProductMain({
             
              </ul>
             </div>
+            {/* <div className="tracker tab">
+             <ul>
+              {
+                 carousel_data.map((n,i)=> <li><AiFillCiCircle style={{border:`${active === i?2:0.5}px solid black`, borderRadius:'50%'}} color="#ccc" /></li>)
+              }
+            
+             </ul>
+            </div> */}
+            {/* <div className="tracker_ tab">
+             <div onClick={()=>swipeRight(currentSlide)}><AiFillBackward size={30} /></div>
+             <div onClick={()=>swipeLeft(currentSlide)}><AiFillForward  size={30}/></div>
+            </div> */}
             {
               carousel_data.map((d,i)=>{
 
