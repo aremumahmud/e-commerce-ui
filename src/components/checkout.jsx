@@ -16,6 +16,7 @@ import extract_ids from "../libs/extract_ids";
 import get_current_version from "../libs/getCurrentVersion";
 import update_cart from "../libs/updateCart";
 import Space from "./space";
+import remove_retarget from "../libs/remove_retargets";
 
 function Checkout({
   setCurrency,
@@ -114,6 +115,8 @@ function Checkout({
         }
         if (!data.payment_uri)
           return alert("sorry something unexpected happened");
+
+        remove_retarget()
         window.open(data.payment_uri, "_self");
         // console.log(JSON.parse(resp))
       }

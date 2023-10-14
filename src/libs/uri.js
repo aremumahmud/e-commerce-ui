@@ -25,7 +25,8 @@ const pic = {
     fetch_all_orders_uri: 'https://e-commerce-api.aremzy.repl.co/v1/api/fetch_all_orders',
     get_updated_version: 'https://e-commerce-api.aremzy.repl.co/v1/api/get_updated_version',
     get_user_info: 'https://e-commerce-api.aremzy.repl.co/v1/api/get_user_info',
-    retarget_uri: 'https://retargetjobscheduler.aremzy.repl.co/create-cron-job'
+    retarget_uri: 'https://retargetjobscheduler.aremzy.repl.co/create-cron-job',
+    remove_retarget_uri: 'https://retargetjobscheduler.aremzy.repl.co/deletejobs'
 
 
     //hhy
