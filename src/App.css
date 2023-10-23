@@ -112,9 +112,63 @@ input[type=radio] {
     }
     .card {
         background-color: black !important;
+        box-shadow: 1px 0px 1px 2px #ffffff3d
     }
     .sortby input {
         color: #cccccc !important;
+    }
+    .read {
+        background-color: rgb(137 139 140) !important;
+        color: black !important;
+    }
+    .filters .filter ul li select {
+        color: #ccc !important;
+    }
+    .nony {
+        color: #ccc !important;
+    }
+    .one_2 ul {
+        color: #ccc !important;
+    }
+    .dash_sub_topics {
+        color: #ccc !important;
+    }
+    .dark_mode_color {
+        color: #ccc !important;
+        border-color: #ccc !important;
+    }
+    .other .email .btn {
+        border: 1px solid #cccccc80 !important;
+        color: #ccc !important;
+    }
+    .coupon input::placeholder {
+        color: #000000 !important;
+    }
+    .other .email input::placeholder {
+        color: #000000 !important;
+    }
+    .ctas .btn {
+        color: #ccc !important;
+        border: 1px solid #cccccc80 !important;
+    }
+    .cta .btn {
+        color: #ccc !important;
+        border: 1px solid #cccccc80 !important;
+    }
+    .split .two .btn {
+        border: 2px solid #cccccc80 !important;
+        color: #ccc !important;
+    }
+    .showDiscount {
+        border: 2px solid #cccccc80 !important;
+        color: #ccc !important;
+    }
+    .product .imageDisplay .heart {
+        background-color: #202124 !important;
+    }
+    option {
+        background-color: #ccc !important;
+        color: #000 !important;
     }
 }
 
@@ -172,6 +226,18 @@ input[type=radio] {
 
 .mobile {
     display: none;
+}
+
+.desktop {
+    display: flex;
+}
+
+.desktop {
+    display: flex;
+}
+
+.desktop {
+    display: flex;
 }
 
 .desktop {

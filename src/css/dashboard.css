@@ -151,11 +151,19 @@ span {
 }
 
 .nony {
-    color: #004225;
+    color: #000000;
     font-weight: 700;
     font-size: medium;
 }
 
 .h {
     text-align: center;
+}
+
+.dash_sub_topics {
+    padding: 10px;
+    color: #000000;
+    width: fit-content;
+    margin-bottom: 10px;
+    font-weight: 600;
 }

@@ -58,7 +58,7 @@
 .showDiscount {
     margin-top: 10px;
     padding: 5px;
-    background-color: #004225;
+    background-color: #000000;
     color: #ffffff;
     width: fit-content;
     display: flex;
@@ -67,7 +67,7 @@
 }
 
 .name_ting {
-    font-weight: 800;
+    font-weight: 500;
     margin-right: 10px;
 }
 

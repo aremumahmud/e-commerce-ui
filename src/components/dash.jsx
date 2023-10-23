@@ -119,13 +119,7 @@ function Dash({ orders, setViewStatus, setViewData, loader, refresh }) {
             <>
               {" "}
               <p
-                style={{
-                  padding: "10px",
-                  color: " #004225",
-                  width: "fit-content",
-                  marginBottom: "10px",
-                  fontWeight: "600",
-                }}>
+                className='dash_sub_topics'>
                 Username :{" "}
                 <span
                   style={{
@@ -136,13 +130,7 @@ function Dash({ orders, setViewStatus, setViewData, loader, refresh }) {
                 </span>
               </p>
               <p
-                style={{
-                  padding: "10px",
-                  color: " #004225",
-                  width: "fit-content",
-                  marginBottom: "10px",
-                  fontWeight: "600",
-                }}>
+               className='dash_sub_topics'>
                 Email address :{" "}
                 <span
                   style={{
@@ -162,6 +150,7 @@ function Dash({ orders, setViewStatus, setViewData, loader, refresh }) {
                   borderRadius: "10px",
                   marginBottom: "10px",
                 }}
+                className="dark_mode_color"
                 onClick={() => {
                   let conf = window.confirm("Are you want to Log Out?");
                   if (conf) {
