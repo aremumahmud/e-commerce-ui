@@ -1,6 +1,6 @@
 import "../css/productMain.css";
-import { AiFillBackward, AiFillCiCircle, AiFillForward, AiOutlineCar, AiOutlineDeliveredProcedure } from "react-icons/ai";
-
+import {  AiOutlineCar, AiOutlineDeliveredProcedure } from "react-icons/ai";
+import {  BiCircle } from "react-icons/bi";
 import Products from "./products";
 import { useEffect, useState } from "react";
 
@@ -139,7 +139,7 @@ function ProductMain({
             <div className="tracker mobile">
              <ul>
               {
-                 carousel_data.map((n,i)=> <li><AiFillCiCircle style={{border:`${active === i?2:0.5}px solid black`, borderRadius:'50%'}} color="#ccc" /></li>)
+                 carousel_data.map((n,i)=> <li><BiCircle style={{border:`${active === i?2:0.5}px solid black`, borderRadius:'50%'}} color="#ccc" /></li>)
               }
             
              </ul>
